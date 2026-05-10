@@ -1,0 +1,36 @@
+---
+import Base from '~/layouts/Base.astro';
+import Button from '~/components/ui/Button.astro';
+---
+
+<Base title="Pagina niet gevonden" description="Deze pagina bestaat niet (meer)." noindex={true}>
+  <section class="container-x py-24 md:py-32">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+      <div class="col-span-12 md:col-span-7">
+        <p class="mono-eyebrow text-accent">404</p>
+        <h1 class="mt-6 font-display text-hero text-teal-900 text-balance">
+          Deze pagina bestaat<br /><span class="display-italic">niet meer.</span>
+        </h1>
+        <p class="mt-7 max-w-prose text-lead text-ink-soft">
+          Het kan zijn dat de pagina is verhuisd, of dat de link niet helemaal klopt. Hier zijn
+          een paar plekken die meestal het juiste antwoord geven.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <Button href="/">Naar de homepage</Button>
+          <Button href="/certificering/" variant="secondary">Bekijk de normen</Button>
+          <Button href="/contact/" variant="ghost">Of neem contact op →</Button>
+        </div>
+      </div>
+
+      <aside class="col-span-12 md:col-span-4 md:col-start-9">
+        <p class="mono-eyebrow text-teal-700">Snelle links</p>
+        <ul class="mt-4 divide-y divide-line-cool border-y border-line-cool">
+          <li><a href="/werkwijze/" class="block py-3 hover:text-teal-700">De werkwijze</a></li>
+          <li><a href="/nulmeting/" class="block py-3 hover:text-teal-700">Kosteloze nulmeting</a></li>
+          <li><a href="/partnerprogramma/" class="block py-3 hover:text-teal-700">Partnerprogramma</a></li>
+          <li><a href="/over-ons/" class="block py-3 hover:text-teal-700">Over GTY</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</Base>

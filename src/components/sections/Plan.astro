@@ -1,0 +1,51 @@
+---
+import Eyebrow from '~/components/ui/Eyebrow.astro';
+
+const stappen = [
+  {
+    nr: '01',
+    titel: 'Analyse',
+    body: 'Een nulmeting brengt in kaart waar uw organisatie staat ten opzichte van de norm. Geen aannames — een feitelijk vertrekpunt waarop u en GTY samen het traject kunnen plannen.',
+    duur: 'Doorgaans 1–3 weken',
+  },
+  {
+    nr: '02',
+    titel: 'Implementatie',
+    body: 'GTY werkt naast uw team aan het managementsysteem. Processen, documentatie, verantwoordelijkheden en bewustzijn worden ingericht op een manier die past bij hoe uw organisatie écht werkt.',
+    duur: 'Afhankelijk van norm en omvang',
+  },
+  {
+    nr: '03',
+    titel: 'Certificering en borging',
+    body: 'GTY bereidt u voor op de externe audit en begeleidt het contact met de certificerende instelling. Na het certificaat blijft GTY beschikbaar — via het Partnerprogramma als u dat wenst.',
+    duur: 'Tot en met de externe audit',
+  },
+];
+---
+
+<section class="container-x py-20 md:py-28">
+  <div class="max-w-narrow">
+    <Eyebrow>Het plan</Eyebrow>
+    <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+      Drie stappen. <span class="display-italic">Geen verrassingen.</span>
+    </h2>
+    <p class="mt-5 max-w-prose text-lead text-ink-soft">
+      Elk certificeringstraject volgt dezelfde drie fasen. Wat erbinnen gebeurt, stemmen we
+      af op uw norm, uw sector en uw uitgangspositie.
+    </p>
+  </div>
+
+  <ol class="mt-14 grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-6 relative">
+    <div class="hidden md:block absolute left-0 right-0 top-[14px] h-px bg-line-cool"></div>
+
+    {stappen.map((s) => (
+      <li class="md:col-span-4 relative">
+        <div class="hidden md:block absolute -top-1 left-0 w-2.5 h-2.5 rounded-full bg-teal-700"></div>
+        <p class="md:pt-9 mono-eyebrow text-teal-700">{s.nr}</p>
+        <h3 class="mt-2 font-display text-h3 text-teal-900">{s.titel}</h3>
+        <p class="mt-4 text-base text-ink max-w-[36ch]">{s.body}</p>
+        <p class="mt-4 text-caption font-mono text-ink-soft uppercase tracking-wider">{s.duur}</p>
+      </li>
+    ))}
+  </ol>
+</section>

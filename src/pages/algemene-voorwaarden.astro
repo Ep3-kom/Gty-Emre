@@ -1,0 +1,47 @@
+---
+import Base from '~/layouts/Base.astro';
+import LegalBanner from '~/components/ui/LegalBanner.astro';
+import { siteData } from '~/data/site-data';
+---
+
+<Base title="Algemene voorwaarden" description="De algemene voorwaarden van GTY voor opdrachten en samenwerking." noindex={true}>
+  <article class="container-x py-16 md:py-20 max-w-3xl">
+    <p class="mono-eyebrow text-teal-700">Juridisch</p>
+    <h1 class="mt-6 font-display text-h1 text-teal-900">Algemene voorwaarden</h1>
+    <p class="mt-4 text-caption font-mono text-ink-soft uppercase tracking-wider">Laatst bijgewerkt: nog te bevestigen</p>
+
+    <LegalBanner />
+
+    <div class="mt-10 space-y-8 text-base text-ink">
+      <section>
+        <h2 class="font-display text-h3 text-teal-900">Toepasselijkheid</h2>
+        <p class="mt-3">
+          Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen, offertes en
+          overeenkomsten tussen {siteData.legalName} en opdrachtgever, voor zover van deze
+          voorwaarden niet schriftelijk is afgeweken.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-display text-h3 text-teal-900">Definitieve tekst nog te leveren</h2>
+        <p class="mt-3">
+          De volledige, juridisch gecontroleerde tekst van de algemene voorwaarden wordt
+          nog door GTY aangeleverd en op deze pagina gepubliceerd. Tot die tijd gelden de
+          voorwaarden zoals vermeld op de aanbieding of overeenkomst die u van GTY heeft
+          ontvangen. Voor vragen kunt u contact opnemen via
+          <a href={siteData.contact.emailHref} class="link-underline text-teal-700">{siteData.contact.email}</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-display text-h3 text-teal-900">Contact</h2>
+        <p class="mt-3">
+          {siteData.legalName}<br />
+          {siteData.contact.address.street}<br />
+          {siteData.contact.address.postal} {siteData.contact.address.city}<br />
+          {siteData.contact.email} · {siteData.contact.phone}
+        </p>
+      </section>
+    </div>
+  </article>
+</Base>

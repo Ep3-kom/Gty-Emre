@@ -1,0 +1,121 @@
+---
+import { siteData } from '~/data/site-data';
+import { normen } from '~/data/normen';
+import { t } from '~/i18n/nl';
+---
+
+<div
+  class="fixed inset-0 z-40 bg-paper hidden flex-col"
+  data-mobile-nav
+  aria-hidden="true"
+>
+  <div class="flex h-[72px] items-center justify-between border-b border-line-cool px-6">
+    <a href="/" class="flex items-center" aria-label="GTY home">
+      <img src="/logo.svg" alt="GTY" width="64" height="29" class="h-7 w-auto" />
+    </a>
+    <button
+      type="button"
+      class="p-2 -mr-2"
+      aria-label="Sluit menu"
+      data-mobile-nav-close
+    >
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <line x1="2" y1="2" x2="18" y2="18" stroke="currentColor" stroke-width="1.6" />
+        <line x1="18" y1="2" x2="2" y2="18" stroke="currentColor" stroke-width="1.6" />
+      </svg>
+    </button>
+  </div>
+
+  <nav class="flex-1 overflow-y-auto px-6 py-8" aria-label="Mobiele navigatie">
+    <ul class="space-y-2">
+      <li>
+        <details class="group">
+          <summary class="flex items-baseline justify-between py-3 font-display text-h3 text-teal-900">
+            <span>{t.nav.certificering}</span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" class="transition-transform group-open:rotate-180" aria-hidden="true">
+              <path d="M1 1L6 7L11 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+          </summary>
+          <ul class="mt-1 mb-3 ml-1 space-y-2 border-l border-line-cool pl-5">
+            {normen.map((n) => (
+              <li>
+                <a href={`/certificering/${n.slug}/`} class="flex items-baseline justify-between py-1.5 text-base">
+                  <span>{n.code}</span>
+                  <span class="text-caption text-ink-soft">{n.shortTitle}</span>
+                </a>
+              </li>
+            ))}
+            <li><a href="/certificering/" class="block py-1.5 text-base text-teal-700">{t.nav.certificeringAll} →</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="/partnerprogramma/" class="block py-3 font-display text-h3 text-teal-900">{t.nav.partnerprogramma}</a></li>
+      <li>
+        <details class="group">
+          <summary class="flex items-baseline justify-between py-3 font-display text-h3 text-teal-900">
+            <span>{t.nav.interneAudits}</span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" class="transition-transform group-open:rotate-180" aria-hidden="true">
+              <path d="M1 1L6 7L11 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+          </summary>
+          <ul class="mt-1 mb-3 ml-1 space-y-2 border-l border-line-cool pl-5">
+            <li><a href="/interne-audits/" class="block py-1.5 text-base">{t.nav.interneAuditsAll}</a></li>
+            <li><a href="/nulmeting/" class="block py-1.5 text-base">{t.nav.nulmeting}</a></li>
+            <li><a href="/rie/" class="block py-1.5 text-base">{t.nav.rie}</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="/academy/" class="block py-3 font-display text-h3 text-teal-900">{t.nav.academy}</a></li>
+      <li><a href="/werkwijze/" class="block py-3 font-display text-h3 text-teal-900">{t.nav.werkwijze}</a></li>
+      <li><a href="/over-ons/" class="block py-3 font-display text-h3 text-teal-900">{t.nav.overOns}</a></li>
+      <li><a href="/contact/" class="block py-3 font-display text-h3 text-teal-900">{t.nav.contact}</a></li>
+    </ul>
+
+    <div class="mt-10 pt-8 border-t border-line-cool">
+      <a
+        href={siteData.cta.primary.href}
+        class="block w-full text-center bg-teal-900 text-paper px-5 py-3.5 font-medium rounded-md"
+      >
+        {siteData.cta.primary.label}
+      </a>
+      <a
+        href={siteData.cta.secondary.href}
+        class="block w-full text-center mt-3 border border-ink/20 px-5 py-3.5 font-medium rounded-md"
+      >
+        {siteData.cta.secondary.label}
+      </a>
+    </div>
+
+    <div class="mt-10 text-small text-ink-soft space-y-1">
+      <a href={siteData.contact.phoneHref} class="block link-underline">{siteData.contact.phone}</a>
+      <a href={siteData.contact.emailHref} class="block link-underline">{siteData.contact.email}</a>
+    </div>
+  </nav>
+</div>
+
+<script>
+  const nav = document.querySelector<HTMLElement>('[data-mobile-nav]');
+  const triggers = document.querySelectorAll<HTMLButtonElement>('[data-mobile-nav-trigger]');
+  const close = document.querySelector<HTMLButtonElement>('[data-mobile-nav-close]');
+
+  const open = () => {
+    if (!nav) return;
+    nav.classList.remove('hidden');
+    nav.classList.add('flex');
+    nav.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+  const shut = () => {
+    if (!nav) return;
+    nav.classList.add('hidden');
+    nav.classList.remove('flex');
+    nav.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  triggers.forEach((t) => t.addEventListener('click', open));
+  close?.addEventListener('click', shut);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') shut();
+  });
+</script>

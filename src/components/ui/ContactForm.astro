@@ -1,0 +1,84 @@
+---
+import { t } from '~/i18n/nl';
+---
+
+<form action="/api/contact/" method="POST" class="border border-line-cool bg-paper p-6 md:p-8 space-y-5" data-contact-form novalidate>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <label class="block">
+      <span class="block text-small font-medium text-ink mb-1.5">Voornaam <span class="text-accent">*</span></span>
+      <input required name="voornaam" type="text" autocomplete="given-name" class="w-full border border-line bg-paper px-3.5 py-2.5 text-base focus:outline-none focus:border-teal-700" />
+    </label>
+    <label class="block">
+      <span class="block text-small font-medium text-ink mb-1.5">Achternaam <span class="text-accent">*</span></span>
+      <input required name="achternaam" type="text" autocomplete="family-name" class="w-full border border-line bg-paper px-3.5 py-2.5 text-base focus:outline-none focus:border-teal-700" />
+    </label>
+    <label class="block">
+      <span class="block text-small font-medium text-ink mb-1.5">E-mail <span class="text-accent">*</span></span>
+      <input required name="email" type="email" autocomplete="email" class="w-full border border-line bg-paper px-3.5 py-2.5 text-base focus:outline-none focus:border-teal-700" />
+    </label>
+    <label class="block">
+      <span class="block text-small font-medium text-ink mb-1.5">Telefoon</span>
+      <input name="telefoon" type="tel" autocomplete="tel" class="w-full border border-line bg-paper px-3.5 py-2.5 text-base focus:outline-none focus:border-teal-700" />
+    </label>
+  </div>
+
+  <label class="block">
+    <span class="block text-small font-medium text-ink mb-1.5">Organisatie</span>
+    <input name="organisatie" type="text" autocomplete="organization" class="w-full border border-line bg-paper px-3.5 py-2.5 text-base focus:outline-none focus:border-teal-700" />
+  </label>
+
+  <label class="block">
+    <span class="block text-small font-medium text-ink mb-1.5">Bericht <span class="text-accent">*</span></span>
+    <textarea required name="bericht" rows="5" class="w-full border border-line bg-paper px-3.5 py-2.5 text-base focus:outline-none focus:border-teal-700" placeholder="Vertel kort wat u zoekt — een norm waarover u twijfelt, een traject dat u overweegt, of een vraag waar u geen direct antwoord op heeft."></textarea>
+  </label>
+
+  <label class="flex items-start gap-3 text-small text-ink-soft">
+    <input required type="checkbox" name="akkoord" class="mt-1" />
+    <span>{t.forms.privacy}</span>
+  </label>
+
+  <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+
+  <div class="pt-2 flex flex-wrap items-center justify-between gap-3">
+    <p class="text-caption font-mono text-ink-soft uppercase tracking-wider">
+      Reactie binnen één werkdag.
+    </p>
+    <button type="submit" class="bg-teal-900 text-paper px-5 py-2.5 text-small font-medium rounded-md hover:bg-ink transition-colors">
+      Verstuur bericht
+    </button>
+  </div>
+
+  <div class="hidden pt-4 border-t border-line-cool" data-success>
+    <h3 class="font-display text-h4 text-teal-900">{t.forms.successTitle}</h3>
+    <p class="mt-2 text-small text-ink-soft">{t.forms.successBody}</p>
+  </div>
+  <div class="hidden pt-4 border-t border-line-cool" data-error>
+    <h3 class="font-display text-h4 text-accent">{t.forms.errorTitle}</h3>
+    <p class="mt-2 text-small text-ink-soft">{t.forms.errorBody}</p>
+  </div>
+</form>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form));
+    if (data.company) return;
+    const success = form.querySelector<HTMLElement>('[data-success]')!;
+    const errorBox = form.querySelector<HTMLElement>('[data-error]')!;
+    success.classList.add('hidden');
+    errorBox.classList.add('hidden');
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('submit failed');
+      form.reset();
+      success.classList.remove('hidden');
+    } catch {
+      errorBox.classList.remove('hidden');
+    }
+  });
+</script>

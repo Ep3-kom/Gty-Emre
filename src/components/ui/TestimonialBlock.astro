@@ -1,0 +1,18 @@
+---
+type Props = {
+  quote: string;
+  attribution: string;
+  context?: string;
+};
+const { quote, attribution, context } = Astro.props;
+---
+
+<figure class="container-x py-16 md:py-20">
+  <blockquote class="max-w-3xl font-display text-h2 leading-snug text-teal-900 display-italic">
+    “{quote}”
+  </blockquote>
+  <figcaption class="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-2">
+    <span class="mono-eyebrow text-teal-700">{attribution}</span>
+    {context && <span class="text-small text-ink-soft">{context}</span>}
+  </figcaption>
+</figure>

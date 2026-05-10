@@ -1,0 +1,51 @@
+---
+import Base from '~/layouts/Base.astro';
+import LegalBanner from '~/components/ui/LegalBanner.astro';
+import { siteData } from '~/data/site-data';
+---
+
+<Base title="Disclaimer" description="Disclaimer van de website van GTY." noindex={true}>
+  <article class="container-x py-16 md:py-20 max-w-3xl">
+    <p class="mono-eyebrow text-teal-700">Juridisch</p>
+    <h1 class="mt-6 font-display text-h1 text-teal-900">Disclaimer</h1>
+
+    <LegalBanner />
+
+    <div class="mt-10 space-y-8 text-base text-ink">
+      <section>
+        <h2 class="font-display text-h3 text-teal-900">Inhoud van deze website</h2>
+        <p class="mt-3">
+          {siteData.legalName} besteedt grote zorg aan de juistheid en actualiteit van de
+          informatie op deze website. Aan de inhoud kunnen echter geen rechten worden ontleend.
+          GTY aanvaardt geen aansprakelijkheid voor schade die voortvloeit uit het gebruik van
+          de informatie op deze website.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-display text-h3 text-teal-900">Verwijzingen</h2>
+        <p class="mt-3">
+          Deze website kan verwijzingen bevatten naar websites van derden. GTY heeft geen
+          zeggenschap over de inhoud van die websites en is niet aansprakelijk voor de
+          juistheid of beschikbaarheid daarvan.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-display text-h3 text-teal-900">Auteursrecht</h2>
+        <p class="mt-3">
+          De inhoud van deze website — teksten, beeldmateriaal, logo's en lay-out — is
+          eigendom van {siteData.legalName} of de oorspronkelijke makers. Overname, geheel
+          of gedeeltelijk, is niet toegestaan zonder voorafgaande schriftelijke toestemming.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-display text-h3 text-teal-900">Contact</h2>
+        <p class="mt-3">
+          Vragen of opmerkingen? <a href={siteData.contact.emailHref} class="link-underline text-teal-700">{siteData.contact.email}</a>.
+        </p>
+      </section>
+    </div>
+  </article>
+</Base>

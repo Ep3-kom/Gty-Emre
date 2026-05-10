@@ -1,0 +1,196 @@
+---
+import Base from '~/layouts/Base.astro';
+import Eyebrow from '~/components/ui/Eyebrow.astro';
+import NulmetingForm from '~/components/ui/NulmetingForm.astro';
+import AuditChecklist from '~/components/ui/AuditChecklist.astro';
+import CallToAction from '~/components/sections/CallToAction.astro';
+import { siteData } from '~/data/site-data';
+---
+
+<Base
+  title="Nulmeting"
+  description="Een GTY-nulmeting geeft u een eerlijk, onafhankelijk beeld van waar uw organisatie staat ten opzichte van een norm of doelstelling. Kosteloos, vrijblijvend."
+>
+  <section class="border-b border-line-cool">
+    <div class="container-x pt-12 md:pt-16 pb-16 md:pb-20">
+      <nav aria-label="Breadcrumb" class="mb-8 text-caption font-mono text-ink-soft uppercase tracking-wider">
+        <a href="/" class="hover:text-teal-700">Home</a>
+        <span class="mx-2 text-line-cool">/</span>
+        <span class="text-teal-700">Nulmeting</span>
+      </nav>
+
+      <div class="grid grid-cols-12 gap-x-6 gap-y-8">
+        <div class="col-span-12 lg:col-span-9">
+          <Eyebrow>De eerste stap, zonder verplichtingen</Eyebrow>
+          <h1 class="mt-6 font-display text-h1 md:text-[3.5rem] md:leading-[1.05] text-teal-900 text-balance">
+            Weet waar u staat.<br /><span class="display-italic">Voordat u een volgende stap zet.</span>
+          </h1>
+          <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">
+            Een GTY-nulmeting geeft u een eerlijk, onafhankelijk beeld van waar uw organisatie
+            nu staat — ten opzichte van een norm, een wettelijke vereiste of uw eigen
+            doelstellingen. Zonder verdere verplichting. Kosteloos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-20 md:py-24">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+      <div class="col-span-12 md:col-span-4">
+        <Eyebrow>Wat het is</Eyebrow>
+        <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+          Een eerlijk beeld.<br /><span class="display-italic">Zonder verrassingen achteraf.</span>
+        </h2>
+      </div>
+      <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
+        <p>
+          Een nulmeting is een onafhankelijke beoordeling van de huidige staat van uw
+          organisatie. We toetsen uw processen, documentatie en managementsysteem aan de eisen
+          van een relevante norm — of aan uw eigen doelstellingen, als certificering nog niet
+          aan de orde is.
+        </p>
+        <p>
+          Het resultaat is een helder overzicht van wat al op orde is, waar hiaten bestaan en
+          welke stappen nodig zijn om het gewenste niveau te bereiken. Geen aannames, alleen
+          feiten.
+        </p>
+        <p>
+          De nulmeting is een kosteloze, zelfstandige dienst. U bent niet verplicht om daarna
+          een vervolgopdracht bij GTY af te nemen. De rapportage is van u — wat u er daarna mee
+          doet, bepaalt u zelf.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream">
+    <div class="container-x py-20 md:py-24">
+      <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+        <div class="col-span-12 md:col-span-5">
+          <Eyebrow>Wanneer zinvol</Eyebrow>
+          <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+            Herkenbaar? Dan is een nulmeting<br /><span class="display-italic">de juiste eerste stap.</span>
+          </h2>
+        </div>
+        <div class="col-span-12 md:col-span-6 md:col-start-7">
+          <ul class="divide-y divide-line border-y border-line">
+            <li class="py-6">
+              <p class="font-display text-h4 text-teal-900">U overweegt certificering</p>
+              <p class="mt-3 text-base text-ink max-w-prose">
+                Voordat u een traject start, wilt u weten hoeveel werk dat vraagt en of uw
+                organisatie er al deels klaar voor is. Een nulmeting geeft dat beeld concreet,
+                zonder aannames.
+              </p>
+            </li>
+            <li class="py-6">
+              <p class="font-display text-h4 text-teal-900">U twijfelt of uw systeem nog voldoet</p>
+              <p class="mt-3 text-base text-ink max-w-prose">
+                Normen worden herzien, uw organisatie is gegroeid of veranderd. Een nulmeting
+                brengt in kaart of uw huidige systeem nog aansluit, en waar bijsturing nodig is.
+              </p>
+            </li>
+            <li class="py-6">
+              <p class="font-display text-h4 text-teal-900">Intern is er onduidelijkheid</p>
+              <p class="mt-3 text-base text-ink max-w-prose">
+                Niet iedereen heeft hetzelfde beeld van hoe de organisatie ervoor staat. Een
+                nulmeting geeft een objectief, onafhankelijk vertrekpunt waar iedereen op kan
+                bouwen.
+              </p>
+            </li>
+            <li class="py-6">
+              <p class="font-display text-h4 text-teal-900">U wilt een samenwerking goed starten</p>
+              <p class="mt-3 text-base text-ink max-w-prose">
+                Veel GTY-partners starten met een nulmeting als fundament voor een
+                certificeringstraject of het Partnerprogramma. Zo weten we beiden precies wat
+                de uitgangssituatie is.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-20 md:py-24">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+      <div class="col-span-12 md:col-span-4">
+        <Eyebrow>Wat we in kaart brengen</Eyebrow>
+        <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+          Geen aannames.<br /><span class="display-italic">Alleen feiten.</span>
+        </h2>
+      </div>
+      <div class="col-span-12 md:col-span-7 md:col-start-6">
+        <ol class="space-y-5">
+          <li class="border-l-2 border-teal-700 pl-5">
+            <p class="text-base text-ink"><strong class="font-medium">Aansluiting op normeisen.</strong> De mate waarin uw processen voldoen aan de relevante norm — niet als afvink-lijst, maar als analyse van wat er werkelijk gebeurt versus wat de norm vraagt.</p>
+          </li>
+          <li class="border-l-2 border-teal-700 pl-5">
+            <p class="text-base text-ink"><strong class="font-medium">Documentatie en beleid.</strong> Volledigheid, actualiteit en bruikbaarheid in de praktijk. Documentatie die niemand raadpleegt is een audit-risico.</p>
+          </li>
+          <li class="border-l-2 border-teal-700 pl-5">
+            <p class="text-base text-ink"><strong class="font-medium">Inrichting van het managementsysteem.</strong> Verantwoordelijkheden, sturing, monitoring — en de hiaten daartussen.</p>
+          </li>
+          <li class="border-l-2 border-teal-700 pl-5">
+            <p class="text-base text-ink"><strong class="font-medium">Wettelijke verplichtingen.</strong> Welke wet- en regelgeving op uw organisatie van toepassing is, en in hoeverre u daaraan voldoet.</p>
+          </li>
+          <li class="border-l-2 border-teal-700 pl-5">
+            <p class="text-base text-ink"><strong class="font-medium">Prioritering.</strong> Welke stappen het meest urgent zijn, en welke inspanning ze vragen — uitgedrukt in tijd en complexiteit, niet alleen in een vinkje.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-line-cool bg-paper">
+    <div class="container-x py-20 md:py-24">
+      <div class="max-w-narrow mb-10">
+        <Eyebrow>Indicatieve zelftest</Eyebrow>
+        <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+          Probeer het zelf in <span class="display-italic">een minuut.</span>
+        </h2>
+        <p class="mt-5 max-w-prose text-base text-ink-soft">
+          Acht vragen die een eerste richting geven. Geen formele beoordeling — alleen iets
+          om mee in een gesprek te stappen.
+        </p>
+      </div>
+      <div class="max-w-3xl">
+        <AuditChecklist />
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-20 md:py-24">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+      <div class="col-span-12 md:col-span-5">
+        <Eyebrow>Aanvragen</Eyebrow>
+        <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+          Vraag uw kosteloze<br /><span class="display-italic">nulmeting aan.</span>
+        </h2>
+        <p class="mt-5 text-base text-ink-soft max-w-prose">
+          Drie korte stappen. Geen verplichting. Geen kosten. Binnen één werkdag nemen we
+          contact op om de afspraak in te plannen.
+        </p>
+        <dl class="mt-10 space-y-5 text-small">
+          <div>
+            <dt class="mono-eyebrow text-teal-700">Liever direct bellen?</dt>
+            <dd class="mt-1.5"><a href={siteData.contact.phoneHref} class="font-mono text-teal-900 link-underline">{siteData.contact.phone}</a></dd>
+          </div>
+          <div>
+            <dt class="mono-eyebrow text-teal-700">Of mailen?</dt>
+            <dd class="mt-1.5"><a href={siteData.contact.emailHref} class="text-teal-900 link-underline">{siteData.contact.email}</a></dd>
+          </div>
+        </dl>
+      </div>
+      <div class="col-span-12 md:col-span-7 md:col-start-6">
+        <NulmetingForm />
+      </div>
+    </div>
+  </section>
+
+  <CallToAction
+    eyebrow="Nog niet zeker?"
+    title="Even sparren mag ook."
+    body="Twijfelt u of een nulmeting nu de juiste stap is? Plan een vrijblijvend kennismakingsgesprek. We luisteren, denken mee, en zeggen het eerlijk als een nulmeting nog niet aan de orde is."
+  />
+</Base>

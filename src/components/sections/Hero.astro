@@ -1,0 +1,59 @@
+---
+import { siteData } from '~/data/site-data';
+import Eyebrow from '~/components/ui/Eyebrow.astro';
+import Button from '~/components/ui/Button.astro';
+---
+
+<section class="relative overflow-hidden">
+  <div class="container-x pt-16 md:pt-24 pb-20 md:pb-28">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+      <div class="col-span-12 lg:col-span-8">
+        <Eyebrow>De standaard in certificering en compliance</Eyebrow>
+
+        <h1 class="mt-6 font-display text-[2.6rem] leading-[1.05] md:text-hero text-balance text-teal-900">
+          Zekerheid in certificering.<br />
+          <span class="display-italic text-teal-700">Rust in compliance.</span>
+        </h1>
+
+        <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">
+          Uw organisatie heeft een certificaat nodig — voor een aanbesteding, een opdrachtgever
+          of een sectoreis. GTY is de partner die u er stap voor stap naartoe leidt, en die ook
+          daarna naast u blijft. Zodat het certificaat niet alleen behaald wordt, maar werkt.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-3">
+          <Button href={siteData.cta.primary.href} size="lg">{siteData.cta.primary.label}</Button>
+          <Button href={siteData.cta.secondary.href} variant="ghost" size="lg">
+            {siteData.cta.secondary.label} →
+          </Button>
+        </div>
+      </div>
+
+      <aside class="col-span-12 lg:col-span-4 lg:col-start-9 self-end">
+        <div class="border border-line-cool bg-cream/60 p-7 md:p-8">
+          <p class="mono-eyebrow text-teal-700">Wat GTY belooft</p>
+          <dl class="mt-5 space-y-4">
+            <div>
+              <dt class="font-display text-h4 text-teal-900">Zekerheid</dt>
+              <dd class="mt-1 text-small text-ink-soft">U weet altijd waar u staat en wat er komt.</dd>
+            </div>
+            <div class="rule-cream"></div>
+            <div>
+              <dt class="font-display text-h4 text-teal-900">Rust</dt>
+              <dd class="mt-1 text-small text-ink-soft">Compliance is geregeld. Geen verrassingen.</dd>
+            </div>
+            <div class="rule-cream"></div>
+            <div>
+              <dt class="font-display text-h4 text-teal-900">Controle</dt>
+              <dd class="mt-1 text-small text-ink-soft">Uw organisatie. Uw systeem. Uw grip.</dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="container-x">
+    <div class="rule"></div>
+  </div>
+</section>

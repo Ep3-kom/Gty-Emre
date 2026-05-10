@@ -1,0 +1,49 @@
+---
+type Fase = {
+  nr: string;
+  titel: string;
+  duur: string;
+  body: string;
+  stappen: string[];
+};
+
+type Props = { fases: Fase[] };
+const { fases } = Astro.props;
+---
+
+<div class="relative">
+  <svg
+    aria-hidden="true"
+    class="hidden md:block absolute left-0 right-0 top-[36px] w-full h-px"
+    viewBox="0 0 100 1"
+    preserveAspectRatio="none"
+    width="100%"
+    height="1"
+  >
+    <line x1="0" y1="0.5" x2="100" y2="0.5" stroke="#D9E5E5" stroke-width="1" stroke-dasharray="0.6 0.4" />
+  </svg>
+
+  <ol class="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-8">
+    {fases.map((f) => (
+      <li class="relative">
+        <div class="flex items-baseline gap-3">
+          <span aria-hidden="true" class="hidden md:flex w-[18px] h-[18px] items-center justify-center bg-paper relative -top-1">
+            <span class="block w-2.5 h-2.5 rounded-full bg-teal-700"></span>
+          </span>
+          <span class="mono-eyebrow text-teal-700">Fase {f.nr}</span>
+        </div>
+        <h3 class="mt-4 font-display text-h3 text-teal-900">{f.titel}</h3>
+        <p class="mt-2 text-caption font-mono text-ink-soft uppercase tracking-wider">{f.duur}</p>
+        <p class="mt-5 text-base text-ink">{f.body}</p>
+        <ul class="mt-5 space-y-2 text-small text-ink-soft">
+          {f.stappen.map((s) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-[10px] block w-2 h-px bg-teal-700/60 shrink-0" aria-hidden="true"></span>
+              <span>{s}</span>
+            </li>
+          ))}
+        </ul>
+      </li>
+    ))}
+  </ol>
+</div>

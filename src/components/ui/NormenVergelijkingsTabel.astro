@@ -1,0 +1,38 @@
+---
+import { normen } from '~/data/normen';
+---
+
+<div class="overflow-x-auto -mx-6 md:mx-0">
+  <table class="min-w-[840px] w-full border-y border-line-cool text-small">
+    <thead class="bg-cream sticky top-0">
+      <tr class="text-left">
+        <th scope="col" class="py-4 px-5 mono-eyebrow text-teal-700 border-b border-line">Norm</th>
+        <th scope="col" class="py-4 px-5 mono-eyebrow text-teal-700 border-b border-line">Voor wie</th>
+        <th scope="col" class="py-4 px-5 mono-eyebrow text-teal-700 border-b border-line">Doorlooptijd</th>
+        <th scope="col" class="py-4 px-5 mono-eyebrow text-teal-700 border-b border-line">Auditcyclus</th>
+        <th scope="col" class="py-4 px-5 mono-eyebrow text-teal-700 border-b border-line">Sectorfocus</th>
+        <th scope="col" class="py-4 px-5 mono-eyebrow text-teal-700 border-b border-line"><span class="sr-only">Detail</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      {normen.map((n) => (
+        <tr class="border-b border-line-cool hover:bg-teal-50/40 transition-colors">
+          <td class="py-5 px-5 align-top">
+            <div class="font-mono text-teal-900 font-medium">{n.code}</div>
+            <div class="mt-1 text-caption text-ink-soft">{n.shortTitle}</div>
+          </td>
+          <td class="py-5 px-5 align-top text-ink max-w-[260px]">{n.audience}</td>
+          <td class="py-5 px-5 align-top font-mono text-ink">{n.doorlooptijd}</td>
+          <td class="py-5 px-5 align-top text-ink">{n.auditFrequentie}</td>
+          <td class="py-5 px-5 align-top text-ink-soft max-w-[260px]">{n.sectorFocus}</td>
+          <td class="py-5 px-5 align-top text-right">
+            <a href={`/certificering/${n.slug}/`} class="text-teal-700 link-underline whitespace-nowrap">Detail →</a>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  <p class="mt-4 px-6 md:px-0 text-caption text-ink-soft font-mono">
+    Doorlooptijden indicatief — afhankelijk van uw organisatie en uitgangspositie.
+  </p>
+</div>

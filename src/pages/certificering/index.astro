@@ -1,0 +1,138 @@
+---
+import Base from '~/layouts/Base.astro';
+import Eyebrow from '~/components/ui/Eyebrow.astro';
+import NormenVergelijkingsTabel from '~/components/ui/NormenVergelijkingsTabel.astro';
+import CallToAction from '~/components/sections/CallToAction.astro';
+import { normen } from '~/data/normen';
+import { breadcrumbJsonLd, canonical } from '~/lib/seo';
+import { siteData } from '~/data/site-data';
+
+const url = canonical(Astro.url.pathname);
+const jsonLd = [
+  breadcrumbJsonLd([
+    { name: 'Home', url: siteData.url },
+    { name: 'Certificering', url },
+  ]),
+];
+---
+
+<Base
+  title="Certificering"
+  description="Overzicht van de normen waar GTY uw organisatie naar certificering begeleidt: ISO 9001, ISO 14001, ISO 27001, HKZ en NEN 7510."
+  jsonLd={jsonLd}
+>
+  <section class="border-b border-line-cool">
+    <div class="container-x pt-12 md:pt-16 pb-16">
+      <nav aria-label="Breadcrumb" class="mb-8 text-caption font-mono text-ink-soft uppercase tracking-wider">
+        <a href="/" class="hover:text-teal-700">Home</a>
+        <span class="mx-2 text-line-cool">/</span>
+        <span class="text-teal-700">Certificering</span>
+      </nav>
+
+      <div class="grid grid-cols-12 gap-x-6 gap-y-8">
+        <div class="col-span-12 lg:col-span-8">
+          <Eyebrow>Samen naar certificering</Eyebrow>
+          <h1 class="mt-6 font-display text-h1 md:text-[3.5rem] md:leading-[1.05] text-teal-900 text-balance">
+            Uw certificaat. <span class="display-italic">Onze gezamenlijke inzet.</span>
+          </h1>
+          <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">
+            Welke norm voor uw organisatie het juiste antwoord is, hangt af van wat u levert,
+            aan wie en onder welke voorwaarden. Hieronder een vergelijkend overzicht. Bij twijfel:
+            laat een nulmeting beoordelen wat uw uitgangspositie is en welke norm — of combinatie —
+            het meest passend is.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-16 md:py-20">
+    <div class="flex items-end justify-between gap-6 mb-8">
+      <div>
+        <Eyebrow>Vergelijking</Eyebrow>
+        <h2 class="mt-5 font-display text-h2 text-teal-900">De vijf normen op een rij.</h2>
+      </div>
+      <a href="/nulmeting/" class="hidden md:inline-block text-small text-teal-700 link-underline whitespace-nowrap">
+        Twijfel? Vraag een nulmeting →
+      </a>
+    </div>
+
+    <NormenVergelijkingsTabel />
+  </section>
+
+  <section class="bg-cream">
+    <div class="container-x py-20 md:py-24">
+      <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+        <div class="col-span-12 md:col-span-4">
+          <Eyebrow>Wat het oplevert</Eyebrow>
+          <h2 class="mt-5 font-display text-h2 text-teal-900 text-balance">
+            Meer dan een certificaat aan de muur.
+          </h2>
+        </div>
+        <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
+          <p>
+            <strong class="font-medium">Toegang tot uw markt.</strong> Voor veel sectoren is een
+            certificaat een voorwaarde voor aanbestedingen, contracten met zorgverzekeraars of
+            samenwerking met grote opdrachtgevers. Het verschil tussen wel of niet meedoen.
+          </p>
+          <p>
+            <strong class="font-medium">Grip op uw organisatie.</strong> Een goed traject dwingt
+            scherp na te denken over wie waarvoor verantwoordelijk is, hoe processen lopen, en
+            welke risico\'s u accepteert. Dat is niet de bijwerking — dat is de waarde.
+          </p>
+          <p>
+            <strong class="font-medium">Een basis om op te bouwen.</strong> Het managementsysteem
+            blijft staan als de markt verandert, als u groeit, of als er nieuwe normen bijkomen.
+            Een goed eerste certificaat maakt het tweede aanzienlijk eenvoudiger.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-20 md:py-24">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-12">
+      <div class="col-span-12 md:col-span-5">
+        <Eyebrow>Welke norm</Eyebrow>
+        <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+          Welke past bij <span class="display-italic">uw organisatie?</span>
+        </h2>
+        <p class="mt-5 text-base text-ink-soft max-w-prose">
+          Een korte richtlijn — niet als beslismodel, wel om uw eerste gesprek met GTY scherper
+          te kunnen voorbereiden.
+        </p>
+      </div>
+
+      <div class="col-span-12 md:col-span-6 md:col-start-7">
+        <ol class="space-y-7 text-base text-ink">
+          <li class="border-l-2 border-teal-700 pl-5">
+            <p class="mono-eyebrow text-teal-700">Klassieke aanbestedingseis</p>
+            <p class="mt-2"><strong>ISO 9001</strong> — wanneer een opdrachtgever simpelweg "ISO-gecertificeerd" vraagt, bedoelt men in 90% van de gevallen ISO 9001.</p>
+          </li>
+          <li class="border-l-2 border-teal-700 pl-5">
+            <p class="mono-eyebrow text-teal-700">Aantoonbaar duurzaam ondernemen</p>
+            <p class="mt-2"><strong>ISO 14001</strong> — vaak gevraagd door overheid, bouw en infrastructuur. Combineerbaar met ISO 9001.</p>
+          </li>
+          <li class="border-l-2 border-teal-700 pl-5">
+            <p class="mono-eyebrow text-teal-700">Werken met data van anderen</p>
+            <p class="mt-2"><strong>ISO 27001</strong> — voor IT, SaaS, financieel, advocatuur, overheid en alles wat met vertrouwelijke data werkt.</p>
+          </li>
+          <li class="border-l-2 border-teal-700 pl-5">
+            <p class="mono-eyebrow text-teal-700">Zorg en welzijn</p>
+            <p class="mt-2"><strong>HKZ</strong> — sectorspecifiek voor jeugdzorg, gehandicaptenzorg, thuiszorg, GGZ en andere zorgsegmenten.</p>
+          </li>
+          <li class="border-l-2 border-teal-700 pl-5">
+            <p class="mono-eyebrow text-teal-700">Persoonlijke gezondheidsinformatie</p>
+            <p class="mt-2"><strong>NEN 7510</strong> — voor zorgorganisaties en zorg-IT-leveranciers. Vaak in combinatie met HKZ of ISO 27001.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction
+    eyebrow="Onbekend terrein"
+    title="Niet zeker welke norm bij u past?"
+    body="Begin met een nulmeting. Een GTY-consultant brengt uw uitgangspositie in kaart en adviseert welke norm — of combinatie — bij uw organisatie en uw markt past. Kosteloos, vrijblijvend, op feiten gebaseerd."
+  />
+</Base>

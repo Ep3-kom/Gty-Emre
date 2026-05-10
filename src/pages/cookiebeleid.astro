@@ -1,0 +1,50 @@
+---
+import Base from '~/layouts/Base.astro';
+import { siteData } from '~/data/site-data';
+---
+
+<Base title="Cookiebeleid" description="GTY gebruikt geen tracking cookies. Lees hier hoe we omgaan met analytics." noindex={true}>
+  <article class="container-x py-16 md:py-20 max-w-3xl">
+    <p class="mono-eyebrow text-teal-700">Juridisch</p>
+    <h1 class="mt-6 font-display text-h1 text-teal-900">Cookiebeleid</h1>
+
+    <div class="mt-10 space-y-8 text-base text-ink">
+      <section>
+        <h2 class="font-display text-h3 text-teal-900">Geen tracking cookies</h2>
+        <p class="mt-3">
+          Deze website gebruikt geen tracking cookies. We gebruiken geen advertentiesystemen,
+          geen pixels van sociale media, en geen scripts die uw bezoek volgen op andere
+          websites.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-display text-h3 text-teal-900">Functionele opslag</h2>
+        <p class="mt-3">
+          Wij gebruiken uitsluitend lokale browser-opslag (sessionStorage) om binnen één bezoek
+          te onthouden of u de privacy-mededeling onderaan de pagina al heeft gezien. Deze
+          informatie verlaat uw browser niet en wordt automatisch verwijderd zodra u de
+          browser sluit.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-display text-h3 text-teal-900">Analytics zonder cookies</h2>
+        <p class="mt-3">
+          Voor bezoekanalyses gebruiken wij Plausible Analytics — een privacy-vriendelijke
+          analytics-dienst die geen cookies plaatst, geen IP-adressen opslaat en geen
+          persoonsgegevens verwerkt. De geaggregeerde, geanonimiseerde statistieken
+          (bezoekersaantallen, populaire pagina's, verwijzende websites) helpen ons de site
+          te verbeteren — meer niet.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-display text-h3 text-teal-900">Vragen?</h2>
+        <p class="mt-3">
+          Neem contact op via <a href={siteData.contact.emailHref} class="link-underline text-teal-700">{siteData.contact.email}</a>.
+        </p>
+      </section>
+    </div>
+  </article>
+</Base>

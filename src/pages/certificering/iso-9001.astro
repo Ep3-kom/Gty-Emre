@@ -1,0 +1,98 @@
+---
+import NormPagina from '~/layouts/NormPaginaTemplate.astro';
+import { normBySlug } from '~/data/normen';
+const norm = normBySlug('iso-9001')!;
+---
+
+<NormPagina
+  norm={norm}
+  oneliner="ISO 9001. De norm die aantoont dat kwaliteit geen toeval is."
+  intro="ISO 9001 is de meest gevraagde certificering bij aanbestedingen, opdrachtgevers en grote afnemers. Het toont aan dat uw organisatie kwaliteit niet aan goede bedoelingen overlaat, maar systematisch borgt — van directie tot werkvloer. GTY begeleidt u door het volledige traject."
+  watIs={{
+    eyebrow: 'Wat is ISO 9001',
+    titel: 'De internationale standaard voor kwaliteitsmanagement.',
+    body: [
+      'ISO 9001 stelt eisen aan het kwaliteitsmanagementsysteem van een organisatie. De norm gaat niet over de kwaliteit van een specifiek product of dienst, maar over de mate waarin een organisatie haar processen kent, beheerst en verbetert. Dat onderscheid is essentieel: een ISO 9001-certificaat zegt niet dat u het beste levert in uw markt, het zegt dat u kunt aantonen dat u levert wat u belooft — keer op keer, met gerichte verbetering waar dat nodig is.',
+      'Het uitgangspunt is procesbenadering en risico-gebaseerd denken. Welke processen leiden tot uw resultaat, welke risico\'s en kansen kleven daaraan, en hoe stuurt u daarop? De norm dwingt u die vragen scherp te beantwoorden, niet als papierwerk maar als manier van werken. Daarom is ISO 9001 toepasbaar voor elke organisatie — van een technische dienstverlener met tien medewerkers tot een productieorganisatie met meerdere vestigingen.',
+      'In de praktijk betekent het: heldere verantwoordelijkheden, gedocumenteerde processen waar dat zinvol is, monitoring van wat ertoe doet, en een directie die actief stuurt op kwaliteitsdoelstellingen. Niet meer regels dan nodig, niet minder dan de norm vraagt.',
+    ],
+  }}
+  voorWie={{
+    eyebrow: 'Voor wie',
+    titel: 'Voor organisaties die kwaliteit willen bewijzen én borgen.',
+    body: [
+      'ISO 9001 wordt door overheden, grote opdrachtgevers en aanbestedingsdocumenten regelmatig als harde eis gesteld. Dat geldt voor beveiligingsbedrijven, technische dienstverleners, IT-bedrijven, zorginstellingen en steeds vaker ook adviesbureaus. Zonder certificaat valt u in die markt simpelweg af.',
+      'Maar er zijn ook organisaties die ISO 9001 oppakken zonder externe verplichting. Omdat ze merken dat groei tegen de grenzen van hun interne organisatie aanloopt. Omdat verantwoordelijkheden onhelder zijn geworden, processen per medewerker verschillen, of omdat de directie geen feitelijke grip heeft op wat er gebeurt. Voor die organisaties is ISO 9001 geen doel maar een instrument: een gestructureerde manier om de eigen organisatie weer kenbaar en bestuurbaar te maken.',
+      'Sectorvoorbeelden waarin GTY ervaring heeft opgebouwd: beveiligingsbedrijven, IT- en SaaS-leveranciers, dienstverleners in de zakelijke markt, technische installatiebedrijven en zorgaanbieders die naast HKZ ook ISO 9001 voeren.',
+    ],
+  }}
+  hoeWerkt={{
+    eyebrow: 'Hoe GTY werkt',
+    titel: 'Samen bouwen we een systeem dat echt werkt.',
+    body: [
+      'GTY start met een nulmeting. We brengen in kaart hoe uw organisatie nu werkt, welke processen al goed lopen, waar afwijkingen zijn ten opzichte van de norm en welke risico\'s nog niet beheerst worden. Het resultaat is een feitelijk vertrekpunt — geen aannames, geen standaard checklist die voor elke organisatie hetzelfde oplevert.',
+      'Op basis daarvan bouwen we het kwaliteitsmanagementsysteem samen op. Procesbeschrijvingen alleen waar ze waarde toevoegen, een directiebeoordeling die stuurt in plaats van administreert, een interne auditprogramma dat afwijkingen vindt voordat de externe auditor dat doet. We werken naast uw team, niet erboven of er los van. Eén consultant die uw organisatie leert kennen, in plaats van een wisselend team dat steeds opnieuw moet worden bijgepraat.',
+      'In de aanloop naar de externe audit zorgen we dat directie en kernmedewerkers weten wat er gevraagd wordt, dat documentatie sluit, en dat we voorbereid zijn op de vragen die deze certificerende instelling in deze sector stelt. Tijdens de audit zijn we aanwezig — als ondersteuning, niet als spreekbuis. Na het certificaat blijft GTY beschikbaar voor borging.',
+    ],
+  }}
+  valkuilen={[
+    {
+      titel: 'Documentatie die niemand gebruikt',
+      body: 'Trajecten die te zwaar leunen op uitgebreide procesbeschrijvingen produceren een systeem dat in een audit standhoudt maar in de praktijk genegeerd wordt. GTY bouwt alleen documentatie waar het werk om vraagt — de norm vereist minder vastlegging dan veel consultants suggereren.',
+    },
+    {
+      titel: 'De directiebeoordeling als afvink-vergadering',
+      body: 'Veel organisaties lopen jaarlijks een vaste agenda af zonder dat het management er werkelijk op stuurt. Dat is precies wat externe auditors herkennen. GTY zet de directiebeoordeling neer als een gesprek dat de directie zelf wil voeren, met cijfers die ertoe doen.',
+    },
+    {
+      titel: 'Risico-analyse die alleen "papier-risico\'s" benoemt',
+      body: 'Risico-gebaseerd denken is een norm-eis die makkelijk verzandt in algemeenheden. We werken altijd vanuit de werkelijke risico\'s die uw operatie kent — niet vanuit een sjabloon dat overal opgeplakt wordt.',
+    },
+    {
+      titel: 'Een interne audit die te "vriendelijk" is',
+      body: 'Interne auditors die collega\'s niet willen confronteren leveren rapportages waarin niets staat. Bij de externe audit komt het er dan in één keer hard uit. GTY traint of voert interne audits uit die wél vinden wat er te vinden is.',
+    },
+    {
+      titel: 'Een traject dat eindigt bij de certificeringsbeslissing',
+      body: 'Het certificaat is geen eindpunt. Wat in jaar één wordt opgeleverd moet in jaar twee en drie nog steeds kloppen. Organisaties die geen borging organiseren, lopen tegen surveillance-audits aan die elk jaar opnieuw stress opleveren.',
+    },
+    {
+      titel: 'De norm-eisen letterlijk volgen, in plaats van het doel ervan',
+      body: 'ISO 9001 is doelgericht geschreven, niet voorschrijvend. Wie de norm leest als een lijst eisen om af te vinken, mist de bedoeling. GTY vertaalt de eisen naar wat ze in uw context zinvol maakt.',
+    },
+  ]}
+  daarna={{
+    eyebrow: 'En daarna',
+    titel: 'Het certificaat is het begin.',
+    body: [
+      'Een ISO 9001-certificaat is drie jaar geldig, met jaarlijkse surveillance-audits die toetsen of het systeem nog werkt zoals beloofd. Tussen de audits door verandert er altijd iets: een herziene norm, nieuwe medewerkers, een gewijzigd proces, een nieuwe wet die in uw sector relevant wordt.',
+      'Veel GTY-partners kiezen daarom voor het Partnerprogramma. Kwartaalaudits, normupdates, ondersteuning bij directiebeoordeling en een vast aanspreekpunt — zodat surveillance-audits geen jaarlijks alarm zijn maar een rustig gesprek over een systeem dat continu actueel is gehouden.',
+    ],
+  }}
+  faq={[
+    {
+      vraag: 'Hoe lang duurt een ISO 9001-traject?',
+      antwoord: 'Indicatief 4–6 maanden van nulmeting tot externe audit, afhankelijk van uw uitgangspositie, de omvang van de organisatie en de mate waarin processen al gedocumenteerd zijn. Een organisatie die al volgens de geest van de norm werkt kan in 3 maanden klaar zijn; een organisatie die volledig opnieuw begint heeft soms 8–9 maanden nodig.',
+    },
+    {
+      vraag: 'Welke certificerende instelling kiezen we?',
+      antwoord: 'GTY voert zelf geen externe audits uit — dat is bewust gescheiden. Wij adviseren u over geaccrediteerde certificerende instellingen die bij uw sector en organisatieomvang passen. U sluit het contract direct met de CI; GTY begeleidt het traject.',
+    },
+    {
+      vraag: 'Moeten alle processen worden beschreven?',
+      antwoord: 'Nee. ISO 9001:2015 vereist alleen documentatie waar dat zinvol is voor de werking van het kwaliteitsmanagementsysteem. Wij beperken ons tot wat de norm verplicht stelt en wat uw organisatie helpt — verder gaan we niet.',
+    },
+    {
+      vraag: 'Kan ISO 9001 gecombineerd worden met andere normen?',
+      antwoord: 'Ja, en dat is in de praktijk vaak efficiënter. ISO 9001, ISO 14001 en ISO 27001 delen dezelfde overkoepelende structuur (HLS), waardoor één geïntegreerd managementsysteem mogelijk is. GTY kan parallelle of opvolgende trajecten begeleiden.',
+    },
+    {
+      vraag: 'Wat is het verschil tussen ISO 9001 en HKZ voor zorgorganisaties?',
+      antwoord: 'HKZ is sectorspecifiek voor zorg en welzijn en bevat aanvullende eisen op het gebied van cliëntgerichtheid en zorgprocessen. Voor veel zorgorganisaties volstaat HKZ alleen, maar opdrachtgevers vragen soms ISO 9001 daarnaast — bijvoorbeeld voor ondersteunende diensten of niet-zorggebonden activiteiten.',
+    },
+    {
+      vraag: 'Wat gebeurt er als de externe auditor afwijkingen vindt?',
+      antwoord: 'Categorie A-afwijkingen (kritisch) moeten worden opgelost voordat het certificaat wordt afgegeven. Categorie B-afwijkingen worden opgevolgd in een corrigerend actieplan dat binnen drie maanden moet zijn afgerond. GTY begeleidt deze opvolging zodat het certificaat alsnog tijdig wordt verleend.',
+    },
+  ]}
+/>

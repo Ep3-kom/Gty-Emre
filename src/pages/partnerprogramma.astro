@@ -1,0 +1,269 @@
+---
+import Base from '~/layouts/Base.astro';
+import Eyebrow from '~/components/ui/Eyebrow.astro';
+import Button from '~/components/ui/Button.astro';
+import CallToAction from '~/components/sections/CallToAction.astro';
+import { siteData } from '~/data/site-data';
+import { serviceJsonLd, canonical } from '~/lib/seo';
+
+const url = canonical(Astro.url.pathname);
+const jsonLd = [serviceJsonLd({ name: 'Partnerprogramma', description: 'Structurele compliance-borging na certificering: kwartaalaudits, normupdates en een vast aanspreekpunt.', url })];
+---
+
+<Base
+  title="Partnerprogramma"
+  description="Structurele compliance, afgestemd op uw organisatie. Het Partnerprogramma borgt naleving na certificering — kwartaalaudits, normupdates, trainingen en één vast aanspreekpunt."
+  jsonLd={jsonLd}
+>
+  <section class="border-b border-line-cool">
+    <div class="container-x pt-12 md:pt-16 pb-16 md:pb-20">
+      <nav aria-label="Breadcrumb" class="mb-8 text-caption font-mono text-ink-soft uppercase tracking-wider">
+        <a href="/" class="hover:text-teal-700">Home</a>
+        <span class="mx-2 text-line-cool">/</span>
+        <span class="text-teal-700">Partnerprogramma</span>
+      </nav>
+
+      <div class="grid grid-cols-12 gap-x-6 gap-y-8">
+        <div class="col-span-12 lg:col-span-9">
+          <Eyebrow>Borging na certificering</Eyebrow>
+          <h1 class="mt-6 font-display text-h1 md:text-[3.5rem] md:leading-[1.05] text-teal-900 text-balance">
+            Structurele compliance,<br /><span class="display-italic">afgestemd op uw organisatie.</span>
+          </h1>
+          <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">
+            Na certificering begint het echte werk: naleving borgen, documentatie actueel
+            houden, voorbereid blijven op surveillance- en hercertificeringsaudits. Het
+            Partnerprogramma vangt dat op — als verlengstuk van uw management, het hele
+            jaar door.
+          </p>
+          <div class="mt-9 flex flex-wrap gap-3">
+            <Button href={siteData.cta.primary.href} size="lg">{siteData.cta.primary.label}</Button>
+            <Button href="#wat-het-inhoudt" variant="ghost" size="lg">Lees wat het inhoudt →</Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-20 md:py-24">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+      <div class="col-span-12 md:col-span-4">
+        <Eyebrow>Het probleem</Eyebrow>
+        <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+          Compliance regelt <span class="display-italic">zichzelf niet.</span>
+        </h2>
+      </div>
+      <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
+        <p>
+          Het certificaat hangt aan de muur, en dan? Normen worden herzien — ISO 27001 ging
+          in 2022 op de schop, NEN 7510 volgt eigen ritmes, HKZ-schema's worden periodiek
+          bijgesteld. Processen veranderen — een nieuw IT-systeem, een gewijzigde
+          dienstverlening, een andere organisatiestructuur. Medewerkers wisselen — de
+          kwaliteitsfunctionaris die alles bouwde, vertrekt. Zorgteams krijgen nieuwe
+          collega's die de werkwijze nog niet kennen.
+        </p>
+        <p>
+          Tussen surveillance-audits in raakt het systeem in de praktijk uit fase met de
+          documentatie. Niemand merkt het — totdat de auditor in jaar twee terugkomt en de
+          afwijkingen meeneemt die er een jaar eerder nog niet waren. Of erger: tot er een
+          incident gebeurt en blijkt dat de procedure die zou moeten werken al een tijdje
+          niet meer aansluit op de werkelijkheid.
+        </p>
+        <p class="text-ink-soft">
+          Compliance is geen project dat afloopt. Het is een toestand die onderhoud vraagt.
+          Wie dat onderhoud niet organiseert, onderhandelt elk jaar opnieuw met de
+          gevolgen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="wat-het-inhoudt" class="bg-cream">
+    <div class="container-x py-20 md:py-24">
+      <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+        <div class="col-span-12 md:col-span-5">
+          <Eyebrow>Wat het inhoudt</Eyebrow>
+          <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+            Geen vast programma.<br /><span class="display-italic">Een partner die past.</span>
+          </h2>
+          <p class="mt-5 text-base text-ink-soft max-w-prose">
+            Het Partnerprogramma kent geen tariefkaart met vaste pakketten. Wat uw organisatie
+            nodig heeft, hangt af van de norm, het volwassenheidsniveau van het systeem, en
+            de mate van wijziging in uw bedrijfsvoering. Hieronder de bouwstenen waaruit we
+            samen een passend programma stellen.
+          </p>
+        </div>
+
+        <div class="col-span-12 md:col-span-7 md:col-start-6">
+          <ol class="space-y-0">
+            <li class="border-y border-line py-7 grid grid-cols-12 gap-4">
+              <div class="col-span-12 md:col-span-4">
+                <p class="mono-eyebrow text-teal-700">01</p>
+                <h3 class="mt-2 font-display text-h4 text-teal-900">Kwartaalaudits</h3>
+              </div>
+              <div class="col-span-12 md:col-span-8 text-base text-ink">
+                <p>
+                  Vier keer per jaar een interne audit op een wisselend deel van uw
+                  managementsysteem. Niet als verplicht nummer, maar als doelgerichte
+                  steekproef die afwijkingen vindt voordat ze aan het oppervlak komen tijdens
+                  een externe audit.
+                </p>
+              </div>
+            </li>
+            <li class="border-b border-line py-7 grid grid-cols-12 gap-4">
+              <div class="col-span-12 md:col-span-4">
+                <p class="mono-eyebrow text-teal-700">02</p>
+                <h3 class="mt-2 font-display text-h4 text-teal-900">Beleids- en normupdates</h3>
+              </div>
+              <div class="col-span-12 md:col-span-8 text-base text-ink">
+                <p>
+                  Wijzigingen in de norm, in relevante wet- en regelgeving, in branche-eisen
+                  van zorgverzekeraars of opdrachtgevers — wij signaleren wat voor uw
+                  organisatie relevant is, en passen het systeem aan voordat het een
+                  probleem wordt.
+                </p>
+              </div>
+            </li>
+            <li class="border-b border-line py-7 grid grid-cols-12 gap-4">
+              <div class="col-span-12 md:col-span-4">
+                <p class="mono-eyebrow text-teal-700">03</p>
+                <h3 class="mt-2 font-display text-h4 text-teal-900">Trainingen op maat</h3>
+              </div>
+              <div class="col-span-12 md:col-span-8 text-base text-ink">
+                <p>
+                  Korte trainingen voor nieuwe medewerkers, refreshers voor zittende teams,
+                  of gerichte sessies bij wijzigingen in werkwijze. Op locatie, afgestemd op
+                  wat uw mensen daadwerkelijk nodig hebben.
+                </p>
+              </div>
+            </li>
+            <li class="border-b border-line py-7 grid grid-cols-12 gap-4">
+              <div class="col-span-12 md:col-span-4">
+                <p class="mono-eyebrow text-teal-700">04</p>
+                <h3 class="mt-2 font-display text-h4 text-teal-900">Vast aanspreekpunt</h3>
+              </div>
+              <div class="col-span-12 md:col-span-8 text-base text-ink">
+                <p>
+                  Eén consultant die uw organisatie kent. Bereikbaar voor de vraag die niet
+                  kan wachten, voor de wijziging die u even wilt afstemmen, en voor het
+                  voorbereidende werk vóór elke surveillance-audit.
+                </p>
+              </div>
+            </li>
+            <li class="py-7 grid grid-cols-12 gap-4">
+              <div class="col-span-12 md:col-span-4">
+                <p class="mono-eyebrow text-teal-700">05</p>
+                <h3 class="mt-2 font-display text-h4 text-teal-900">Voorbereiding op externe audits</h3>
+              </div>
+              <div class="col-span-12 md:col-span-8 text-base text-ink">
+                <p>
+                  Voor elke surveillance-audit en hercertificering zorgen we dat directie,
+                  kwaliteitsfunctionaris en kernmedewerkers voorbereid zijn. Geen paniek vooraf,
+                  geen verrassingen tijdens. Tijdens de audit zijn we beschikbaar.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-20 md:py-24">
+    <Eyebrow>Aanpak</Eyebrow>
+    <h2 class="mt-6 max-w-2xl font-display text-h2 text-teal-900 text-balance">
+      Drie fasen. <span class="display-italic">Van gesprek tot doorlopende samenwerking.</span>
+    </h2>
+
+    <ol class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-x-6 relative">
+      <div class="hidden md:block absolute left-0 right-0 top-[14px] h-px bg-line-cool"></div>
+
+      <li class="md:col-span-1 relative">
+        <div class="hidden md:block absolute -top-1 left-0 w-2.5 h-2.5 rounded-full bg-teal-700"></div>
+        <p class="md:pt-9 mono-eyebrow text-teal-700">01</p>
+        <h3 class="mt-2 font-display text-h3 text-teal-900">Kennismaking</h3>
+        <p class="mt-4 text-base text-ink max-w-[36ch]">
+          We brengen in kaart waar uw organisatie staat — of u net gecertificeerd bent, of u al
+          een paar surveillance-cycli achter de rug heeft, of u tegen de hercertificering aanloopt.
+        </p>
+      </li>
+      <li class="md:col-span-1 relative">
+        <div class="hidden md:block absolute -top-1 left-0 w-2.5 h-2.5 rounded-full bg-teal-700"></div>
+        <p class="md:pt-9 mono-eyebrow text-teal-700">02</p>
+        <h3 class="mt-2 font-display text-h3 text-teal-900">Programma op maat</h3>
+        <p class="mt-4 text-base text-ink max-w-[36ch]">
+          Op basis van wat we tegenkomen stellen we een programma op dat past bij uw organisatie.
+          Niet meer dan nodig, niet minder dan de norm vraagt.
+        </p>
+      </li>
+      <li class="md:col-span-1 relative">
+        <div class="hidden md:block absolute -top-1 left-0 w-2.5 h-2.5 rounded-full bg-teal-700"></div>
+        <p class="md:pt-9 mono-eyebrow text-teal-700">03</p>
+        <h3 class="mt-2 font-display text-h3 text-teal-900">Doorlopende samenwerking</h3>
+        <p class="mt-4 text-base text-ink max-w-[36ch]">
+          Geen project met einddatum. Een doorlopende relatie waarin we elkaar kennen, en
+          waarin het onderhoud van uw systeem niet meer iets is dat erbij komt.
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="container-x py-20 md:py-24">
+      <Eyebrow>Voor en na</Eyebrow>
+      <h2 class="mt-6 max-w-2xl font-display text-h2 text-paper text-balance">
+        Wat verandert er als <span class="display-italic">GTY naast u staat?</span>
+      </h2>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 border-t border-paper/15">
+        <div class="md:border-r border-paper/15 py-8 md:pr-10">
+          <p class="mono-eyebrow text-paper/70">Zonder structurele borging</p>
+          <ul class="mt-5 space-y-3 text-base text-paper/85">
+            <li class="flex items-start gap-3">
+              <span class="mt-[10px] block w-3 h-px bg-paper/40 shrink-0" aria-hidden="true"></span>
+              <span>Onzekerheid of het systeem nog klopt voor de volgende audit</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-[10px] block w-3 h-px bg-paper/40 shrink-0" aria-hidden="true"></span>
+              <span>Compliance is een taak die erbij komt, en niemand pakt het werkelijk op</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-[10px] block w-3 h-px bg-paper/40 shrink-0" aria-hidden="true"></span>
+              <span>Normupdates worden gemist totdat ze een afwijking opleveren</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-[10px] block w-3 h-px bg-paper/40 shrink-0" aria-hidden="true"></span>
+              <span>Stress voor elke surveillance-audit en hercertificering</span>
+            </li>
+          </ul>
+        </div>
+        <div class="border-t md:border-t-0 border-paper/15 py-8 md:pl-10">
+          <p class="mono-eyebrow text-teal-200">Met GTY als vaste partner</p>
+          <ul class="mt-5 space-y-3 text-base text-paper">
+            <li class="flex items-start gap-3">
+              <span class="mt-[10px] block w-3 h-px bg-teal-200 shrink-0" aria-hidden="true"></span>
+              <span>U weet altijd waar u staat en wat er eventueel moet gebeuren</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-[10px] block w-3 h-px bg-teal-200 shrink-0" aria-hidden="true"></span>
+              <span>GTY borgt het; uw team richt zich op waar ze goed in zijn</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-[10px] block w-3 h-px bg-teal-200 shrink-0" aria-hidden="true"></span>
+              <span>U bent altijd actueel; wij houden de norm en wetgeving bij</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-[10px] block w-3 h-px bg-teal-200 shrink-0" aria-hidden="true"></span>
+              <span>U gaat elke audit in met vertrouwen, niet met paniek</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction
+    eyebrow="Klaar voor een vaste partner?"
+    title="Plan een gesprek over het Partnerprogramma."
+    body="We bespreken waar uw organisatie staat, welke borging zinvol is, en welke vorm bij u past. Geen verplichtingen — een eerste gesprek dat ook nuttig is als we niet samenwerken."
+  />
+</Base>

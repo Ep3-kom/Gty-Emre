@@ -1,0 +1,98 @@
+---
+import NormPagina from '~/layouts/NormPaginaTemplate.astro';
+import { normBySlug } from '~/data/normen';
+const norm = normBySlug('nen-7510')!;
+---
+
+<NormPagina
+  norm={norm}
+  oneliner="NEN 7510. Informatiebeveiliging voor de zorg."
+  intro="NEN 7510 is de Nederlandse norm voor informatiebeveiliging in de zorg. Steeds vaker contractueel vereist door zorgverzekeraars, gemeenten en zorginkopers voor organisaties die werken met persoonlijke gezondheidsinformatie. GTY begeleidt het volledige traject — met kennis van zowel de technische als de organisatorische eisen die in de zorg gelden."
+  watIs={{
+    eyebrow: 'Wat is NEN 7510',
+    titel: 'De Nederlandse norm voor informatiebeveiliging in de zorg.',
+    body: [
+      'NEN 7510 is opgebouwd op de structuur van ISO 27001, maar uitgebreid en aangescherpt voor de zorgsector. Waar ISO 27001 sector-onafhankelijk is, expliciteert NEN 7510 wat informatiebeveiliging betekent als u werkt met patiënt- of cliëntgegevens, medische dossiers en bijzondere persoonsgegevens.',
+      'De norm sluit nauw aan op de Algemene Verordening Gegevensbescherming (AVG) en op de Wet aanvullende bepalingen verwerking persoonsgegevens in de zorg (Wabvpz). Dat betekent: NEN 7510 is niet alleen een security-kader, het is tegelijk een instrument om aantoonbare AVG-compliance in de zorgcontext in te richten — toegangsrechten, logging van inzage in dossiers, dataminimalisatie, datalek-procedures.',
+      'NEN 7510 is opgesplitst in twee delen. NEN 7510-1 beschrijft het managementsysteem (vergelijkbaar met de hoofdtekst van ISO 27001). NEN 7510-2 specificeert de beheersmaatregelen — vaak op een concreter niveau dan ISO 27001 Annex A. Bijvoorbeeld rond gebruikersauthenticatie en logging van toegang tot patiëntgegevens.',
+    ],
+  }}
+  voorWie={{
+    eyebrow: 'Voor wie',
+    titel: 'Voor zorgorganisaties die werken met persoonlijke gezondheidsinformatie.',
+    body: [
+      'NEN 7510 is direct relevant voor ziekenhuizen, GGZ-instellingen, huisartsenpraktijken, jeugdzorg- en gehandicaptenzorgorganisaties, thuiszorgaanbieders en alle organisaties die elektronische patiënt- of cliëntdossiers voeren. In aanbestedingen en contracten met zorgverzekeraars wordt NEN 7510 inmiddels vaak als ondergrens gesteld.',
+      'Daarnaast is de norm relevant voor leveranciers in het zorgdomein — softwareleveranciers van EPD\'s en ECD\'s, ICT-dienstverleners voor zorgorganisaties, hosting-leveranciers, en consultants die met cliëntgegevens werken. Voor deze partijen is NEN 7510 (vaak in combinatie met ISO 27001) een commerciële randvoorwaarde.',
+      'Steeds meer zorgorganisaties kiezen ervoor om NEN 7510 en ISO 27001 in één gecombineerd traject te halen. Dat is vaak efficiënt: de overlap is groot en u kunt met één geïntegreerd ISMS aan beide audits voldoen.',
+    ],
+  }}
+  hoeWerkt={{
+    eyebrow: 'Hoe GTY werkt',
+    titel: 'Van risicoanalyse tot een gecertificeerd ISMS.',
+    body: [
+      'We starten met een nulmeting waarin we uw huidige beveiligingsmaatregelen in kaart brengen, getoetst aan NEN 7510-2. Specifiek voor zorgcontext: hoe is toegang tot patiëntgegevens technisch en organisatorisch geregeld, welke logging bestaat er op inzage in dossiers, hoe is leveranciersbeheer ingericht voor de software die met zorgdata werkt, en hoe staat het met awareness van zorgmedewerkers rond informatiebeveiliging.',
+      'Op basis van de risicoanalyse bouwen we het informatiebeveiligingsmanagementsysteem op. Toegangsbeheer met aantoonbare rechten-toekenning, logging die in audits standhoudt, incidentmanagement aangesloten op datalek-meldingen onder de AVG, continuïteitsplanning voor systemen waar zorg op rust, en bewustwording onder zorgteams die in de praktijk doordringt — niet als jaarlijkse e-learning maar als doorlopend proces.',
+      'In de aanloop naar de externe audit zorgen we dat technische maatregelen en organisatorische maatregelen elkaar aanvullen, en dat de directie inzichtelijk maakt hoe op informatiebeveiliging wordt gestuurd. Daarna blijft GTY beschikbaar — wijzigingen in de zorg-IT-keten zijn de norm, niet de uitzondering.',
+    ],
+  }}
+  valkuilen={[
+    {
+      titel: 'Toegang tot dossiers die niet aantoonbaar gelogd is',
+      body: 'NEN 7510-2 stelt specifieke eisen aan logging van toegang tot patiëntgegevens. EPD\'s en ECD\'s leveren dit vaak standaard, maar moeten correct geconfigureerd zijn. We toetsen of uw logging niet alleen plaatsvindt, maar ook periodiek wordt beoordeeld.',
+    },
+    {
+      titel: 'Verwerkersovereenkomsten zonder verdere opvolging',
+      body: 'Een ondertekende verwerkersovereenkomst met uw EPD-leverancier is een begin. Maar de norm vraagt structureel toezicht op de verwerker — hun ISO 27001 of NEN 7510-status, beveiligingsincidenten die u worden gemeld, eventuele sub-verwerkers. We richten leveranciersbeheer in zoals het hoort.',
+    },
+    {
+      titel: 'Awareness die de zorgmedewerker niet bereikt',
+      body: 'Zorgteams werken onder hoge tijdsdruk. Een algemene e-learning over informatiebeveiliging beklijft niet. We zoeken naar awareness-vormen die in zorgcontext werken: korte teamoverleg-onderdelen, casuïstiek uit de eigen organisatie, en duidelijke werkafspraken op de zorgvloer.',
+    },
+    {
+      titel: 'Datalekken die niet binnen 72 uur worden gemeld',
+      body: 'Onder de AVG geldt een 72-uurs meldplicht aan de Autoriteit Persoonsgegevens. NEN 7510 vraagt aantoonbaar dat dit proces werkt. We oefenen incident-scenario\'s in zodat het in de praktijk lukt — onder druk, niet alleen op papier.',
+    },
+    {
+      titel: 'Continuïteit die alleen ICT betreft',
+      body: 'Business continuity in de zorg gaat niet alleen over uitwijk-IT. Wat doet u als het EPD een dag onbereikbaar is? Heeft u een werkbare papieren routine? Wij toetsen continuïteit in de zorg-praktijk, niet alleen in de serverruimte.',
+    },
+    {
+      titel: 'Het ISMS los van het zorgkwaliteitssysteem',
+      body: 'Veel zorgorganisaties voeren NEN 7510 en HKZ als gescheiden werelden. Dat is dubbel werk en levert inconsistenties op. We integreren waar dat zinvol is: directiebeoordeling, interne audits en risicobeheersing in één samenhangende structuur.',
+    },
+  ]}
+  daarna={{
+    eyebrow: 'En daarna',
+    titel: 'Een ISMS dat met de zorg meebeweegt.',
+    body: [
+      'In de zorg-IT-keten verandert er voortdurend iets: nieuwe modules in het EPD, een gewijzigde sub-processor, een aangescherpte AVG-uitspraak van de Autoriteit Persoonsgegevens, een nieuwe NEN 7510-versie. Elk van die wijzigingen kan invloed hebben op uw certificeerbare ISMS.',
+      'Het Partnerprogramma houdt dat actueel. Kwartaalaudits gericht op de NEN 7510-2 controls die in audits steekproef worden bekeken, signalering van wijzigende wetgeving en branche-eisen, en directe ondersteuning bij verandertrajecten.',
+    ],
+  }}
+  faq={[
+    {
+      vraag: 'Verschil tussen NEN 7510 en ISO 27001?',
+      antwoord: 'NEN 7510 is gebaseerd op ISO 27001, maar specifiek voor de zorgsector. NEN 7510-2 bevat aanvullende, vaak concretere beheersmaatregelen rond toegang tot patiëntgegevens, logging en zorg-specifieke risico\'s. Voor zorgorganisaties is NEN 7510 doorgaans passender. Wie ook commercieel buiten de zorg actief is, voert vaak beide.',
+    },
+    {
+      vraag: 'Moeten wij alle EPD-leveranciers screenen voor NEN 7510?',
+      antwoord: 'Niet alle leveranciers, maar wel die met toegang tot patiëntgegevens of die een dragende rol hebben in uw IT-keten. Voor die leveranciers is een aantoonbaar leveranciersbeheer-proces vereist, met periodieke beoordeling. We helpen die selectie en governance inrichten.',
+    },
+    {
+      vraag: 'Geldt NEN 7510 ook voor cloudgebruik?',
+      antwoord: 'Ja, expliciet. NEN 7510-2 bevat eisen voor cloud-services in de zorg. Veel zorgorganisaties werken met cloud-EPD\'s en SaaS-aanvullingen — die vallen volledig binnen scope. We toetsen of uw cloudgebruik daarmee conform is.',
+    },
+    {
+      vraag: 'Hoe lang duurt een NEN 7510-traject?',
+      antwoord: 'Indicatief 6–9 maanden. Bij gecombineerde NEN 7510 + ISO 27001 trajecten is de doorlooptijd vergelijkbaar — het tweede certificaat haalt u doorgaans niet veel sneller dan het eerste, omdat de implementatie de tijd kost, niet de audit zelf.',
+    },
+    {
+      vraag: 'Welke certificerende instelling kunnen we kiezen?',
+      antwoord: 'Voor NEN 7510 zijn een aantal in Nederland geaccrediteerde certificerende instellingen beschikbaar. We adviseren over CI\'s die in uw zorgsegment ervaring hebben en een redelijke werkwijze hanteren. De keuze ligt uiteindelijk bij u.',
+    },
+    {
+      vraag: 'Werkt NEN 7510 ook voor kleine huisartsenpraktijken?',
+      antwoord: 'De norm is niet schaalafhankelijk, maar de implementatielast wel. Voor een kleine praktijk vraagt NEN 7510 een proportionele invulling — geen overdreven documentatie, wel aantoonbaar werkende beheersmaatregelen. Wij stemmen het traject daarop af.',
+    },
+  ]}
+/>

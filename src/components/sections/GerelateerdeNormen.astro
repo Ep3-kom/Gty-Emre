@@ -1,0 +1,28 @@
+---
+import Eyebrow from '~/components/ui/Eyebrow.astro';
+import { normen, type Norm } from '~/data/normen';
+
+type Props = { huidig: string };
+const { huidig } = Astro.props;
+const andere: Norm[] = normen.filter((n) => n.slug !== huidig).slice(0, 3);
+---
+
+<section class="container-x py-20 md:py-24">
+  <Eyebrow>Gerelateerde normen</Eyebrow>
+  <h2 class="mt-6 font-display text-h2 text-teal-900 max-w-2xl text-balance">
+    Veel organisaties combineren normen. <span class="display-italic">Wij ook.</span>
+  </h2>
+
+  <ul class="mt-12 grid grid-cols-1 md:grid-cols-3 border-t border-line-cool">
+    {andere.map((n) => (
+      <li class="border-b border-line-cool md:border-b-0 md:border-r last:md:border-r-0 border-line-cool">
+        <a href={`/certificering/${n.slug}/`} class="block py-7 md:px-6 first:md:pl-0 group">
+          <p class="mono-eyebrow text-teal-700">{n.code}</p>
+          <h3 class="mt-3 font-display text-h3 text-teal-900 group-hover:text-accent transition-colors">{n.shortTitle}</h3>
+          <p class="mt-3 text-base text-ink-soft max-w-[36ch]">{n.oneliner}</p>
+          <span class="mt-4 inline-block text-small text-teal-700 link-underline">Lees meer →</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</section>

@@ -1,0 +1,43 @@
+---
+import Button from '~/components/ui/Button.astro';
+import Eyebrow from '~/components/ui/Eyebrow.astro';
+import { siteData } from '~/data/site-data';
+
+type Props = {
+  eyebrow?: string;
+  title?: string;
+  body?: string;
+  variant?: 'default' | 'inverse';
+};
+
+const {
+  eyebrow = 'Start nu',
+  title = 'Klaar om de norm te stellen in uw eigen organisatie?',
+  body = 'Plan een vrijblijvend kennismakingsgesprek. We bespreken waar uw organisatie staat, wat het traject vraagt en of GTY de juiste partner voor u is. Geen verplichtingen. Geen standaardpitch. Een eerlijk gesprek.',
+  variant = 'default',
+} = Astro.props;
+
+const isInverse = variant === 'inverse';
+---
+
+<section class:list={[isInverse ? 'bg-ink text-paper' : 'bg-paper border-t border-line-cool']}>
+  <div class="container-x py-20 md:py-28">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-8 items-end">
+      <div class="col-span-12 md:col-span-7">
+        <Eyebrow>{eyebrow}</Eyebrow>
+        <h2 class:list={['mt-6 font-display text-h1 text-balance', isInverse ? 'text-paper' : 'text-teal-900']}>
+          {title}
+        </h2>
+        <p class:list={['mt-6 max-w-prose text-lead', isInverse ? 'text-paper/80' : 'text-ink-soft']}>{body}</p>
+      </div>
+      <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col gap-3">
+        <Button href={siteData.cta.primary.href} variant={isInverse ? 'inverse' : 'primary'} size="lg">
+          {siteData.cta.primary.label}
+        </Button>
+        <Button href={siteData.cta.secondary.href} variant="ghost" size="lg" class={isInverse ? 'text-paper hover:text-cream' : ''}>
+          {siteData.cta.secondary.label} →
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>

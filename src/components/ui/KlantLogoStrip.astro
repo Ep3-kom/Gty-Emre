@@ -1,0 +1,24 @@
+---
+type Klant = { naam: string; logoSrc: string };
+type Props = { klanten?: Klant[] };
+const { klanten = [] } = Astro.props;
+if (klanten.length === 0) return null;
+---
+
+<section class="border-t border-line-cool">
+  <div class="container-x py-12">
+    <p class="mono-eyebrow text-ink-soft">Zij kozen voor zekerheid. En bleven.</p>
+    <ul class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-8 gap-y-10 items-center">
+      {klanten.map((k) => (
+        <li class="flex justify-center">
+          <img
+            src={k.logoSrc}
+            alt={k.naam}
+            title={k.naam}
+            class="max-h-10 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+          />
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

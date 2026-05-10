@@ -1,0 +1,109 @@
+---
+const vragen = [
+  'Beschikt uw organisatie over een actueel kwaliteits- of managementsysteem dat in de praktijk gevolgd wordt?',
+  'Zijn verantwoordelijkheden voor processen en documentatie helder en aanwijsbaar belegd?',
+  'Is documentatie (procedures, beleid, registraties) op de werkvloer eenduidig vindbaar én actueel?',
+  'Worden interne audits structureel uitgevoerd, met opvolging van bevindingen?',
+  'Is er een terugkerende directiebeoordeling die op cijfers stuurt — en niet alleen administreert?',
+  'Worden risico\'s — operationeel, informatie, milieu of zorginhoudelijk — periodiek beoordeeld?',
+  'Zijn medewerkers aantoonbaar getraind op de werkwijze die zij geacht worden te volgen?',
+  'Wordt de jaarlijkse surveillance-audit voorbereid voordat de auditor de datum vaststelt?',
+];
+---
+
+<div class="border border-line-cool bg-paper" data-checklist>
+  <div class="border-b border-line-cool px-6 py-5">
+    <p class="mono-eyebrow text-teal-700">Indicatieve zelftest</p>
+    <h3 class="mt-2 font-display text-h3 text-teal-900">Hoe ver staat u van de norm?</h3>
+    <p class="mt-3 text-small text-ink-soft max-w-prose">
+      Acht vragen die een eerste richting geven. Geen formele beoordeling — alleen een
+      indicatie waarover u met een GTY-consultant verder kunt praten.
+    </p>
+  </div>
+
+  <ol class="divide-y divide-line-cool" data-checklist-list>
+    {vragen.map((v, i) => (
+      <li class="px-6 py-4 flex items-start gap-5">
+        <span class="font-mono text-caption text-ink-soft mt-1.5 shrink-0">{String(i + 1).padStart(2, '0')}</span>
+        <span class="flex-1 text-base text-ink">{v}</span>
+        <fieldset class="flex gap-2 shrink-0">
+          <legend class="sr-only">Antwoord op vraag {i + 1}</legend>
+          <label class="cursor-pointer">
+            <input type="radio" name={`q${i}`} value="ja" class="peer sr-only" />
+            <span class="block px-3.5 py-1.5 border border-line text-small font-mono peer-checked:bg-teal-900 peer-checked:text-paper peer-checked:border-teal-900 transition-colors">Ja</span>
+          </label>
+          <label class="cursor-pointer">
+            <input type="radio" name={`q${i}`} value="deels" class="peer sr-only" />
+            <span class="block px-3.5 py-1.5 border border-line text-small font-mono peer-checked:bg-signal-amber peer-checked:text-ink peer-checked:border-signal-amber transition-colors">Deels</span>
+          </label>
+          <label class="cursor-pointer">
+            <input type="radio" name={`q${i}`} value="nee" class="peer sr-only" />
+            <span class="block px-3.5 py-1.5 border border-line text-small font-mono peer-checked:bg-accent peer-checked:text-paper peer-checked:border-accent transition-colors">Nee</span>
+          </label>
+        </fieldset>
+      </li>
+    ))}
+  </ol>
+
+  <div class="border-t border-line-cool px-6 py-6">
+    <div class="flex items-baseline justify-between gap-4">
+      <p class="mono-eyebrow text-teal-700">Indicatie</p>
+      <button type="button" data-checklist-reset class="text-caption font-mono text-ink-soft hover:text-teal-700 link-underline">Opnieuw invullen</button>
+    </div>
+    <p class="mt-4 font-display text-h3 text-teal-900" data-checklist-result>
+      Beantwoord de vragen om uw indicatie te zien.
+    </p>
+    <p class="mt-4 text-small text-ink-soft max-w-prose" data-checklist-detail></p>
+    <p class="mt-6 text-caption font-mono text-ink-soft uppercase tracking-wider">
+      Indicatieve zelftest — geen formele beoordeling. Een echte nulmeting wordt uitgevoerd door een GTY-consultant op locatie.
+    </p>
+  </div>
+</div>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-checklist]');
+  if (root) {
+    const list = root.querySelector<HTMLElement>('[data-checklist-list]')!;
+    const result = root.querySelector<HTMLElement>('[data-checklist-result]')!;
+    const detail = root.querySelector<HTMLElement>('[data-checklist-detail]')!;
+    const reset = root.querySelector<HTMLButtonElement>('[data-checklist-reset]')!;
+    const total = list.querySelectorAll('li').length;
+
+    const update = () => {
+      const radios = root.querySelectorAll<HTMLInputElement>('input[type="radio"]:checked');
+      if (radios.length < total) {
+        result.textContent = `Nog ${total - radios.length} vragen te gaan.`;
+        detail.textContent = '';
+        return;
+      }
+      let ja = 0, deels = 0;
+      radios.forEach((r) => {
+        if (r.value === 'ja') ja++;
+        else if (r.value === 'deels') deels++;
+      });
+      const score = ja + deels * 0.5;
+      let label: string, body: string;
+      if (score >= 7) {
+        label = 'U bent in een korte sprint audit-klaar te maken.';
+        body = 'Het systeem lijkt grotendeels te staan. Een gerichte interne audit kan vinden wat er nog ontbreekt. Plan een gesprek om te bepalen wat de meest efficiënte volgende stap is.';
+      } else if (score >= 4.5) {
+        label = 'U bent op de goede weg.';
+        body = 'Op meerdere punten staat al iets, maar er is werk te doen voor het systeem auditbestendig is. Een nulmeting brengt de prioriteiten in kaart.';
+      } else if (score >= 2) {
+        label = 'Er ligt nog veel werk.';
+        body = 'Het managementsysteem is op meerdere fronten nog niet volgroeid. Een nulmeting helpt bepalen waar te starten — en hoe het traject te plannen.';
+      } else {
+        label = 'U staat aan het begin.';
+        body = 'Een goed startpunt: er is veel ruimte om iets te bouwen dat in de organisatie werkt. Begin met een nulmeting; dan praten we over de aanpak.';
+      }
+      result.textContent = label;
+      detail.textContent = body;
+    };
+
+    list.addEventListener('change', update);
+    reset.addEventListener('click', () => {
+      root.querySelectorAll<HTMLInputElement>('input[type="radio"]').forEach((r) => (r.checked = false));
+      update();
+    });
+  }
+</script>

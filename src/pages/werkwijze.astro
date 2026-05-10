@@ -1,0 +1,183 @@
+---
+import Base from '~/layouts/Base.astro';
+import Eyebrow from '~/components/ui/Eyebrow.astro';
+import Tijdlijn from '~/components/sections/Tijdlijn.astro';
+import CallToAction from '~/components/sections/CallToAction.astro';
+import Button from '~/components/ui/Button.astro';
+
+const fases = [
+  {
+    nr: '01',
+    titel: 'Kennismaking en nulmeting',
+    duur: '1–3 weken',
+    body: 'Het traject begint met luisteren. We brengen uw vraag, uw context en uw uitgangspositie in kaart — voordat er een traject wordt voorgesteld.',
+    stappen: [
+      'Vrijblijvend kennismakingsgesprek met directie en sleutelpersonen',
+      'Nulmeting op locatie: processen, documentatie, mensen',
+      'Schriftelijke rapportage met bevindingen en prioritering',
+      'Persoonlijke toelichting op de rapportage en bespreking vervolgopties',
+    ],
+  },
+  {
+    nr: '02',
+    titel: 'Uitvoering',
+    duur: 'Afhankelijk van norm en omvang',
+    body: 'GTY werkt naast uw team aan de inrichting van het managementsysteem. Geen aparte traject-organisatie naast uw operatie — we sluiten aan bij hoe u werkt.',
+    stappen: [
+      'Inrichten van het managementsysteem op uw werkelijke processen',
+      'Documentatie alleen waar de norm of uw werk dat vraagt',
+      'Trainingen en bewustwording per team, op locatie',
+      'Interne audit voorafgaand aan de externe audit',
+      'Voorbereiding directie en kernmedewerkers op de externe audit',
+      'Begeleiding van het auditproces met de certificerende instelling',
+    ],
+  },
+  {
+    nr: '03',
+    titel: 'Resultaat en wat daarna komt',
+    duur: 'Doorlopend',
+    body: 'Het traject sluit af met een concreet resultaat — het certificaat, de getoetste RI&E, het opgeleverde rapport. Voor partners die structurele ondersteuning willen, gaat de samenwerking door via het Partnerprogramma.',
+    stappen: [
+      'Afronding van eventuele auditafwijkingen tot certificering definitief is',
+      'Overdracht van het systeem aan uw interne kwaliteitsfunctionaris',
+      'Optioneel: Partnerprogramma voor structurele borging',
+      'Optioneel: opleiding interne auditoren via GTY Academy',
+    ],
+  },
+];
+---
+
+<Base
+  title="Werkwijze"
+  description="Hoe GTY werkt: drie fasen — kennismaking en nulmeting, uitvoering, resultaat en borging. Helder, voorspelbaar, zonder verrassingen."
+>
+  <section class="border-b border-line-cool">
+    <div class="container-x pt-12 md:pt-16 pb-16 md:pb-20">
+      <nav aria-label="Breadcrumb" class="mb-8 text-caption font-mono text-ink-soft uppercase tracking-wider">
+        <a href="/" class="hover:text-teal-700">Home</a>
+        <span class="mx-2 text-line-cool">/</span>
+        <span class="text-teal-700">Werkwijze</span>
+      </nav>
+
+      <div class="grid grid-cols-12 gap-x-6 gap-y-8">
+        <div class="col-span-12 lg:col-span-9">
+          <Eyebrow>Hoe GTY werkt</Eyebrow>
+          <h1 class="mt-6 font-display text-h1 md:text-[3.5rem] md:leading-[1.05] text-teal-900 text-balance">
+            Helder. Voorspelbaar. <span class="display-italic">Zonder verrassingen.</span>
+          </h1>
+          <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">
+            Elke samenwerking begint bij uw vraag. We brengen die vraag eerst goed in beeld,
+            voordat we de aanpak bepalen. Geen standaardpakket, geen vooraf bedacht traject —
+            wel een vaste structuur waarbinnen het werk gebeurt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-20 md:py-24">
+    <div class="max-w-narrow">
+      <Eyebrow>De drie fasen</Eyebrow>
+      <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+        Drie stappen. <span class="display-italic">Geen verrassingen.</span>
+      </h2>
+      <p class="mt-5 max-w-prose text-lead text-ink-soft">
+        De fasen waarbinnen elk GTY-traject zich afspeelt. Wat erbinnen gebeurt, stemmen we
+        af op uw norm, sector en uitgangspositie.
+      </p>
+    </div>
+    <div class="mt-16">
+      <Tijdlijn fases={fases} />
+    </div>
+  </section>
+
+  <section class="bg-cream">
+    <div class="container-x py-20 md:py-24">
+      <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+        <div class="col-span-12 md:col-span-4">
+          <Eyebrow>Wat anders is</Eyebrow>
+          <h2 class="mt-5 font-display text-h2 text-teal-900 text-balance">
+            Geen consultant op afstand.<br /><span class="display-italic">Een vaste kracht naast u.</span>
+          </h2>
+        </div>
+        <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
+          <p>
+            U werkt gedurende het hele traject met dezelfde GTY-consultant. Niet een wisselend
+            team, niet een junior die de uitvoering doet en een senior die alleen verschijnt op
+            stuurmomenten. De persoon die u ontmoet bij de nulmeting is dezelfde die u door de
+            externe audit begeleidt — en die in jaar twee de surveillance-audit voorbereidt.
+          </p>
+          <p>
+            Dat heeft praktische gevolgen. We hoeven uw organisatie niet elk gesprek opnieuw te
+            leren kennen. We weten wie waarvoor verantwoordelijk is, welke afdeling welke
+            werkdruk heeft, welke beslissingen al eerder zijn gewogen. Dat versnelt het werk en
+            voorkomt dat u keer op keer dezelfde context moet uitleggen.
+          </p>
+          <p>
+            Het heeft ook een kwalitatief gevolg. Een consultant die uw organisatie kent, ziet
+            afwijkingen die een buitenstaander mist. En kan adviseren met begrip van uw
+            geschiedenis — niet vanuit een sjabloon dat overal opgelegd wordt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-20 md:py-24">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+      <div class="col-span-12 md:col-span-5">
+        <Eyebrow>Wat u kunt verwachten</Eyebrow>
+        <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+          Heldere afspraken. <span class="display-italic">Vanaf de eerste dag.</span>
+        </h2>
+      </div>
+      <div class="col-span-12 md:col-span-6 md:col-start-7">
+        <ul class="divide-y divide-line-cool border-y border-line-cool">
+          <li class="py-6">
+            <p class="mono-eyebrow text-teal-700">Eén voorstel</p>
+            <p class="mt-2 text-base text-ink">
+              Na het kennismakingsgesprek ontvangt u één voorstel met aanpak, planning en
+              investering. Geen meerwerk-clausules die later opduiken.
+            </p>
+          </li>
+          <li class="py-6">
+            <p class="mono-eyebrow text-teal-700">Eén aanspreekpunt</p>
+            <p class="mt-2 text-base text-ink">
+              Eén consultant die uw organisatie kent. Telefonisch en per e-mail bereikbaar
+              zonder tussenkomst van accountmanagers of intake-formulieren.
+            </p>
+          </li>
+          <li class="py-6">
+            <p class="mono-eyebrow text-teal-700">Voortgang die u kunt volgen</p>
+            <p class="mt-2 text-base text-ink">
+              Een planning met heldere mijlpalen, en periodieke voortgangsoverleggen die niet
+              meer tijd kosten dan ze opleveren.
+            </p>
+          </li>
+          <li class="py-6">
+            <p class="mono-eyebrow text-teal-700">Eerlijke beoordeling</p>
+            <p class="mt-2 text-base text-ink">
+              Als wij menen dat een norm niet bij uw organisatie past, of dat een traject nog
+              te vroeg is, zeggen we dat. Beter een uitgesteld traject dan een verspild
+              certificaat.
+            </p>
+          </li>
+          <li class="py-6">
+            <p class="mono-eyebrow text-teal-700">Geen verborgen meterstanden</p>
+            <p class="mt-2 text-base text-ink">
+              Wij werken niet op uurbasis met onverwachte facturen achteraf. Investering wordt
+              vooraf afgesproken. Bij scope-wijzigingen bespreken we dat eerst, niet achteraf.
+            </p>
+          </li>
+        </ul>
+
+        <div class="mt-10 flex flex-wrap gap-x-5 gap-y-3 items-center">
+          <Button href="/contact/" size="lg">Plan een kennismakingsgesprek</Button>
+          <Button href="/nulmeting/" variant="ghost">Begin met een nulmeting →</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction />
+</Base>

@@ -1,0 +1,136 @@
+---
+import Base from '~/layouts/Base.astro';
+import NormPaginaHero from '~/components/sections/NormPaginaHero.astro';
+import GerelateerdeNormen from '~/components/sections/GerelateerdeNormen.astro';
+import CallToAction from '~/components/sections/CallToAction.astro';
+import FAQAccordion from '~/components/ui/FAQAccordion.astro';
+import Eyebrow from '~/components/ui/Eyebrow.astro';
+import { siteData } from '~/data/site-data';
+import { faqJsonLd, serviceJsonLd, breadcrumbJsonLd, canonical } from '~/lib/seo';
+import type { Norm } from '~/data/normen';
+
+type Section = { eyebrow: string; titel: string; body: string[] };
+
+type Props = {
+  norm: Norm;
+  oneliner: string;
+  intro: string;
+  watIs: Section;
+  voorWie: Section;
+  hoeWerkt: Section;
+  valkuilen: { titel: string; body: string }[];
+  daarna: Section;
+  faq: { vraag: string; antwoord: string }[];
+};
+
+const { norm, oneliner, intro, watIs, voorWie, hoeWerkt, valkuilen, daarna, faq } = Astro.props;
+const url = canonical(Astro.url.pathname);
+const jsonLd = [
+  serviceJsonLd({ name: norm.title, description: oneliner, url }),
+  faqJsonLd(faq),
+  breadcrumbJsonLd([
+    { name: 'Home', url: siteData.url },
+    { name: 'Certificering', url: `${siteData.url}/certificering/` },
+    { name: norm.code, url },
+  ]),
+];
+---
+
+<Base title={`${norm.code} certificering`} description={`${oneliner} ${intro}`} jsonLd={jsonLd}>
+  <NormPaginaHero norm={norm} oneliner={oneliner} intro={intro} />
+
+  <section class="container-x py-20 md:py-24">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+      <div class="col-span-12 md:col-span-4">
+        <Eyebrow>{watIs.eyebrow}</Eyebrow>
+        <h2 class="mt-5 font-display text-h2 text-teal-900 text-balance">{watIs.titel}</h2>
+      </div>
+      <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
+        {watIs.body.map((p) => <p>{p}</p>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream">
+    <div class="container-x py-20 md:py-24">
+      <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+        <div class="col-span-12 md:col-span-5">
+          <Eyebrow>{voorWie.eyebrow}</Eyebrow>
+          <h2 class="mt-5 font-display text-h2 text-teal-900 text-balance">{voorWie.titel}</h2>
+        </div>
+        <div class="col-span-12 md:col-span-6 md:col-start-7 max-w-prose space-y-5 text-base text-ink">
+          {voorWie.body.map((p) => <p>{p}</p>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-20 md:py-24">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+      <div class="col-span-12 md:col-span-4">
+        <Eyebrow>{hoeWerkt.eyebrow}</Eyebrow>
+        <h2 class="mt-5 font-display text-h2 text-teal-900 text-balance">{hoeWerkt.titel}</h2>
+        <p class="mt-6 mono-eyebrow text-teal-700">Eén vast aanspreekpunt</p>
+      </div>
+      <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
+        {hoeWerkt.body.map((p) => <p>{p}</p>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-line-cool bg-paper">
+    <div class="container-x py-20 md:py-24">
+      <div class="max-w-narrow">
+        <Eyebrow>Veelgemaakte fouten</Eyebrow>
+        <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+          Waar trajecten <span class="display-italic">stuklopen</span> — en hoe GTY dat voorkomt.
+        </h2>
+      </div>
+      <ol class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-line-cool">
+        {valkuilen.map((v, i) => (
+          <li class="bg-paper p-7">
+            <p class="mono-eyebrow text-teal-700">{String(i + 1).padStart(2, '0')}</p>
+            <h3 class="mt-3 font-display text-h4 text-teal-900">{v.titel}</h3>
+            <p class="mt-3 text-base text-ink">{v.body}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="container-x py-20 md:py-24">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+      <div class="col-span-12 md:col-span-4">
+        <Eyebrow>{daarna.eyebrow}</Eyebrow>
+        <h2 class="mt-5 font-display text-h2 text-teal-900 text-balance">{daarna.titel}</h2>
+      </div>
+      <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
+        {daarna.body.map((p) => <p>{p}</p>)}
+        <p>
+          <a href="/partnerprogramma/" class="link-underline text-teal-700">Lees meer over het Partnerprogramma →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-paper border-t border-line-cool">
+    <div class="container-x py-20 md:py-24">
+      <div class="max-w-narrow">
+        <Eyebrow>Veelgestelde vragen</Eyebrow>
+        <h2 class="mt-6 font-display text-h2 text-teal-900">Wat klanten ons vooraf vragen.</h2>
+      </div>
+      <div class="mt-10 max-w-3xl">
+        <FAQAccordion items={faq} />
+      </div>
+    </div>
+  </section>
+
+  <GerelateerdeNormen huidig={norm.slug} />
+
+  <CallToAction
+    eyebrow="Start nu"
+    title={`Klaar om met ${norm.code} aan de slag te gaan?`}
+    body={`Plan een vrijblijvend kennismakingsgesprek. We bespreken uw uitgangspositie en wat een ${norm.code}-traject voor uw organisatie vraagt. Geen verplichtingen. Geen standaardpitch. Een eerlijk gesprek.`}
+    variant="inverse"
+  />
+</Base>

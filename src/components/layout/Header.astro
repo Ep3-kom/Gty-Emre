@@ -1,0 +1,117 @@
+---
+import { siteData } from '~/data/site-data';
+import { normen } from '~/data/normen';
+import { t } from '~/i18n/nl';
+import MobileNav from '~/components/layout/MobileNav.astro';
+
+const path = Astro.url.pathname;
+const isActive = (prefix: string) =>
+  prefix === '/' ? path === '/' : path.startsWith(prefix);
+---
+
+<header class="relative z-30 border-b border-line-cool bg-paper">
+  <div class="container-x flex h-[72px] items-center justify-between gap-8">
+    <a href="/" class="flex items-center gap-3" aria-label="GTY home">
+      <img src="/logo.svg" alt="GTY" width="64" height="29" class="h-7 w-auto" />
+      <span class="sr-only">GTY</span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-1" aria-label="Hoofdnavigatie">
+      <div class="relative group">
+        <button
+          class="px-3 py-2 text-small text-ink hover:text-teal-700 transition-colors flex items-center gap-1.5"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          {t.nav.certificering}
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div
+          class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-opacity"
+        >
+          <div class="bg-paper border border-line-cool shadow-lift min-w-[280px] py-2">
+            {normen.map((n) => (
+              <a
+                href={`/certificering/${n.slug}/`}
+                class="flex items-baseline justify-between gap-4 px-5 py-2.5 text-small hover:bg-teal-50"
+              >
+                <span class="font-medium text-ink">{n.code}</span>
+                <span class="text-ink-soft text-caption">{n.shortTitle}</span>
+              </a>
+            ))}
+            <div class="my-1 mx-5 rule"></div>
+            <a
+              href="/certificering/"
+              class="block px-5 py-2.5 text-small text-teal-700 hover:bg-teal-50"
+            >
+              {t.nav.certificeringAll} →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="/partnerprogramma/"
+        class:list={['px-3 py-2 text-small transition-colors', isActive('/partnerprogramma') ? 'text-teal-700' : 'text-ink hover:text-teal-700']}
+      >
+        {t.nav.partnerprogramma}
+      </a>
+
+      <div class="relative group">
+        <button
+          class="px-3 py-2 text-small text-ink hover:text-teal-700 transition-colors flex items-center gap-1.5"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          {t.nav.interneAudits}
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-opacity">
+          <div class="bg-paper border border-line-cool shadow-lift min-w-[260px] py-2">
+            <a href="/interne-audits/" class="block px-5 py-2.5 text-small hover:bg-teal-50">
+              {t.nav.interneAuditsAll}
+            </a>
+            <a href="/nulmeting/" class="block px-5 py-2.5 text-small hover:bg-teal-50">
+              {t.nav.nulmeting}
+            </a>
+            <a href="/rie/" class="block px-5 py-2.5 text-small hover:bg-teal-50">
+              {t.nav.rie}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="/academy/" class="px-3 py-2 text-small text-ink hover:text-teal-700 transition-colors">{t.nav.academy}</a>
+      <a href="/werkwijze/" class="px-3 py-2 text-small text-ink hover:text-teal-700 transition-colors">{t.nav.werkwijze}</a>
+      <a href="/over-ons/" class="px-3 py-2 text-small text-ink hover:text-teal-700 transition-colors">{t.nav.overOns}</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a
+        href={siteData.cta.primary.href}
+        class="hidden lg:inline-flex items-center bg-teal-900 text-paper px-4 py-2.5 text-small font-medium hover:bg-ink transition-colors rounded-md"
+      >
+        {t.nav.primaryCta}
+      </a>
+
+      <button
+        type="button"
+        class="lg:hidden p-2 -mr-2"
+        aria-label="Open menu"
+        data-mobile-nav-trigger
+      >
+        <svg width="22" height="14" viewBox="0 0 22 14" fill="none" aria-hidden="true">
+          <line x1="0" y1="1" x2="22" y2="1" stroke="currentColor" stroke-width="1.6" />
+          <line x1="0" y1="7" x2="22" y2="7" stroke="currentColor" stroke-width="1.6" />
+          <line x1="0" y1="13" x2="22" y2="13" stroke="currentColor" stroke-width="1.6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<MobileNav />

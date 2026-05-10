@@ -1,0 +1,50 @@
+---
+import Eyebrow from '~/components/ui/Eyebrow.astro';
+
+const zonder = [
+  'Een traject dat de organisatie uitput in plaats van versterkt',
+  'Een certificaat dat papier blijft en in de dagelijkse praktijk geen voet aan de grond krijgt',
+  'Surveillance-audits die elk jaar opnieuw paniek opleveren',
+  'Normupdates die te laat opgemerkt worden',
+];
+const met = [
+  'Een traject dat de organisatie sterker achterlaat dan ze begon',
+  'Een systeem dat in de praktijk werkt — niet alleen op papier',
+  'Audits die u tegemoet gaat met vertrouwen',
+  'Een partner die normupdates al heeft verwerkt voordat u erover hoort',
+];
+---
+
+<section class="bg-cream">
+  <div class="container-x py-20 md:py-28">
+    <Eyebrow>Wat het verschil maakt</Eyebrow>
+    <h2 class="mt-6 max-w-2xl font-display text-h2 text-teal-900 text-balance">
+      Het zit in wat er <span class="display-italic">na</span> het certificaat overblijft.
+    </h2>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 border-t border-line">
+      <div class="md:border-r border-line py-8 md:pr-10">
+        <p class="mono-eyebrow text-ink-soft">Zonder de juiste partner</p>
+        <ul class="mt-5 space-y-3 text-base text-ink">
+          {zonder.map((z) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-[10px] block w-3 h-px bg-ink-soft shrink-0" aria-hidden="true"></span>
+              <span>{z}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="border-t md:border-t-0 border-line py-8 md:pl-10">
+        <p class="mono-eyebrow text-teal-700">Met GTY naast u</p>
+        <ul class="mt-5 space-y-3 text-base text-ink">
+          {met.map((m) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-[10px] block w-3 h-px bg-teal-700 shrink-0" aria-hidden="true"></span>
+              <span>{m}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

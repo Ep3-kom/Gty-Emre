@@ -1,0 +1,42 @@
+---
+import { t } from '~/i18n/nl';
+---
+
+<div
+  data-cookie-notice
+  class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 hidden max-w-[640px] w-[calc(100%-2rem)] bg-ink text-paper border border-paper/10 shadow-lift rounded-md"
+  role="status"
+  aria-live="polite"
+>
+  <div class="flex items-center gap-3 px-4 py-3">
+    <p class="flex-1 text-small text-paper/90">
+      {t.cookieNotice.text.split('privacyverklaring')[0]}
+      <a href={t.cookieNotice.privacyHref} class="link-underline text-paper">privacyverklaring</a>
+      {t.cookieNotice.text.split('privacyverklaring')[1]}
+    </p>
+    <button
+      type="button"
+      data-cookie-dismiss
+      class="shrink-0 px-2 py-1.5 text-paper/70 hover:text-paper text-small font-medium"
+      aria-label={t.cookieNotice.dismiss}
+    >
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <line x1="2" y1="2" x2="12" y2="12" stroke="currentColor" stroke-width="1.4" />
+        <line x1="12" y1="2" x2="2" y2="12" stroke="currentColor" stroke-width="1.4" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  const KEY = 'gty:cookie-notice-dismissed';
+  const el = document.querySelector<HTMLElement>('[data-cookie-notice]');
+  const btn = document.querySelector<HTMLButtonElement>('[data-cookie-dismiss]');
+  if (el && sessionStorage.getItem(KEY) !== '1') {
+    el.classList.remove('hidden');
+  }
+  btn?.addEventListener('click', () => {
+    sessionStorage.setItem(KEY, '1');
+    el?.classList.add('hidden');
+  });
+</script>

@@ -1,0 +1,98 @@
+---
+import NormPagina from '~/layouts/NormPaginaTemplate.astro';
+import { normBySlug } from '~/data/normen';
+const norm = normBySlug('iso-14001')!;
+---
+
+<NormPagina
+  norm={norm}
+  oneliner="ISO 14001. Aantoonbaar verantwoord omgaan met uw milieu-impact."
+  intro="ISO 14001 is de internationale norm voor milieumanagementsystemen. Steeds vaker een harde eis in aanbestedingen, en steeds vaker een instrument waarmee organisaties zelf grip krijgen op energieverbruik, afvalstromen en milieurisico's. GTY begeleidt het volledige traject — van eerste milieu-inventarisatie tot certificaat en de borging daarna."
+  watIs={{
+    eyebrow: 'Wat is ISO 14001',
+    titel: 'De internationale norm voor milieumanagement.',
+    body: [
+      'ISO 14001 stelt eisen aan de manier waarop een organisatie haar milieu-impact identificeert, beheerst en verbetert. De norm vraagt geen specifieke milieuprestaties — er staat niet hoeveel CO₂ u mag uitstoten of hoeveel afval u mag produceren. Wat de norm wel vraagt: dat u uw eigen milieu-aspecten kent, dat u de wettelijke kaders waarbinnen u opereert kent, dat u doelstellingen formuleert die ertoe doen, en dat u aantoonbaar werkt aan verbetering.',
+      'Het hart van een ISO 14001-systeem is de milieu-aspectenanalyse: een gestructureerde inventarisatie van alle activiteiten, producten en diensten waarmee uw organisatie het milieu beïnvloedt — direct of indirect, in normale bedrijfsomstandigheden én bij incidenten. Vanuit die analyse ontstaan de prioriteiten waar het managementsysteem op stuurt.',
+      'ISO 14001 deelt de High-Level Structure (HLS) met ISO 9001 en ISO 27001. Een organisatie die al een ISO 9001-managementsysteem heeft, kan ISO 14001 aanzienlijk efficiënter implementeren omdat directiebeoordeling, interne audit en documentbeheersing in dezelfde structuur passen.',
+    ],
+  }}
+  voorWie={{
+    eyebrow: 'Voor wie',
+    titel: 'Voor organisaties die milieuprestaties willen borgen.',
+    body: [
+      'ISO 14001 is direct relevant voor organisaties met een meetbare fysieke milieu-impact: technische installatiebedrijven, productiebedrijven, bouw- en infrabedrijven, transportondernemingen, facilitaire dienstverleners en bedrijven die werken met chemische stoffen of energie-intensieve processen. In deze sectoren is de norm vaak een aanbestedingseis — overheden en grote opdrachtgevers stellen ISO 14001 standaard.',
+      'Daarnaast kiezen steeds meer dienstverlenende organisaties voor ISO 14001. Niet omdat hun directe milieu-impact groot is, maar omdat opdrachtgevers in toenemende mate vragen naar aantoonbaar duurzaam ondernemerschap. Een ISO 14001-certificaat geeft daar een gestandaardiseerd antwoord op — eerlijker en concreter dan een algemene duurzaamheidsverklaring.',
+      'Sectoren waarin GTY ervaring heeft: technische dienstverlening, productiebedrijven in het MKB, facilitaire bedrijven, en organisaties die ISO 14001 combineren met ISO 9001 of ISO 27001 in een geïntegreerd systeem.',
+    ],
+  }}
+  hoeWerkt={{
+    eyebrow: 'Hoe GTY werkt',
+    titel: 'Van milieu-inventarisatie tot certificaat.',
+    body: [
+      'We starten met een nulmeting waarin we uw huidige milieuprestaties en -risico\'s in kaart brengen, samen met de wettelijke kaders die voor uw organisatie gelden — Wabo, Activiteitenbesluit, eventueel Omgevingswet-vergunningen, branchespecifieke regelingen. Tegelijk inventariseren we welke milieudata u nu al verzamelt en welke nog niet.',
+      'Op basis daarvan stellen we de milieu-aspectenanalyse op. Niet als een spreadsheet die slechts één keer ingevuld wordt, maar als levend document dat de basis vormt voor doelstellingen, monitoring en verbetering. Vervolgens richten we het managementsysteem in: verantwoordelijkheden, procedures voor incidentafhandeling en noodsituaties, monitoring van energie-, afval- en grondstofstromen, en een directiebeoordeling die werkelijk stuurt op milieuprestaties.',
+      'Bij organisaties die ISO 14001 combineren met ISO 9001 of ISO 27001 bouwen we één geïntegreerd systeem in plaats van drie aparte. Dat scheelt aanzienlijk in beheerlast en zorgt dat het systeem in de praktijk wordt gebruikt — niet als naast elkaar bestaande certificaat-mappen.',
+    ],
+  }}
+  valkuilen={[
+    {
+      titel: 'Aspectenanalyse die te abstract blijft',
+      body: 'Veel organisaties komen niet verder dan algemene categorieën als "energieverbruik" en "afval". Dat passeert geen audit en helpt u niet sturen. GTY werkt op het niveau van concrete activiteiten en processen.',
+    },
+    {
+      titel: 'Wettelijke kaders die niet bijgehouden worden',
+      body: 'De norm vraagt aantoonbaar inzicht in compliance-verplichtingen — en dat is een bewegend doel. Wij richten een proces in dat veranderingen in wet- en regelgeving structureel signaleert, in plaats van eens per jaar geforceerd te checken.',
+    },
+    {
+      titel: 'Doelstellingen die niet meetbaar zijn',
+      body: '"Verminderen van afval" is geen doelstelling waar een auditor genoegen mee neemt. We formuleren doelen die concreet meetbaar zijn binnen het systeem dat u toch al voert, zonder een nieuw KPI-bureaucratie op te tuigen.',
+    },
+    {
+      titel: 'Noodsituatie-procedures die nooit getest worden',
+      body: 'Procedures voor calamiteiten staan vaak op papier maar worden nooit beoefend. Een ISO 14001-auditor vraagt naar de laatste oefening — als die er niet was, leidt dat tot een afwijking. Wij plannen ze in en helpen ze doorlopen.',
+    },
+    {
+      titel: 'Monitoring zonder analyse',
+      body: 'Data verzamelen is niet hetzelfde als data gebruiken. Veel ISO 14001-systemen produceren cijfers waar niemand iets mee doet. Wij richten monitoring zo in dat de directiebeoordeling op de uitkomsten kan sturen.',
+    },
+    {
+      titel: 'Het systeem isoleren van de bedrijfsvoering',
+      body: 'Als ISO 14001 een eigen wereld wordt naast de operatie, sterft het systeem af. We integreren milieu-aspecten in inkoop-, project- en operationele processen — daar moet het zijn werk doen.',
+    },
+  ]}
+  daarna={{
+    eyebrow: 'En daarna',
+    titel: 'Een certificaat dat actueel blijft.',
+    body: [
+      'Milieuwetgeving verandert. Activiteitenbesluit, omgevingsvergunningen, branchespecifieke afspraken, Europese richtlijnen — de kaders waarbinnen u opereert worden regelmatig bijgesteld. Een ISO 14001-systeem dat in jaar één perfect klopt, is in jaar drie niet meer compleet zonder onderhoud.',
+      'Het Partnerprogramma vangt dat op. We bewaken de wettelijke kaders, voeren kwartaalaudits uit op uw aspectenanalyse en doelstellingen, en zorgen dat de jaarlijkse directiebeoordeling klaarligt met cijfers die kloppen. Zo blijft het certificaat een spiegel van wat u werkelijk doet.',
+    ],
+  }}
+  faq={[
+    {
+      vraag: 'Hoe lang duurt een ISO 14001-traject?',
+      antwoord: 'Indicatief 5–7 maanden, afhankelijk van de complexiteit van uw milieu-impact en de mate waarin u al milieudata verzamelt. Bedrijven met een vergunningplichtige activiteit hebben vaak meer voorwerk nodig dan dienstverleners met beperkte directe impact.',
+    },
+    {
+      vraag: 'Kan ISO 14001 gecombineerd worden met ISO 9001?',
+      antwoord: 'Ja, en wij raden dat ook aan als beide normen relevant zijn. Door één geïntegreerd managementsysteem te bouwen, deelt u directiebeoordeling, interne audits, documentbeheer en risico-analyse. Dat scheelt aanzienlijk in beheerlast.',
+    },
+    {
+      vraag: 'Wat is het verschil tussen ISO 14001 en CO₂-Prestatieladder?',
+      antwoord: 'ISO 14001 is een breed milieumanagementsysteem; de CO₂-Prestatieladder richt zich specifiek op CO₂-reductie en wordt vooral in aanbestedingen van Rijkswaterstaat en grote opdrachtgevers gevraagd. Ze sluiten elkaar niet uit — veel bouw- en infrabedrijven voeren beide.',
+    },
+    {
+      vraag: 'Moet onze organisatie al milieudoelstellingen hebben voordat we beginnen?',
+      antwoord: 'Nee. De aspectenanalyse die we tijdens de implementatie uitvoeren, levert juist de input voor zinvolle doelstellingen. We starten zonder vooraf bedachte targets en bouwen ze op vanuit wat uw organisatie werkelijk kan beïnvloeden.',
+    },
+    {
+      vraag: 'Wat als wij geen "milieu-zware" activiteiten hebben?',
+      antwoord: 'Ook dienstverlenende organisaties hebben milieu-aspecten — kantoorenergie, mobiliteit, ICT-infrastructuur, inkoop, papier- en afvalstromen. ISO 14001 is goed implementeerbaar voor organisaties met beperkte directe impact, en dan vooral een statement richting opdrachtgevers.',
+    },
+    {
+      vraag: 'Welke certificerende instelling past bij ons?',
+      antwoord: 'Dat hangt af van uw sector, omvang en internationale activiteiten. We adviseren over geaccrediteerde CI\'s en zorgen dat de keuze niet wordt gestuurd door wie het goedkoopst is, maar door wie uw branche goed kent.',
+    },
+  ]}
+/>

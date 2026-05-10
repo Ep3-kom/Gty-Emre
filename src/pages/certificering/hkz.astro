@@ -1,0 +1,98 @@
+---
+import NormPagina from '~/layouts/NormPaginaTemplate.astro';
+import { normBySlug } from '~/data/normen';
+const norm = normBySlug('hkz')!;
+---
+
+<NormPagina
+  norm={norm}
+  oneliner="HKZ. De kwaliteitsnorm voor organisaties in zorg en welzijn."
+  intro="HKZ is de sectorspecifieke kwaliteitsnorm voor zorg- en welzijnsorganisaties in Nederland. Het zegt iets dat een algemene kwaliteitsnorm niet kan zeggen: dat uw organisatie cliëntgerichte zorg levert volgens de eisen van uw branche. GTY begeleidt zorginstellingen door het volledige HKZ-traject — van nulmeting tot certificaat en de borging daarna."
+  watIs={{
+    eyebrow: 'Wat is HKZ',
+    titel: 'De norm voor kwaliteit en veiligheid in de zorg.',
+    body: [
+      'HKZ staat voor Harmonisatie Kwaliteitsbeoordeling in de Zorgsector. Achter die formele naam zit een set sectorspecifieke certificatieschema\'s, ontwikkeld in overleg met cliëntorganisaties, brancheverenigingen en zorgverzekeraars. Er is dus geen één HKZ-norm, maar een familie van schema\'s — voor jeugdzorg, gehandicaptenzorg, thuiszorg, kinderopvang, GGZ en meer.',
+      'Wat HKZ onderscheidt van ISO 9001 is de expliciete verankering van het cliëntperspectief. De norm vraagt aantoonbaar dat cliëntervaringen worden opgehaald, geanalyseerd en gebruikt om de zorg te verbeteren. Klachtafhandeling, medezeggenschap en cliëntgerichte communicatie zijn geen optionele uitwerkingen — ze zijn ingebouwd in de eisen.',
+      'HKZ wordt door zorginkopers, zorgverzekeraars en gemeenten regelmatig als voorwaarde gesteld voor contractering. Voor veel zorgorganisaties is het daarmee een bedrijfskritische certificering — het verschil tussen wel of geen toegang tot een markt.',
+    ],
+  }}
+  voorWie={{
+    eyebrow: 'Voor wie',
+    titel: 'Voor zorginstellingen die kwaliteit niet aan het toeval overlaten.',
+    body: [
+      'GTY heeft ervaring met HKZ-trajecten in jeugdzorg, gehandicaptenzorg en thuiszorg. Dat zijn ook de sectoren waarin de eisen van inkopers en verzekeraars het meest expliciet zijn, en waarin de wisselwerking tussen kwaliteitssysteem en zorgpraktijk het scherpst zichtbaar wordt.',
+      'In andere segmenten van zorg en welzijn — kinderopvang, GGZ, beschermd wonen, dagbesteding — gelden eigen HKZ-schema\'s met sectorspecifieke aanvullingen. Wij stemmen de aanpak af op het schema dat voor uw organisatie van toepassing is, inclusief de specifieke onderwerpen die in uw segment door auditoren extra worden uitgevraagd.',
+      'Voor multidisciplinaire zorgorganisaties die meerdere typen zorg leveren, kan een gecombineerd of opvolgend HKZ-traject zinvol zijn. We kijken altijd of er logische overlap met ISO 9001 of NEN 7510 te benutten valt.',
+    ],
+  }}
+  hoeWerkt={{
+    eyebrow: 'Hoe GTY werkt',
+    titel: 'Begeleiding van A tot Z.',
+    body: [
+      'We starten met een nulmeting waarin we uw organisatie toetsen tegen het voor u relevante HKZ-schema. Niet alleen op de algemene managementeisen, maar specifiek op de zorginhoudelijke en cliëntgerichte aspecten van uw schema. We kijken op locatie, spreken met cliëntenraad of cliëntvertegenwoordigers waar dat past, en beoordelen hoe het kwaliteitsdenken in uw zorgteams al leeft.',
+      'In de implementatie ligt de nadruk op systemen die in de zorgpraktijk werken. Cliëntdossiers, methodieken, multidisciplinair overleg, incidentmeldingen en klachtafhandeling — allemaal onderwerpen waar de norm over gaat en waar uw zorgmedewerkers dagelijks mee werken. We zorgen dat de kwaliteitsdocumenten zich aanpassen aan de zorgpraktijk, niet andersom.',
+      'In de aanloop naar de externe audit bereiden we directie, kwaliteitsfunctionaris en operationeel leidinggevenden voor op de gesprekken die de auditor zal voeren. Tijdens de audit zijn we beschikbaar — als rugdekking voor het team, niet als woordvoerder.',
+    ],
+  }}
+  valkuilen={[
+    {
+      titel: 'Cliëntervaringen meten zonder ze te gebruiken',
+      body: 'Cliënttevredenheidsonderzoeken die elk jaar worden uitgevoerd en vervolgens in een la verdwijnen, leiden tot een afwijking. De norm vraagt aantoonbaar gebruik van cliëntfeedback in verbetering. Wij richten dat als doorlopend proces in.',
+    },
+    {
+      titel: 'Klachtafhandeling die te procedureel is',
+      body: 'Een klachtenregeling die voldoet aan de Wkkgz is niet automatisch genoeg voor HKZ. De norm vraagt dat klachten daadwerkelijk leiden tot leren en verbeteren. Dat vereist een feedback-loop, niet alleen een correcte afhandeling.',
+    },
+    {
+      titel: 'Medezeggenschap als formaliteit',
+      body: 'Cliëntenraad of vergelijkbaar orgaan moet aantoonbaar betrokken zijn bij relevante besluitvorming. Veel zorgorganisaties hebben dat formeel goed geregeld, maar kunnen de werkelijke betrokkenheid niet aantonen. Wij helpen die brug te slaan.',
+    },
+    {
+      titel: 'Methodieken op papier, niet in de praktijk',
+      body: 'Beschreven werkwijzen die zorgteams niet (h)erkennen, leveren afwijkingen op tijdens audits op locatie. We werken vanuit de feitelijke methodiek en passen documentatie daarop aan, niet andersom.',
+    },
+    {
+      titel: 'Incidenten melden zonder analyse',
+      body: 'Een meldsysteem zonder systematische analyse van trends en oorzaken haalt geen audit. We richten de incidentanalyse zo in dat ze terugvloeit in zorgverbetering en in de jaarlijkse evaluatie.',
+    },
+    {
+      titel: 'Kwaliteit als eilandje van de kwaliteitsfunctionaris',
+      body: 'Als HKZ alleen leeft bij één persoon, valt het systeem om zodra die persoon vertrekt — én staat het op afstand van de zorg. Wij zorgen dat het systeem in de teams verankerd raakt, met de kwaliteitsfunctionaris als bewaker, niet als enige eigenaar.',
+    },
+  ]}
+  daarna={{
+    eyebrow: 'En daarna',
+    titel: 'Borging die de zorgpraktijk volgt.',
+    body: [
+      'In de zorg verandert er constant: nieuwe wet- en regelgeving (Wzd, Wkkgz, Jeugdwet-aanpassingen), wijzigende eisen van zorginkopers, nieuwe inspectiekaders. Een HKZ-systeem dat actueel was bij certificering, is twee jaar later alleen nog actueel als er onderhoud op zit.',
+      'Het Partnerprogramma is daar voor zorgorganisaties op afgestemd: kwartaalaudits met focus op de cliëntgerichte eisen die door HKZ-auditoren extra worden uitgevraagd, ondersteuning bij wijzigende inkoopvoorwaarden en hulp bij voorbereiding op IGJ-bezoek of -toezicht.',
+    ],
+  }}
+  faq={[
+    {
+      vraag: 'Welk HKZ-schema is op onze organisatie van toepassing?',
+      antwoord: 'Dat hangt af van het type zorg dat u levert. Voor jeugdzorg, gehandicaptenzorg, thuiszorg, GGZ, kinderopvang, beschermd wonen en dagbesteding bestaan eigen schema\'s. Tijdens de nulmeting bepalen we samen welk schema (of welke combinatie) aansluit op uw organisatie.',
+    },
+    {
+      vraag: 'Hoe lang duurt een HKZ-traject?',
+      antwoord: 'Indicatief 6–9 maanden. Voor organisaties die voorheen geen geformaliseerd kwaliteitssysteem hadden, kan dat oplopen tot 12 maanden. De doorlooptijd hangt sterk af van de mate waarin cliëntgerichte processen al transparant gedocumenteerd zijn.',
+    },
+    {
+      vraag: 'Verschil tussen HKZ en ISO 9001 voor de zorg?',
+      antwoord: 'HKZ is sectorspecifiek en bevat eisen rond cliëntgerichtheid, klachten, medezeggenschap en zorginhoud die in ISO 9001 niet expliciet staan. Voor de meeste zorgorganisaties is HKZ daarmee passender. Soms wordt ISO 9001 daarnaast gevraagd voor ondersteunende diensten.',
+    },
+    {
+      vraag: 'Moeten we voor HKZ ook NEN 7510 hebben?',
+      antwoord: 'Niet automatisch — het zijn aparte certificeringen. Maar zorgverzekeraars en gemeenten vragen steeds vaker NEN 7510 als aanvullende eis vanwege de verwerking van persoonlijke gezondheidsinformatie. We adviseren of een gecombineerd traject zinvol is.',
+    },
+    {
+      vraag: 'Hoe gaan jullie om met de cliëntenraad in een HKZ-traject?',
+      antwoord: 'We betrekken de cliëntenraad waar dat nodig en passend is, in afstemming met u. Niet als verplicht nummer, maar omdat hun perspectief vaak helpt om verbeteringen te ontdekken die intern niet zichtbaar zijn.',
+    },
+    {
+      vraag: 'Wat als de IGJ tegelijkertijd toezicht houdt?',
+      antwoord: 'Een HKZ-systeem dat in de praktijk werkt, helpt ook bij IGJ-toezicht — de kaders overlappen sterk op het gebied van veiligheid, deskundigheid en cliëntgerichtheid. We stemmen de inrichting zo af dat één goed werkend systeem beide audiences bedient.',
+    },
+  ]}
+/>

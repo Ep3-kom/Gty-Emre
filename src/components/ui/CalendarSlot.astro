@@ -1,0 +1,24 @@
+---
+import { siteData } from '~/data/site-data';
+// TODO: vraag klant — Cal.com / Calendly account-URL voor afspraakplanner.
+// Zodra geleverd: vervang dit blok met de embed.
+---
+
+<div class="border border-dashed border-line-cool bg-cream/40 p-7 md:p-8">
+  <p class="mono-eyebrow text-teal-700">Direct een afspraak</p>
+  <h3 class="mt-3 font-display text-h3 text-teal-900">Bel of mail nu.</h3>
+  <p class="mt-4 text-base text-ink-soft max-w-prose">
+    De snelste route naar een afspraak is direct contact. Een online agenda volgt binnenkort —
+    tot die tijd reageren we doorgaans binnen één werkdag.
+  </p>
+  <dl class="mt-6 space-y-3 text-base">
+    <div class="flex items-baseline gap-3">
+      <dt class="mono-eyebrow text-teal-700 w-20">Telefoon</dt>
+      <dd><a href={siteData.contact.phoneHref} class="font-mono text-teal-900 link-underline">{siteData.contact.phone}</a></dd>
+    </div>
+    <div class="flex items-baseline gap-3">
+      <dt class="mono-eyebrow text-teal-700 w-20">E-mail</dt>
+      <dd><a href={siteData.contact.emailHref} class="text-teal-900 link-underline">{siteData.contact.email}</a></dd>
+    </div>
+  </dl>
+</div>

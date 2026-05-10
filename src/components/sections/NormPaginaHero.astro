@@ -1,0 +1,64 @@
+---
+import Eyebrow from '~/components/ui/Eyebrow.astro';
+import Button from '~/components/ui/Button.astro';
+import { siteData } from '~/data/site-data';
+import type { Norm } from '~/data/normen';
+
+type Props = { norm: Norm; oneliner: string; intro: string };
+const { norm, oneliner, intro } = Astro.props;
+---
+
+<section class="border-b border-line-cool">
+  <div class="container-x pt-12 md:pt-16 pb-16 md:pb-20">
+    <nav aria-label="Breadcrumb" class="mb-8 text-caption font-mono text-ink-soft uppercase tracking-wider">
+      <a href="/" class="hover:text-teal-700">Home</a>
+      <span class="mx-2 text-line-cool">/</span>
+      <a href="/certificering/" class="hover:text-teal-700">Certificering</a>
+      <span class="mx-2 text-line-cool">/</span>
+      <span class="text-teal-700">{norm.code}</span>
+    </nav>
+
+    <div class="grid grid-cols-12 gap-x-6 gap-y-8">
+      <div class="col-span-12 lg:col-span-8">
+        <Eyebrow>{norm.code} · {norm.shortTitle}</Eyebrow>
+        <h1 class="mt-6 font-display text-h1 md:text-[3.5rem] md:leading-[1.05] text-teal-900 text-balance">
+          {oneliner}
+        </h1>
+        <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">{intro}</p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-3">
+          <Button href={siteData.cta.primary.href} size="lg">{siteData.cta.primary.label}</Button>
+          <Button href={siteData.cta.secondary.href} variant="ghost" size="lg">
+            {siteData.cta.secondary.label} →
+          </Button>
+        </div>
+      </div>
+
+      <aside class="col-span-12 lg:col-span-4 lg:col-start-9">
+        <div class="border border-line-cool bg-cream/60 p-7 font-mono text-small">
+          <dl class="space-y-4">
+            <div>
+              <dt class="mono-eyebrow text-teal-700">Voor wie</dt>
+              <dd class="mt-1.5 font-sans text-base text-ink">{norm.audience}</dd>
+            </div>
+            <div class="rule-cream"></div>
+            <div>
+              <dt class="mono-eyebrow text-teal-700">Doorlooptijd</dt>
+              <dd class="mt-1.5 font-sans text-base text-ink">{norm.doorlooptijd}</dd>
+            </div>
+            <div class="rule-cream"></div>
+            <div>
+              <dt class="mono-eyebrow text-teal-700">Auditcyclus</dt>
+              <dd class="mt-1.5 font-sans text-base text-ink">{norm.auditFrequentie}</dd>
+            </div>
+            <div class="rule-cream"></div>
+            <div>
+              <dt class="mono-eyebrow text-teal-700">Sectorfocus</dt>
+              <dd class="mt-1.5 font-sans text-base text-ink">{norm.sectorFocus}</dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
