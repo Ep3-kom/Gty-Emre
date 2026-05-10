@@ -3,7 +3,4 @@ type Props = { class?: string };
 const { class: extra = '' } = Astro.props;
 ---
 
-<div class:list={['flex items-center gap-3', extra]}>
-  <span class="block w-8 h-px bg-teal-700/60"></span>
-  <span class="mono-eyebrow"><slot /></span>
-</div>
+<span class:list={['mono-eyebrow', extra]}><slot /></span>
