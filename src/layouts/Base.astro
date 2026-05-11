@@ -13,6 +13,7 @@ type Props = {
   noindex?: boolean;
   jsonLd?: object[];
   bodyClass?: string;
+  headerOverlay?: boolean;
 };
 
 const {
@@ -22,6 +23,7 @@ const {
   noindex = false,
   jsonLd = [],
   bodyClass = '',
+  headerOverlay = false,
 } = Astro.props;
 
 const pageTitle = buildTitle(title);
@@ -72,8 +74,8 @@ const allLd = [localBusinessJsonLd(), ...jsonLd];
       Naar de inhoud
     </a>
 
-    <Header />
-    <main id="main" class="flex-1">
+    <Header overlay={headerOverlay} />
+    <main id="main" class:list={['flex-1', headerOverlay && '-mt-[88px]']}>
       <slot />
     </main>
     <Footer />

@@ -4,22 +4,42 @@ import { normen } from '~/data/normen';
 import { t } from '~/i18n/nl';
 import MobileNav from '~/components/layout/MobileNav.astro';
 
+type Props = { overlay?: boolean };
+const { overlay = false } = Astro.props;
+
 const path = Astro.url.pathname;
 const isActive = (prefix: string) =>
   prefix === '/' ? path === '/' : path.startsWith(prefix);
+
+const headerClass = overlay
+  ? 'relative z-30 bg-transparent text-paper'
+  : 'relative z-30 border-b border-line-cool bg-paper text-ink';
+
+const navItemBase = 'px-3 py-2 text-small transition-colors';
+const navItemRest = overlay
+  ? 'text-paper/85 hover:text-paper'
+  : 'text-ink hover:text-teal-700';
+const navItemActive = overlay ? 'text-paper' : 'text-teal-700';
+
+const ctaClass = overlay
+  ? 'hidden lg:inline-flex items-center bg-paper text-teal-900 px-4 py-2.5 text-small font-medium hover:bg-cream transition-colors rounded-md'
+  : 'hidden lg:inline-flex items-center bg-teal-900 text-paper px-4 py-2.5 text-small font-medium hover:bg-ink transition-colors rounded-md';
+
+const logoSize = overlay ? 'h-10' : 'h-7';
+const headerHeight = overlay ? 'h-[88px]' : 'h-[72px]';
 ---
 
-<header class="relative z-30 border-b border-line-cool bg-paper">
-  <div class="container-x flex h-[72px] items-center justify-between gap-8">
+<header class={headerClass}>
+  <div class={`container-x flex ${headerHeight} items-center justify-between gap-8`}>
     <a href="/" class="flex items-center gap-3" aria-label="GTY home">
-      <img src="/logo.svg" alt="GTY" width="64" height="29" class="h-7 w-auto" />
+      <img src="/logo.svg" alt="GTY" width="64" height="29" class={`${logoSize} w-auto`} />
       <span class="sr-only">GTY</span>
     </a>
 
     <nav class="hidden lg:flex items-center gap-1" aria-label="Hoofdnavigatie">
       <div class="relative group">
         <button
-          class="px-3 py-2 text-small text-ink hover:text-teal-700 transition-colors flex items-center gap-1.5"
+          class={`${navItemBase} ${navItemRest} flex items-center gap-1.5`}
           aria-haspopup="true"
           aria-expanded="false"
         >
@@ -31,7 +51,7 @@ const isActive = (prefix: string) =>
         <div
           class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-opacity"
         >
-          <div class="bg-paper border border-line-cool shadow-lift min-w-[280px] py-2">
+          <div class="bg-paper border border-line-cool shadow-lift min-w-[280px] py-2 text-ink">
             {normen.map((n) => (
               <a
                 href={`/certificering/${n.slug}/`}
@@ -54,14 +74,14 @@ const isActive = (prefix: string) =>
 
       <a
         href="/partnerprogramma/"
-        class:list={['px-3 py-2 text-small transition-colors', isActive('/partnerprogramma') ? 'text-teal-700' : 'text-ink hover:text-teal-700']}
+        class:list={[navItemBase, isActive('/partnerprogramma') ? navItemActive : navItemRest]}
       >
         {t.nav.partnerprogramma}
       </a>
 
       <div class="relative group">
         <button
-          class="px-3 py-2 text-small text-ink hover:text-teal-700 transition-colors flex items-center gap-1.5"
+          class={`${navItemBase} ${navItemRest} flex items-center gap-1.5`}
           aria-haspopup="true"
           aria-expanded="false"
         >
@@ -71,7 +91,7 @@ const isActive = (prefix: string) =>
           </svg>
         </button>
         <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-opacity">
-          <div class="bg-paper border border-line-cool shadow-lift min-w-[260px] py-2">
+          <div class="bg-paper border border-line-cool shadow-lift min-w-[260px] py-2 text-ink">
             <a href="/interne-audits/" class="block px-5 py-2.5 text-small hover:bg-teal-50">
               {t.nav.interneAuditsAll}
             </a>
@@ -85,16 +105,13 @@ const isActive = (prefix: string) =>
         </div>
       </div>
 
-      <a href="/academy/" class="px-3 py-2 text-small text-ink hover:text-teal-700 transition-colors">{t.nav.academy}</a>
-      <a href="/werkwijze/" class="px-3 py-2 text-small text-ink hover:text-teal-700 transition-colors">{t.nav.werkwijze}</a>
-      <a href="/over-ons/" class="px-3 py-2 text-small text-ink hover:text-teal-700 transition-colors">{t.nav.overOns}</a>
+      <a href="/academy/" class={`${navItemBase} ${navItemRest}`}>{t.nav.academy}</a>
+      <a href="/werkwijze/" class={`${navItemBase} ${navItemRest}`}>{t.nav.werkwijze}</a>
+      <a href="/over-ons/" class={`${navItemBase} ${navItemRest}`}>{t.nav.overOns}</a>
     </nav>
 
     <div class="flex items-center gap-3">
-      <a
-        href={siteData.cta.primary.href}
-        class="hidden lg:inline-flex items-center bg-teal-900 text-paper px-4 py-2.5 text-small font-medium hover:bg-ink transition-colors rounded-md"
-      >
+      <a href={siteData.cta.primary.href} class={ctaClass}>
         {t.nav.primaryCta}
       </a>
 

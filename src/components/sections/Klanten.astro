@@ -1,0 +1,145 @@
+---
+type Klant = { naam: string; logo: string };
+
+const klanten: Klant[] = [
+  { naam: 'AE Security Group', logo: '/images/klanten/ae-security-group.png' },
+  { naam: 'Certicor', logo: '/images/klanten/certicor.png' },
+  { naam: 'Ir. Lely Lyceum', logo: '/images/klanten/ir-lely-lyceum.png' },
+  { naam: 'KinderKidz Opvang', logo: '/images/klanten/kinderkidz-opvang.png' },
+  { naam: 'Shadow Security', logo: '/images/klanten/shadow-security.png' },
+  { naam: 'JeugdSterk', logo: '/images/klanten/jeugdsterk.png' },
+  { naam: 'Linden Tree Care', logo: '/images/klanten/linden-tree-care.png' },
+  { naam: 'Smile Place Tandartsen', logo: '/images/klanten/smile-place-tandartsen.png' },
+  { naam: 'dAP — De Arbo Pioniers', logo: '/images/klanten/dap-arbo-pioniers.png' },
+  { naam: 'Zorgstip', logo: '/images/klanten/zorgstip.png' },
+  { naam: 'Emirs Foundation', logo: '/images/klanten/emirs-foundation.png' },
+];
+
+const track = [...klanten, ...klanten];
+---
+
+<section class="relative bg-paper border-y border-line-cool">
+  <div class="container-x pt-20 md:pt-28 pb-10 md:pb-14 max-w-3xl mx-auto">
+    <h2
+      class="font-display text-[2.4rem] sm:text-[3rem] md:text-[3.75rem] lg:text-[4.25rem] leading-[1.02] tracking-[-0.02em] text-teal-900 text-balance"
+    >
+      Zij kozen voor <span class="display-italic text-teal-700">zekerheid.</span>
+      <span class="block md:inline">En bleven.</span>
+    </h2>
+
+    <p class="mt-6 text-lead text-ink-soft text-pretty max-w-prose">
+      Zorgorganisaties, scholen, beveiligingsbedrijven, kinderopvang, arbo-adviseurs.
+      Elf opdrachtgevers, zes sectoren — en steeds dezelfde manier van werken.
+    </p>
+  </div>
+
+  <div class="klanten-marquee relative pb-16 md:pb-20">
+    <div class="klanten-track" role="list" aria-label="Klanten van GTY">
+      {track.map((k, i) => (
+        <div
+          role="listitem"
+          aria-hidden={i >= klanten.length ? 'true' : undefined}
+          class="klanten-card"
+        >
+          <img
+            src={k.logo}
+            alt={i >= klanten.length ? '' : `Logo ${k.naam}`}
+            width="200"
+            height="100"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      ))}
+    </div>
+
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-paper to-transparent"
+    ></div>
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-paper to-transparent"
+    ></div>
+  </div>
+</section>
+
+<style>
+  .klanten-marquee {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+
+  .klanten-track {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    width: max-content;
+    animation: klanten-scroll 50s linear infinite;
+    will-change: transform;
+  }
+
+  .klanten-marquee:hover .klanten-track {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .klanten-track {
+      animation: none;
+      transform: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: auto;
+      padding: 0 1.5rem;
+    }
+  }
+
+  @keyframes klanten-scroll {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-50%, 0, 0); }
+  }
+
+  .klanten-card {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: theme('colors.paper');
+    border: 1px solid theme('colors.line-cool');
+    padding: 1rem 1.25rem;
+    transition: border-color 200ms ease, transform 200ms ease;
+  }
+
+  .klanten-card:hover {
+    border-color: theme('colors.teal.700');
+  }
+
+  .klanten-card img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: filter 250ms ease, opacity 250ms ease;
+  }
+
+  .klanten-card:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  @media (min-width: 768px) {
+    .klanten-card {
+      width: 240px;
+      height: 130px;
+    }
+    .klanten-track {
+      gap: 1.5rem;
+    }
+  }
+</style>

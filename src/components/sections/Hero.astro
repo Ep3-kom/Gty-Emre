@@ -4,18 +4,38 @@ import Eyebrow from '~/components/ui/Eyebrow.astro';
 import Button from '~/components/ui/Button.astro';
 ---
 
-<section class="relative overflow-hidden">
-  <div class="container-x pt-16 md:pt-24 pb-20 md:pb-28">
-    <div class="grid grid-cols-12 gap-x-6 gap-y-10">
-      <div class="col-span-12 lg:col-span-8">
-        <Eyebrow>De standaard in certificering en compliance</Eyebrow>
+<section class="relative isolate overflow-hidden bg-teal-900 text-paper">
+  <img
+    src="/images/hero-overleg-gang.jpg"
+    alt="Twee professionals in gesprek in een lichte, geordende kantoorgang."
+    width="2400"
+    height="1350"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+    class="absolute inset-0 -z-20 h-full w-full object-cover object-[55%_center]"
+  />
 
-        <h1 class="mt-6 font-display text-[2.6rem] leading-[1.05] md:text-hero text-balance text-teal-900">
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 -z-10 bg-gradient-to-r from-teal-900/85 via-teal-900/60 to-teal-900/25"
+  ></div>
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 -z-10 bg-gradient-to-t from-teal-900/70 via-transparent to-teal-900/20"
+  ></div>
+
+  <div class="container-x relative pt-[152px] md:pt-[176px] pb-16 md:pb-20 min-h-[88vh] flex flex-col">
+    <div class="grid grid-cols-12 gap-x-6 flex-1">
+      <div class="col-span-12 lg:col-span-8 xl:col-span-7 flex flex-col justify-center">
+        <Eyebrow class="!text-cream/90">De standaard in certificering en compliance</Eyebrow>
+
+        <h1 class="mt-6 font-display text-[2.6rem] leading-[1.05] md:text-hero text-balance text-paper drop-shadow-[0_1px_24px_rgba(8,24,26,0.45)]">
           Zekerheid in certificering.<br />
-          <span class="display-italic text-teal-700">Rust in compliance.</span>
+          <span class="display-italic text-cream">Rust in compliance.</span>
         </h1>
 
-        <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">
+        <p class="mt-7 max-w-prose text-lead text-cream/90 text-pretty">
           Uw organisatie heeft een certificaat nodig — voor een aanbesteding, een opdrachtgever
           of een sectoreis. GTY is de partner die u er stap voor stap naartoe leidt, en die ook
           daarna naast u blijft. Zodat het certificaat niet alleen behaald wordt, maar werkt.
@@ -23,37 +43,36 @@ import Button from '~/components/ui/Button.astro';
 
         <div class="mt-10 flex flex-wrap items-center gap-3">
           <Button href={siteData.cta.primary.href} size="lg">{siteData.cta.primary.label}</Button>
-          <Button href={siteData.cta.secondary.href} variant="ghost" size="lg">
+          <Button
+            href={siteData.cta.secondary.href}
+            variant="ghost"
+            size="lg"
+            class="!text-paper !border-paper/40 hover:!bg-paper/10"
+          >
             {siteData.cta.secondary.label} →
           </Button>
         </div>
       </div>
-
-      <aside class="col-span-12 lg:col-span-4 lg:col-start-9 self-end">
-        <div class="border border-line-cool bg-cream/60 p-7 md:p-8">
-          <p class="mono-eyebrow text-teal-700">Wat GTY belooft</p>
-          <dl class="mt-5 space-y-4">
-            <div>
-              <dt class="font-display text-h4 text-teal-900">Zekerheid</dt>
-              <dd class="mt-1 text-small text-ink-soft">U weet altijd waar u staat en wat er komt.</dd>
-            </div>
-            <div class="rule-cream"></div>
-            <div>
-              <dt class="font-display text-h4 text-teal-900">Rust</dt>
-              <dd class="mt-1 text-small text-ink-soft">Compliance is geregeld. Geen verrassingen.</dd>
-            </div>
-            <div class="rule-cream"></div>
-            <div>
-              <dt class="font-display text-h4 text-teal-900">Controle</dt>
-              <dd class="mt-1 text-small text-ink-soft">Uw organisatie. Uw systeem. Uw grip.</dd>
-            </div>
-          </dl>
-        </div>
-      </aside>
     </div>
-  </div>
 
-  <div class="container-x">
-    <div class="rule"></div>
+    <div
+      class="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-3 border-t border-paper/20 divide-y md:divide-y-0 md:divide-x divide-paper/15"
+    >
+      <div class="py-6 md:py-7 md:pr-8">
+        <p class="mono-eyebrow !text-cream/90">Zekerheid</p>
+        <p class="mt-2 font-display text-h4 text-paper">U weet waar u staat.</p>
+        <p class="mt-1 text-small text-cream/75">En wat er komt.</p>
+      </div>
+      <div class="py-6 md:py-7 md:px-8">
+        <p class="mono-eyebrow !text-cream/90">Rust</p>
+        <p class="mt-2 font-display text-h4 text-paper">Compliance is geregeld.</p>
+        <p class="mt-1 text-small text-cream/75">Geen verrassingen.</p>
+      </div>
+      <div class="py-6 md:py-7 md:pl-8">
+        <p class="mono-eyebrow !text-cream/90">Controle</p>
+        <p class="mt-2 font-display text-h4 text-paper">Uw organisatie.</p>
+        <p class="mt-1 text-small text-cream/75">Uw systeem. Uw grip.</p>
+      </div>
+    </div>
   </div>
 </section>
