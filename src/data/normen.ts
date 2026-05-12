@@ -3,7 +3,7 @@ export type Norm = {
   code: string;
   title: string;
   shortTitle: string;
-  category: 'kwaliteit' | 'milieu' | 'informatiebeveiliging' | 'zorg';
+  category: 'kwaliteit' | 'milieu' | 'informatiebeveiliging' | 'zorg' | 'arbo';
   audience: string;
   doorlooptijd: string;
   auditFrequentie: string;
@@ -71,6 +71,18 @@ export const normen: Norm[] = [
     auditFrequentie: 'Jaarlijkse surveillance · 3-jaars hercertificering',
     sectorFocus: 'Ziekenhuizen, huisartsen, ggz, thuiszorg',
     oneliner: 'Informatiebeveiliging voor de zorg.',
+  },
+  {
+    slug: 'certificatieschema-arbodiensten',
+    code: 'Certificatieschema Arbodiensten',
+    title: 'Certificatieschema Arbodiensten',
+    shortTitle: 'Wettelijk schema voor arbodiensten',
+    category: 'arbo',
+    audience: 'Interne en externe arbodiensten in Nederland',
+    doorlooptijd: '4–6 maanden (indicatief)',
+    auditFrequentie: 'Jaarlijkse surveillance · 3-jaars hercertificering',
+    sectorFocus: 'Arbodienstverlening, bedrijfsgeneeskunde',
+    oneliner: 'Het wettelijk verplichte certificaat voor arbodiensten.',
   },
 ];
 
