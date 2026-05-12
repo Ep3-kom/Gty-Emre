@@ -28,6 +28,14 @@ const year = new Date().getFullYear();
           <a href={siteData.contact.phoneHref} class="block link-underline font-mono">{siteData.contact.phone}</a>
           <a href={siteData.contact.emailHref} class="block link-underline">{siteData.contact.email}</a>
         </div>
+        <dl class="mt-5 grid grid-cols-[auto,1fr] gap-x-3 gap-y-1 text-caption text-paper/65 font-mono">
+          <dt class="text-paper/55">Openingstijden</dt>
+          <dd>{siteData.business.hours}</dd>
+          <dt class="text-paper/55">KvK</dt>
+          <dd>{siteData.business.kvk}</dd>
+          <dt class="text-paper/55">BTW</dt>
+          <dd>{siteData.business.vat}</dd>
+        </dl>
       </div>
 
       <div class="md:col-span-2">

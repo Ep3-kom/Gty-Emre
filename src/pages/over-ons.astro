@@ -45,12 +45,14 @@ import { siteData } from '~/data/site-data';
       </div>
       <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
         <p>
-          GTY werd in {siteData.business.foundedYear} opgericht na jaren aan de
-          binnenkant te hebben gewerkt bij organisaties die een certificeringstraject
-          doorliepen. Telkens viel hetzelfde op: bedrijven die na maanden inspanning
-          het certificaat haalden en een jaar later toch weer struikelden bij de
-          opvolgaudit. Of trajecten die afgevinkt werden zonder dat het systeem
-          ergens echt voet aan de grond kreeg.
+          GTY werd eind {siteData.business.foundedYear} als zelfstandig
+          adviesbureau gelanceerd, voortbouwend op ervaring die de oprichter
+          sinds eind {siteData.business.experienceSinceYear} in het werkveld
+          opbouwde — aan de binnenkant van organisaties die een
+          certificeringstraject doorliepen. Telkens viel hetzelfde op: bedrijven
+          die na maanden inspanning het certificaat haalden en een jaar later
+          toch weer struikelden bij de opvolgaudit. Of trajecten die afgevinkt
+          werden zonder dat het systeem ergens echt voet aan de grond kreeg.
         </p>
         <p>
           Het zat zelden in de norm zelf, maar in hoe trajecten werden uitgevoerd.
@@ -59,16 +61,15 @@ import { siteData } from '~/data/site-data';
           per fase opnieuw moesten worden bijgepraat.
         </p>
         <p>
-          Wat ooit begon bij BHV-opleidingen, groeide uit naar volledige
-          normbegeleiding — kwaliteitszorg, milieu, informatiebeveiliging,
-          zorgkwaliteit. Met één principe: dezelfde begeleider die u in de eerste
-          meting tegenkwam, voert u ook door surveillance-jaar drie. Geen
-          overdrachten, geen team-wissels, geen ruis op de lijn.
+          Dat is de aanleiding voor GTY. Eén begeleider die u in de eerste meting
+          tegenkomt en die u ook door surveillance-jaar drie voert. Geen
+          overdrachten, geen team-wissels, geen ruis op de lijn. De
+          dienstverlening loopt van certificering en interne audits tot
+          partnerprogramma, RI&E en BHV — telkens vanuit dezelfde lijn.
         </p>
         <p class="text-ink-soft">
-          Dat is geen verkooptekst — het is hoe we werken. En het is waarom
-          klanten die ooit met ons een traject deden, jaren later nog steeds aan
-          de telefoon hangen.
+          Dat is geen verkooptekst — het is hoe we werken. Een jong bureau, met
+          ervaring die ouder is dan de naam.
         </p>
       </div>
     </div>
@@ -166,7 +167,10 @@ import { siteData } from '~/data/site-data';
         <dl class="mt-12 space-y-5 text-small">
           <div>
             <dt class="mono-eyebrow text-teal-700">Opgericht</dt>
-            <dd class="mt-1.5 font-mono text-ink">{siteData.business.foundedYear}</dd>
+            <dd class="mt-1.5 font-mono text-ink">
+              {siteData.business.foundedYear}
+              <span class="text-ink-soft"> · ervaring sinds {siteData.business.experienceSinceYear}</span>
+            </dd>
           </div>
           <div>
             <dt class="mono-eyebrow text-teal-700">Vestiging</dt>
@@ -177,11 +181,58 @@ import { siteData } from '~/data/site-data';
             <dd class="mt-1.5 text-ink">Heel Nederland, op locatie bij u.</dd>
           </div>
           <div>
+            <dt class="mono-eyebrow text-teal-700">Sectoren</dt>
+            <dd class="mt-1.5 text-ink">{siteData.business.sectorsServed.join(' · ')}</dd>
+          </div>
+          <div>
+            <dt class="mono-eyebrow text-teal-700">Track record</dt>
+            <dd class="mt-1.5 text-ink">
+              {siteData.business.trajectsCompleted} trajecten afgerond ·
+              {' '}{siteData.business.trajectsInProgress} klanten in begeleiding
+            </dd>
+          </div>
+          <div>
             <dt class="mono-eyebrow text-teal-700">Specialisatie</dt>
-            <dd class="mt-1.5 text-ink">ISO 9001 · ISO 14001 · ISO 27001 · HKZ · NEN 7510</dd>
+            <dd class="mt-1.5 text-ink">ISO 9001 · ISO 14001 · ISO 27001 · HKZ · NEN 7510 · Certificatieschema Arbodiensten</dd>
           </div>
         </dl>
       </aside>
+    </div>
+  </section>
+
+  <section class="border-y border-line-cool bg-paper">
+    <div class="container-x py-20 md:py-24">
+      <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+        <div class="col-span-12 md:col-span-5">
+          <Eyebrow>Wat klanten zeggen</Eyebrow>
+          <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
+            Aanbevelingen <span class="display-italic">van de mensen met wie we werken.</span>
+          </h2>
+          <p class="mt-5 text-base text-ink-soft max-w-prose">
+            We zijn een jong bureau en de meeste trajecten lopen nog. Zodra
+            klanten hun traject afronden — of eerder, als zij dat zelf willen —
+            komen hun woorden hier te staan. Zonder geredigeerde marketingtekst.
+          </p>
+        </div>
+        <div class="col-span-12 md:col-span-6 md:col-start-7">
+          <ul class="grid grid-cols-1 gap-px bg-line-cool border border-line-cool">
+            <li class="bg-paper p-7">
+              <p class="mono-eyebrow text-teal-700">Binnenkort</p>
+              <p class="mt-3 text-base text-ink-soft">
+                Reviews van klanten in zorg, IT, arbodienstverlening en beveiliging
+                worden hier verzameld zodra de trajecten dat toelaten.
+              </p>
+            </li>
+            <li class="bg-paper p-7">
+              <p class="mono-eyebrow text-teal-700">Liever direct spreken?</p>
+              <p class="mt-3 text-base text-ink">
+                We brengen u op verzoek in contact met een lopende klant in uw
+                sector. <a href="/contact/" class="link-underline text-teal-700">Vraag het ons →</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 

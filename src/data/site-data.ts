@@ -3,7 +3,7 @@ export const siteData = {
   legalName: 'GTY',
   tagline: 'Zekerheid in certificering. Rust in compliance.',
   description:
-    'GTY begeleidt Nederlandse organisaties bij certificering voor ISO 9001, ISO 14001, ISO 27001, HKZ en NEN 7510 — en zorgt dat het certificaat zijn waarde behoudt.',
+    'GTY begeleidt Nederlandse organisaties bij certificering voor ISO 9001, ISO 14001, ISO 27001, HKZ, NEN 7510 en het Certificatieschema Arbodiensten — en zorgt dat het certificaat zijn waarde behoudt.',
   url: 'https://gty.nl',
   contact: {
     address: {
@@ -18,16 +18,14 @@ export const siteData = {
     emailHref: 'mailto:info@gty.nl',
   },
   business: {
-    foundedYear: 2022,
-    // TODO: vraag klant — KvK-nummer
-    kvk: null,
-    // TODO: vraag klant — BTW-nummer
-    vat: null,
-    // TODO: vraag klant — openingstijden contactlijn
-    hours: null,
-    // TODO: vraag klant — aantal trajecten / sectoren / aantal medewerkers (bewust niet ingevuld; zie brief)
-    trajectsCompleted: null,
-    sectorsServed: null,
+    foundedYear: 2025,
+    experienceSinceYear: 2022,
+    kvk: '87435950',
+    vat: 'NL004413019B37',
+    hours: 'Maandag t/m vrijdag · 09:00 – 17:00',
+    trajectsCompleted: 3,
+    trajectsInProgress: '6–7',
+    sectorsServed: ['Zorg', 'IT', 'Arbodiensten', 'Beveiliging'],
   },
   services: [
     { slug: 'certificering', label: 'Certificering' },
