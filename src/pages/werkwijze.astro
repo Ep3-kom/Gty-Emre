@@ -8,40 +8,40 @@ import Button from '~/components/ui/Button.astro';
 const fases = [
   {
     nr: '01',
-    titel: 'Kennismaking en nulmeting',
-    duur: '1–3 weken',
-    body: 'Het traject begint met luisteren. We brengen uw vraag, uw context en uw uitgangspositie in kaart — voordat er een traject wordt voorgesteld.',
+    titel: 'Verkenning en meting',
+    duur: '1 tot 3 weken',
+    body: 'We beginnen met goed luisteren. Wat is uw vraag, hoe staat uw organisatie ervoor, en welke route past daarbij — dat moet eerst helder zijn voor er ook maar één offerte komt.',
     stappen: [
-      'Vrijblijvend kennismakingsgesprek met directie en sleutelpersonen',
-      'Nulmeting op locatie: processen, documentatie, mensen',
-      'Schriftelijke rapportage met bevindingen en prioritering',
-      'Persoonlijke toelichting op de rapportage en bespreking vervolgopties',
+      'Verkennend gesprek met directie en de mensen die u erbij wilt hebben',
+      'Meting ter plekke: processen, documenten, betrokkenheid',
+      'Bevindingen op papier, met duidelijke prioritering',
+      'Toelichting in een gesprek en samen kijken naar vervolgstappen',
     ],
   },
   {
     nr: '02',
-    titel: 'Uitvoering',
-    duur: 'Afhankelijk van norm en omvang',
-    body: 'GTY werkt naast uw team aan de inrichting van het managementsysteem. Geen aparte traject-organisatie naast uw operatie — we sluiten aan bij hoe u werkt.',
+    titel: 'Inrichten en invoeren',
+    duur: 'Variabel — afhankelijk van norm en organisatieomvang',
+    body: 'Wij werken mee in uw organisatie aan het managementsysteem. Geen aparte projectorganisatie ernaast — we voegen ons naar de manier waarop het werk daadwerkelijk loopt.',
     stappen: [
-      'Inrichten van het managementsysteem op uw werkelijke processen',
-      'Documentatie alleen waar de norm of uw werk dat vraagt',
-      'Trainingen en bewustwording per team, op locatie',
-      'Interne audit voorafgaand aan de externe audit',
-      'Voorbereiding directie en kernmedewerkers op de externe audit',
-      'Begeleiding van het auditproces met de certificerende instelling',
+      'Het systeem opbouwen rond de processen zoals ze nu werken',
+      'Documentatie waar de norm dat vereist of waar uw werk er baat bij heeft — niet meer',
+      'Training en awareness per afdeling, op uw locatie',
+      'Interne audit ter voorbereiding op de externe beoordeling',
+      'Directie en sleutelpersonen klaarstomen voor de auditdag',
+      'Begeleiding tijdens het proces met de certificerende instelling',
     ],
   },
   {
     nr: '03',
-    titel: 'Resultaat en wat daarna komt',
-    duur: 'Doorlopend',
-    body: 'Het traject sluit af met een concreet resultaat — het certificaat, de getoetste RI&E, het opgeleverde rapport. Voor partners die structurele ondersteuning willen, gaat de samenwerking door via het Partnerprogramma.',
+    titel: 'Afronding en de tijd erna',
+    duur: 'Doorlopend, naar wens',
+    body: 'Er ligt aan het eind een concreet resultaat: het certificaat, een getoetste RI&E of een opgeleverd auditrapport. Wilt u na afloop blijvend ondersteund worden, dan kan dat via het Partnerprogramma.',
     stappen: [
-      'Afronding van eventuele auditafwijkingen tot certificering definitief is',
-      'Overdracht van het systeem aan uw interne kwaliteitsfunctionaris',
-      'Optioneel: Partnerprogramma voor structurele borging',
-      'Optioneel: opleiding interne auditoren via GTY Academy',
+      'Sluitend maken van eventuele afwijkingen tot het certificaat definitief is',
+      'Overdracht aan uw interne kwaliteitsverantwoordelijke',
+      'Optioneel: instappen in het Partnerprogramma voor langdurige borging',
+      'Optioneel: interne auditoren opleiden via de GTY Academy',
     ],
   },
 ];
@@ -49,7 +49,7 @@ const fases = [
 
 <Base
   title="Werkwijze"
-  description="Hoe GTY werkt: drie fasen — kennismaking en nulmeting, uitvoering, resultaat en borging. Helder, voorspelbaar, zonder verrassingen."
+  description="Hoe wij werken: drie fasen — verkennen, inrichten, borgen. Voorspelbaar, met heldere stappen en zonder verborgen agenda."
 >
   <section class="border-b border-line-cool">
     <div class="container-x pt-12 md:pt-16 pb-16 md:pb-20">
@@ -61,14 +61,15 @@ const fases = [
 
       <div class="grid grid-cols-12 gap-x-6 gap-y-8">
         <div class="col-span-12 lg:col-span-9">
-          <Eyebrow>Hoe GTY werkt</Eyebrow>
+          <Eyebrow>Zo werken wij</Eyebrow>
           <h1 class="mt-6 font-display text-h1 md:text-[3.5rem] md:leading-[1.05] text-teal-900 text-balance">
-            Helder. Voorspelbaar. <span class="display-italic">Zonder verrassingen.</span>
+            Voorspelbaar verloop. <span class="display-italic">Geen verborgen agenda.</span>
           </h1>
           <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">
-            Elke samenwerking begint bij uw vraag. We brengen die vraag eerst goed in beeld,
-            voordat we de aanpak bepalen. Geen standaardpakket, geen vooraf bedacht traject —
-            wel een vaste structuur waarbinnen het werk gebeurt.
+            Iedere samenwerking start bij uw vraag — die maken we eerst goed
+            zichtbaar. Pas dan ontstaat de aanpak. We werken niet uit een
+            standaardpakket, maar wel binnen een vast ritme dat het werk
+            navolgbaar maakt.
           </p>
         </div>
       </div>
@@ -77,13 +78,13 @@ const fases = [
 
   <section class="container-x py-20 md:py-24">
     <div class="max-w-narrow">
-      <Eyebrow>De drie fasen</Eyebrow>
+      <Eyebrow>Drie fasen</Eyebrow>
       <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
-        Drie stappen. <span class="display-italic">Geen verrassingen.</span>
+        Een ritme dat voor iedereen werkt — <span class="display-italic">ook voor uw mensen.</span>
       </h2>
       <p class="mt-5 max-w-prose text-lead text-ink-soft">
-        De fasen waarbinnen elk GTY-traject zich afspeelt. Wat erbinnen gebeurt, stemmen we
-        af op uw norm, sector en uitgangspositie.
+        De structuur is voor elk traject hetzelfde. De inhoud verschilt per norm,
+        per sector en per startpunt — dat stemmen we af op uw situatie.
       </p>
     </div>
     <div class="mt-16">
@@ -95,28 +96,30 @@ const fases = [
     <div class="container-x py-20 md:py-24">
       <div class="grid grid-cols-12 gap-x-6 gap-y-10">
         <div class="col-span-12 md:col-span-4">
-          <Eyebrow>Wat anders is</Eyebrow>
+          <Eyebrow>Het verschil</Eyebrow>
           <h2 class="mt-5 font-display text-h2 text-teal-900 text-balance">
-            Geen consultant op afstand.<br /><span class="display-italic">Een vaste kracht naast u.</span>
+            Geen telefonisch advies van een afdeling.<br /><span class="display-italic">Iemand die meeloopt.</span>
           </h2>
         </div>
         <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
           <p>
-            U werkt gedurende het hele traject met dezelfde GTY-consultant. Niet een wisselend
-            team, niet een junior die de uitvoering doet en een senior die alleen verschijnt op
-            stuurmomenten. De persoon die u ontmoet bij de nulmeting is dezelfde die u door de
-            externe audit begeleidt — en die in jaar twee de surveillance-audit voorbereidt.
+            Het hele traject door spreekt u dezelfde GTY-begeleider. Geen
+            roulerend team, geen junior aan de uitvoering en een senior alleen
+            bij sturen. Wie u bij de eerste meting ontmoet, staat ook bij de
+            externe audit naast u — en bereidt een jaar later de
+            surveillance-audit met u voor.
           </p>
           <p>
-            Dat heeft praktische gevolgen. We hoeven uw organisatie niet elk gesprek opnieuw te
-            leren kennen. We weten wie waarvoor verantwoordelijk is, welke afdeling welke
-            werkdruk heeft, welke beslissingen al eerder zijn gewogen. Dat versnelt het werk en
-            voorkomt dat u keer op keer dezelfde context moet uitleggen.
+            Dat heeft praktische voordelen. We hoeven uw organisatie niet bij
+            elk gesprek opnieuw te leren kennen. Wie wat doet, waar de druk
+            zit, welke keuze eerder gemaakt is — dat is bekend. Het versnelt
+            het werk en haalt de last weg van steeds uitleggen.
           </p>
           <p>
-            Het heeft ook een kwalitatief gevolg. Een consultant die uw organisatie kent, ziet
-            afwijkingen die een buitenstaander mist. En kan adviseren met begrip van uw
-            geschiedenis — niet vanuit een sjabloon dat overal opgelegd wordt.
+            Het bepaalt ook de kwaliteit. Iemand die uw organisatie kent ziet
+            afwijkingen die een buitenstaander mist, en kan adviseren met
+            historisch besef in plaats van een sjabloon dat overal hetzelfde
+            wordt toegepast.
           </p>
         </div>
       </div>
@@ -126,47 +129,48 @@ const fases = [
   <section class="container-x py-20 md:py-24">
     <div class="grid grid-cols-12 gap-x-6 gap-y-10">
       <div class="col-span-12 md:col-span-5">
-        <Eyebrow>Wat u kunt verwachten</Eyebrow>
+        <Eyebrow>Wat u van ons mag verwachten</Eyebrow>
         <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
-          Heldere afspraken. <span class="display-italic">Vanaf de eerste dag.</span>
+          Afspraken die staan. <span class="display-italic">Vanaf de start.</span>
         </h2>
       </div>
       <div class="col-span-12 md:col-span-6 md:col-start-7">
         <ul class="divide-y divide-line-cool border-y border-line-cool">
           <li class="py-6">
-            <p class="mono-eyebrow text-teal-700">Eén voorstel</p>
+            <p class="mono-eyebrow text-teal-700">Eén offerte</p>
             <p class="mt-2 text-base text-ink">
-              Na het kennismakingsgesprek ontvangt u één voorstel met aanpak, planning en
-              investering. Geen meerwerk-clausules die later opduiken.
+              Na het kennismakingsgesprek krijgt u één voorstel: aanpak, planning,
+              investering. Geen meerwerk dat halverwege opduikt.
             </p>
           </li>
           <li class="py-6">
-            <p class="mono-eyebrow text-teal-700">Eén aanspreekpunt</p>
+            <p class="mono-eyebrow text-teal-700">Eén contactpersoon</p>
             <p class="mt-2 text-base text-ink">
-              Eén consultant die uw organisatie kent. Telefonisch en per e-mail bereikbaar
-              zonder tussenkomst van accountmanagers of intake-formulieren.
+              Dezelfde begeleider, het hele traject. Direct bereikbaar — geen
+              accountmanagers, geen ticketsysteem.
             </p>
           </li>
           <li class="py-6">
-            <p class="mono-eyebrow text-teal-700">Voortgang die u kunt volgen</p>
+            <p class="mono-eyebrow text-teal-700">Inzicht in de voortgang</p>
             <p class="mt-2 text-base text-ink">
-              Een planning met heldere mijlpalen, en periodieke voortgangsoverleggen die niet
-              meer tijd kosten dan ze opleveren.
+              Een planning met duidelijke mijlpalen en korte voortgangs­overleggen
+              die niet meer tijd vragen dan ze opleveren.
             </p>
           </li>
           <li class="py-6">
-            <p class="mono-eyebrow text-teal-700">Eerlijke beoordeling</p>
+            <p class="mono-eyebrow text-teal-700">Een eerlijk oordeel</p>
             <p class="mt-2 text-base text-ink">
-              Als wij menen dat een norm niet bij uw organisatie past, of dat een traject nog
-              te vroeg is, zeggen we dat. Beter een uitgesteld traject dan een verspild
-              certificaat.
+              Als een norm niet bij uw organisatie past, of als het te vroeg is,
+              zeggen we dat ronduit. Liever een uitgesteld traject dan een
+              certificaat dat onderaan de streep geen waarde toevoegt.
             </p>
           </li>
           <li class="py-6">
-            <p class="mono-eyebrow text-teal-700">Geen verborgen meterstanden</p>
+            <p class="mono-eyebrow text-teal-700">Vaste prijsafspraak</p>
             <p class="mt-2 text-base text-ink">
-              Wij werken niet op uurbasis met onverwachte facturen achteraf. Investering wordt
-              vooraf afgesproken. Bij scope-wijzigingen bespreken we dat eerst, niet achteraf.
+              Geen open-eind facturatie op uurbasis. De investering ligt vooraf
+              vast. Verandert de scope, dan bespreken we dat eerst — niet
+              achteraf op de factuur.
             </p>
           </li>
         </ul>

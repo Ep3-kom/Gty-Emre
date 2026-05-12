@@ -2,29 +2,29 @@
 import Eyebrow from '~/components/ui/Eyebrow.astro';
 
 const zonder = [
-  'Een traject dat de organisatie uitput in plaats van versterkt',
-  'Een certificaat dat papier blijft en in de dagelijkse praktijk geen voet aan de grond krijgt',
-  'Surveillance-audits die elk jaar opnieuw paniek opleveren',
-  'Normupdates die te laat opgemerkt worden',
+  'Een implementatie die uw team meer kost dan ze oplevert',
+  'Een systeem dat alleen in mappen leeft en niet op de werkvloer',
+  'Een surveillance-audit die opnieuw een sprint vooraf eist',
+  'Normwijzigingen die u pas merkt als ze al verwerkt hadden moeten zijn',
 ];
 const met = [
-  'Een traject dat de organisatie sterker achterlaat dan ze begon',
-  'Een systeem dat in de praktijk werkt — niet alleen op papier',
-  'Audits die u tegemoet gaat met vertrouwen',
-  'Een partner die normupdates al heeft verwerkt voordat u erover hoort',
+  'Een traject dat uw organisatie scherper achterlaat dan u begon',
+  'Een systeem dat herkenbaar is voor de mensen die ermee werken',
+  'Audits die u rustig en voorbereid ingaat',
+  'Een begeleider die normupdates al voor u in beeld heeft',
 ];
 ---
 
 <section class="bg-cream">
   <div class="container-x py-20 md:py-28">
-    <Eyebrow>Wat het verschil maakt</Eyebrow>
+    <Eyebrow>Het verschil zit erna</Eyebrow>
     <h2 class="mt-6 max-w-2xl font-display text-h2 text-teal-900 text-balance">
-      Het zit in wat er <span class="display-italic">na</span> het certificaat overblijft.
+      Een goed traject merkt u <span class="display-italic">pas echt</span> in het jaar daarop.
     </h2>
 
     <div class="mt-12 grid grid-cols-1 md:grid-cols-2 border-t border-line">
       <div class="md:border-r border-line py-8 md:pr-10">
-        <p class="mono-eyebrow text-ink-soft">Zonder de juiste partner</p>
+        <p class="mono-eyebrow text-ink-soft">Zonder goede begeleiding</p>
         <ul class="mt-5 space-y-3 text-base text-ink">
           {zonder.map((z) => (
             <li class="flex items-start gap-3">
@@ -35,7 +35,7 @@ const met = [
         </ul>
       </div>
       <div class="border-t md:border-t-0 border-line py-8 md:pl-10">
-        <p class="mono-eyebrow text-teal-700">Met GTY naast u</p>
+        <p class="mono-eyebrow text-teal-700">Met GTY aan boord</p>
         <ul class="mt-5 space-y-3 text-base text-ink">
           {met.map((m) => (
             <li class="flex items-start gap-3">

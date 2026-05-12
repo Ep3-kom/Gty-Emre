@@ -10,7 +10,7 @@ const posts = (await getCollection('inzichten', ({ data }) => !data.draft)).sort
 
 <Base
   title="Inzichten"
-  description="Artikelen en analyses over certificering, compliance en de praktijk van managementsystemen — door GTY."
+  description="Observaties uit de praktijk van certificering, audits en managementsystemen — geschreven vanuit het werk zelf, niet vanaf de zijlijn."
 >
   <section class="border-b border-line-cool">
     <div class="container-x pt-12 md:pt-16 pb-16 md:pb-20">
@@ -20,14 +20,14 @@ const posts = (await getCollection('inzichten', ({ data }) => !data.draft)).sort
         <span class="text-teal-700">Inzichten</span>
       </nav>
 
-      <Eyebrow>GTY Inzichten</Eyebrow>
+      <Eyebrow>Inzichten</Eyebrow>
       <h1 class="mt-6 font-display text-h1 md:text-[3.5rem] md:leading-[1.05] text-teal-900 text-balance">
-        Wat we leren <span class="display-italic">van het werk.</span>
+        Geleerd <span class="display-italic">in de praktijk.</span>
       </h1>
       <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">
-        Op deze plek delen we observaties uit certificeringstrajecten, audits en
-        Partnerprogramma's. Geen marketing-blogs — wel concrete inzichten over wat in de
-        praktijk werkt en waar trajecten stuklopen.
+        Hier delen we notities uit lopend werk — trajecten, audits, partnerafspraken.
+        Geen marketingteksten, wel observaties over wat werkt op de werkvloer en
+        waar implementaties typisch vastlopen.
       </p>
     </div>
   </section>
@@ -35,10 +35,11 @@ const posts = (await getCollection('inzichten', ({ data }) => !data.draft)).sort
   <section class="container-x py-20 md:py-24">
     {posts.length === 0 ? (
       <div class="max-w-narrow">
-        <p class="font-display text-h2 text-teal-900 display-italic">Binnenkort.</p>
+        <p class="font-display text-h2 text-teal-900 display-italic">Bijna zover.</p>
         <p class="mt-4 max-w-prose text-base text-ink-soft">
-          We werken aan de eerste artikelen. Nu al een vraag? Neem direct contact op — vaak is
-          dat sneller dan een blog lezen.
+          De eerste stukken zijn in voorbereiding. Heeft u nu al een concrete
+          vraag? Bellen of mailen werkt vaak sneller dan wachten op een
+          artikel.
         </p>
       </div>
     ) : (

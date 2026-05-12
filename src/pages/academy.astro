@@ -9,37 +9,37 @@ const trainingen = [
   {
     naam: 'Normkennis',
     beschrijving:
-      'Wat staat er werkelijk in ISO 9001, 14001, 27001, HKZ of NEN 7510 — en wat betekent dat voor uw organisatie? Een training die de norm ontdoet van jargon en koppelt aan uw eigen werkwijze.',
-    doelgroep: 'Directie, kwaliteitsfunctionarissen, key users',
+      'Wat staat er in ISO 9001, 14001, 27001, HKZ of NEN 7510 als u door het jargon heen kijkt? En wat betekent het voor úw organisatie? Deze training maakt de norm tastbaar en koppelt hem aan uw eigen manier van werken.',
+    doelgroep: 'Directie, kwaliteitsverantwoordelijken, sleutelgebruikers',
   },
   {
     naam: 'Implementatie',
     beschrijving:
-      'Hoe vertaalt u norm-eisen naar werkende processen, zonder een bureaucratie op te bouwen die de organisatie afremt? Praktische sessies voor de mensen die het systeem dagelijks gebruiken.',
+      'Hoe maakt u van norm-eisen werkende processen zonder een onnodig zware structuur op te tuigen? Praktische sessies voor de mensen die het systeem dag-in-dag-uit gebruiken.',
     doelgroep: 'Procesbegeleiders, lijn-managers',
   },
   {
     naam: 'Interne auditvaardigheden',
     beschrijving:
-      'Een interne audit voert u niet om te toetsen of er fouten zijn, maar om te leren wat er beter kan. Wij trainen interne auditoren in vraagtechniek, observatie en rapportage die werkelijk verbetering oplevert.',
-    doelgroep: 'Interne auditoren, kwaliteitsfunctionarissen',
+      'Een interne audit voert u niet om fouten te vinden, maar om te leren wat scherper kan. We trainen auditoren in vraagtechniek, waarneming en rapportages die daadwerkelijk tot verbetering leiden.',
+    doelgroep: 'Interne auditoren, kwaliteitsverantwoordelijken',
   },
   {
     naam: 'Kwaliteitsmanagement',
     beschrijving:
-      'Verdiepende training voor wie verantwoordelijk is voor het kwaliteitsmanagementsysteem. Van directiebeoordeling tot opvolging van afwijkingen — alle elementen die het systeem werkend houden.',
-    doelgroep: 'Kwaliteitsfunctionarissen, kwaliteitsmanagers',
+      'Verdieping voor wie het kwaliteitsmanagementsysteem onder zijn hoede heeft. Van directiebeoordeling tot opvolging van afwijkingen — de bouwstenen die een systeem levend houden.',
+    doelgroep: 'Kwaliteitsverantwoordelijken, kwaliteitsmanagers',
   },
   {
     naam: 'Informatiebeveiliging',
     beschrijving:
-      'Awareness en gedragsverandering rond informatiebeveiliging — voor zorgteams, IT-afdelingen, financieel medewerkers. Niet één keer per jaar afvinken, maar werkelijk doorleven wat veiligheid in uw werk betekent.',
-    doelgroep: 'Alle medewerkers, in groepen van 8–15',
+      'Awareness en gedragsverandering rondom informatiebeveiliging — voor zorgteams, IT, finance. Geen jaarlijkse afvink-cursus, maar een training die mensen laat doorvoelen wat veiligheid in hun werk betekent.',
+    doelgroep: 'Alle medewerkers, groepen van 8–15',
   },
   {
     naam: 'Bedrijfshulpverlening (BHV)',
     beschrijving:
-      'Volwaardige BHV-training op locatie, afgestemd op de specifieke situatie en risico\'s van uw werkplek. Geen generieke EHBO-cursus, maar een training die past bij wat in úw gebouw kan gebeuren.',
+      'Volwaardige BHV-training bij u op locatie, afgestemd op de specifieke risico\'s en lay-out van uw werkplek. Niet een algemene EHBO-cursus, maar een training die past bij wat in úw situatie kan gebeuren.',
     doelgroep: 'Aangewezen BHV\'ers',
   },
 ];
@@ -47,7 +47,7 @@ const trainingen = [
 
 <Base
   title="Academy"
-  description="GTY Academy verzorgt trainingen op locatie: normkennis, implementatie, interne auditvaardigheden, kwaliteitsmanagement, informatiebeveiliging en BHV. Op maat voor uw mensen."
+  description="Trainingen die op uw werkvloer gegeven worden: normkennis, implementatie, interne audits, kwaliteits- en informatiebeveiligings­thema's en BHV — telkens toegesneden op uw mensen en sector."
 >
   <section class="border-b border-line-cool">
     <div class="container-x pt-12 md:pt-16 pb-16 md:pb-20">
@@ -61,12 +61,13 @@ const trainingen = [
         <div class="col-span-12 lg:col-span-9">
           <Eyebrow>GTY Academy</Eyebrow>
           <h1 class="mt-6 font-display text-h1 md:text-[3.5rem] md:leading-[1.05] text-teal-900 text-balance">
-            Kennis die blijft.<br /><span class="display-italic">In uw eigen organisatie.</span>
+            Kennis die landt.<br /><span class="display-italic">En in uw organisatie blijft hangen.</span>
           </h1>
           <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">
-            Een certificaat is alleen duurzaam als uw mensen begrijpen wat er van hen wordt
-            verwacht. GTY Academy brengt die kennis naar uw organisatie — praktisch, op maat
-            en direct toepasbaar in uw werk.
+            Een certificaat houdt alleen stand als de mensen erachter begrijpen
+            wat er van hen wordt verwacht. Onze trainingen komen daarom naar
+            uw locatie — toegespitst op uw werk, in een taal die uw team kent
+            en met voorbeelden uit de praktijk waarin ze morgen weer staan.
           </p>
           <div class="mt-9 flex flex-wrap gap-3">
             <Button href={siteData.cta.primary.href} size="lg">Vraag een training aan</Button>
@@ -80,25 +81,26 @@ const trainingen = [
   <section class="container-x py-20 md:py-24">
     <div class="grid grid-cols-12 gap-x-6 gap-y-10">
       <div class="col-span-12 md:col-span-4">
-        <Eyebrow>Waarom maatwerk</Eyebrow>
+        <Eyebrow>Waarom op maat</Eyebrow>
         <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
-          Geen catalogus.<br /><span class="display-italic">Een training die past.</span>
+          Geen open inschrijvingen.<br /><span class="display-italic">Een training die op uw situatie past.</span>
         </h2>
       </div>
       <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
         <p>
-          Standaard-trainingen zijn altijd voor iemand anders bedoeld. De voorbeelden komen
-          uit een andere sector, het kennisniveau klopt niet, en wat in uw organisatie urgent
-          is wordt gladgestreken in een algemene formulering.
+          Standaardtrainingen werken voor andere bedrijven. De voorbeelden
+          spelen elders, het niveau klopt niet helemaal, en wat bij u urgent
+          is wordt vlakgemaakt in algemene formuleringen.
         </p>
         <p>
-          Onze trainingen worden op locatie verzorgd, afgestemd op uw sector, uw processen
-          en het kennisniveau van uw deelnemers. Voorbeelden komen uit uw eigen werk. De
-          oefeningen sluiten aan op wat morgen op uw werkvloer kan gebeuren.
+          Wij geven onze trainingen bij u op locatie, afgestemd op uw sector,
+          uw processen en het kennisniveau van de mensen voor wie het bedoeld
+          is. Voorbeelden komen uit uw werk; oefeningen sluiten aan op wat
+          morgen op de werkvloer echt kan gebeuren.
         </p>
         <p class="text-ink-soft">
-          Het resultaat: deelnemers die niet alleen weten wat er besproken is, maar ook
-          herkennen waar het op hun eigen werkplek terugkomt.
+          Dat levert deelnemers op die niet alleen weten wát is besproken,
+          maar het ook terugzien als ze hun eigen werk doen.
         </p>
       </div>
     </div>
@@ -106,9 +108,9 @@ const trainingen = [
 
   <section class="bg-cream">
     <div class="container-x py-20 md:py-24">
-      <Eyebrow>Trainingsaanbod</Eyebrow>
+      <Eyebrow>Het aanbod</Eyebrow>
       <h2 class="mt-6 max-w-2xl font-display text-h2 text-teal-900 text-balance">
-        Wat GTY Academy <span class="display-italic">verzorgt.</span>
+        Trainingen die wij <span class="display-italic">verzorgen.</span>
       </h2>
 
       <ol class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-px bg-line border border-line">
@@ -128,25 +130,25 @@ const trainingen = [
   <section class="container-x py-20 md:py-24">
     <div class="grid grid-cols-12 gap-x-6 gap-y-10">
       <div class="col-span-12 md:col-span-5">
-        <Eyebrow>Hoe het werkt</Eyebrow>
+        <Eyebrow>De praktijk</Eyebrow>
         <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
-          De training komt <span class="display-italic">naar u toe.</span>
+          De training <span class="display-italic">komt bij u langs.</span>
         </h2>
       </div>
       <div class="col-span-12 md:col-span-6 md:col-start-7 max-w-prose space-y-5 text-base text-ink">
         <p>
-          Alle trainingen verzorgen we op locatie bij uw organisatie. Dat scheelt logistiek,
-          en — belangrijker — het maakt de inhoud direct herkenbaar. We oefenen waar uw
-          mensen werken, met situaties die uw organisatie kent.
+          We verzorgen alle trainingen op uw locatie. Dat scheelt logistiek en
+          maakt de inhoud direct herkenbaar — we oefenen waar uw mensen
+          werken, met situaties die ze elke dag tegenkomen.
         </p>
         <p>
-          Voorafgaand aan elke training stemmen we af welke specifieke aandachtspunten in uw
-          organisatie spelen. Wat er na de training moet zijn blijven hangen, en hoe we dat
-          kunnen toetsen.
+          Vooraf stemmen we af welke aandachtspunten in uw organisatie spelen,
+          wat er moet blijven hangen na de training, en hoe we dat toetsen.
         </p>
         <p>
-          Trainingen worden gegeven in groepen van 8–15 deelnemers, afhankelijk van de
-          inhoud. Voor BHV-trainingen geldt de wettelijk voorgeschreven minimale praktijktijd.
+          Groepen variëren tussen 8 en 15 deelnemers, afhankelijk van de
+          inhoud. Voor BHV-trainingen volgen we de wettelijk vastgelegde
+          minimale praktijktijd.
         </p>
       </div>
     </div>
@@ -156,22 +158,22 @@ const trainingen = [
     <div class="container-x py-20 md:py-24">
       <div class="grid grid-cols-12 gap-x-6 gap-y-10">
         <div class="col-span-12 md:col-span-7">
-          <Eyebrow>Onderdeel van het geheel</Eyebrow>
+          <Eyebrow>In samenhang</Eyebrow>
           <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
             Trainingen die <span class="display-italic">het systeem</span> versterken.
           </h2>
           <div class="mt-8 max-w-prose space-y-5 text-base text-ink">
             <p>
-              Voor partners in een certificeringstraject of het Partnerprogramma zijn
-              trainingen geen losse aanvulling. Ze sluiten aan op wat we samen bouwen — de
-              auditor-training valt logisch in een ISO 9001-implementatie, awareness-training
-              hoort bij elk informatiebeveiligings-traject, en BHV-training kan onderdeel zijn
-              van het bredere veiligheidsmanagement.
+              Voor klanten in een certificeringstraject of in ons Partnerprogramma
+              zijn trainingen geen losse extraatjes. Ze sluiten aan op wat we
+              samen bouwen — een auditor-training past in een ISO 9001-traject,
+              awareness-sessies horen bij elke informatiebeveiligingstrajectorie,
+              BHV kan ingebed worden in breder veiligheidsmanagement.
             </p>
             <p>
-              Voor organisaties die alleen een training afnemen geldt hetzelfde: we kijken
-              wat de training in uw bredere systeem moet bewerkstelligen, en stemmen de
-              inhoud daarop af.
+              Neemt u alleen een training af? Dan blijft het uitgangspunt
+              hetzelfde: we kijken wat de training in uw organisatie moet
+              opleveren en stemmen de inhoud daarop af.
             </p>
           </div>
           <div class="mt-9 flex flex-wrap gap-x-5 gap-y-3 items-center">
@@ -184,8 +186,8 @@ const trainingen = [
   </section>
 
   <CallToAction
-    eyebrow="Welke training past bij u?"
-    title="Vraag een training aan."
-    body="Plan een vrijblijvend gesprek waarin we afstemmen welke training past, voor welke deelnemers en in welke vorm. Geen vaste pakketten — wel een vaste werkwijze."
+    eyebrow="Welke training zoekt u?"
+    title="Een training aanvragen begint met een gesprek."
+    body="In een vrijblijvend overleg kijken we welke training past, voor welke groep en in welke vorm. Geen prijslijstje met pakketten — wel een vaste werkwijze die rekening houdt met uw situatie."
   />
 </Base>

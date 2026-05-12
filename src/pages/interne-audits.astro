@@ -13,7 +13,7 @@ const jsonLd = [serviceJsonLd({ name: 'Interne audits', description: 'Onafhankel
 
 <Base
   title="Interne audits"
-  description="Onafhankelijke interne audits voor organisaties die willen weten hoe hun processen er écht voor staan. Voor ISO 9001, ISO 14001, ISO 27001, HKZ en NEN 7510."
+  description="Onafhankelijke beoordeling van uw managementsysteem in de praktijk — voor ISO 9001, ISO 14001, ISO 27001, HKZ en NEN 7510. Met opvolgrapport dat tot daadwerkelijke verbetering leidt."
   jsonLd={jsonLd}
 >
   <section class="border-b border-line-cool">
@@ -26,18 +26,19 @@ const jsonLd = [serviceJsonLd({ name: 'Interne audits', description: 'Onafhankel
 
       <div class="grid grid-cols-12 gap-x-6 gap-y-8">
         <div class="col-span-12 lg:col-span-9">
-          <Eyebrow>Interne audits door GTY</Eyebrow>
+          <Eyebrow>Onafhankelijke audits</Eyebrow>
           <h1 class="mt-6 font-display text-h1 md:text-[3.5rem] md:leading-[1.05] text-teal-900 text-balance">
-            Weet u zeker dat uw organisatie<br /><span class="display-italic">doet wat ze zegt dat ze doet?</span>
+            Doet uw organisatie ook werkelijk<br /><span class="display-italic">wat er beschreven staat?</span>
           </h1>
           <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">
-            GTY voert onafhankelijke interne audits uit voor organisaties die willen weten hoe
-            hun processen er werkelijk voor staan. Los van of juist voor een externe audit.
-            Scherp, eerlijk en gericht op verbetering — niet op een papieren stempel.
+            Wij verzorgen onafhankelijke interne audits voor organisaties die
+            willen weten hoe hun processen er in de praktijk voor staan — als
+            opmaat naar een externe audit of gewoon als peiling. Eerlijk
+            beoordeeld, gericht op verbetering, niet op een vinkje.
           </p>
           <div class="mt-9 flex flex-wrap gap-3">
             <Button href={siteData.cta.primary.href} size="lg">{siteData.cta.primary.label}</Button>
-            <Button href="/nulmeting/" variant="ghost" size="lg">Of begin met een nulmeting →</Button>
+            <Button href="/nulmeting/" variant="ghost" size="lg">Of start met een meting →</Button>
           </div>
         </div>
       </div>
@@ -47,47 +48,50 @@ const jsonLd = [serviceJsonLd({ name: 'Interne audits', description: 'Onafhankel
   <section class="container-x py-20 md:py-24">
     <div class="grid grid-cols-12 gap-x-6 gap-y-10">
       <div class="col-span-12 md:col-span-5">
-        <Eyebrow>Wanneer relevant</Eyebrow>
+        <Eyebrow>Wanneer zinvol</Eyebrow>
         <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
-          Vier momenten waarop het<br /><span class="display-italic">direct waarde heeft.</span>
+          Vier situaties waarin een audit<br /><span class="display-italic">echt iets oplevert.</span>
         </h2>
       </div>
       <div class="col-span-12 md:col-span-6 md:col-start-7">
         <ul class="divide-y divide-line-cool border-y border-line-cool">
           <li class="py-6">
             <p class="mono-eyebrow text-teal-700">01</p>
-            <p class="mt-2 font-display text-h4 text-teal-900">Een externe audit nadert</p>
+            <p class="mt-2 font-display text-h4 text-teal-900">De externe audit komt eraan</p>
             <p class="mt-3 text-base text-ink max-w-prose">
-              U bent gecertificeerd, en de surveillance-audit of hercertificering komt eraan.
-              Een onafhankelijke interne audit vooraf vindt wat de externe auditor anders zou
-              vinden — terwijl u nog tijd heeft het op te lossen.
+              U bent gecertificeerd en de surveillance- of hercertificeringsaudit
+              nadert. Een onafhankelijke audit vooraf legt bloot wat de externe
+              auditor anders zou aanwijzen — met genoeg tijd om het op te lossen.
             </p>
           </li>
           <li class="py-6">
             <p class="mono-eyebrow text-teal-700">02</p>
-            <p class="mt-2 font-display text-h4 text-teal-900">Twijfel over de werking in de praktijk</p>
+            <p class="mt-2 font-display text-h4 text-teal-900">Onzekerheid over de praktijk</p>
             <p class="mt-3 text-base text-ink max-w-prose">
-              Op papier klopt alles. Maar werken uw processen ook zoals beschreven? Bij groei,
-              bij nieuwe medewerkers of bij wijzigingen in werkwijze ontstaat soms een gat
-              tussen wat u dacht dat er gebeurde en wat er werkelijk gebeurt.
+              Op papier ziet alles er goed uit. Maar werkt het ook zo in de
+              dagelijkse routine? Door groei, nieuw personeel of veranderingen
+              in werkwijzen kan er onmerkbaar afstand ontstaan tussen het
+              beschreven proces en wat er daadwerkelijk gebeurt.
             </p>
           </li>
           <li class="py-6">
             <p class="mono-eyebrow text-teal-700">03</p>
-            <p class="mt-2 font-display text-h4 text-teal-900">Inspectie of toezicht</p>
+            <p class="mt-2 font-display text-h4 text-teal-900">Inspectie of toezichtbezoek</p>
             <p class="mt-3 text-base text-ink max-w-prose">
-              Er staat een inspectiebezoek gepland — IGJ, Arbeidsinspectie, AP. Of er is net
-              een geweest met aandachtspunten. Een interne audit toetst of u staat waar u zou
-              moeten staan, en helpt afwijkingen aantoonbaar op te volgen.
+              Er komt een inspectie (IGJ, Arbeidsinspectie, AP) of er is er
+              recent een geweest met aandachtspunten. Een interne audit toont
+              of u staat waar u moet staan en geeft de basis om afwijkingen
+              aantoonbaar weg te werken.
             </p>
           </li>
           <li class="py-6">
             <p class="mono-eyebrow text-teal-700">04</p>
-            <p class="mt-2 font-display text-h4 text-teal-900">Voorafgaand aan een certificeringstraject</p>
+            <p class="mt-2 font-display text-h4 text-teal-900">Verkenning vóór een traject</p>
             <p class="mt-3 text-base text-ink max-w-prose">
-              U overweegt certificering en wilt eerst weten waar u staat. Een interne audit
-              tegen een norm waar u nog niet op gecertificeerd bent, geeft u een zuiver beeld
-              voordat u een traject in gaat.
+              U denkt na over certificering en wilt eerst weten wat u te
+              wachten staat. Een audit op een norm waar u nog niet op
+              gecertificeerd bent, geeft u een zuiver beeld vóór u aan
+              een traject begint.
             </p>
           </li>
         </ul>
@@ -99,34 +103,34 @@ const jsonLd = [serviceJsonLd({ name: 'Interne audits', description: 'Onafhankel
     <div class="container-x py-20 md:py-24">
       <div class="grid grid-cols-12 gap-x-6 gap-y-10">
         <div class="col-span-12 md:col-span-4">
-          <Eyebrow>Hoe GTY een audit uitvoert</Eyebrow>
+          <Eyebrow>Onze aanpak</Eyebrow>
           <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
-            Verder dan toetsen aan de norm.
+            Meer dan afvinken tegen de norm.
           </h2>
         </div>
         <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
           <p>
-            Een externe auditor toetst of u aan de norm voldoet — niet meer, niet minder. Dat is
-            zijn rol. Een interne audit kan en moet meer doen. Wij kijken hoe uw organisatie
-            werkelijk werkt: waar processen afwijken van wat op papier staat, welke oorzaken
-            daaronder liggen, en wat er concreet beter kan.
+            Een externe auditor toetst of u voldoet aan de norm — daar houdt zijn
+            rol op. Een interne audit kan en moet meer zijn. Wij kijken hoe uw
+            organisatie werkelijk functioneert: waar de praktijk afwijkt van de
+            beschrijving, welke oorzaken daarin meespelen en wat er beter kan.
           </p>
           <p>
-            Dat betekent dat we niet alleen documentatie doornemen, maar ook gesprekken voeren
-            met de mensen die het werk doen. Niet om hen op fouten te betrappen, maar om te
-            begrijpen waarom de praktijk afwijkt — vaak met goede redenen die het systeem nog
-            niet heeft opgevangen.
+            Dat doen we niet door alleen documenten te lezen, maar door te
+            spreken met de mensen op de vloer. Niet om fouten op te sporen, maar
+            om te snappen waarom processen anders lopen — vaak met goede redenen
+            die het systeem nog niet opgevangen heeft.
           </p>
           <p>
-            Na de audit ontvangt u een heldere rapportage met bevindingen, verbeterpunten en
-            concrete acties. We bespreken de uitkomsten met uw team en ondersteunen bij de
-            opvolging. Zo blijft een audit niet een momentopname, maar wordt het een aanzet
-            tot verbetering die ook in de praktijk landt.
+            Achteraf krijgt u een heldere rapportage: bevindingen, verbeterpunten
+            en concrete acties. We nemen de uitkomsten met uw team door en
+            ondersteunen bij de opvolging. Geen momentopname die in een la
+            verdwijnt, maar een aanzet die in de praktijk landt.
           </p>
           <p class="text-ink-soft">
-            U werkt altijd met dezelfde persoon. Niet een wisselend team, niet een consultant
-            die elke keer opnieuw moet worden bijgepraat. GTY kent uw organisatie — en dat
-            merkt u in de scherpte van de audit.
+            Dezelfde begeleider, het hele jaar door. Geen wisselend team, geen
+            tijdverlies door telkens opnieuw bijpraten. Doordat wij uw organisatie
+            kennen, valt de audit ook scherper uit.
           </p>
         </div>
       </div>
@@ -134,13 +138,13 @@ const jsonLd = [serviceJsonLd({ name: 'Interne audits', description: 'Onafhankel
   </section>
 
   <section class="container-x py-20 md:py-24">
-    <Eyebrow>Wat GTY toetst</Eyebrow>
+    <Eyebrow>Onze auditkennis</Eyebrow>
     <h2 class="mt-6 max-w-2xl font-display text-h2 text-teal-900 text-balance">
-      Auditcapaciteit voor <span class="display-italic">vijf normen.</span>
+      Ervaring in <span class="display-italic">vijf normen.</span>
     </h2>
     <p class="mt-5 max-w-prose text-base text-ink-soft">
-      Eén consultant die de normen kent, in plaats van losse specialisten per norm. Bij
-      gecombineerde managementsystemen voeren we ook geïntegreerde audits uit.
+      Eén begeleider die alle normen beheerst — geen aparte specialist per norm.
+      Bij combinaties van normen voeren we ook geïntegreerde audits uit.
     </p>
 
     <ul class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-line-cool border border-line-cool">
@@ -158,33 +162,34 @@ const jsonLd = [serviceJsonLd({ name: 'Interne audits', description: 'Onafhankel
     <div class="container-x py-20 md:py-24">
       <div class="grid grid-cols-12 gap-x-6 gap-y-10">
         <div class="col-span-12 md:col-span-5">
-          <Eyebrow>Wat het oplevert</Eyebrow>
+          <Eyebrow>De opbrengst</Eyebrow>
           <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
-            Een organisatie die <span class="display-italic">weet</span> waar ze staat.
+            Een organisatie die <span class="display-italic">weet</span> waar ze nu echt staat.
           </h2>
         </div>
         <div class="col-span-12 md:col-span-6 md:col-start-7">
           <dl class="divide-y divide-line-cool border-y border-line-cool">
             <div class="py-6">
-              <dt class="font-display text-h4 text-teal-900">Onduidelijkheid → Betrouwbaar inzicht</dt>
+              <dt class="font-display text-h4 text-teal-900">Vermoeden → Feit</dt>
               <dd class="mt-3 text-base text-ink max-w-prose">
-                In plaats van interne discussies over wat wel en niet werkt, een feitelijk
-                rapport dat de basis vormt voor besluitvorming.
+                In plaats van interne discussies over wat wel of niet loopt,
+                een rapport dat de basis vormt voor onderbouwde keuzes.
               </dd>
             </div>
             <div class="py-6">
-              <dt class="font-display text-h4 text-teal-900">Late afwijkingen → Vroegtijdige signalering</dt>
+              <dt class="font-display text-h4 text-teal-900">Late constatering → Vroegtijdig signaal</dt>
               <dd class="mt-3 text-base text-ink max-w-prose">
-                Wat een externe auditor over zes maanden zou vinden, vinden wij nu — terwijl
-                er nog tijd is om het op te lossen voordat het een audit-bevinding wordt.
+                Wat een externe auditor over een halfjaar zou opmerken, vinden
+                wij nu — met de tijd om het rustig op te lossen voor het tot
+                een formele afwijking leidt.
               </dd>
             </div>
             <div class="py-6">
-              <dt class="font-display text-h4 text-teal-900">Audits als verplichting → Audits als motor</dt>
+              <dt class="font-display text-h4 text-teal-900">Verplichting → Verbetering</dt>
               <dd class="mt-3 text-base text-ink max-w-prose">
-                Een audit die werkelijke verbetering oplevert, in plaats van een rapport dat
-                in een la verdwijnt. Dat verschil zit in de opvolging — en in de relatie met
-                de auditor.
+                Een audit die daadwerkelijk iets verandert, niet een document
+                dat in een map belandt. Dat verschil zit in de opvolging en in
+                hoe het gesprek gevoerd wordt.
               </dd>
             </div>
           </dl>
@@ -196,26 +201,27 @@ const jsonLd = [serviceJsonLd({ name: 'Interne audits', description: 'Onafhankel
   <section class="container-x py-20 md:py-24">
     <div class="grid grid-cols-12 gap-x-6 gap-y-8">
       <div class="col-span-12 md:col-span-7">
-        <Eyebrow>De logische vervolgstap</Eyebrow>
+        <Eyebrow>En daarna?</Eyebrow>
         <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
-          Na de audit weet u <span class="display-italic">wat er volgt.</span>
+          Na de audit weet u <span class="display-italic">wat zinvol is.</span>
         </h2>
         <div class="mt-8 max-w-prose space-y-5 text-base text-ink">
           <p>
-            Veel organisaties ontdekken na een GTY-audit dat ze klaar zijn voor een
-            certificeringstraject — of juist dat het nog te vroeg is en welke stappen eerst
-            nodig zijn. Andere ontdekken dat ze behoefte hebben aan structurele borging via
-            het Partnerprogramma in plaats van losse audits.
+            Veel organisaties komen na een audit met ons tot de conclusie dat ze
+            klaar zijn voor een certificeringstraject — of juist dat ze er nog
+            even niet zijn, en welke stappen daarvoor liggen. Anderen merken dat
+            losse audits niet volstaan en stappen over naar continue borging via
+            het Partnerprogramma.
           </p>
           <p>
-            We denken daarin mee, zonder druk. U bepaalt het tempo, en wat de volgende stap is.
-            Soms is dat verder met GTY. Soms is dat zelfstandig verder, met de bevindingen in
-            de hand. Beide zijn een goed antwoord.
+            Wij denken vrijblijvend mee. U bepaalt het tempo en de richting.
+            Soms is dat samen verder. Soms is dat zelfstandig verder met de
+            bevindingen op zak. Beide is een geldig antwoord.
           </p>
         </div>
         <div class="mt-9 flex flex-wrap gap-x-5 gap-y-3 items-center">
           <Button href="/certificering/" variant="secondary">Bekijk de normen</Button>
-          <Button href="/partnerprogramma/" variant="ghost">Lees over het Partnerprogramma →</Button>
+          <Button href="/partnerprogramma/" variant="ghost">Naar het Partnerprogramma →</Button>
         </div>
       </div>
     </div>
@@ -223,7 +229,7 @@ const jsonLd = [serviceJsonLd({ name: 'Interne audits', description: 'Onafhankel
 
   <CallToAction
     eyebrow="Eerste audit"
-    title="Benieuwd hoe uw organisatie er echt voor staat?"
-    body="Plan een vrijblijvend kennismakingsgesprek. We bespreken welke norm of welk proces u wilt laten doorlichten, en wat een interne audit door GTY u oplevert."
+    title="Wilt u een eerlijke spiegel?"
+    body="In een vrijblijvend kennismakings­gesprek bekijken we welke norm of welk proces u wilt laten doorlichten en wat een interne audit u oplevert. Geen verplichting, gewoon een gesprek."
   />
 </Base>

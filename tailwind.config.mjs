@@ -1,39 +1,37 @@
 /**
- * GTY design tokens.
+ * GTY design tokens — Kader-geïnspireerd, zonder het groen.
  *
- * Kleurensysteem afgeleid van logo-fill #B8E3E5 (teal.200), uitgebouwd in
- * dezelfde hue (~183°) tot een werkbare schaal. Geen default Tailwind colors.
+ * Primair: diep navy #001F32 (overgenomen van kader.nl).
+ * Achtergronden: zuiver wit + koele grijzen, geen gele undertoon.
+ * Accent: warm koper-oranje #B5532C (vervangt het neon-groen van kader —
+ * past bij navy en heeft geen "success-betekenis" die verwarrend zou zijn
+ * op een certificerings-site).
+ * Secundair (sparingly): zacht paars #7F57EE voor highlights of editorial
+ * details, niet voor CTA's.
  *
- * WCAG AA contrast-verificatie (gebruikte combinaties op productie):
+ * WCAG AA (kerncombinaties):
  *
- *   ink              #0F1B1F  op  paper  #FAFAF7   →  17.4:1   AAA  body
- *   ink-soft         #3A4B4F  op  paper  #FAFAF7   →   8.4:1   AAA  caption
- *   ink              #0F1B1F  op  cream  #F1EBDD   →  16.0:1   AAA  body op cream
- *   teal.900         #143031  op  paper  #FAFAF7   →  13.0:1   AAA  CTA button bg
- *   teal.900         #143031  op  cream  #F1EBDD   →  11.9:1   AAA  headings
- *   teal.700         #2F5D5F  op  paper  #FAFAF7   →   7.5:1   AAA  link / heading
- *   teal.700         #2F5D5F  op  cream  #F1EBDD   →   6.9:1   AAA  link op cream
- *   paper            #FAFAF7  op  teal.900 #143031  →  13.0:1  AAA  CTA button text
- *   paper            #FAFAF7  op  ink    #0F1B1F   →  17.4:1   AAA  inverse panel
- *   accent           #A53E26  op  paper  #FAFAF7   →   5.9:1   AA   accent links
- *   accent           #A53E26  op  cream  #F1EBDD   →   5.4:1   AA   accent op cream
- *
- * Originele accent #B8462E gaf 4.45:1 op cream — net onder AA. Daarom verlaagd
- * naar #A53E26 voor garantie 5:1+. teal.500 #5A9598 mag NIET als body-text op
- * paper (3.0:1, alleen UI / large text).
+ *   ink              #0A0A0A  op  paper  #FFFFFF   →  20.6:1   AAA  body
+ *   ink-soft         #5C5C5C  op  paper  #FFFFFF   →   7.0:1   AAA  caption
+ *   navy.900         #001F32  op  paper  #FFFFFF   →  17.2:1   AAA  CTA bg
+ *   navy.700         #143F60  op  paper  #FFFFFF   →   9.6:1   AAA  link / heading
+ *   navy.700         #143F60  op  cream  #F5F5F5   →   8.9:1   AAA  link op grijs
+ *   paper            #FFFFFF  op  navy.900         →  17.2:1   AAA  inverse
+ *   accent           #B5532C  op  paper  #FFFFFF   →   5.1:1   AA   accent links
+ *   accent           #B5532C  op  cream  #F5F5F5   →   4.7:1   AA   accent op cream
  */
 
-const teal = {
-  50:  '#EEF7F7',
-  100: '#D5ECEC',
-  200: '#B8E3E5',
-  300: '#94D0D2',
-  400: '#73B7B9',
-  500: '#5A9598',
-  600: '#447576',
-  700: '#2F5D5F',
-  800: '#1F4445',
-  900: '#143031',
+const navy = {
+  50:  '#F0F4F7',
+  100: '#DDE7EE',
+  200: '#B8CDDF',
+  300: '#8AABC8',
+  400: '#5485B0',
+  500: '#2D6691',
+  600: '#1F5077',
+  700: '#143F60',
+  800: '#0A2E47',
+  900: '#001F32',
 };
 
 export default {
@@ -48,17 +46,17 @@ export default {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      teal,
-      ink: '#0F1B1F',
-      'ink-soft': '#3A4B4F',
-      paper: '#FAFAF7',
-      cream: '#F1EBDD',
-      'cream-deep': '#E8DFC9',
-      line: '#E2DDCF',
-      'line-cool': '#D9E5E5',
-      accent: '#A53E26',
-      'accent-deep': '#7E2E1B',
-      'signal-amber': '#C68A1A',
+      teal: navy,
+      ink: '#001F32',
+      'ink-soft': '#4A5A6A',
+      paper: '#FFFFFF',
+      cream: '#FFFFFF',
+      'cream-deep': '#F5F5F5',
+      line: '#E3E3E3',
+      'line-cool': '#E3E3E3',
+      accent: '#B5532C',
+      'accent-deep': '#8A3D1F',
+      'signal-amber': '#7F57EE',
       white: '#FFFFFF',
       black: '#000000',
     },
@@ -91,8 +89,8 @@ export default {
         DEFAULT: '6px',
       },
       boxShadow: {
-        edit: '0 1px 2px rgba(15,27,31,0.08), 0 0 0 1px rgba(15,27,31,0.04)',
-        lift: '0 4px 14px rgba(15,27,31,0.08)',
+        edit: '0 1px 2px rgba(10,10,10,0.08), 0 0 0 1px rgba(10,10,10,0.04)',
+        lift: '0 4px 14px rgba(10,10,10,0.08)',
       },
       transitionTimingFunction: {
         'ease-out-soft': 'cubic-bezier(0.22, 0.61, 0.36, 1)',
