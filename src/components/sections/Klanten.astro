@@ -1,10 +1,11 @@
 ---
-type Klant = { naam: string; logo: string };
+type Klant = { naam: string; logo: string; small?: boolean };
 
 const klanten: Klant[] = [
   { naam: 'AE Security Group', logo: '/images/klanten/ae-security-group.png' },
   { naam: 'Certicor', logo: '/images/klanten/certicor.png' },
   { naam: 'Ir. Lely Lyceum', logo: '/images/klanten/ir-lely-lyceum.png' },
+  { naam: 'iCNT', logo: '/images/klanten/iCNT-logo-zwart-oranje.png', small: true },
   { naam: 'KinderKidz Opvang', logo: '/images/klanten/kinderkidz-opvang.png' },
   { naam: 'Shadow Security', logo: '/images/klanten/shadow-security.png' },
   { naam: 'JeugdSterk', logo: '/images/klanten/jeugdsterk.png' },
@@ -28,7 +29,7 @@ const track = [...klanten, ...klanten];
 
     <p class="mt-6 text-lead text-ink-soft text-pretty max-w-prose">
       Van zorgaanbieders en scholen tot beveiligers, kinderopvang en arbo-adviseurs —
-      elf organisaties uit zes verschillende sectoren, allemaal begeleid vanuit
+      twaalf organisaties uit zes verschillende sectoren, allemaal begeleid vanuit
       dezelfde aanpak.
     </p>
   </div>
@@ -48,6 +49,7 @@ const track = [...klanten, ...klanten];
             height="100"
             loading="lazy"
             decoding="async"
+            class:list={[k.small && 'logo-small']}
           />
         </div>
       ))}
@@ -102,14 +104,14 @@ const track = [...klanten, ...klanten];
 
   .klanten-card {
     flex: 0 0 auto;
-    width: 200px;
-    height: 110px;
+    width: 230px;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: theme('colors.paper');
     border: 1px solid theme('colors.line-cool');
-    padding: 1rem 1.25rem;
+    padding: 1.25rem 1.5rem;
     transition: border-color 200ms ease, transform 200ms ease;
   }
 
@@ -118,14 +120,17 @@ const track = [...klanten, ...klanten];
   }
 
   .klanten-card img {
-    max-height: 100%;
-    max-width: 100%;
     width: auto;
-    height: auto;
+    height: 114px;
+    max-width: 90%;
     object-fit: contain;
     filter: grayscale(100%);
     opacity: 0.75;
     transition: filter 250ms ease, opacity 250ms ease;
+  }
+
+  .klanten-card img.logo-small {
+    height: 58px;
   }
 
   .klanten-card:hover img {
@@ -135,8 +140,14 @@ const track = [...klanten, ...klanten];
 
   @media (min-width: 768px) {
     .klanten-card {
-      width: 240px;
-      height: 130px;
+      width: 270px;
+      height: 150px;
+    }
+    .klanten-card img {
+      height: 126px;
+    }
+    .klanten-card img.logo-small {
+      height: 64px;
     }
     .klanten-track {
       gap: 1.5rem;
