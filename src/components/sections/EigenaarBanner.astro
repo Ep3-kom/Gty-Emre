@@ -2,60 +2,55 @@
 import { siteData } from '~/data/site-data';
 ---
 
-<section class="relative bg-[#DDE7EE] overflow-visible">
+<section class="bg-paper py-16 md:py-20">
   <div class="container-x">
-    <div class="grid grid-cols-12 gap-x-6 gap-y-8 items-center">
-      <div
-        class="col-span-12 sm:col-span-5 md:col-span-4 lg:col-span-3 relative flex justify-center sm:justify-start"
-      >
-        <figure class="relative aspect-[3/4] w-full max-w-[300px] sm:max-w-none -mb-16 sm:-mb-20 md:-mb-28 lg:-mb-36 z-10">
-          <img
-            src="/foto-eigenaar.jpeg"
-            alt="Portret van de oprichter van GTY"
-            width="800"
-            height="800"
-            loading="lazy"
-            decoding="async"
-            class="block w-full h-full object-cover object-[center_22%] drop-shadow-[0_30px_40px_rgba(0,31,50,0.25)]"
-          />
-        </figure>
-      </div>
+    <div class="rounded-2xl bg-cream px-8 md:px-14 py-10 md:py-12 flex flex-col md:flex-row items-center gap-10 md:gap-0 overflow-hidden">
 
-      <div
-        class="col-span-12 sm:col-span-7 md:col-span-8 lg:col-span-9 py-14 md:py-20 lg:py-24 md:pl-6 lg:pl-10"
-      >
-        <h2
-          class="font-sans font-semibold text-[1.9rem] sm:text-[2.25rem] md:text-[2.6rem] lg:text-[3.1rem] leading-[1.08] tracking-[-0.02em] text-teal-900 text-balance"
-        >
-          Wilt u GTY persoonlijk leren kennen?
+      <!-- Links: tekst + knoppen -->
+      <div class="flex-1 md:pr-10">
+        <p class="text-small text-ink-soft">Persoonlijk kennis maken?</p>
+        <h2 class="mt-3 font-sans font-bold text-[1.9rem] md:text-[2.5rem] leading-[1.1] tracking-[-0.02em] text-teal-900">
+          Maak kennis met<br />Emre Ozdemir
         </h2>
 
-        <p class="mt-5 max-w-prose text-lead text-ink-soft text-pretty">
-          We nemen graag de tijd voor een vrijblijvend gesprek over uw organisatie.
-        </p>
-
-        <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-          <a
-            href={siteData.cta.primary.href}
-            class="group inline-flex items-center gap-3 bg-teal-900 text-paper px-7 py-3.5 text-small font-medium hover:bg-ink transition-colors"
-          >
-            Contact
-            <span
-              aria-hidden="true"
-              class="inline-block transition-transform group-hover:translate-x-1"
-            >→</span>
-          </a>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
           <a
             href={siteData.contact.phoneHref}
-            class="text-small text-ink hover:text-teal-700 transition-colors"
+            class="inline-flex items-center gap-2 border border-teal-900/30 text-teal-900 text-small font-medium px-5 py-3 rounded-full hover:bg-teal-900 hover:text-paper transition-colors"
           >
-            Of bel direct
-            <span class="font-medium ml-1 underline decoration-teal-700/30 underline-offset-4 hover:decoration-teal-700">
-              {siteData.contact.phone}
-            </span>
+            {siteData.contact.phone}
+          </a>
+          <a
+            href="/contact/"
+            class="inline-flex items-center gap-2 border border-teal-900/30 text-teal-900 text-small font-medium px-5 py-3 rounded-full hover:bg-teal-900 hover:text-paper transition-colors"
+          >
+            Plan een kennismakingsgesprek
+          </a>
+          <a
+            href="/contact/"
+            aria-label="Naar contactpagina"
+            class="inline-flex items-center justify-center w-11 h-11 border border-teal-900/30 text-teal-900 rounded-full hover:bg-teal-900 hover:text-paper transition-colors text-base"
+          >
+            ↗
           </a>
         </div>
       </div>
+
+      <!-- Rechts: foto -->
+      <div class="flex-shrink-0">
+        <div class="w-52 md:w-64 lg:w-72 rounded-2xl overflow-hidden bg-[#DDE7EE]">
+          <img
+            src="/foto-eigenaar-removebg-preview.png"
+            alt="Emre Ozdemir, oprichter van GTY"
+            width="288"
+            height="340"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-full object-cover object-top"
+          />
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
