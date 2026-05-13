@@ -1,24 +1,18 @@
 /**
- * GTY design tokens — Kader-geïnspireerd, zonder het groen.
+ * GTY design tokens — monotonaal ink + teal palet.
  *
- * Primair: diep navy #001F32 (overgenomen van kader.nl).
+ * Primair: diep navy/ink #001F32.
  * Achtergronden: zuiver wit + koele grijzen, geen gele undertoon.
- * Accent: warm koper-oranje #B5532C (vervangt het neon-groen van kader —
- * past bij navy en heeft geen "success-betekenis" die verwarrend zou zijn
- * op een certificerings-site).
- * Secundair (sparingly): zacht paars #7F57EE voor highlights of editorial
- * details, niet voor CTA's.
+ * Accent: teal #2F5D5F — gebruikt voor links, hairlines en subtiele highlights.
+ *         Geen rode/oranje accenten.
  *
  * WCAG AA (kerncombinaties):
  *
- *   ink              #0A0A0A  op  paper  #FFFFFF   →  20.6:1   AAA  body
- *   ink-soft         #5C5C5C  op  paper  #FFFFFF   →   7.0:1   AAA  caption
- *   navy.900         #001F32  op  paper  #FFFFFF   →  17.2:1   AAA  CTA bg
+ *   ink              #001F32  op  paper  #FFFFFF   →  17.2:1   AAA  body / CTA bg
+ *   ink-soft         #4A5A6A  op  paper  #FFFFFF   →   7.4:1   AAA  caption
  *   navy.700         #143F60  op  paper  #FFFFFF   →   9.6:1   AAA  link / heading
- *   navy.700         #143F60  op  cream  #F5F5F5   →   8.9:1   AAA  link op grijs
  *   paper            #FFFFFF  op  navy.900         →  17.2:1   AAA  inverse
- *   accent           #B5532C  op  paper  #FFFFFF   →   5.1:1   AA   accent links
- *   accent           #B5532C  op  cream  #F5F5F5   →   4.7:1   AA   accent op cream
+ *   accent           #2F5D5F  op  paper  #FFFFFF   →   6.9:1   AAA  accent links
  */
 
 const navy = {
@@ -54,8 +48,8 @@ export default {
       'cream-deep': '#F5F5F5',
       line: '#E3E3E3',
       'line-cool': '#E3E3E3',
-      accent: '#B5532C',
-      'accent-deep': '#8A3D1F',
+      accent: '#2F5D5F',
+      'accent-deep': '#1F4244',
       'signal-amber': '#7F57EE',
       white: '#FFFFFF',
       black: '#000000',

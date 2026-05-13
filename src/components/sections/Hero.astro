@@ -2,46 +2,69 @@
 import { siteData } from '~/data/site-data';
 ---
 
-<section class="relative isolate overflow-hidden text-white" style="height: 100vh;">
-  <img
-    src="/images/gty-hero-audit-discussion.jpg"
-    alt="Twee professionals in gesprek tijdens een audit-overleg in een lichte werkomgeving."
-    width="2400"
-    height="1350"
-    loading="eager"
-    fetchpriority="high"
-    decoding="async"
-    class="absolute inset-0 -z-20 h-full w-full object-cover"
-    style="object-position: center right;"
-  />
+<section
+  class="relative isolate overflow-hidden text-white"
+  style="background-color: #0F1B1F; min-height: clamp(640px, 92vh, 960px);"
+>
+  <div
+    aria-hidden="true"
+    class="absolute inset-y-0 right-0 hidden lg:block"
+    style="width: 56%; clip-path: polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%);"
+  >
+    <img
+      src="/images/gty-hero-audit-discussion.jpg"
+      alt=""
+      width="2400"
+      height="1350"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      class="absolute inset-0 h-full w-full object-cover"
+      style="object-position: center right; filter: saturate(0.9) contrast(1.02);"
+    />
+    <div
+      aria-hidden="true"
+      class="absolute inset-0"
+      style="background: linear-gradient(to right, rgba(15,27,31,0.55), rgba(15,27,31,0.1) 35%, rgba(15,27,31,0) 70%);"
+    ></div>
+  </div>
 
   <div
     aria-hidden="true"
-    class="absolute inset-0 -z-10"
-    style="background-color: rgba(47, 93, 95, 0.18);"
-  ></div>
-  <div
-    aria-hidden="true"
-    class="absolute inset-y-0 left-0 -z-10 w-full md:w-3/4 lg:w-2/3"
-    style="background: linear-gradient(to right, rgba(15,27,31,0.65), rgba(15,27,31,0.15) 70%, transparent);"
-  ></div>
+    class="lg:hidden absolute inset-x-0 bottom-0"
+    style="height: 38%;"
+  >
+    <img
+      src="/images/gty-hero-audit-discussion.jpg"
+      alt=""
+      loading="eager"
+      decoding="async"
+      class="absolute inset-0 h-full w-full object-cover opacity-50"
+      style="object-position: center right;"
+    />
+    <div
+      aria-hidden="true"
+      class="absolute inset-0"
+      style="background: linear-gradient(to bottom, #0F1B1F 0%, rgba(15,27,31,0.7) 30%, rgba(15,27,31,0.4) 100%);"
+    ></div>
+  </div>
 
-  <div class="container-x relative pt-[152px] md:pt-[176px] pb-20 h-full flex flex-col justify-center">
+  <div class="container-x relative pt-[152px] md:pt-[176px] pb-20 flex flex-col justify-center" style="min-height: inherit;">
     <div class="grid grid-cols-12 gap-x-6">
-      <div class="col-span-12 lg:col-span-8 xl:col-span-7">
-        <p class="font-mono uppercase text-white/90" style="font-size: 11px; letter-spacing: 0.15em;">
+      <div class="col-span-12 lg:col-span-6">
+        <p class="font-mono uppercase" style="font-size: 11px; letter-spacing: 0.18em; color: rgba(241,235,221,0.75);">
           Certificering en borging, in één hand
         </p>
 
         <h1
-          class="mt-6 font-display font-bold text-balance text-white"
-          style="font-size: clamp(2.4rem, 5.5vw, 4.5rem); line-height: 1.05; text-shadow: 0 1px 24px rgba(8,24,26,0.45);"
+          class="mt-7 font-display font-bold text-balance text-white"
+          style="font-size: clamp(2.4rem, 5.5vw, 4.5rem); line-height: 1.05; letter-spacing: -0.01em;"
         >
           Een norm die werkt.<br />
           <span class="italic font-normal" style="color: #FFFFFF;">Een systeem dat blijft.</span>
         </h1>
 
-        <p class="mt-7 max-w-prose text-pretty" style="font-size: 1.125rem; line-height: 1.65; color: rgba(241,235,221,0.92);">
+        <p class="mt-7 max-w-prose text-pretty" style="font-size: 1.125rem; line-height: 1.65; color: rgba(241,235,221,0.85);">
           Of de aanleiding nu een aanbesteding is, een eis van uw opdrachtgever of een
           regel binnen uw sector — wij begeleiden u tot het certificaat er staat. En
           blijven daarna betrokken, zodat het systeem niet stilvalt zodra de auditor
@@ -51,8 +74,8 @@ import { siteData } from '~/data/site-data';
         <div class="mt-10 flex flex-wrap items-center gap-3">
           <a
             href={siteData.cta.primary.href}
-            class="inline-flex items-center justify-center px-7 py-3.5 font-medium text-white transition-colors hover:bg-black"
-            style="background-color: #0F1B1F; font-size: 15px;"
+            class="inline-flex items-center justify-center px-7 py-3.5 font-medium text-white transition-colors hover:opacity-90"
+            style="background-color: #2F5D5F; font-size: 15px;"
           >
             {siteData.cta.primary.label}
           </a>
@@ -111,7 +134,7 @@ import { siteData } from '~/data/site-data';
   .pillar-cap {
     display: block;
     height: 3px;
-    background-color: #B8462E;
+    background-color: #2F5D5F;
   }
   .pillar-inner {
     flex: 1;
@@ -124,7 +147,7 @@ import { siteData } from '~/data/site-data';
     right: 16px;
     font-size: 10px;
     letter-spacing: 0.18em;
-    color: rgba(184,70,46,0.7);
+    color: rgba(47,93,95,0.7);
   }
   .pillar-text {
     margin-top: 28px;
