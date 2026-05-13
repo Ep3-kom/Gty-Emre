@@ -1,40 +1,89 @@
 ---
-import Eyebrow from '~/components/ui/Eyebrow.astro';
 ---
 
-<section class="container-x py-20 md:py-28">
-  <div class="grid grid-cols-12 gap-x-6 gap-y-10">
-    <div class="col-span-12 md:col-span-4">
-      <Eyebrow>De realiteit</Eyebrow>
-      <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
-        Het certificaat ophalen is één.<br />
-        <span class="display-italic">Erna doorademen iets heel anders.</span>
-      </h2>
-    </div>
+<section class="relative overflow-hidden" style="background-color: #FFFFFF;">
+  <div class="container-x relative" style="padding-block: clamp(80px, 10vw, 128px);">
+    <div class="grid grid-cols-12 gap-x-6 gap-y-14 lg:gap-y-16">
+      <div class="col-span-12 lg:col-span-7">
+        <p class="font-mono uppercase" style="font-size: 11px; letter-spacing: 0.15em; color: #2F5D5F;">De realiteit</p>
+        <h2
+          class="mt-6 font-display font-bold text-balance"
+          style="color: #0F1B1F; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.08;"
+        >
+          Het certificaat ophalen is één.<br />
+          <span class="italic font-normal" style="color: #2F5D5F;">Erna doorademen iets heel anders.</span>
+        </h2>
+      </div>
 
-    <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
-      <p>
-        Een normtraject vraagt tijd, deskundigheid en samenhang die niet stilletjes
-        ontstaan tussen het reguliere werk door. Dossiers raken op achterstand,
-        eigenaarschap valt uiteen over meerdere afdelingen, en de auditplanning is altijd
-        net iets dichterbij dan op de actielijst staat.
-      </p>
-      <p>
-        Daaronder ligt de stillere zorg: dat een externe beoordelaar dingen aanwijst die
-        intern allang voelbaar waren. Dat het managementsysteem netjes is opgeschreven,
-        maar in de dagelijkse praktijk niet wordt gevolgd. Dat het certificaat aan de
-        muur hangt, maar het effect na een paar maanden alweer verdampt.
-      </p>
-      <p class="text-ink-soft">
-        Een goed traject hoort uw organisatie scherper te maken, niet zwaarder. Daar
-        ligt voor de meeste organisaties het echte verschil — en daar begint ons werk.
-      </p>
+      <figure class="col-span-12 lg:col-span-7 relative">
+        <svg
+          aria-hidden="true"
+          class="pointer-events-none absolute hidden md:block"
+          width="420"
+          height="420"
+          viewBox="0 0 520 520"
+          fill="none"
+          style="opacity: 0.14; left: -56px; top: -48px; z-index: 0;"
+        >
+          <rect x="40" y="40" width="440" height="440" stroke="#B8462E" stroke-width="1" />
+          <rect x="80" y="80" width="360" height="360" stroke="#B8462E" stroke-width="1" />
+          <rect x="120" y="120" width="280" height="280" stroke="#B8462E" stroke-width="1" />
+          <rect x="160" y="160" width="200" height="200" stroke="#B8462E" stroke-width="1" />
+          <rect x="200" y="200" width="120" height="120" stroke="#B8462E" stroke-width="1" />
+        </svg>
+
+        <div class="relative" style="z-index: 1;">
+          <span
+            aria-hidden="true"
+            class="absolute hidden md:block"
+            style="top: 22px; left: -28px; right: 26px; bottom: -22px; background-color: #2F5D5F;"
+          ></span>
+
+          <div
+            class="relative overflow-hidden"
+            style="transform: rotate(-1.4deg); transform-origin: 30% 50%; box-shadow: 0 24px 60px -28px rgba(15,27,31,0.45);"
+          >
+            <img
+              src="/images/certificaat.jpg"
+              alt="Een ingelijst certificaat op een kast — het symbool dat doorgaans aan een muur eindigt"
+              loading="lazy"
+              decoding="async"
+              class="block w-full h-auto"
+              style="aspect-ratio: 3/2; object-fit: cover; filter: saturate(0.85) contrast(1.02);"
+            />
+          </div>
+        </div>
+
+        <figcaption
+          class="mt-6 font-mono uppercase flex items-center gap-3"
+          style="font-size: 11px; letter-spacing: 0.16em; color: #2F5D5F;"
+        >
+          <span aria-hidden="true" style="display:inline-block; width: 24px; height: 1px; background-color: #B8462E;"></span>
+          Het zichtbare deel van een traject — niet het hele werk.
+        </figcaption>
+      </figure>
+
+      <div
+        class="col-span-12 lg:col-span-4 lg:col-start-9 max-w-prose space-y-5 lg:self-end"
+        style="font-size: 1.0625rem; line-height: 1.65; color: #0F1B1F;"
+      >
+        <p>
+          Een normtraject vraagt tijd, deskundigheid en samenhang die niet stilletjes
+          ontstaan tussen het reguliere werk door. Dossiers raken op achterstand,
+          eigenaarschap valt uiteen over meerdere afdelingen, en de auditplanning is altijd
+          net iets dichterbij dan op de actielijst staat.
+        </p>
+        <p>
+          Daaronder ligt de stillere zorg: dat een externe beoordelaar dingen aanwijst die
+          intern allang voelbaar waren. Dat het managementsysteem netjes is opgeschreven,
+          maar in de dagelijkse praktijk niet wordt gevolgd. Dat het certificaat aan de
+          muur hangt, maar het effect na een paar maanden alweer verdampt.
+        </p>
+        <p style="color: rgba(15,27,31,0.72);">
+          Een goed traject hoort uw organisatie scherper te maken, niet zwaarder. Daar
+          ligt voor de meeste organisaties het echte verschil — en daar begint ons werk.
+        </p>
+      </div>
     </div>
   </div>
 </section>
-
-<div class="bg-cream">
-  <div class="container-x py-3">
-    <div class="rule-cream"></div>
-  </div>
-</div>

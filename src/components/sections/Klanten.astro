@@ -18,15 +18,16 @@ const klanten: Klant[] = [
 const track = [...klanten, ...klanten];
 ---
 
-<section class="relative bg-paper border-y border-line-cool">
+<section class="relative" style="background-color: #FFFFFF; border-top: 1px solid rgba(47,93,95,0.15); border-bottom: 1px solid rgba(47,93,95,0.15);">
   <div class="container-x pt-20 md:pt-28 pb-10 md:pb-14 max-w-3xl mx-auto">
     <h2
-      class="font-display text-[2.4rem] sm:text-[3rem] md:text-[3.75rem] lg:text-[4.25rem] leading-[1.02] tracking-[-0.02em] text-teal-900 text-balance"
+      class="font-display font-bold text-balance"
+      style="color: #0F1B1F; font-size: clamp(2.2rem, 5vw, 4.25rem); line-height: 1.04; letter-spacing: -0.02em;"
     >
-      Eens met ons begonnen. <span class="display-italic text-teal-700">Nog steeds samen.</span>
+      Eens met ons begonnen. <span class="italic font-normal" style="color: #2F5D5F;">Nog steeds samen.</span>
     </h2>
 
-    <p class="mt-6 text-lead text-ink-soft text-pretty max-w-prose">
+    <p class="mt-6 max-w-prose text-pretty" style="font-size: 1.125rem; line-height: 1.65; color: rgba(15,27,31,0.72);">
       Van zorgaanbieders en scholen tot beveiligers, kinderopvang en arbo-adviseurs —
       elf organisaties uit zes verschillende sectoren, allemaal begeleid vanuit
       dezelfde aanpak.
@@ -55,11 +56,13 @@ const track = [...klanten, ...klanten];
 
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-paper to-transparent"
+      class="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32"
+      style="background: linear-gradient(to right, #FFFFFF, transparent);"
     ></div>
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-paper to-transparent"
+      class="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32"
+      style="background: linear-gradient(to left, #FFFFFF, transparent);"
     ></div>
   </div>
 </section>
@@ -107,14 +110,14 @@ const track = [...klanten, ...klanten];
     display: flex;
     align-items: center;
     justify-content: center;
-    background: theme('colors.paper');
-    border: 1px solid theme('colors.line-cool');
+    background-color: #FFFFFF;
+    border: 1px solid rgba(47, 93, 95, 0.15);
     padding: 1rem 1.25rem;
     transition: border-color 200ms ease, transform 200ms ease;
   }
 
   .klanten-card:hover {
-    border-color: theme('colors.teal.700');
+    border-color: rgba(47, 93, 95, 0.45);
   }
 
   .klanten-card img {

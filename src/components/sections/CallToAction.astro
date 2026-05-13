@@ -1,6 +1,4 @@
 ---
-import Button from '~/components/ui/Button.astro';
-import Eyebrow from '~/components/ui/Eyebrow.astro';
 import { siteData } from '~/data/site-data';
 
 type Props = {
@@ -20,24 +18,91 @@ const {
 const isInverse = variant === 'inverse';
 ---
 
-<section class:list={[isInverse ? 'bg-ink text-paper' : 'bg-paper border-t border-line-cool']}>
-  <div class="container-x py-20 md:py-28">
-    <div class="grid grid-cols-12 gap-x-6 gap-y-8 items-end">
-      <div class="col-span-12 md:col-span-7">
-        <Eyebrow>{eyebrow}</Eyebrow>
-        <h2 class:list={['mt-6 font-display text-h1 text-balance', isInverse ? 'text-paper' : 'text-teal-900']}>
-          {title}
-        </h2>
-        <p class:list={['mt-6 max-w-prose text-lead', isInverse ? 'text-paper/80' : 'text-ink-soft']}>{body}</p>
-      </div>
-      <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col gap-3">
-        <Button href={siteData.cta.primary.href} variant={isInverse ? 'inverse' : 'primary'} size="lg">
-          {siteData.cta.primary.label}
-        </Button>
-        <Button href={siteData.cta.secondary.href} variant="ghost" size="lg" class={isInverse ? 'text-paper hover:text-cream' : ''}>
-          {siteData.cta.secondary.label} →
-        </Button>
+{isInverse ? (
+  <section style="background-color: #0F1B1F;">
+    <div class="container-x" style="padding-block: clamp(80px, 10vw, 120px);">
+      <div class="grid grid-cols-12 gap-x-6 gap-y-10 items-center">
+        <div class="col-span-12 md:col-span-7">
+          <p class="font-mono uppercase" style="font-size: 11px; letter-spacing: 0.15em; color: rgba(241,235,221,0.7);">
+            {eyebrow}
+          </p>
+          <h2
+            class="mt-6 font-display font-bold text-balance text-white"
+            style="font-size: clamp(2.4rem, 5vw, 3.5rem); line-height: 1.08;"
+          >
+            {title}
+          </h2>
+          <p class="mt-6 max-w-prose text-pretty" style="font-size: 1.125rem; line-height: 1.65; color: rgba(255,255,255,0.8);">
+            {body}
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a
+              href={siteData.cta.primary.href}
+              class="inline-flex items-center justify-center px-7 py-4 font-medium transition-colors hover:bg-[#FFFFFF]"
+              style="background-color: #FFFFFF; color: #0F1B1F; font-size: 15px;"
+            >
+              {siteData.cta.primary.label}
+            </a>
+            <a
+              href={siteData.cta.secondary.href}
+              class="inline-flex items-center font-medium text-white underline underline-offset-4"
+              style="font-size: 15px; text-decoration-color: rgba(255,255,255,0.6);"
+            >
+              {siteData.cta.secondary.label} →
+            </a>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-5 relative">
+          <div class="relative overflow-hidden" style="aspect-ratio: 4 / 3; background-color: #14262A;">
+            <img
+              src="/images/section-phase-icons.jpg"
+              alt="Kennismakingsgesprek met een adviseur van GTY"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+              style="filter: saturate(0.85) contrast(1.05);"
+            />
+            <div
+              aria-hidden="true"
+              class="absolute inset-0"
+              style="background: linear-gradient(135deg, rgba(15,27,31,0.45), rgba(15,27,31,0.05) 55%, rgba(47,93,95,0.25));"
+            ></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+) : (
+  <section style="background-color: #FFFFFF; border-top: 1px solid rgba(47,93,95,0.15);">
+    <div class="container-x" style="padding-block: clamp(80px, 10vw, 120px);">
+      <div class="grid grid-cols-12 gap-x-6 gap-y-8 items-end">
+        <div class="col-span-12 md:col-span-7">
+          <p class="font-mono uppercase" style="font-size: 11px; letter-spacing: 0.15em; color: #2F5D5F;">{eyebrow}</p>
+          <h2
+            class="mt-6 font-display font-bold text-balance"
+            style="color: #0F1B1F; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.08;"
+          >
+            {title}
+          </h2>
+          <p class="mt-6 max-w-prose" style="font-size: 1.125rem; line-height: 1.65; color: rgba(15,27,31,0.72);">{body}</p>
+        </div>
+        <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col gap-3">
+          <a
+            href={siteData.cta.primary.href}
+            class="inline-flex items-center justify-center px-7 py-3.5 font-medium text-white transition-colors hover:opacity-90"
+            style="background-color: #B8462E; font-size: 15px;"
+          >
+            {siteData.cta.primary.label}
+          </a>
+          <a
+            href={siteData.cta.secondary.href}
+            class="inline-flex items-center justify-center font-medium"
+            style="color: #0F1B1F; font-size: 15px; border-bottom: 2px solid #B8462E; padding-bottom: 2px; align-self: flex-start;"
+          >
+            {siteData.cta.secondary.label} →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+)}
