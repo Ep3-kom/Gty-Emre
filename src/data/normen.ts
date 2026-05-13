@@ -66,10 +66,10 @@ export const normen: Norm[] = [
     title: 'NEN 7510 Certificering',
     shortTitle: 'Informatiebeveiliging in de zorg',
     category: 'informatiebeveiliging',
-    audience: 'Zorgorganisaties met persoonlijke gezondheidsinformatie',
+    audience: 'Zorgaanbieders én verwerkers van gezondheidsinformatie',
     doorlooptijd: '6–9 maanden',
     auditFrequentie: 'Jaarlijkse surveillance · 3-jaars hercertificering',
-    sectorFocus: 'Ziekenhuizen, huisartsen, ggz, thuiszorg',
+    sectorFocus: 'Zorg, IT-leveranciers in de zorg, EPD/ECD-software, hosting',
     oneliner: 'Informatiebeveiliging voor de zorg.',
   },
   {

@@ -4,73 +4,102 @@ import { t } from '~/i18n/nl';
 const year = new Date().getFullYear();
 ---
 
-<footer class="bg-ink text-paper">
-  <div class="container-x py-16">
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-12">
-      <div class="md:col-span-5">
+<footer style="background-color: #0F1B1F; color: #FFFFFF; border-top: 1px solid rgba(47,93,95,0.2);">
+  <div class="container-x" style="padding-block: 56px;">
+    <div class="grid grid-cols-2 md:grid-cols-12 gap-x-6 gap-y-10">
+      <div class="col-span-2 md:col-span-4">
         <a href="/" class="inline-flex items-center" aria-label="GTY home">
-          <img src="/logo.svg" alt="GTY" width="80" height="36" class="h-9 w-auto" />
+          <img src="/logo.svg" alt="GTY" width="80" height="36" class="h-8 w-auto" />
         </a>
-        <p class="mt-5 max-w-sm text-small text-paper/75">
+        <p class="mt-4 max-w-xs" style="font-size: 13px; line-height: 1.55; color: rgba(255,255,255,0.65);">
           GTY ondersteunt Nederlandse organisaties bij certificering en de borging
-          daarna. Van eerste meting tot interne audit — één partij, één lijn.
+          daarna. Eén partij, één lijn.
         </p>
       </div>
 
-      <div class="md:col-span-3 md:col-start-7">
-        <h3 class="mono-eyebrow text-paper/70">{t.footer.address}</h3>
-        <address class="not-italic mt-3 text-small leading-relaxed text-paper/85">
+      <div class="col-span-2 md:col-span-4">
+        <h3 class="font-mono uppercase" style="font-size: 10px; letter-spacing: 0.16em; color: rgba(255,255,255,0.5);">
+          {t.footer.address}
+        </h3>
+        <address class="not-italic mt-3" style="font-size: 13px; line-height: 1.55; color: rgba(255,255,255,0.85);">
           {siteData.contact.address.street}<br />
-          {siteData.contact.address.postal} {siteData.contact.address.city}<br />
-          {siteData.contact.address.country}
+          {siteData.contact.address.postal} {siteData.contact.address.city}
         </address>
-        <div class="mt-5 space-y-1.5 text-small">
-          <a href={siteData.contact.phoneHref} class="block link-underline font-mono">{siteData.contact.phone}</a>
-          <a href={siteData.contact.emailHref} class="block link-underline">{siteData.contact.email}</a>
+        <div class="mt-3 flex flex-col" style="font-size: 13px; line-height: 1.6;">
+          <a href={siteData.contact.phoneHref} class="font-mono footer-link" style="color: rgba(255,255,255,0.85);">
+            {siteData.contact.phone}
+          </a>
+          <a href={siteData.contact.emailHref} class="footer-link" style="color: rgba(255,255,255,0.85);">
+            {siteData.contact.email}
+          </a>
         </div>
-        <dl class="mt-5 grid grid-cols-[auto,1fr] gap-x-3 gap-y-1 text-caption text-paper/65 font-mono">
-          <dt class="text-paper/55">Openingstijden</dt>
-          <dd>{siteData.business.hours}</dd>
-          <dt class="text-paper/55">KvK</dt>
-          <dd>{siteData.business.kvk}</dd>
-          <dt class="text-paper/55">BTW</dt>
-          <dd>{siteData.business.vat}</dd>
-        </dl>
+        <p class="mt-3 font-mono" style="font-size: 11px; letter-spacing: 0.04em; color: rgba(255,255,255,0.45);">
+          KvK {siteData.business.kvk} · BTW {siteData.business.vat} · {siteData.business.hours}
+        </p>
       </div>
 
-      <div class="md:col-span-2">
-        <h3 class="mono-eyebrow text-paper/70">{t.footer.services}</h3>
-        <ul class="mt-3 space-y-1.5 text-small text-paper/85">
-          <li><a href="/certificering/" class="link-underline">Certificering</a></li>
-          <li><a href="/partnerprogramma/" class="link-underline">Partnerprogramma</a></li>
-          <li><a href="/interne-audits/" class="link-underline">Interne audits</a></li>
-          <li><a href="/academy/" class="link-underline">Academy</a></li>
+      <div class="col-span-1 md:col-span-2">
+        <h3 class="font-mono uppercase" style="font-size: 10px; letter-spacing: 0.16em; color: rgba(255,255,255,0.5);">
+          {t.footer.services}
+        </h3>
+        <ul class="mt-3 flex flex-col gap-1.5" style="font-size: 13px; color: rgba(255,255,255,0.85);">
+          <li><a href="/certificering/" class="footer-link">Certificering</a></li>
+          <li><a href="/partnerprogramma/" class="footer-link">Partnerprogramma</a></li>
+          <li><a href="/interne-audits/" class="footer-link">Interne audits</a></li>
+          <li><a href="/academy/" class="footer-link">Academy</a></li>
         </ul>
       </div>
 
-      <div class="md:col-span-2">
-        <h3 class="mono-eyebrow text-paper/70">{t.footer.navigation}</h3>
-        <ul class="mt-3 space-y-1.5 text-small text-paper/85">
-          <li><a href="/werkwijze/" class="link-underline">{t.nav.werkwijze}</a></li>
-          <li><a href="/over-ons/" class="link-underline">{t.nav.overOns}</a></li>
-          <li><a href="/contact/" class="link-underline">{t.nav.contact}</a></li>
-          <li><a href="/inzichten/" class="link-underline">Inzichten</a></li>
+      <div class="col-span-1 md:col-span-2">
+        <h3 class="font-mono uppercase" style="font-size: 10px; letter-spacing: 0.16em; color: rgba(255,255,255,0.5);">
+          {t.footer.navigation}
+        </h3>
+        <ul class="mt-3 flex flex-col gap-1.5" style="font-size: 13px; color: rgba(255,255,255,0.85);">
+          <li><a href="/werkwijze/" class="footer-link">{t.nav.werkwijze}</a></li>
+          <li><a href="/over-ons/" class="footer-link">{t.nav.overOns}</a></li>
+          <li><a href="/contact/" class="footer-link">{t.nav.contact}</a></li>
+          <li><a href="/inzichten/" class="footer-link">Inzichten</a></li>
         </ul>
       </div>
     </div>
 
-    <hr class="mt-14 border-paper/15" />
+    <hr class="mt-10" style="border: none; border-top: 1px solid rgba(255,255,255,0.1);" />
 
-    <div class="mt-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-      <p class="text-caption text-paper/60 font-mono">
+    <div class="mt-5 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+      <p class="font-mono" style="font-size: 11px; color: rgba(255,255,255,0.5);">
         © {year} {t.footer.copyright}
       </p>
-      <ul class="flex flex-wrap gap-x-5 gap-y-2 text-caption text-paper/60 font-mono">
-        <li><a href="/privacyverklaring/" class="link-underline">{t.footer.privacy}</a></li>
-        <li><a href="/algemene-voorwaarden/" class="link-underline">{t.footer.terms}</a></li>
-        <li><a href="/cookiebeleid/" class="link-underline">{t.footer.cookies}</a></li>
-        <li><a href="/disclaimer/" class="link-underline">{t.footer.disclaimer}</a></li>
+      <ul class="flex flex-wrap gap-x-5 gap-y-1 font-mono" style="font-size: 11px; color: rgba(255,255,255,0.5);">
+        <li><a href="/privacyverklaring/" class="footer-link">{t.footer.privacy}</a></li>
+        <li><a href="/algemene-voorwaarden/" class="footer-link">{t.footer.terms}</a></li>
+        <li><a href="/cookiebeleid/" class="footer-link">{t.footer.cookies}</a></li>
+        <li><a href="/disclaimer/" class="footer-link">{t.footer.disclaimer}</a></li>
       </ul>
     </div>
+
+    <p
+      class="mt-4 font-mono"
+      style="font-size: 11px; color: rgba(255,255,255,0.4);"
+    >
+      Ontwikkeld door
+      <a
+        href="https://elevate-webdesign.nl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer-link"
+        style="color: rgba(255,255,255,0.7);"
+      >
+        Elevate Webdesign
+      </a>
+    </p>
   </div>
 </footer>
+
+<style>
+  .footer-link {
+    transition: color 180ms ease;
+  }
+  .footer-link:hover {
+    color: #2F5D5F;
+  }
+</style>

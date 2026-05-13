@@ -1,6 +1,4 @@
 ---
-import Eyebrow from '~/components/ui/Eyebrow.astro';
-
 const stappen = [
   {
     nr: '01',
@@ -23,29 +21,52 @@ const stappen = [
 ];
 ---
 
-<section class="container-x py-20 md:py-28">
-  <div class="max-w-narrow">
-    <Eyebrow>De aanpak</Eyebrow>
-    <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
-      Drie fasen. <span class="display-italic">Niets dat u overvalt.</span>
-    </h2>
-    <p class="mt-5 max-w-prose text-lead text-ink-soft">
-      Ieder traject doorloopt dezelfde drie fasen. De invulling daarbinnen schalen we
-      naar uw norm, uw sector en het punt waar u nu staat.
-    </p>
+<section style="background-color: #FFFFFF;">
+  <div class="container-x" style="padding-block: clamp(60px, 8vw, 100px);">
+    <div class="max-w-narrow">
+      <p class="font-mono uppercase" style="font-size: 11px; letter-spacing: 0.15em; color: #2F5D5F;">De aanpak</p>
+      <h2
+        class="mt-6 font-display font-bold text-balance"
+        style="color: #0F1B1F; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.08;"
+      >
+        Drie fasen. <span class="italic font-normal" style="color: #2F5D5F;">Niets dat u overvalt.</span>
+      </h2>
+      <p class="mt-5 max-w-prose" style="font-size: 1.125rem; line-height: 1.65; color: rgba(15,27,31,0.72);">
+        Ieder traject doorloopt dezelfde drie fasen. De invulling daarbinnen schalen we
+        naar uw norm, uw sector en het punt waar u nu staat.
+      </p>
+    </div>
+
+    <ol class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-10 relative">
+      <div
+        aria-hidden="true"
+        class="hidden md:block absolute left-0 right-0 top-[10px]"
+        style="height: 1px; background-color: rgba(47,93,95,0.2);"
+      ></div>
+
+      {stappen.map((s) => (
+        <li class="relative">
+          <span
+            aria-hidden="true"
+            class="block absolute -top-1 left-0"
+            style="width: 20px; height: 20px; border-radius: 9999px; background-color: #2F5D5F;"
+          ></span>
+          <p
+            class="font-display"
+            style="margin-top: 36px; font-size: 72px; font-weight: 700; color: #2F5D5F; line-height: 1;"
+          >
+            {s.nr}
+          </p>
+          <h3 class="mt-5 font-display" style="color: #0F1B1F; font-size: 1.75rem; line-height: 1.2;">{s.titel}</h3>
+          <p class="mt-4 max-w-[36ch]" style="font-size: 1.0625rem; line-height: 1.65; color: #0F1B1F;">{s.body}</p>
+          <p
+            class="mt-4 font-mono uppercase"
+            style="font-size: 11px; letter-spacing: 0.15em; color: #2F5D5F;"
+          >
+            {s.duur}
+          </p>
+        </li>
+      ))}
+    </ol>
   </div>
-
-  <ol class="mt-14 grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-6 relative">
-    <div class="hidden md:block absolute left-0 right-0 top-[14px] h-px bg-line-cool"></div>
-
-    {stappen.map((s) => (
-      <li class="md:col-span-4 relative">
-        <div class="hidden md:block absolute -top-1 left-0 w-2.5 h-2.5 rounded-full bg-teal-700"></div>
-        <p class="md:pt-9 mono-eyebrow text-teal-700">{s.nr}</p>
-        <h3 class="mt-2 font-display text-h3 text-teal-900">{s.titel}</h3>
-        <p class="mt-4 text-base text-ink max-w-[36ch]">{s.body}</p>
-        <p class="mt-4 text-caption font-mono text-ink-soft uppercase tracking-wider">{s.duur}</p>
-      </li>
-    ))}
-  </ol>
 </section>
