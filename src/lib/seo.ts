@@ -9,7 +9,7 @@ export type SEOProps = {
 };
 
 export const buildTitle = (title?: string) =>
-  title ? `${title} — GTY` : `${siteData.name} — ${siteData.tagline}`;
+  title ? `${title} · GTY` : `${siteData.name} · ${siteData.tagline}`;
 
 export const canonical = (pathname: string) =>
   new URL(pathname, siteData.url).toString();

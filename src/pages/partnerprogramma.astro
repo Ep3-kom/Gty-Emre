@@ -23,8 +23,8 @@ const jsonLd = [serviceJsonLd({ name: 'Partnerprogramma', description: 'Structur
         <span class="text-teal-700">Partnerprogramma</span>
       </nav>
 
-      <div class="grid grid-cols-12 gap-x-6 gap-y-8">
-        <div class="col-span-12 lg:col-span-9">
+      <div class="grid grid-cols-12 gap-x-6 gap-y-10 items-center">
+        <div class="col-span-12 lg:col-span-7">
           <Eyebrow>Na het certificaat</Eyebrow>
           <h1 class="mt-6 font-display text-h1 md:text-[3.5rem] md:leading-[1.05] text-teal-900 text-balance">
             Doorlopende borging,<br /><span class="display-italic">in een vorm die past.</span>
@@ -40,6 +40,18 @@ const jsonLd = [serviceJsonLd({ name: 'Partnerprogramma', description: 'Structur
             <Button href="#wat-het-inhoudt" variant="ghost" size="lg">Lees wat het inhoudt →</Button>
           </div>
         </div>
+        <aside class="col-span-12 lg:col-span-4 lg:col-start-9">
+          <div class="relative overflow-hidden" style="aspect-ratio: 4 / 5;">
+            <img
+              src="/images/partnerschap-handdruk.jpg"
+              alt="Twee partners schudden elkaar de hand, symbool voor een samenwerking die doorloopt na het certificaat"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+              style="object-position: center; filter: saturate(0.92) contrast(1.02);"
+            />
+          </div>
+        </aside>
       </div>
     </div>
   </section>
@@ -54,21 +66,20 @@ const jsonLd = [serviceJsonLd({ name: 'Partnerprogramma', description: 'Structur
       </div>
       <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
         <p>
-          Het certificaat hangt, en dan? Normen worden herzien (ISO 27001 in
-          2022, NEN 7510 in eigen tempo, HKZ-schema's periodiek). Processen
+          Het certificaat hangt, en dan? Normen worden herzien, processen
           schuiven mee met nieuwe IT-systemen, andere dienstverlening of
           gewijzigde teamstructuur. Mensen rouleren: de kwaliteitsverantwoordelijke
           die alles opzette gaat weg, nieuwe collega's kennen de werkwijze nog niet.
         </p>
         <p>
           Tussen de jaarlijkse audits in groeit de afstand tussen wat er op
-          papier staat en wat er op de werkvloer gebeurt. Niemand merkt het —
+          papier staat en wat er op de werkvloer gebeurt. Niemand merkt het,
           tot de externe auditor terugkomt en de afwijkingen aanwijst die een
           jaar eerder nog niet bestonden. Of erger: tot een incident laat zien
           dat de procedure niet meer klopt met de praktijk.
         </p>
         <p class="text-ink-soft">
-          Compliance is geen project met een einddatum. Het is een staat die
+          Compliance is geen project met een einddatum. Het is één staat die
           onderhoud vraagt. Wie dat onderhoud niet organiseert, betaalt er ieder
           jaar opnieuw voor.
         </p>
@@ -82,7 +93,7 @@ const jsonLd = [serviceJsonLd({ name: 'Partnerprogramma', description: 'Structur
         <div class="col-span-12 md:col-span-5">
           <Eyebrow>De inhoud</Eyebrow>
           <h2 class="mt-6 font-display text-h2 text-teal-900 text-balance">
-            Geen vaste pakketten.<br /><span class="display-italic">Een programma op uw maat.</span>
+            Geen vaste pakketten.<br /><span class="display-italic">Een programma op maat.</span>
           </h2>
           <p class="mt-5 text-base text-ink-soft max-w-prose">
             Wij hanteren geen prijslijst met afvinkbare bundels. Wat zinvol is
@@ -142,7 +153,7 @@ const jsonLd = [serviceJsonLd({ name: 'Partnerprogramma', description: 'Structur
               </div>
               <div class="col-span-12 md:col-span-8 text-base text-ink">
                 <p>
-                  Dezelfde begeleider, jaar in jaar uit. Aanspreekbaar bij een
+                  Dezelfde partner, jaar in jaar uit. Aanspreekbaar bij een
                   vraag die niet kan wachten, bij wijzigingen die u even wilt
                   toetsen, en voor de voorbereiding op elke surveillance-audit.
                 </p>
@@ -216,7 +227,7 @@ const jsonLd = [serviceJsonLd({ name: 'Partnerprogramma', description: 'Structur
 
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 border-t border-paper/15">
         <div class="md:border-r border-paper/15 py-8 md:pr-10">
-          <p class="mono-eyebrow text-paper/70">Zonder vaste begeleiding</p>
+          <p class="mono-eyebrow text-paper/70">Zonder vaste partner</p>
           <ul class="mt-5 space-y-3 text-base text-paper/85">
             <li class="flex items-start gap-3">
               <span class="mt-[10px] block w-3 h-px bg-paper/40 shrink-0" aria-hidden="true"></span>
@@ -237,7 +248,7 @@ const jsonLd = [serviceJsonLd({ name: 'Partnerprogramma', description: 'Structur
           </ul>
         </div>
         <div class="border-t md:border-t-0 border-paper/15 py-8 md:pl-10">
-          <p class="mono-eyebrow text-teal-200">Met GTY als vaste begeleider</p>
+          <p class="mono-eyebrow text-teal-200">Met GTY als vaste partner</p>
           <ul class="mt-5 space-y-3 text-base text-paper">
             <li class="flex items-start gap-3">
               <span class="mt-[10px] block w-3 h-px bg-teal-200 shrink-0" aria-hidden="true"></span>

@@ -3,7 +3,7 @@ export const siteData = {
   legalName: 'GTY',
   tagline: 'Zekerheid in certificering. Rust in compliance.',
   description:
-    'GTY begeleidt Nederlandse organisaties bij certificering voor ISO 9001, ISO 14001, ISO 27001, HKZ, NEN 7510 en het Certificatieschema Arbodiensten — en zorgt dat het certificaat zijn waarde behoudt.',
+    'GTY begeleidt Nederlandse organisaties bij certificering voor ISO 9001, ISO 14001, ISO 27001, HKZ, NEN 7510 en het Certificatieschema Arbodiensten, en zorgt dat het certificaat zijn waarde behoudt.',
   url: 'https://gty.nl',
   contact: {
     address: {

@@ -9,6 +9,7 @@ export type Norm = {
   auditFrequentie: string;
   sectorFocus: string;
   oneliner: string;
+  gerelateerd?: string[];
 };
 
 export const normen: Norm[] = [
@@ -45,7 +46,7 @@ export const normen: Norm[] = [
     audience: 'Organisaties die werken met vertrouwelijke data',
     doorlooptijd: '6–9 maanden',
     auditFrequentie: 'Jaarlijkse surveillance · 3-jaars hercertificering',
-    sectorFocus: 'IT, financieel, zorg, overheid',
+    sectorFocus: 'IT, SaaS, financieel, beveiliging, overheid',
     oneliner: 'Informatiebeveiliging die standhoudt.',
   },
   {
@@ -59,6 +60,7 @@ export const normen: Norm[] = [
     auditFrequentie: 'Jaarlijkse surveillance · 3-jaars hercertificering',
     sectorFocus: 'Jeugdzorg, thuiszorg, gehandicaptenzorg, ggz',
     oneliner: 'De kwaliteitsnorm voor organisaties in zorg en welzijn.',
+    gerelateerd: ['nen-7510', 'iso-9001', 'iso-27001'],
   },
   {
     slug: 'nen-7510',

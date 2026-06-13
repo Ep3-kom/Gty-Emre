@@ -4,13 +4,18 @@ import { normen, type Norm } from '~/data/normen';
 
 type Props = { huidig: string };
 const { huidig } = Astro.props;
-const andere: Norm[] = normen.filter((n) => n.slug !== huidig).slice(0, 3);
+const huidigeNorm = normen.find((n) => n.slug === huidig);
+const andere: Norm[] = huidigeNorm?.gerelateerd?.length
+  ? huidigeNorm.gerelateerd
+      .map((s) => normen.find((n) => n.slug === s))
+      .filter((n): n is Norm => Boolean(n))
+  : normen.filter((n) => n.slug !== huidig).slice(0, 3);
 ---
 
 <section class="container-x py-20 md:py-24">
   <Eyebrow>Gerelateerde normen</Eyebrow>
   <h2 class="mt-6 font-display text-h2 text-teal-900 max-w-2xl text-balance">
-    Veel organisaties combineren normen. <span class="display-italic">Wij ook.</span>
+    Andere normen waarin <span class="display-italic">wij u ondersteunen.</span>
   </h2>
 
   <ul class="mt-12 grid grid-cols-1 md:grid-cols-3 border-t border-line-cool">
