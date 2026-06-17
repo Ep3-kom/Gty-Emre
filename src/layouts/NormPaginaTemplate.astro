@@ -15,6 +15,9 @@ type Props = {
   norm: Norm;
   oneliner: string;
   intro: string;
+  beeld?: { src: string; alt: string };
+  voorWieBeeld?: { src: string; alt: string };
+  hoeWerktBeeld?: { src: string; alt: string };
   watIs: Section;
   voorWie: Section;
   hoeWerkt: Section;
@@ -23,7 +26,7 @@ type Props = {
   faq: { vraag: string; antwoord: string }[];
 };
 
-const { norm, oneliner, intro, watIs, voorWie, hoeWerkt, valkuilen, daarna, faq } = Astro.props;
+const { norm, oneliner, intro, beeld, voorWieBeeld, hoeWerktBeeld, watIs, voorWie, hoeWerkt, valkuilen, daarna, faq } = Astro.props;
 const url = canonical(Astro.url.pathname);
 const jsonLd = [
   serviceJsonLd({ name: norm.title, description: oneliner, url }),
@@ -37,7 +40,7 @@ const jsonLd = [
 ---
 
 <Base title={`${norm.code} certificering`} description={`${oneliner} ${intro}`} jsonLd={jsonLd}>
-  <NormPaginaHero norm={norm} oneliner={oneliner} intro={intro} />
+  <NormPaginaHero norm={norm} oneliner={oneliner} intro={intro} beeld={beeld} />
 
   <section class="container-x py-20 md:py-24">
     <div class="grid grid-cols-12 gap-x-6 gap-y-10">
@@ -57,6 +60,11 @@ const jsonLd = [
         <div class="col-span-12 md:col-span-5">
           <Eyebrow>{voorWie.eyebrow}</Eyebrow>
           <h2 class="mt-5 font-display text-h2 text-teal-900 text-balance">{voorWie.titel}</h2>
+          {voorWieBeeld && (
+            <figure class="mt-8 relative overflow-hidden" style="aspect-ratio: 4 / 3;">
+              <img src={voorWieBeeld.src} alt={voorWieBeeld.alt} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" style="object-position: center; filter: saturate(0.9) contrast(1.02);" />
+            </figure>
+          )}
         </div>
         <div class="col-span-12 md:col-span-6 md:col-start-7 max-w-prose space-y-5 text-base text-ink">
           {voorWie.body.map((p) => <p>{p}</p>)}
@@ -71,6 +79,11 @@ const jsonLd = [
         <Eyebrow>{hoeWerkt.eyebrow}</Eyebrow>
         <h2 class="mt-5 font-display text-h2 text-teal-900 text-balance">{hoeWerkt.titel}</h2>
         <p class="mt-6 mono-eyebrow text-teal-700">Eén vast aanspreekpunt</p>
+        {hoeWerktBeeld && (
+          <figure class="mt-8 relative overflow-hidden" style="aspect-ratio: 4 / 3;">
+            <img src={hoeWerktBeeld.src} alt={hoeWerktBeeld.alt} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" style="object-position: center; filter: saturate(0.9) contrast(1.02);" />
+          </figure>
+        )}
       </div>
       <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
         {hoeWerkt.body.map((p) => <p>{p}</p>)}

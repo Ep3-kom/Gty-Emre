@@ -4,8 +4,8 @@ import Button from '~/components/ui/Button.astro';
 import { siteData } from '~/data/site-data';
 import type { Norm } from '~/data/normen';
 
-type Props = { norm: Norm; oneliner: string; intro: string };
-const { norm, oneliner, intro } = Astro.props;
+type Props = { norm: Norm; oneliner: string; intro: string; beeld?: { src: string; alt: string } };
+const { norm, oneliner, intro, beeld } = Astro.props;
 ---
 
 <section class="border-b border-line-cool">
@@ -35,6 +35,18 @@ const { norm, oneliner, intro } = Astro.props;
       </div>
 
       <aside class="col-span-12 lg:col-span-4 lg:col-start-9">
+        {beeld && (
+          <figure class="mb-6 relative overflow-hidden" style="aspect-ratio: 4 / 5;">
+            <img
+              src={beeld.src}
+              alt={beeld.alt}
+              loading="eager"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+              style="object-position: center; filter: saturate(0.9) contrast(1.02);"
+            />
+          </figure>
+        )}
         <div class="border border-line-cool bg-cream/60 p-7 font-mono text-small">
           <dl class="space-y-4">
             <div>

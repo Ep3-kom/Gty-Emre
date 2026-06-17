@@ -48,7 +48,7 @@ export default {
       ink: '#0F1B1F',
       'ink-soft': '#3A4B4F',
       paper: '#FAFAF7',
-      cream: '#F1EBDD',
+      cream: '#EEF7F7', // zeer lichte wit-blauwe tint (voorheen beige #F1EBDD); contrastnoten hierboven indicatief
       'cream-deep': '#E8DFC9',
       line: '#E2DDCF',
       'line-cool': '#D9E5E5',
