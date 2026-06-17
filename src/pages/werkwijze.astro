@@ -51,48 +51,40 @@ const fases = [
   title="Werkwijze"
   description="Hoe wij werken: drie fasen, verkennen, inrichten, borgen. Voorspelbaar, met heldere stappen en zonder verborgen agenda."
 >
-  <section class="border-b border-line-cool">
-    <div class="container-x pt-12 md:pt-16 pb-16 md:pb-20">
-      <nav aria-label="Breadcrumb" class="mb-8 text-caption font-mono text-ink-soft uppercase tracking-wider">
-        <a href="/" class="hover:text-teal-700">Home</a>
-        <span class="mx-2 text-line-cool">/</span>
-        <span class="text-teal-700">Werkwijze</span>
+  <section class="relative overflow-hidden border-b border-line-cool" style="min-height: 72vh; display: flex; flex-direction: column; justify-content: flex-end;">
+    <img
+      src="/images/gty-hero-audit-discussion.jpg"
+      alt="Een GTY-adviseur in gesprek met een klant tijdens een werksessie"
+      loading="eager"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="object-position: center; filter: saturate(0.88) contrast(1.03);"
+    />
+    <div
+      class="absolute inset-0"
+      style="background: linear-gradient(to top, rgba(10,24,26,0.82) 0%, rgba(10,24,26,0.35) 55%, rgba(10,24,26,0.10) 100%);"
+    ></div>
+
+    <div class="relative container-x pt-10 pb-16 md:pb-20">
+      <nav aria-label="Breadcrumb" class="mb-10 text-caption font-mono uppercase tracking-wider" style="color: rgba(255,255,255,0.55);">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span class="mx-2" style="color: rgba(255,255,255,0.3);">/</span>
+        <span style="color: rgba(255,255,255,0.8);">Werkwijze</span>
       </nav>
 
-      <div class="grid grid-cols-12 gap-x-6 gap-y-8">
-        <div class="col-span-12 lg:col-span-9">
-          <Eyebrow>Zo werken wij</Eyebrow>
-          <h1 class="mt-6 font-display text-h1 md:text-[3.5rem] md:leading-[1.05] text-teal-900 text-balance">
-            Voorspelbaar verloop. <span class="display-italic">Geen verborgen agenda.</span>
-          </h1>
-          <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">
-            Iedere samenwerking start bij uw vraag, die maken we eerst goed
-            zichtbaar. Pas dan ontstaat de aanpak. We werken niet uit een
-            standaardpakket, maar wel binnen een vast ritme dat het werk
-            navolgbaar maakt.
-          </p>
-        </div>
+      <div class="max-w-3xl">
+        <p class="font-mono uppercase" style="font-size: 11px; letter-spacing: 0.15em; color: rgba(160,210,210,0.9);">Zo werken wij</p>
+        <h1 class="mt-5 font-display font-bold text-balance" style="color: #FFFFFF; font-size: clamp(2.25rem, 5vw, 4rem); line-height: 1.06;">
+          Voorspelbaar verloop. <span class="italic font-normal" style="color: rgba(160,210,210,0.95);">Geen verborgen agenda.</span>
+        </h1>
+        <p class="mt-6 max-w-prose text-pretty" style="font-size: 1.125rem; line-height: 1.65; color: rgba(255,255,255,0.75);">
+          Iedere samenwerking start bij uw vraag, die maken we eerst goed
+          zichtbaar. Pas dan ontstaat de aanpak. We werken niet uit een
+          standaardpakket, maar wel binnen een vast ritme dat het werk
+          navolgbaar maakt.
+        </p>
       </div>
     </div>
-  </section>
-
-  <section class="container-x pt-14 md:pt-20">
-    <figure>
-      <div class="relative overflow-hidden" style="aspect-ratio: 16 / 7;">
-        <img
-          src="/images/gty-hero-audit-discussion.jpg"
-          alt="Een GTY-adviseur in gesprek met een klant tijdens een werksessie"
-          loading="lazy"
-          decoding="async"
-          class="absolute inset-0 w-full h-full object-cover"
-          style="object-position: center; filter: saturate(0.9) contrast(1.02);"
-        />
-      </div>
-      <figcaption class="mt-4 font-mono uppercase flex items-center gap-3" style="font-size: 11px; letter-spacing: 0.16em; color: #2F5D5F;">
-        <span aria-hidden="true" style="display:inline-block; width: 20px; height: 1px; background-color: #2F5D5F;"></span>
-        Naast uw team, het hele traject door
-      </figcaption>
-    </figure>
   </section>
 
   <section class="container-x py-20 md:py-24">
