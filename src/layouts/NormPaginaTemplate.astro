@@ -16,6 +16,7 @@ type Props = {
   oneliner: string;
   intro: string;
   beeld?: { src: string; alt: string };
+  heroBeeldRechts?: boolean;
   voorWieBeeld?: { src: string; alt: string };
   hoeWerktBeeld?: { src: string; alt: string };
   watIs: Section;
@@ -26,7 +27,7 @@ type Props = {
   faq: { vraag: string; antwoord: string }[];
 };
 
-const { norm, oneliner, intro, beeld, voorWieBeeld, hoeWerktBeeld, watIs, voorWie, hoeWerkt, valkuilen, daarna, faq } = Astro.props;
+const { norm, oneliner, intro, beeld, heroBeeldRechts, voorWieBeeld, hoeWerktBeeld, watIs, voorWie, hoeWerkt, valkuilen, daarna, faq } = Astro.props;
 const url = canonical(Astro.url.pathname);
 const jsonLd = [
   serviceJsonLd({ name: norm.title, description: oneliner, url }),
@@ -40,7 +41,7 @@ const jsonLd = [
 ---
 
 <Base title={`${norm.code} certificering`} description={`${oneliner} ${intro}`} jsonLd={jsonLd}>
-  <NormPaginaHero norm={norm} oneliner={oneliner} intro={intro} beeld={beeld} />
+  <NormPaginaHero norm={norm} oneliner={oneliner} intro={intro} beeld={beeld} beeldRechts={heroBeeldRechts} />
 
   <section class="container-x py-14 md:py-16">
     <div class="grid grid-cols-12 gap-x-6 gap-y-10">

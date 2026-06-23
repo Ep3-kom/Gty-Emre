@@ -35,7 +35,7 @@ export const siteData = {
   ],
   cta: {
     primary: { label: 'Plan een kennismakingsgesprek', href: '/contact/' },
-    secondary: { label: 'Start een kosteloze nulmeting', href: '/nulmeting/' },
+    secondary: { label: 'Start een kosteloze nulmeting', href: '/nulmeting/#aanvragen' },
   },
 } as const;
 

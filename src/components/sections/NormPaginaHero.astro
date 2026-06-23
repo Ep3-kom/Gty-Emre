@@ -4,10 +4,95 @@ import Button from '~/components/ui/Button.astro';
 import { siteData } from '~/data/site-data';
 import type { Norm } from '~/data/normen';
 
-type Props = { norm: Norm; oneliner: string; intro: string; beeld?: { src: string; alt: string } };
-const { norm, oneliner, intro, beeld } = Astro.props;
+type Props = { norm: Norm; oneliner: string; intro: string; beeld?: { src: string; alt: string }; beeldRechts?: boolean };
+const { norm, oneliner, intro, beeld, beeldRechts } = Astro.props;
 ---
 
+{beeldRechts ? (
+  <section
+    class="relative isolate overflow-hidden text-white border-b border-line-cool"
+    style="background-color: #0F1B1F;"
+  >
+    {beeld && (
+      <div
+        aria-hidden="true"
+        class="absolute inset-y-0 right-0 hidden lg:block"
+        style="width: 44%; clip-path: polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%);"
+      >
+        <img
+          src={beeld.src}
+          alt=""
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          class="absolute inset-0 h-full w-full object-cover"
+          style="object-position: center; filter: saturate(0.95) contrast(1.02);"
+        />
+      </div>
+    )}
+
+    <div class="container-x relative pt-12 md:pt-16 pb-16 md:pb-20">
+      <nav aria-label="Breadcrumb" class="mb-8 text-caption font-mono uppercase tracking-wider" style="color: rgba(241,235,221,0.6);">
+        <a href="/" class="transition-colors hover:text-white">Home</a>
+        <span class="mx-2" style="color: rgba(241,235,221,0.35);">/</span>
+        <a href="/certificering/" class="transition-colors hover:text-white">Certificering</a>
+        <span class="mx-2" style="color: rgba(241,235,221,0.35);">/</span>
+        <span style="color: rgba(241,235,221,0.9);">{norm.code}</span>
+      </nav>
+
+      <div class="grid grid-cols-12 gap-x-6">
+        <div class="col-span-12 lg:col-span-7">
+          <p class="font-mono uppercase" style="font-size: 11px; letter-spacing: 0.18em; color: rgba(241,235,221,0.75);">
+            {norm.code} · {norm.shortTitle}
+          </p>
+
+          <h1
+            class="mt-6 font-display font-bold text-balance text-white"
+            style="font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.05; letter-spacing: -0.01em;"
+          >
+            {oneliner}
+          </h1>
+
+          <p class="mt-7 max-w-prose text-pretty" style="font-size: 1.125rem; line-height: 1.65; color: rgba(241,235,221,0.85);">
+            {intro}
+          </p>
+
+          <div class="mt-9 flex flex-wrap items-center gap-3">
+            <a
+              href={siteData.cta.primary.href}
+              class="inline-flex items-center justify-center px-7 py-3.5 font-medium transition-opacity hover:opacity-90"
+              style="background-color: #FFFFFF; color: #0F1B1F; font-size: 15px;"
+            >
+              {siteData.cta.primary.label}
+            </a>
+            <a
+              href={siteData.cta.secondary.href}
+              class="inline-flex items-center justify-center px-7 py-3.5 font-medium text-white border border-white/45 transition-colors hover:bg-white/10"
+              style="font-size: 15px;"
+            >
+              {siteData.cta.secondary.label} →
+            </a>
+          </div>
+
+          <dl class="mt-10 flex flex-wrap gap-x-10 gap-y-5 border-t pt-7" style="border-color: rgba(241,235,221,0.18);">
+            <div>
+              <dt class="font-mono uppercase" style="font-size: 11px; letter-spacing: 0.14em; color: rgba(241,235,221,0.6);">Voor wie</dt>
+              <dd class="mt-1.5 text-base" style="color: rgba(241,235,221,0.92);">{norm.audience}</dd>
+            </div>
+            <div>
+              <dt class="font-mono uppercase" style="font-size: 11px; letter-spacing: 0.14em; color: rgba(241,235,221,0.6);">Auditcyclus</dt>
+              <dd class="mt-1.5 text-base" style="color: rgba(241,235,221,0.92);">{norm.auditFrequentie}</dd>
+            </div>
+            <div>
+              <dt class="font-mono uppercase" style="font-size: 11px; letter-spacing: 0.14em; color: rgba(241,235,221,0.6);">Sectorfocus</dt>
+              <dd class="mt-1.5 text-base" style="color: rgba(241,235,221,0.92);">{norm.sectorFocus}</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+) : (
 <section class="border-b border-line-cool">
   <div class="container-x pt-12 md:pt-16 pb-16 md:pb-20">
     <nav aria-label="Breadcrumb" class="mb-8 text-caption font-mono text-ink-soft uppercase tracking-wider">
@@ -69,3 +154,4 @@ const { norm, oneliner, intro, beeld } = Astro.props;
     </div>
   </div>
 </section>
+)}

@@ -80,5 +80,24 @@ const allLd = [localBusinessJsonLd(), ...jsonLd];
     </main>
     <Footer />
     <CookieNotice />
+
+    <script is:inline>
+      // Bij aankomst op een pagina mét anker (#...): eerst bovenaan starten en
+      // dan vloeiend naar het doel scrollen, in plaats van een harde sprong.
+      (function () {
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced || !location.hash) return;
+        var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        if (!target) return;
+        // Voorkom dat de browser de scrollpositie herstelt of hard springt.
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
