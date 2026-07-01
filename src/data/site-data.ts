@@ -34,7 +34,7 @@ export const siteData = {
     { slug: 'academy', label: 'Academy' },
   ],
   cta: {
-    primary: { label: 'Plan een kennismakingsgesprek', href: '/contact/' },
+    primary: { label: 'Plan een kennismakingsgesprek', href: '/#kennismaken' },
     secondary: { label: 'Start een kosteloze nulmeting', href: '/nulmeting/#aanvragen' },
   },
 } as const;

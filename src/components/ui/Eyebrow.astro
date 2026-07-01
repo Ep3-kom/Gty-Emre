@@ -1,6 +1,5 @@
 ---
+// Eyebrow-labels (de kleine woorden boven de koppen) zijn sitebreed uitgezet.
+// De component rendert bewust niets; de doorgegeven tekst wordt genegeerd.
 type Props = { class?: string };
-const { class: extra = '' } = Astro.props;
 ---
-
-<span class:list={['mono-eyebrow', extra]}><slot /></span>

@@ -1,15 +1,19 @@
 ---
 import { siteData } from '~/data/site-data';
+
+// Google Calendar-afsprakenpagina. Bewust een gewone link (nieuw tabblad):
+// de booking-pagina kan niet in een iframe (Google blokkeert dat via X-Frame-Options).
+const agendaUrl = 'https://calendar.app.google/gYqFiWCiSRk3g7c38';
 ---
 
-<section class="bg-paper py-12 md:py-16">
+<section id="kennismaken" class="bg-paper py-12 md:py-16">
   <div class="container-x">
     <div class="rounded-2xl bg-cream border border-line flex flex-col md:flex-row items-stretch overflow-hidden">
 
       <!-- Links: tekst + knoppen -->
       <div class="flex-1 flex flex-col justify-between px-10 md:px-14 py-12 md:py-16">
         <div>
-          <p class="text-small text-ink-soft">Persoonlijk kennis maken?</p>
+          <p class="text-small text-ink-soft">Persoonlijk kennismaken?</p>
           <h2 class="mt-3 font-sans font-bold text-[2rem] md:text-[2.6rem] leading-[1.1] tracking-[-0.02em] text-teal-900">
             Maak kennis met<br />Emre Ozdemir
           </h2>
@@ -22,19 +26,23 @@ import { siteData } from '~/data/site-data';
           >
             {siteData.contact.phone}
           </a>
-          <button
-            id="open-calendar"
-            class="inline-flex items-center gap-2 border border-teal-900/30 text-teal-900 text-small font-medium px-5 py-3 rounded-full hover:bg-teal-900 hover:text-paper transition-colors cursor-pointer"
+          <a
+            href={agendaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 border border-teal-900/30 text-teal-900 text-small font-medium px-5 py-3 rounded-full hover:bg-teal-900 hover:text-paper transition-colors"
           >
             Plan een kennismakingsgesprek
-          </button>
-          <button
-            id="open-calendar-arrow"
+          </a>
+          <a
+            href={agendaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Kennismakingsgesprek inplannen"
-            class="inline-flex items-center justify-center w-11 h-11 border border-teal-900/30 text-teal-900 rounded-full hover:bg-teal-900 hover:text-paper transition-colors text-base cursor-pointer"
+            class="inline-flex items-center justify-center w-11 h-11 border border-teal-900/30 text-teal-900 rounded-full hover:bg-teal-900 hover:text-paper transition-colors text-base"
           >
             ↗
-          </button>
+          </a>
         </div>
       </div>
 
@@ -54,54 +62,3 @@ import { siteData } from '~/data/site-data';
     </div>
   </div>
 </section>
-
-<!-- Kalender modal -->
-<div id="calendar-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
-  <div id="calendar-backdrop" class="absolute inset-0 bg-ink/60 backdrop-blur-sm"></div>
-  <div class="relative z-10 w-[95vw] bg-paper rounded-2xl shadow-lift overflow-hidden">
-    <div class="flex items-center justify-between px-6 py-4 border-b border-line">
-      <p class="font-sans font-medium text-teal-900">Kennismakingsgesprek inplannen</p>
-      <button id="close-calendar" aria-label="Sluiten" class="text-ink-soft hover:text-teal-900 transition-colors text-xl leading-none">✕</button>
-    </div>
-    <iframe
-      id="calendar-iframe"
-      src=""
-      data-src="https://calendar.app.google/gYqFiWCiSRk3g7c38"
-      width="100%"
-      height="750"
-      style="border: none;"
-      class="block"
-    ></iframe>
-  </div>
-</div>
-
-<script>
-  const modal = document.getElementById('calendar-modal');
-  const iframe = document.getElementById('calendar-iframe') as HTMLIFrameElement;
-  const backdrop = document.getElementById('calendar-backdrop');
-  const closeBtn = document.getElementById('close-calendar');
-
-  function openModal() {
-    if (!iframe.src || iframe.src === window.location.href) {
-      iframe.src = iframe.dataset.src!;
-    }
-    modal!.classList.remove('hidden');
-    modal!.classList.add('flex');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    modal!.classList.add('hidden');
-    modal!.classList.remove('flex');
-    document.body.style.overflow = '';
-  }
-
-  document.getElementById('open-calendar')?.addEventListener('click', openModal);
-  document.getElementById('open-calendar-arrow')?.addEventListener('click', openModal);
-  closeBtn?.addEventListener('click', closeModal);
-  backdrop?.addEventListener('click', closeModal);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
-  });
-</script>

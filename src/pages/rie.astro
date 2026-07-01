@@ -1,7 +1,6 @@
 ---
 import Base from '~/layouts/Base.astro';
 import Eyebrow from '~/components/ui/Eyebrow.astro';
-import Button from '~/components/ui/Button.astro';
 import CallToAction from '~/components/sections/CallToAction.astro';
 import { siteData } from '~/data/site-data';
 import { serviceJsonLd, canonical } from '~/lib/seo';
@@ -15,53 +14,56 @@ const jsonLd = [serviceJsonLd({ name: 'Risico-Inventarisatie & Evaluatie', descr
   description="Een complete RI&E volgens de Arbowet: inventarisatie op locatie, een werkbaar plan van aanpak en toetsing waar de wet dat eist."
   jsonLd={jsonLd}
 >
-  <section class="border-b border-line-cool">
-    <div class="container-x pt-12 md:pt-16 pb-16 md:pb-20">
-      <nav aria-label="Breadcrumb" class="mb-8 text-caption font-mono text-ink-soft uppercase tracking-wider">
-        <a href="/" class="hover:text-teal-700">Home</a>
-        <span class="mx-2 text-line-cool">/</span>
-        <span class="text-teal-700">RI&E</span>
+  <section class="relative overflow-hidden border-b border-line-cool" style="min-height: 72vh; display: flex; flex-direction: column; justify-content: flex-end;">
+    <img
+      src="/images/arbodiensten-werkplek.jpg"
+      alt="Een werknemer met beschermingsmiddelen aan het werk in de werkplaats"
+      loading="eager"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="object-position: center; filter: saturate(0.88) contrast(1.03);"
+    />
+    <div
+      class="absolute inset-0"
+      style="background: linear-gradient(to top, rgba(10,24,26,0.82) 0%, rgba(10,24,26,0.35) 55%, rgba(10,24,26,0.10) 100%);"
+    ></div>
+
+    <div class="relative container-x pt-10 pb-16 md:pb-20">
+      <nav aria-label="Breadcrumb" class="mb-10 text-caption font-mono uppercase tracking-wider" style="color: rgba(255,255,255,0.55);">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span class="mx-2" style="color: rgba(255,255,255,0.3);">/</span>
+        <span style="color: rgba(255,255,255,0.8);">RI&E</span>
       </nav>
 
-      <div class="grid grid-cols-12 gap-x-6 gap-y-8">
-        <div class="col-span-12 lg:col-span-9">
-          <Eyebrow>Risico-Inventarisatie & Evaluatie</Eyebrow>
-          <h1 class="mt-6 font-display text-h1 md:text-[3.5rem] md:leading-[1.05] text-teal-900 text-balance">
-            Uw RI&E op orde.<br /><span class="display-italic">Compleet, getoetst, bruikbaar.</span>
-          </h1>
-          <p class="mt-7 max-w-prose text-lead text-ink-soft text-pretty">
-            Elke werkgever in Nederland is wettelijk verplicht een RI&E uit te
-            voeren. Wij begeleiden dat traject van begin tot eind, van
-            inventarisatie op de werkvloer tot plan van aanpak en, waar
-            vereist, de officiële toetsing. Aantoonbaar voldoen aan de Arbowet,
-            en met een document dat ook in de praktijk werkt.
-          </p>
-          <div class="mt-9 flex flex-wrap gap-3">
-            <Button href={siteData.cta.primary.href} size="lg">{siteData.cta.primary.label}</Button>
-            <Button href={siteData.contact.phoneHref} variant="ghost" size="lg">Of bel direct →</Button>
-          </div>
+      <div class="max-w-3xl">
+        <h1 class="font-display font-bold text-balance" style="color: #FFFFFF; font-size: clamp(2.25rem, 5vw, 4rem); line-height: 1.06;">
+          Uw RI&E op orde. <span class="italic font-normal" style="color: rgba(160,210,210,0.95);">Compleet, getoetst, bruikbaar.</span>
+        </h1>
+        <p class="mt-6 max-w-prose text-pretty" style="font-size: 1.125rem; line-height: 1.65; color: rgba(255,255,255,0.75);">
+          Elke werkgever in Nederland is wettelijk verplicht een RI&E uit te
+          voeren. Wij begeleiden dat traject van begin tot eind, van
+          inventarisatie op de werkvloer tot plan van aanpak en, waar
+          vereist, de officiële toetsing. Aantoonbaar voldoen aan de Arbowet,
+          en met een document dat ook in de praktijk werkt.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-3">
+          <a
+            href={siteData.cta.primary.href}
+            class="inline-flex items-center justify-center px-7 py-3.5 font-medium transition-opacity hover:opacity-90"
+            style="background-color: #FFFFFF; color: #0F1B1F; font-size: 15px;"
+          >
+            {siteData.cta.primary.label}
+          </a>
+          <a
+            href={siteData.contact.phoneHref}
+            class="inline-flex items-center justify-center px-7 py-3.5 font-medium text-white border border-white/45 transition-colors hover:bg-white/10"
+            style="font-size: 15px;"
+          >
+            Of bel direct →
+          </a>
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="container-x pt-14 md:pt-20">
-    <figure>
-      <div class="relative overflow-hidden" style="aspect-ratio: 16 / 7;">
-        <img
-          src="/images/arbodiensten-werkplek.jpg"
-          alt="Een werknemer met beschermingsmiddelen aan het werk in de werkplaats"
-          loading="lazy"
-          decoding="async"
-          class="absolute inset-0 w-full h-full object-cover"
-          style="object-position: center; filter: saturate(0.9) contrast(1.02);"
-        />
-      </div>
-      <figcaption class="mt-4 font-mono uppercase flex items-center gap-3" style="font-size: 11px; letter-spacing: 0.16em; color: #2F5D5F;">
-        <span aria-hidden="true" style="display:inline-block; width: 20px; height: 1px; background-color: #2F5D5F;"></span>
-        Werkplekrisico's in beeld, daar begint een goede RI&amp;E
-      </figcaption>
-    </figure>
   </section>
 
   <section class="container-x py-20 md:py-24">
