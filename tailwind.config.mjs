@@ -48,7 +48,7 @@ export default {
       ink: '#0F1B1F',
       'ink-soft': '#3A4B4F',
       paper: '#FAFAF7',
-      cream: '#F1EBDD', // warme beige tint (2-kleurensysteem: wit + beige)
+      cream: '#EEF7F7', // lichte, koele grijs-achtige tint (klantvoorkeur, geen beige)
       'cream-deep': '#E8DFC9',
       line: '#E2DDCF',
       'line-cool': '#D9E5E5',
