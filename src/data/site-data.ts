@@ -18,7 +18,7 @@ export const siteData = {
     emailHref: 'mailto:info@gty.nl',
   },
   business: {
-    foundedYear: 2025,
+    foundedYear: 2022,
     experienceSinceYear: 2022,
     kvk: '87435950',
     vat: 'NL004413019B37',

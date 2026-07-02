@@ -59,9 +59,9 @@ import { siteData } from '~/data/site-data';
       <div class="col-span-12 md:col-span-7 md:col-start-6 max-w-prose space-y-5 text-base text-ink">
         <p>
           GTY werd eind {siteData.business.foundedYear} als zelfstandig
-          adviesbureau gelanceerd, voortbouwend op ervaring die de oprichter
-          sinds eind {siteData.business.experienceSinceYear} in het werkveld
-          opbouwde, aan de binnenkant van organisaties die een
+          adviesbureau gelanceerd, voortbouwend op de ervaring die de oprichter
+          in de jaren daarvoor in het werkveld opbouwde, aan de binnenkant van
+          organisaties die een
           certificeringstraject doorliepen. Telkens viel hetzelfde op: bedrijven
           die na maanden inspanning het certificaat haalden en een jaar later
           toch weer struikelden bij de opvolgaudit. Of trajecten die afgevinkt
@@ -181,7 +181,6 @@ import { siteData } from '~/data/site-data';
             <dt class="mono-eyebrow text-teal-700">Opgericht</dt>
             <dd class="mt-1.5 font-mono text-ink">
               {siteData.business.foundedYear}
-              <span class="text-ink-soft"> · ervaring sinds {siteData.business.experienceSinceYear}</span>
             </dd>
           </div>
           <div>
@@ -195,13 +194,6 @@ import { siteData } from '~/data/site-data';
           <div>
             <dt class="mono-eyebrow text-teal-700">Sectoren</dt>
             <dd class="mt-1.5 text-ink">{siteData.business.sectorsServed.join(' · ')}</dd>
-          </div>
-          <div>
-            <dt class="mono-eyebrow text-teal-700">Track record</dt>
-            <dd class="mt-1.5 text-ink">
-              {siteData.business.trajectsCompleted} trajecten afgerond ·
-              {' '}{siteData.business.trajectsInProgress} klanten in traject
-            </dd>
           </div>
           <div>
             <dt class="mono-eyebrow text-teal-700">Specialisatie</dt>

@@ -48,7 +48,7 @@ export default {
       ink: '#0F1B1F',
       'ink-soft': '#3A4B4F',
       paper: '#FAFAF7',
-      cream: '#EEF7F7', // zeer lichte wit-blauwe tint (voorheen beige #F1EBDD); contrastnoten hierboven indicatief
+      cream: '#F1EBDD', // warme beige tint (2-kleurensysteem: wit + beige)
       'cream-deep': '#E8DFC9',
       line: '#E2DDCF',
       'line-cool': '#D9E5E5',
@@ -59,9 +59,11 @@ export default {
       black: '#000000',
     },
     fontFamily: {
-      display: ['"Newsreader Variable"', 'Newsreader', 'Georgia', 'serif'],
+      // Alles gebruikt hetzelfde lettertype als de body-tekst (Inter), voor een
+      // uniforme uitstraling. display en mono wijzen bewust naar dezelfde stack.
+      display: ['"Inter Variable"', 'Inter', '-apple-system', 'system-ui', 'sans-serif'],
       sans: ['"Inter Variable"', 'Inter', '-apple-system', 'system-ui', 'sans-serif'],
-      mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+      mono: ['"Inter Variable"', 'Inter', '-apple-system', 'system-ui', 'sans-serif'],
     },
     fontSize: {
       'caption': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.06em' }],
