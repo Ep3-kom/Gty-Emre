@@ -6,6 +6,9 @@ type Props = {
   title?: string;
   body?: string;
   variant?: 'default' | 'inverse';
+  imageSrc?: string;
+  imageAlt?: string;
+  imageLarge?: boolean;
 };
 
 const {
@@ -13,6 +16,9 @@ const {
   title = 'Toe aan een traject dat blijft staan?',
   body = 'Een vrijblijvend kennismakingsgesprek is het eenvoudigste begin. We luisteren naar uw situatie, geven aan wat realistisch is en zeggen het ook als wij niet de juiste keuze blijken. Geen pitch, geen verplichting, gewoon een eerlijk gesprek.',
   variant = 'default',
+  imageSrc = '/images/section-phase-icons.jpg',
+  imageAlt = 'Kennismakingsgesprek met een adviseur van GTY',
+  imageLarge = false,
 } = Astro.props;
 
 const isInverse = variant === 'inverse';
@@ -22,7 +28,7 @@ const isInverse = variant === 'inverse';
   <section style="background-color: #0F1B1F;">
     <div class="container-x" style="padding-block: clamp(80px, 10vw, 120px);">
       <div class="grid grid-cols-12 gap-x-6 gap-y-10 items-center">
-        <div class="col-span-12 md:col-span-7">
+        <div class:list={["col-span-12", imageLarge ? "md:col-span-6" : "md:col-span-7"]}>
           <h2
             class="mt-6 font-display font-bold text-balance text-white"
             style="font-size: clamp(2.4rem, 5vw, 3.5rem); line-height: 1.08;"
@@ -49,11 +55,11 @@ const isInverse = variant === 'inverse';
             </a>
           </div>
         </div>
-        <div class="col-span-12 md:col-span-5 relative">
-          <div class="relative overflow-hidden" style="aspect-ratio: 4 / 3; background-color: #14262A;">
+        <div class:list={["col-span-12 relative", imageLarge ? "md:col-span-6" : "md:col-span-5"]}>
+          <div class="relative overflow-hidden" style={`aspect-ratio: ${imageLarge ? '16 / 11' : '4 / 3'}; background-color: #14262A;`}>
             <img
-              src="/images/section-phase-icons.jpg"
-              alt="Kennismakingsgesprek met een adviseur van GTY"
+              src={imageSrc}
+              alt={imageAlt}
               loading="lazy"
               decoding="async"
               class="absolute inset-0 w-full h-full object-cover"
