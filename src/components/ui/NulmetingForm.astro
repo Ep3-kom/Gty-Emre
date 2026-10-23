@@ -1,15 +1,22 @@
 ---
 import { normen } from '~/data/normen';
 import { t } from '~/i18n/nl';
+
+// Web3Forms access key (publiek, mag in de build/git) — zie .env.example
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
 ---
 
 <form
-  action="/api/nulmeting/"
+  action="https://api.web3forms.com/submit"
   method="POST"
   class="border border-line-cool bg-paper"
   data-nulmeting-form
   novalidate
 >
+  <input type="hidden" name="access_key" value={accessKey} />
+  <input type="hidden" name="subject" value="Nieuwe nulmeting-aanvraag via gty.nl" />
+  <input type="hidden" name="from_name" value="GTY website" />
+
   <header class="border-b border-line-cool px-6 md:px-8 py-5 flex items-baseline justify-between gap-4">
     <p class="mono-eyebrow text-teal-700"><span data-step-label>Stap 1 van 3</span></p>
     <ol class="flex gap-1.5" aria-hidden="true">
@@ -204,13 +211,15 @@ import { t } from '~/i18n/nl';
       if (!validateStep(current)) return;
       const data = Object.fromEntries(new FormData(form));
       if (data.company) return;
+      delete data.company;
       try {
         const res = await fetch(form.action, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify(data),
         });
-        if (!res.ok) throw new Error('submit failed');
+        const json = await res.json().catch(() => null);
+        if (!res.ok || !json?.success) throw new Error('submit failed');
         form.querySelectorAll('fieldset, footer').forEach((el) => el.classList.add('hidden'));
         success.classList.remove('hidden');
       } catch {

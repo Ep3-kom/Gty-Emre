@@ -4,9 +4,9 @@ Astro 5 + Tailwind 3 — vendor-neutrale build voor [gty.nl](https://gty.nl).
 
 ## Stack
 
-- **Astro 5** (static + hybrid endpoints)
+- **Astro 5** (volledig statisch)
 - **Tailwind CSS 3** (custom design tokens — geen default colors)
-- **Resend** voor formuliermail
+- **Web3Forms** voor formuliermail (vanuit de browser, geen server nodig)
 - **Plausible** (cookieloos) voor analytics
 - Lokale fonts via `@fontsource(-variable)` — Newsreader, Inter, IBM Plex Mono
 
@@ -23,9 +23,8 @@ cp .env.example .env
 pnpm dev
 ```
 
-De site draait op `http://localhost:4321`. Zonder `RESEND_API_KEY` werken
-contactformulier en nulmeting-formulier in dev-mode: submissies worden gelogd
-in de terminal in plaats van gemaild.
+De site draait op `http://localhost:4321`. Zonder `PUBLIC_WEB3FORMS_KEY` geven
+contactformulier en nulmeting-formulier een foutmelding bij verzenden.
 
 ## Build
 
@@ -40,29 +39,27 @@ Zie `.env.example`.
 
 | Variabele | Verplicht in productie | Doel |
 |---|---|---|
-| `RESEND_API_KEY` | ✓ | Versturen van formuliermails naar `info@gty.nl` |
-| `CONTACT_TO_EMAIL` | optioneel | Override van het ontvangstadres (default `info@gty.nl`) |
+| `PUBLIC_WEB3FORMS_KEY` | ✓ | Access key van Web3Forms; zonder key geven de formulieren een foutmelding |
 | `PUBLIC_PLAUSIBLE_DOMAIN` | optioneel | Domein voor Plausible-script. Leeg = analytics uit. |
 
-## Deploy (vendor-neutraal)
+## Deploy (Hetzner + CloudPanel)
 
-De build is `output: 'static'` met server-rendered API routes voor de
-formulieren (`/api/contact/`, `/api/nulmeting/`). Voor productie heeft u dus
-een hosting nodig die Astro server endpoints ondersteunt.
+De site draait als statische site op de Hetzner-server (`195.201.197.20`),
+CloudPanel-site `gty.nl`, map `/home/gty/htdocs/site/`.
 
-Voeg vóór deploy een Astro adapter toe die past bij uw host:
+Wijziging live zetten:
 
 ```bash
-# voorbeelden — kies één
-pnpm astro add node       # zelf-gehoste Node-server
-pnpm astro add netlify    # Netlify
-pnpm astro add vercel     # Vercel
+git pull                 # laatste versie ophalen
+# ... wijzigen, lokaal checken met: pnpm dev
+git commit -am "..." && git push
+pnpm deploy              # bouwt en uploadt
 ```
 
-Bij een puur statische host (zonder server-functies):
-- Vervang de `<form action="/api/...">` calls door een externe service
-  (Formspree, Resend Webhook, eigen API), of
-- Verwijder de API routes en lever de form-data via `mailto:`-fallback.
+`pnpm deploy` weigert als je map niet exact gelijk is aan GitHub `main`, zodat
+er nooit per ongeluk een oude versie live gaat. Uploaden kan alleen met de
+SSH-sleutel `~/.ssh/gty_deploy`; voor een nieuwe collega een eigen sleutel
+toevoegen in CloudPanel → gty.nl → SSH/FTP → `gty-deploy`.
 
 Documenteer redirects van de huidige WordPress-URLs op de doelhost — zie
 [`redirects.md`](./redirects.md). De mapping is grotendeels 1-op-1.
@@ -73,7 +70,6 @@ Documenteer redirects van de huidige WordPress-URLs op de doelhost — zie
 - `src/data/normen.ts` — gestructureerde data over de 5 normen
 - `src/i18n/nl.ts` — UI-strings (centraal voor latere i18n-uitbreiding)
 - `src/lib/seo.ts` — meta + JSON-LD generators
-- `src/lib/form-handler.ts` — Resend-wrapper, gedeeld door API routes
 - `tailwind.config.mjs` — design tokens met WCAG AA contrast-comments
 
 ## Openstaande klant-input
@@ -93,6 +89,6 @@ src/
 ├── i18n/            UI-strings
 ├── layouts/         Base + NormPaginaTemplate
 ├── lib/             Helpers (seo, form-handler)
-├── pages/           Routes (incl. /api/* server endpoints)
+├── pages/           Routes
 └── styles/          global.css
 ```
