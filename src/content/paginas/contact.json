@@ -117,8 +117,8 @@
    },
    "inhoud": {
     "kicker": "Direct contact",
-    "h2": "Liever direct inplannen of bellen?",
-    "text": "Plan direct een moment in de agenda van Emre Ozdemir, of neem contact op.",
+    "h2": "Liever direct bellen of mailen?",
+    "text": "Neem rechtstreeks contact op met Emre Ozdemir.",
     "quote": "",
     "flip": false,
     "img": "emre",
@@ -140,10 +140,7 @@
       "ico": "klok"
      }
     ],
-    "c1": {
-     "label": "Plan direct in de agenda",
-     "href": "/contact/"
-    },
+    "c1": null,
     "c2": null
    }
   }

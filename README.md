@@ -8,7 +8,7 @@ Astro 5 + Tailwind 3 — vendor-neutrale build voor [gty.nl](https://gty.nl).
 - Eigen stylesheet uit het Wauw-ontwerp (`src/styles/wauw.css`)
 - **Web3Forms** voor formuliermail (vanuit de browser, geen server nodig)
 - **Plausible** (cookieloos) voor analytics
-- Lettertypes: Google Sans Flex en Archivo via Google Fonts (vóór livegang zelf hosten);
+- Lettertypes: Google Sans Flex en Archivo vanaf eigen server (`@fontsource-variable`);
   Otoiwo Grotesk Extended volgt zodra de licentie binnen is
 
 ## Vereisten

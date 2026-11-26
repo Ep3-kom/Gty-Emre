@@ -115,14 +115,6 @@ export const stappen = [
   { tag: 'Partnerprogramma', title: 'Beoordeling en borging', text: 'Externe audit, daarna borging via het Partnerprogramma.', key: 'Certificaat. Op naar YES!', chips: ['Surveillance jaar 1', 'Surveillance jaar 2'], link: l('Over het Partnerprogramma', url.partner) },
 ];
 
-// LET OP: voorbeeldcitaat van Wauw, geen echte klant. Vervangen vóór livegang.
-export const citaat = {
-  tekst: '“We dachten dat NEN 7510 vooral papierwerk zou worden. Nu is het gewoon hoe we werken, en de audit was een gewone week.”',
-  naam: 'Sanne de Vries',
-  functie: 'Kwaliteitsmanager · zorgorganisatie in Zuid-Holland',
-  feiten: [['Norm', 'NEN 7510'], ['Resultaat', 'Certificaat bij de eerste audit'], ['Daarna', 'Partnerprogramma sinds 2024']],
-};
-
 export const vragen = [
   { q: 'Wat doet GTY?', a: 'GTY begeleidt organisaties naar ISO 27001, NEN 7510, ISO 9001, ISO 14001, HKZ en het Certificatieschema Arbodiensten. Van nulmeting tot certificaat en de borging daarna, plus interne audits, RI&E’s en trainingen.' },
   { q: 'Is GTY een certificerende instelling?', a: 'Nee. GTY begeleidt en voert interne audits uit. De externe audit en het certificaat komen van een onafhankelijke, geaccrediteerde certificerende instelling.' },

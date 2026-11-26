@@ -3,7 +3,6 @@ import Wauw from '~/layouts/Wauw.astro';
 import Hero from '~/components/wauw/Hero.astro';
 import Normen from '~/components/wauw/Normen.astro';
 import Werkwijze from '~/components/wauw/Werkwijze.astro';
-import Citaat from '~/components/wauw/Citaat.astro';
 import Vragen from '~/components/wauw/blok/Vragen.astro';
 import { vragen } from '~/data/home';
 import Aanbod from '~/components/wauw/Aanbod.astro';
@@ -16,9 +15,8 @@ import Aanbod from '~/components/wauw/Aanbod.astro';
   <Hero />
   <Normen />
   <Werkwijze />
-  <Citaat />
   <Vragen
-    opmaak={{ overlap: 'ja', z: '1', hoeken: 'geen', kopid: 'h-faq', pt: 'calc(var(--sec-y) + var(--zh-r-sec))', pb: 'calc(var(--sec-y) + var(--zh-r-sec))' }}
+    opmaak={{ overlap: 'ja', z: '1', hoeken: 'geen', kopid: 'h-faq', pt: '0', pb: 'calc(var(--sec-y) + var(--zh-r-sec))' }}
     inhoud={{ eyebrow: 'Veelgestelde vragen', h2: 'Veelgestelde vragen over GTY', intro: 'Staat je vraag er niet bij? Emre beantwoordt hem zelf.', introMobiel: false, items: vragen }}
   />
   <Aanbod />

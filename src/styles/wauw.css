@@ -34,8 +34,8 @@
 --halo-magenta: rgba(228, 0, 123, 0.2);
 --gradient-brand: linear-gradient(90deg, #9AFCC2 0%, #F5F588 100%);
 --scrim-left: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
---font-display: 'Otoiwo Grotesk Extended', 'Archivo', 'Arial Black', system-ui, sans-serif;
---font-body: 'Google Sans Flex', 'Google Sans', 'Figtree', system-ui, sans-serif;
+--font-display: 'Otoiwo Grotesk Extended', 'Archivo Variable', 'Arial Black', system-ui, sans-serif;
+--font-body: 'Google Sans Flex Variable', 'Google Sans', 'Figtree', system-ui, sans-serif;
 --type-display: 800 expanded clamp(44px, 4.6vw, 72px)/1.06 var(--font-display);
 --type-h1: 800 expanded clamp(40px, 4.3vw, 64px)/1.06 var(--font-display);
 --type-h1-page: 800 expanded clamp(36px, 3.6vw, 52px)/1.06 var(--font-display);

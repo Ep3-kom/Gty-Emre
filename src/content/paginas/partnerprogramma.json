@@ -174,17 +174,11 @@
    }
   },
   {
-   "type": "Citaat",
-   "opmaak": {
-    "overlap": "ja"
-   }
-  },
-  {
    "type": "Vragen",
    "opmaak": {
     "bg": "wit",
     "overlap": "ja",
-    "pt": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "pt": "0",
     "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
     "z": "1",
     "kopid": "h-faq",

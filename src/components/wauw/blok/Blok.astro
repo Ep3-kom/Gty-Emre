@@ -20,10 +20,9 @@ import Tabel from './Tabel.astro';
 import Formulier from './Formulier.astro';
 import VoorNa from './VoorNa.astro';
 import Bouwstenen from './Bouwstenen.astro';
-import Citaat from '../Citaat.astro';
 import Normen from '../Normen.astro';
 
-const soorten = { Hero, Tekst, Logos, Kaarten, Filter, Fasen, Feiten, Gerelateerd, Afsluiter, Antwoord, Doorverwijzing, Beeld, BeeldBand, Lijst, Vragen, Split, Tabel, Formulier, VoorNa, Bouwstenen, Citaat, NormenBento: Normen };
+const soorten = { Hero, Tekst, Logos, Kaarten, Filter, Fasen, Feiten, Gerelateerd, Afsluiter, Antwoord, Doorverwijzing, Beeld, BeeldBand, Lijst, Vragen, Split, Tabel, Formulier, VoorNa, Bouwstenen, NormenBento: Normen };
 const { type, opmaak = {}, inhoud } = Astro.props;
 const Sectie = soorten[type as keyof typeof soorten];
 if (!Sectie) throw new Error(`Onbekend blok: ${type}`);
