@@ -112,6 +112,17 @@
    }
   },
   {
+   "type": "Erkenning",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-erkenning"
+   }
+  },
+  {
    "type": "Beeld",
    "opmaak": {
     "uitsnede": "2",

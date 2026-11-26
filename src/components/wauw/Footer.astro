@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import cibot from '~/assets/cibot-wit.png';
 import Logo from './Logo.astro';
 import Ico from './Ico.astro';
 import { footer, url } from '~/data/home';
@@ -36,6 +38,11 @@ import { siteData } from '~/data/site-data';
           </div>
         ))}
       </nav>
+      <div class="foot-cibot">
+        <Image src={cibot} width={240} alt="CIBOT" class="foot-cibot-logo" />
+        <p><strong>CIBOT-gecertificeerd opleidingsinstituut</strong>Met CIBOT-gecertificeerde BHV-instructeurs</p>
+        <a href={url.bhv} class="zh-btn zh-btn--line-light">Bekijk BHV incompany</a>
+      </div>
     </div>
   </div>
   <div class="zh-foot-bar" style="background:var(--zh-ink-2);padding:28px 0">
@@ -54,6 +61,18 @@ import { siteData } from '~/data/site-data';
     </div>
   </div>
 </footer>
+
+<style>
+  .foot-cibot { display: flex; flex-wrap: wrap; align-items: center; gap: 24px 32px; padding: 28px 32px; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: var(--zh-r-card); background: var(--zh-ink-2); }
+  .foot-cibot-logo { width: 112px; height: auto; }
+  .foot-cibot p { flex: 1 1 260px; margin: 0; padding-left: 32px; border-left: 1px solid rgba(255, 255, 255, 0.14); font: 400 16px/1.5 var(--font-body); color: rgba(255, 255, 255, 0.6); }
+  .foot-cibot strong { display: block; color: #fff; }
+  @media (max-width: 767px) {
+    .foot-cibot { flex-direction: column; text-align: center; padding: 28px 24px; }
+    .foot-cibot p { flex: 0 0 auto; padding-left: 0; border-left: 0; }
+    .foot-cibot .zh-btn { align-self: stretch; }
+  }
+</style>
 
 <script>
   const kolommen = [...document.querySelectorAll('.zh-fcol')];
