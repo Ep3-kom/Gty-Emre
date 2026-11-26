@@ -104,9 +104,21 @@ export const overigeCertificering = [
   { kind: 'Zorg en welzijn', code: 'HKZ', text: 'Kwaliteit in zorg of welzijn aantonen', href: url.hkz },
 ];
 
-export const klanten: [bestand: string, naam: string, hoogte: number][] = [
-  ['ae-security', 'AE Security Group', 48], ['certicor', 'Certicor', 31], ['lely', 'Ir. Lely Lyceum', 88], ['shadow-security', 'Shadow Security', 44],
-  ['linden', 'Linden Tree Care', 75], ['dap', 'dAP, De Arbo Pioniers', 49], ['smile-place', 'Smile Place Tandartsen', 49], ['emirs', 'Emirs Foundation', 45],
+export const klanten: { naam: string; bestand: string; klein?: boolean }[] = [
+  { naam: 'Zakenwijzer Arbodienst', bestand: 'zakenwijzer.svg', klein: true },
+  { naam: 'AE Security Group', bestand: 'ae-security-group.png' },
+  { naam: 'Certicor', bestand: 'certicor.png' },
+  { naam: 'Ir. Lely Lyceum', bestand: 'ir-lely-lyceum.png' },
+  { naam: 'iCNT', bestand: 'iCNT-logo-zwart-oranje.png', klein: true },
+  { naam: 'KinderKidz Opvang', bestand: 'kinderkidz-opvang.png' },
+  { naam: 'Shadow Security', bestand: 'shadow-security.png' },
+  { naam: 'JeugdSterk', bestand: 'jeugdsterk.png' },
+  { naam: 'Fort Jeugd', bestand: 'fort-jeugd.png', klein: true },
+  { naam: 'Linden Tree Care', bestand: 'linden-tree-care.png' },
+  { naam: 'Smile Place Tandartsen', bestand: 'smile-place-tandartsen.png' },
+  { naam: 'dAP, De Arbo Pioniers', bestand: 'dap-arbo-pioniers.png' },
+  { naam: 'Zorgstip', bestand: 'zorgstip.png' },
+  { naam: 'Emirs Foundation', bestand: 'emirs-foundation.png' },
 ];
 
 export const stappen = [

@@ -1,9 +1,7 @@
 ---
-import type { ImageMetadata } from 'astro';
-import { normen, overigeNormen, normenCertificering, overigeCertificering, klanten, url } from '~/data/home';
+import Klantlogos from './Klantlogos.astro';
+import { normen, overigeNormen, normenCertificering, overigeCertificering, url } from '~/data/home';
 
-const logos = import.meta.glob<ImageMetadata>('~/assets/wauw/klant-*.png', { eager: true, import: 'default' });
-const src = (n: string) => logos[`/src/assets/wauw/klant-${n}.png`].src;
 const cert = Astro.props.opmaak?.variant === 'certificering';
 const kop = cert
   ? { eyebrow: 'Normen', titel: 'Welke norm past bij je situatie?', intro: 'Kies op situatie, niet op normnaam.' }
@@ -59,12 +57,6 @@ const code = 'font:600 expanded clamp(64px,6.4vw,104px)/0.9 var(--font-display);
   </div>
   <div style="margin-top:var(--sec-y);display:flex;flex-direction:column;gap:32px">
     <div class="gty-container"><h2 id="h-logos" class="zh-logos-kop">Organisaties die met GTY werken</h2></div>
-    <div class="zh-marquee" role="region" aria-label="Klantlogo’s">
-      <ul class="zh-marquee-track">
-        {[false, true].map((dup) => klanten.map(([bestand, naam, h]) => (
-          <li class="zh-logo zh-logo-img" aria-hidden={String(dup)}><img src={src(bestand)} alt={dup ? '' : naam} style={`height:${h}px;width:auto;display:block`} /></li>
-        )))}
-      </ul>
-    </div>
+    <Klantlogos />
   </div>
 </section>

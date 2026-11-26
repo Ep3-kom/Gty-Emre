@@ -65,14 +65,10 @@
    },
    "inhoud": {
     "h": "Organisaties die met GTY werken",
-    "logos": [
-     {
-      "naam": "dAP, De Arbo Pioniers",
-      "src": "dap",
-      "h": "44px"
-     }
-    ],
-    "woorden": []
+    "namen": [
+     "Zakenwijzer Arbodienst",
+     "dAP, De Arbo Pioniers"
+    ]
    }
   },
   {

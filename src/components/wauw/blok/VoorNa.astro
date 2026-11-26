@@ -1,9 +1,7 @@
 ---
+import Klantlogos from '../Klantlogos.astro';
 // Alleen op de pagina Partnerprogramma.
-import type { ImageMetadata } from 'astro';
 import Vink from './Vink.astro';
-import { klanten } from '~/data/home';
-const bestanden = import.meta.glob<ImageMetadata>('~/assets/wauw/klant-*.png', { eager: true, import: 'default' });
 const rijen = [
   ['Implementatie', 'Kost het team meer dan het oplevert', 'Laat de organisatie scherper achter'],
   ['Systeem', 'Leeft alleen in mappen', 'Herkenbaar voor wie ermee werkt'],
@@ -48,11 +46,7 @@ const ov = p.overlap === 'ja';
     </div>
     <div style="display:flex;flex-direction:column;gap:32px">
       <h2 class="zh-logos-kop">Eens met ons begonnen. Nog steeds samen.</h2>
-      <div class="zh-marquee" role="region" aria-label="Klantlogo’s">
-        <ul class="zh-marquee-track">
-          {[false, true].map((dup) => klanten.map(([bestand, naam, h]) => (<li class="zh-logo zh-logo-img" aria-hidden={String(dup)}><img src={bestanden[`/src/assets/wauw/klant-${bestand}.png`].src} alt={dup ? '' : naam} style={`height:${h}px;width:auto;display:block`} /></li>)))}
-        </ul>
-      </div>
+      <Klantlogos />
     </div>
   </div>
 </section>

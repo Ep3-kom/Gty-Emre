@@ -65,29 +65,11 @@
    },
    "inhoud": {
     "h": "Organisaties die met GTY werken",
-    "logos": [
-     {
-      "naam": "AE Security Group",
-      "src": "ae-security",
-      "h": "43px"
-     },
-     {
-      "naam": "Shadow Security",
-      "src": "shadow-security",
-      "h": "40px"
-     },
-     {
-      "naam": "Linden Tree Care",
-      "src": "linden",
-      "h": "68px"
-     },
-     {
-      "naam": "Smile Place Tandartsen",
-      "src": "smile-place",
-      "h": "44px"
-     }
-    ],
-    "woorden": [
+    "namen": [
+     "AE Security Group",
+     "Shadow Security",
+     "Linden Tree Care",
+     "Smile Place Tandartsen",
      "iCNT",
      "KinderKidz Opvang",
      "JeugdSterk",

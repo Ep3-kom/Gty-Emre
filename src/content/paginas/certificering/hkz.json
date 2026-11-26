@@ -65,19 +65,9 @@
    },
    "inhoud": {
     "h": "Zorg- en welzijnsorganisaties die met GTY werken",
-    "logos": [
-     {
-      "naam": "Linden Tree Care",
-      "src": "linden",
-      "h": "68px"
-     },
-     {
-      "naam": "Smile Place Tandartsen",
-      "src": "smile-place",
-      "h": "44px"
-     }
-    ],
-    "woorden": [
+    "namen": [
+     "Linden Tree Care",
+     "Smile Place Tandartsen",
      "KinderKidz Opvang",
      "JeugdSterk",
      "Fort Jeugd",

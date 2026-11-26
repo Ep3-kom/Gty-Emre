@@ -71,49 +71,16 @@
    },
    "inhoud": {
     "h": "Organisaties die met GTY werken",
-    "logos": [
-     {
-      "naam": "AE Security Group",
-      "src": "ae-security",
-      "h": "43px"
-     },
-     {
-      "naam": "Shadow Security",
-      "src": "shadow-security",
-      "h": "40px"
-     },
-     {
-      "naam": "Linden Tree Care",
-      "src": "linden",
-      "h": "68px"
-     },
-     {
-      "naam": "Smile Place Tandartsen",
-      "src": "smile-place",
-      "h": "44px"
-     },
-     {
-      "naam": "dAP, De Arbo Pioniers",
-      "src": "dap",
-      "h": "44px"
-     },
-     {
-      "naam": "Certicor",
-      "src": "certicor",
-      "h": "28px"
-     },
-     {
-      "naam": "Ir. Lely Lyceum",
-      "src": "lely",
-      "h": "79px"
-     },
-     {
-      "naam": "Emirs Foundation",
-      "src": "emirs",
-      "h": "41px"
-     }
-    ],
-    "woorden": [
+    "namen": [
+     "Zakenwijzer Arbodienst",
+     "AE Security Group",
+     "Shadow Security",
+     "Linden Tree Care",
+     "Smile Place Tandartsen",
+     "dAP, De Arbo Pioniers",
+     "Certicor",
+     "Ir. Lely Lyceum",
+     "Emirs Foundation",
      "iCNT",
      "KinderKidz Opvang",
      "JeugdSterk",
