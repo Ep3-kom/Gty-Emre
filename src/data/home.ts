@@ -104,21 +104,21 @@ export const overigeCertificering = [
   { kind: 'Zorg en welzijn', code: 'HKZ', text: 'Kwaliteit in zorg of welzijn aantonen', href: url.hkz },
 ];
 
-export const klanten: { naam: string; bestand: string; klein?: boolean }[] = [
-  { naam: 'Zakenwijzer Arbodienst', bestand: 'zakenwijzer.svg', klein: true },
-  { naam: 'AE Security Group', bestand: 'ae-security-group.png' },
-  { naam: 'Certicor', bestand: 'certicor.png' },
-  { naam: 'Ir. Lely Lyceum', bestand: 'ir-lely-lyceum.png' },
-  { naam: 'iCNT', bestand: 'iCNT-logo-zwart-oranje.png', klein: true },
-  { naam: 'KinderKidz Opvang', bestand: 'kinderkidz-opvang.png' },
-  { naam: 'Shadow Security', bestand: 'shadow-security.png' },
-  { naam: 'JeugdSterk', bestand: 'jeugdsterk.png' },
-  { naam: 'Fort Jeugd', bestand: 'fort-jeugd.png', klein: true },
-  { naam: 'Linden Tree Care', bestand: 'linden-tree-care.png' },
-  { naam: 'Smile Place Tandartsen', bestand: 'smile-place-tandartsen.png' },
-  { naam: 'dAP, De Arbo Pioniers', bestand: 'dap-arbo-pioniers.png' },
-  { naam: 'Zorgstip', bestand: 'zorgstip.png' },
-  { naam: 'Emirs Foundation', bestand: 'emirs-foundation.png' },
+export const klanten: { naam: string; bestand: string; hoogte: number }[] = [
+  { naam: 'Zakenwijzer Arbodienst', bestand: 'zakenwijzer.svg', hoogte: 46 },
+  { naam: 'AE Security Group', bestand: 'ae-security-group.png', hoogte: 48 },
+  { naam: 'Certicor', bestand: 'certicor.png', hoogte: 34 },
+  { naam: 'Ir. Lely Lyceum', bestand: 'ir-lely-lyceum.png', hoogte: 76 },
+  { naam: 'iCNT', bestand: 'iCNT-logo-zwart-oranje.png', hoogte: 48 },
+  { naam: 'KinderKidz Opvang', bestand: 'kinderkidz-opvang.png', hoogte: 64 },
+  { naam: 'Shadow Security', bestand: 'shadow-security.png', hoogte: 48 },
+  { naam: 'JeugdSterk', bestand: 'jeugdsterk.png', hoogte: 72 },
+  { naam: 'Fort Jeugd', bestand: 'fort-jeugd.png', hoogte: 48 },
+  { naam: 'Linden Tree Care', bestand: 'linden-tree-care.png', hoogte: 76 },
+  { naam: 'Smile Place Tandartsen', bestand: 'smile-place-tandartsen.png', hoogte: 54 },
+  { naam: 'dAP, De Arbo Pioniers', bestand: 'dap-arbo-pioniers.png', hoogte: 52 },
+  { naam: 'Zorgstip', bestand: 'zorgstip.png', hoogte: 36 },
+  { naam: 'Emirs Foundation', bestand: 'emirs-foundation.png', hoogte: 52 },
 ];
 
 export const stappen = [
