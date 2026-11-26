@@ -1,0 +1,211 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "2",
+    "kopid": "h-top"
+   },
+   "inhoud": {
+    "klein": true,
+    "kicker": "Inzichten · Informatiebeveiliging",
+    "h1": "ISMS uitgelegd",
+    "sub": "Hoe richt je informatiebeveiliging structureel in? Uitleg in gewone taal.",
+    "c1": null,
+    "c2": null,
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Informatiebeveiliging",
+      "href": "/informatiebeveiliging/"
+     }
+    ],
+    "cur": "ISMS uitgelegd",
+    "auteur": "Emre Ozdemir",
+    "meta": [],
+    "feiten": [],
+    "crop": 3
+   }
+  },
+  {
+   "type": "Antwoord",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "0",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "k": "Kort antwoord",
+    "text": "Een ISMS (information security management system) is het geheel van beleid, processen, rollen en maatregelen waarmee je informatiebeveiliging structureel regelt, toetst en verbetert. ISO 27001 beschrijft de eisen voor een ISMS."
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "4",
+    "kopid": "h-isms-1"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Onderdelen",
+    "h2": "Waaruit bestaat een ISMS?",
+    "intro": "Zes onderdelen die elk ISMS heeft, groot of klein.",
+    "items": [
+     "Scope en context",
+     "Risicobeoordeling",
+     "Maatregelen en verklaring van toepasselijkheid",
+     "Rollen en verantwoordelijkheden",
+     "Interne audit en directiebeoordeling",
+     "Verbeteren"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Doorverwijzing",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": ""
+   },
+   "inhoud": {
+    "text": "Een ISMS inrichten richting ISO 27001?",
+    "label": "Bekijk ISO 27001",
+    "href": "/certificering/iso-27001/"
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-isms-2"
+   },
+   "inhoud": {
+    "kicker": "Inrichten",
+    "h2": "Een ISMS opzetten in vier stappen",
+    "intro": "",
+    "foot": "",
+    "cols": 4,
+    "items": [
+     {
+      "n": "01",
+      "tag": "",
+      "title": "Scope bepalen",
+      "text": "Welke processen, locaties en informatie vallen erin?",
+      "href": "",
+      "linklabel": "",
+      "laatste": false
+     },
+     {
+      "n": "02",
+      "tag": "",
+      "title": "Risico’s in kaart",
+      "text": "Welke risico’s lopen je informatie en je klanten?",
+      "href": "",
+      "linklabel": "",
+      "laatste": false
+     },
+     {
+      "n": "03",
+      "tag": "",
+      "title": "Maatregelen inrichten",
+      "text": "Kies en richt maatregelen in; leg vast in de SoA.",
+      "href": "",
+      "linklabel": "",
+      "laatste": false
+     },
+     {
+      "n": "04",
+      "tag": "",
+      "title": "Toetsen en verbeteren",
+      "text": "Interne audit en directiebeoordeling, elk jaar.",
+      "href": "",
+      "linklabel": "",
+      "laatste": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Split",
+   "opmaak": {
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-isms-4"
+   },
+   "inhoud": {
+    "kicker": "Volgende stap",
+    "h2": "Een ISMS inrichten of laten toetsen?",
+    "text": "We beoordelen waar je staat en welke stap logisch is: ISO 27001, NEN 7510 of eerst een nulmeting.",
+    "quote": "",
+    "flip": false,
+    "img": "",
+    "bullets": [],
+    "c1": {
+     "label": "Laat je situatie beoordelen",
+     "href": "/contact/?onderwerp=situatie"
+    },
+    "c2": {
+     "label": "Bekijk ISO 27001",
+     "href": "/certificering/iso-27001/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "9",
+    "kopid": "h-isms-5"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 3,
+    "items": [
+     {
+      "rel": "Gerelateerd",
+      "label": "Informatiebeveiliging",
+      "href": "/informatiebeveiliging/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "ISO 27001",
+      "href": "/certificering/iso-27001/"
+     },
+     {
+      "rel": "Volgende stap",
+      "label": "Partnerprogramma",
+      "href": "/partnerprogramma/"
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+---
+// Gedeeld omhulsel: achtergrond, overlap, afgeronde hoeken en ruimte per sectie.
+export type Opmaak = { bg?: string; overlap?: string; pt?: string; pb?: string; z?: string; kopid?: string; hoeken?: string; lijn?: string; [k: string]: string | undefined };
+const { opmaak: p = {} } = Astro.props as { opmaak?: Opmaak };
+const ov = p.overlap === 'ja';
+const bg = p.bg || 'wit';
+const achter: Record<string, string> = { wit: 'background:#fff', tint: 'background:var(--zh-page)', inkt: 'background:var(--zh-ink);color:#fff', verloop: '' };
+const hoeken = p.hoeken === 'rond' ? 'border-radius:var(--zh-r-sec);' : p.hoeken === 'onder' ? 'border-radius:0 0 var(--zh-r-sec) var(--zh-r-sec);' : p.hoeken === 'geen' ? '' : ov ? 'border-radius:var(--zh-r-sec) var(--zh-r-sec) 0 0;' : '';
+const stijl = `position:relative;z-index:${p.z || '2'};margin-top:${ov ? 'calc(-1 * var(--zh-r-sec))' : '0'};${hoeken}${achter[bg] ?? ''};padding:${p.pt || 'var(--sec-y)'} 0 ${p.pb || 'calc(var(--sec-y) + var(--zh-r-sec))'}`;
+---
+<section class:list={[bg === 'verloop' && 'zh-breathe', p.lijn === 'boven' && 'zh-lijn-boven']} aria-labelledby={p.kopid || undefined} style={stijl}><slot /></section>

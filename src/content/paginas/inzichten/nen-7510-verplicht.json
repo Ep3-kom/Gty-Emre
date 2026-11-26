@@ -1,0 +1,244 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "2",
+    "kopid": "h-top"
+   },
+   "inhoud": {
+    "klein": true,
+    "kicker": "Inzichten · NEN 7510",
+    "h1": "Is NEN 7510 verplicht?",
+    "sub": "Wanneer NEN 7510 op jouw organisatie van toepassing is.",
+    "c1": null,
+    "c2": null,
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Inzichten",
+      "href": "/inzichten/"
+     }
+    ],
+    "cur": "Is NEN 7510 verplicht?",
+    "auteur": "Emre Ozdemir",
+    "meta": [],
+    "feiten": [],
+    "crop": 1
+   }
+  },
+  {
+   "type": "Antwoord",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "0",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "k": "Kort antwoord",
+    "text": "Deels. Zorgaanbieders die elektronisch gezondheidsgegevens verwerken moeten volgens de Wabvpz en het Besluit elektronische gegevensverwerking door zorgaanbieders voldoen aan NEN 7510 (en NEN 7512 en 7513). Certificering is niet wettelijk verplicht, maar verzekeraars, gemeenten en ketenpartners vragen er vaak om."
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "4",
+    "kopid": "h-knenverplicht-1"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Voor wie",
+    "h2": "Voor wie geldt het?",
+    "intro": "",
+    "items": [
+     "Zorgaanbieders die elektronisch gezondheidsgegevens verwerken",
+     "Leveranciers en IT-partijen die dat namens hen doen (via contract)",
+     "Arbodiensten, via het Certificatieschema Arbodiensten"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "5",
+    "kopid": "h-knenverplicht-2",
+    "lijn": "boven"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Wat moet geregeld",
+    "h2": "Wat moet je regelen?",
+    "intro": "",
+    "items": [
+     "Informatiebeveiligingsbeleid",
+     "Risicoanalyse op gezondheidsgegevens",
+     "Toegangsbeheer en logging",
+     "Afspraken met verwerkers",
+     "Periodieke toetsing en verbetering"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Doorverwijzing",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "6",
+    "kopid": ""
+   },
+   "inhoud": {
+    "text": "Weet je niet zeker of het voor jou geldt?",
+    "label": "Laat je situatie beoordelen",
+    "href": "/contact/?onderwerp=situatie"
+   }
+  },
+  {
+   "type": "Tekst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-knenverplicht-3"
+   },
+   "inhoud": {
+    "kicker": "Risico van niets doen",
+    "h2": "Wat als je niets doet?",
+    "paras": [
+     "De Inspectie Gezondheidszorg en Jeugd (IGJ) houdt toezicht op de beveiliging van gezondheidsgegevens, de Autoriteit Persoonsgegevens op de AVG. Bij een datalek kan een boete volgen.",
+     "Vaak voelbaarder: zonder aantoonbare informatiebeveiliging mis je contracten en aanbestedingen, omdat zorgverzekeraars, gemeenten en ketenpartners erom vragen."
+    ],
+    "foto": false
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-knenverplicht-4"
+   },
+   "inhoud": {
+    "kicker": "Stappenplan",
+    "h2": "In drie stappen",
+    "intro": "",
+    "foot": "",
+    "cols": 3,
+    "items": [
+     {
+      "n": "01",
+      "tag": "Nagaan",
+      "title": "Nagaan of het op jou van toepassing is",
+      "text": "Verwerk je gezondheidsgegevens, of doe je dat voor een zorgaanbieder?",
+      "href": "",
+      "linklabel": "",
+      "who": "Jij"
+     },
+     {
+      "n": "02",
+      "tag": "In kaart brengen",
+      "title": "Uitgangssituatie bepalen",
+      "text": "Een nulmeting laat zien wat er al staat.",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY, samen met jou"
+     },
+     {
+      "n": "03",
+      "tag": "Op orde brengen",
+      "title": "Plan en uitvoering",
+      "text": "Inrichten, toetsen en eventueel certificeren.",
+      "href": "",
+      "linklabel": "",
+      "who": "Jouw team, begeleid door GTY"
+     }
+    ],
+    "gap": "24px",
+    "minh": "340px",
+    "pad": "32px",
+    "limoen": true
+   }
+  },
+  {
+   "type": "Split",
+   "opmaak": {
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "9",
+    "kopid": "h-knenverplicht-6"
+   },
+   "inhoud": {
+    "kicker": "Volgende stap",
+    "h2": "Twijfel je of het voor jou geldt?",
+    "text": "We beoordelen je situatie en adviseren of NEN 7510 of ISO 27001 past.",
+    "quote": "",
+    "flip": false,
+    "img": "",
+    "bullets": [],
+    "c1": {
+     "label": "Laat je situatie beoordelen",
+     "href": "/contact/?onderwerp=situatie"
+    },
+    "c2": {
+     "label": "Bekijk NEN 7510 certificering",
+     "href": "/certificering/nen-7510/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "11",
+    "kopid": "h-knenverplicht-7"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 2,
+    "items": [
+     {
+      "rel": "Gerelateerd",
+      "label": "NEN 7510",
+      "href": "/certificering/nen-7510/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "Informatiebeveiliging in de zorg",
+      "href": "/informatiebeveiliging/zorg/"
+     }
+    ]
+   }
+  }
+ ]
+}

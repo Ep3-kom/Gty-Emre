@@ -1,0 +1,237 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Werkwijze",
+    "h1": "Voorspelbaar verloop. Geen verborgen agenda.",
+    "sub": "Iedere samenwerking start bij jouw vraag, die maken we eerst goed zichtbaar. Pas dan ontstaat de aanpak. Geen standaardpakket, wel een vast ritme dat het werk navolgbaar maakt.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking"
+    },
+    "c2": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     }
+    ],
+    "cur": "Werkwijze",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 1
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-werkwijze-1",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "kicker": "Drie fasen",
+    "h2": "Een ritme dat voor iedereen werkt, ook voor je mensen.",
+    "intro": "De structuur is voor elk traject hetzelfde. De inhoud verschilt per norm, per sector en per startpunt.",
+    "foot": "",
+    "cols": 3,
+    "items": [
+     {
+      "n": "01",
+      "tag": "1 tot 3 weken",
+      "title": "Verkenning en meting",
+      "text": "Gesprek, meting ter plekke en bevindingen met prioriteiten.",
+      "href": "",
+      "linklabel": "",
+      "laatste": false
+     },
+     {
+      "n": "02",
+      "tag": "Variabel, naar norm en omvang",
+      "title": "Inrichten en invoeren",
+      "text": "Het systeem rond je processen zoals ze nu werken, training per afdeling, interne audit.",
+      "href": "/certificering/",
+      "linklabel": "Certificering",
+      "laatste": false
+     },
+     {
+      "n": "03",
+      "tag": "↻ Doorlopend, naar wens",
+      "title": "Afronding en de tijd erna",
+      "text": "Afwijkingen sluiten, overdracht, en desgewenst het Partnerprogramma.",
+      "href": "/partnerprogramma/",
+      "linklabel": "Partnerprogramma",
+      "laatste": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Split",
+   "opmaak": {
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-werkwijze-2",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Eén vaste partner",
+    "h2": "Geen telefonisch advies van een afdeling. Iemand die meeloopt.",
+    "text": "Wie je bij de eerste meting ontmoet, staat ook bij de externe audit naast je, en bereidt een jaar later de surveillance-audit met je voor.",
+    "quote": "“De week voor de audit moet een gewone week zijn.”",
+    "flip": false,
+    "img": "stock",
+    "bullets": [],
+    "c1": null,
+    "c2": null
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "1",
+    "overlap": "ja",
+    "z": "25"
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-werkwijze-3",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Afspraken",
+    "h2": "Afspraken die staan. Vanaf de start.",
+    "intro": "",
+    "cols": 3,
+    "variant": "tegel",
+    "genummerd": true,
+    "items": [
+     {
+      "tag": "01",
+      "title": "Eén offerte",
+      "text": "Na het kennismakingsgesprek één voorstel: aanpak, planning, investering. Geen meerwerk dat halverwege opduikt.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "02",
+      "title": "Eén contactpersoon",
+      "text": "Dezelfde partner, het hele traject. Direct bereikbaar, geen accountmanagers, geen ticketsysteem.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "03",
+      "title": "Inzicht in de voortgang",
+      "text": "Een planning met duidelijke mijlpalen en korte voortgangsoverleggen.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "04",
+      "title": "Een eerlijk oordeel",
+      "text": "Past een norm niet, of is het te vroeg, dan zeggen we dat ronduit.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "05",
+      "title": "Vaste prijsafspraak",
+      "text": "Geen open-eind facturatie op uurbasis. De investering ligt vooraf vast; verandert de scope, dan bespreken we dat eerst.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     }
+    ],
+    "cta": null,
+    "helper": ""
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-werkwijze-4",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Een gewone week voor de audit.",
+    "text": "Omdat goed georganiseerde compliance niet begint wanneer de auditor zijn afspraak inplant. We luisteren naar je situatie en zeggen het ook als wij niet de juiste keuze zijn.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking"
+    },
+    "c2": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-werkwijze-5",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 2,
+    "items": [
+     {
+      "rel": "Volgende stap",
+      "label": "Partnerprogramma",
+      "href": "/partnerprogramma/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "Certificering overzicht",
+      "href": "/certificering/"
+     }
+    ]
+   }
+  }
+ ]
+}

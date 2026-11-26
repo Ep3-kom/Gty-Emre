@@ -1,0 +1,195 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "2",
+    "kopid": "h-top"
+   },
+   "inhoud": {
+    "klein": true,
+    "kicker": "Inzichten · Naslag",
+    "h1": "Begrippenlijst compliance",
+    "sub": "Korte, eenduidige definities van termen die in normtrajecten terugkomen. Elke term heeft een eigen anker (#soa, #isms …) zodat andere pagina’s ernaar linken.",
+    "c1": null,
+    "c2": null,
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Inzichten",
+      "href": "/inzichten/"
+     }
+    ],
+    "cur": "Begrippenlijst compliance",
+    "auteur": "Emre Ozdemir",
+    "meta": [],
+    "feiten": [],
+    "crop": 3
+   }
+  },
+  {
+   "type": "Antwoord",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "0",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "k": "Kort antwoord",
+    "text": "Deze begrippenlijst geeft per term een definitie van één à twee zinnen, met een link naar de pagina waar het onderwerp uitgebreid wordt behandeld."
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-begrippen-1"
+   },
+   "inhoud": {
+    "h2": "Begrippen A–Z",
+    "eyebrow": "Naslag",
+    "intro": "Mis je een begrip? Emre legt het je zelf uit.",
+    "items": [
+     {
+      "q": "Annex A",
+      "a": "Bijlage bij ISO 27001 met 93 beheersmaatregelen, ingedeeld in vier thema’s."
+     },
+     {
+      "q": "Certificerende instelling (CI)",
+      "a": "Onafhankelijke, geaccrediteerde partij die de externe audit uitvoert en het certificaat afgeeft. GTY is geen CI."
+     },
+     {
+      "q": "Directiebeoordeling",
+      "a": "Periodieke beoordeling door de directie van het managementsysteem: doelen, resultaten, risico’s en verbeteracties."
+     },
+     {
+      "q": "Hercertificering",
+      "a": "Volledige externe audit na drie jaar, waarmee een nieuw certificaat wordt afgegeven."
+     },
+     {
+      "q": "HLS / Harmonized Structure",
+      "a": "Gemeenschappelijke hoofdstructuur (sinds 2021 officieel “Harmonized Structure”) van ISO 9001, ISO 14001 en ISO 27001, waardoor normen te combineren zijn in één managementsysteem."
+     },
+     {
+      "q": "ISMS",
+      "a": "Information Security Management System: beleid, processen, rollen en maatregelen om informatiebeveiliging structureel te regelen. Zie “Wat is een ISMS?”."
+     },
+     {
+      "q": "Kerndeskundige",
+      "a": "Gecertificeerd deskundige (bijv. hogere veiligheidskundige of bedrijfsarts) die een RI&E toetst waar de wet dat eist."
+     },
+     {
+      "q": "Nulmeting",
+      "a": "Feitelijke meting van de uitgangssituatie ten opzichte van een norm; startpunt van een traject."
+     },
+     {
+      "q": "Plan van aanpak",
+      "a": "Onderdeel van de RI&E: maatregelen, eigenaar en termijn per risico."
+     },
+     {
+      "q": "RI&E",
+      "a": "Risico-inventarisatie en -evaluatie: de wettelijk verplichte inventarisatie van arbeidsrisico’s."
+     },
+     {
+      "q": "Statement of Applicability (SoA)",
+      "a": "Document waarin je vastlegt welke beheersmaatregelen uit ISO 27001 Annex A gelden, welke zijn ingericht en waarom maatregelen zijn uitgesloten."
+     },
+     {
+      "q": "Surveillance-audit",
+      "a": "Jaarlijkse externe audit tussen certificering en hercertificering (3-jaarscyclus)."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Split",
+   "opmaak": {
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-begrippen-3"
+   },
+   "inhoud": {
+    "kicker": "Volgende stap",
+    "h2": "Liever uitleg in een gesprek?",
+    "text": "We leggen uit wat de norm voor je organisatie betekent.",
+    "quote": "",
+    "flip": false,
+    "img": "",
+    "bullets": [],
+    "c1": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "c2": {
+     "label": "Bekijk certificering",
+     "href": "/certificering/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-begrippen-4"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 3,
+    "items": [
+     {
+      "rel": "Verder lezen",
+      "label": "ISMS uitgelegd",
+      "href": "/informatiebeveiliging/isms/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "ISO 27001",
+      "href": "/certificering/iso-27001/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "NEN 7510",
+      "href": "/certificering/nen-7510/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "ISO 9001",
+      "href": "/certificering/iso-9001/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "RI&E",
+      "href": "/rie/"
+     },
+     {
+      "rel": "Volgende stap",
+      "label": "Interne audits",
+      "href": "/interne-audits/"
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+---
+import Logo from './Logo.astro';
+import Ico from './Ico.astro';
+import { footer, url } from '~/data/home';
+import { siteData } from '~/data/site-data';
+---
+<footer class="zh-foot zh-foot--dark" style="position:relative;z-index:1;margin-top:calc(-1 * var(--zh-r-sec));color:#fff">
+  <div style="background:var(--zh-ink);padding:calc(var(--sec-y-s) + var(--zh-r-sec)) 0 var(--sec-y-s)">
+    <div class="gty-container">
+      <div class="zh-g-foot" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:var(--sec-gap);align-items:end">
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <span class="zh-eyebrow" style="color:rgba(255,255,255,0.6)">Contact</span>
+          <p class="zh-h2 zh-text-gradient" style="max-width:16ch">Eén vaste partner, van nulmeting tot na het certificaat.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <a href={siteData.contact.phoneHref} class="zh-foot-big"><span class="zh-foot-ico"><Ico naam="telefoon" /></span>{siteData.contact.phone}</a>
+            <a href={siteData.contact.emailHref} class="zh-foot-big"><span class="zh-foot-ico"><Ico naam="mail" /></span>{siteData.contact.email}</a>
+            <span style="font:400 16px/1.4 var(--font-body);color:rgba(255,255,255,0.6)">Capelle aan den IJssel · ma–vr 09:00–17:00</span>
+          </div>
+          <div class="zh-btnrow" style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px"><a href={url.kennismaking} class="zh-btn zh-btn--line-light" style="width:max-content">Plan een kennismaking</a><a href={url.contact} class="zh-link" style="color:#fff">Naar de contactpagina</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="zh-foot-base" style="background:var(--zh-ink);padding:0 0 var(--sec-y-s)">
+    <div class="gty-container" style="display:flex;flex-direction:column;gap:var(--sec-gap)">
+      <div aria-hidden="true" style="border-top:1px solid rgba(255,255,255,0.15)"></div>
+      <nav aria-label="Footer" class="zh-footnav" style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:48px 24px">
+        {footer.map((c) => (
+          <div class="zh-fcol" style="display:flex;flex-direction:column;gap:16px">
+            <button type="button" class="zh-fcol-h zh-label" aria-expanded="false" style="color:rgba(255,255,255,0.5)">{c.h}<span class="zh-fcol-pm" aria-hidden="true"><Ico naam="plus" /></span></button>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px">
+              {c.items.map((it) => <li><a href={it.href}>{it.label}</a></li>)}
+            </ul>
+          </div>
+        ))}
+      </nav>
+    </div>
+  </div>
+  <div class="zh-foot-bar" style="background:var(--zh-ink-2);padding:28px 0">
+    <div class="gty-container">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
+        <div style="display:flex;align-items:center;gap:24px">
+          <span class="zh-foot-logo"><Logo wit /></span>
+          <span style="font:600 expanded 14px/1 var(--font-display);color:#fff">Voldoen én vooruit.</span>
+        </div>
+        <div class="zh-foot-legal" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 32px">
+          <div style="display:flex;flex-wrap:wrap;gap:8px 24px"><a href="/privacyverklaring/">Privacyverklaring</a><a href="/algemene-voorwaarden/">Algemene voorwaarden</a><a href="/cookiebeleid/">Cookiebeleid</a><a href="/disclaimer/">Disclaimer</a></div>
+          <span class="zh-foot-sep" aria-hidden="true"></span>
+          <span>© {new Date().getFullYear()} GTY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const kolommen = [...document.querySelectorAll('.zh-fcol')];
+  kolommen.forEach((kolom) =>
+    kolom.querySelector('button')!.addEventListener('click', () => {
+      const open = !kolom.classList.contains('zh-fcol--open');
+      kolommen.forEach((k) => {
+        k.classList.toggle('zh-fcol--open', open && k === kolom);
+        k.querySelector('button')!.setAttribute('aria-expanded', String(open && k === kolom));
+      });
+    }),
+  );
+</script>

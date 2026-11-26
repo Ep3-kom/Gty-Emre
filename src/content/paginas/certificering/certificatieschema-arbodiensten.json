@@ -1,0 +1,252 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Certificering · Certificatieschema Arbodiensten",
+    "h1": "Certificatieschema Arbodiensten, wettelijk verplicht.",
+    "sub": "Voor arbodiensten in Nederland wettelijk verplicht. Het schema combineert ISO 9001 met sectoreisen; wij begeleiden het volledige traject.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-arbo"
+    },
+    "c2": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Certificering",
+      "href": "/certificering/"
+     }
+    ],
+    "cur": "Certificatieschema Arbodiensten",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 0
+   }
+  },
+  {
+   "type": "Tekst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "var(--sec-y-s)",
+    "z": "3",
+    "kopid": "h-arbo-1"
+   },
+   "inhoud": {
+    "kicker": "Wat is het schema",
+    "h2": "Wat is het Certificatieschema Arbodiensten, en voor wie?",
+    "paras": [
+     "Het Certificatieschema Arbodiensten (beheerd door SBCA) is wettelijk verplicht voor arbodiensten in Nederland, intern en extern. Werkgevers in de vangnetregeling moeten met een gecertificeerde arbodienst werken.",
+     "Het schema bouwt op ISO 9001 en voegt eisen toe voor bedrijfsgeneeskundige zorg, privacy, klachten en informatiebeveiliging. Voor dat laatste is NEN 7510-1 de verplichte invulling.",
+     "Voor wie: externe arbodiensten die meerdere werkgevers bedienen en interne arbodiensten met een eigen bedrijfsarts. Zonder certificaat geen licence to operate."
+    ],
+    "foto": false
+   }
+  },
+  {
+   "type": "Logos",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "calc(48px + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": ""
+   },
+   "inhoud": {
+    "h": "Organisaties die met GTY werken",
+    "logos": [
+     {
+      "naam": "dAP, De Arbo Pioniers",
+      "src": "dap",
+      "h": "44px"
+     }
+    ],
+    "woorden": []
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-arbo-2"
+   },
+   "inhoud": {
+    "kicker": "Aanpak GTY",
+    "h2": "Zo werken we naar Certificatieschema Arbodiensten toe",
+    "intro": "",
+    "foot": "↻ Daarna: Partnerprogramma · interne audits",
+    "cols": 4,
+    "items": [
+     {
+      "n": "01",
+      "tag": "In kaart brengen",
+      "title": "Nulmeting",
+      "text": "Waar sta je en wat is nodig?",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY, samen met jou"
+     },
+     {
+      "n": "02",
+      "tag": "Op orde brengen",
+      "title": "Inrichten",
+      "text": "Risico’s, beleid en processen werkbaar inrichten.",
+      "href": "",
+      "linklabel": "",
+      "who": "Jouw team, begeleid door GTY"
+     },
+     {
+      "n": "03",
+      "tag": "Op orde brengen",
+      "title": "Interne audit",
+      "text": "Toetsen of het werkt, vóór de externe audit.",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY"
+     },
+     {
+      "n": "04",
+      "tag": "Certificaat ≠ eindpunt",
+      "title": "Certificeringsaudit",
+      "text": "De certificerende instelling auditeert; GTY begeleidt.",
+      "href": "",
+      "linklabel": "",
+      "who": "Certificerende instelling"
+     }
+    ],
+    "gap": "24px",
+    "minh": "360px",
+    "pad": "32px",
+    "limoen": true,
+    "cta": {
+     "label": "Plan een nulmeting",
+     "href": "/nulmeting/?onderwerp=nulmeting-arbo"
+    }
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "1",
+    "overlap": "ja",
+    "z": "27"
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "kopid": "h-kosten",
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "9",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "variant": "donker",
+    "kicker": "Kostenfactoren",
+    "h2": "Waar hangen de kosten van af?",
+    "intro": "",
+    "items": [
+     "Omvang en scope (locaties, medewerkers, processen)",
+     "Huidige volwassenheid: wat is al geregeld?",
+     "Hoeveel doe je zelf, hoeveel besteed je uit",
+     "Kosten certificerende instelling (apart van begeleiding)"
+    ],
+    "links": [
+     {
+      "label": "NEN 7510",
+      "href": "/certificering/nen-7510/"
+     },
+     {
+      "label": "ISO 9001",
+      "href": "/certificering/iso-9001/"
+     },
+     {
+      "label": "RI&E",
+      "href": "/rie/"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "10",
+    "kopid": "h-arbo-3"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over het Certificatieschema Arbodiensten",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Is het Certificatieschema Arbodiensten wettelijk verplicht?",
+      "a": "Ja. Arbodiensten moeten in Nederland gecertificeerd zijn om te mogen opereren. Werkgevers in de vangnetregeling moeten samenwerken met een gecertificeerde arbodienst."
+     },
+     {
+      "q": "Wat is de relatie met ISO 9001?",
+      "a": "Deel 1 is opgebouwd op de structuur van ISO 9001 en breidt die uit met sectoreisen. Met ISO 9001 heb je de basis, maar voldoe je nog niet aan het volledige schema."
+     },
+     {
+      "q": "Voldoet ISO 27001 nog voor de informatiebeveiligingseisen?",
+      "a": "Nee. Het interpretatiedocument (versie 3.0) schrijft NEN 7510-1 voor. ISO 27001 volstaat alleen nog als aanvulling."
+     },
+     {
+      "q": "Hoe lang duurt een certificeringstraject?",
+      "a": "Dat hangt af van je uitgangspositie. Met ISO 9001 of een werkend kwaliteitssysteem is er minder voorwerk. Een nulmeting geeft een realistisch beeld."
+     },
+     {
+      "q": "Is GTY de certificerende instelling?",
+      "a": "Nee. GTY begeleidt de voorbereiding en kan de interne audit uitvoeren. De certificeringsaudit doet een onafhankelijke, geaccrediteerde instelling."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "11",
+    "kopid": "h-arbo-4",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Klaar om met het Certificatieschema Arbodiensten aan de slag te gaan?",
+    "text": "Plan een vrijblijvend gesprek over je uitgangspositie. Na de certificering blijven we betrokken via het Partnerprogramma.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-arbo"
+    },
+    "c2": {
+     "label": "Bekijk Partnerprogramma",
+     "href": "/partnerprogramma/"
+    }
+   }
+  }
+ ]
+}

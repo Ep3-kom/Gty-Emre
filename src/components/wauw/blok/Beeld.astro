@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import team from '~/assets/wauw/team.jpg';
+const { opmaak: p = {} } = Astro.props;
+const uitsneden = ['left:-100%;top:-71%;width:263%;--my:-15%', 'left:-60%;top:-36%;width:200%;--my:-10%', 'left:-104%;top:-62%;width:250%;--my:-14%', 'top:-10%;left:-3%;width:225%;--my:-2.5%'];
+const uitsnede = uitsneden[Number(p.uitsnede || 0)] || uitsneden[0];
+const mt = p.overlap === 'ja' ? 'calc(-1 * var(--zh-r-sec))' : '0';
+const stijl = `position:absolute;${uitsnede};height:auto;max-width:none`;
+---
+{p.breedte !== 'container' ? (
+  <figure class="zh-beeld-vol" style={`position:relative;z-index:${p.z || '2'};margin:${mt} 0 0;height:560px;overflow:hidden;border-radius:var(--zh-r-sec);background:#1b1b1b`}>
+    <Image src={team} widths={[1600, 2400, 3200]} sizes="260vw" alt="Collega’s in overleg in een licht kantoor, in beweging vastgelegd" style={stijl} />
+  </figure>
+) : (
+  <section aria-label="Sfeerbeeld" style={`position:relative;z-index:${p.z || '2'};margin-top:${mt};background:#fff;padding:${p.overlap === 'ja' ? 'calc(var(--sec-y) + var(--zh-r-sec)) 0 0' : 'var(--sec-y) 0 0'}`}>
+    <div class="gty-container"><figure class="zh-photo" style="margin:0;aspect-ratio:12/5;border-radius:var(--zh-r-card)"><Image src={team} widths={[1600, 2400, 3200]} sizes="220vw" alt="Collega’s lopen door een licht kantoor, in beweging vastgelegd" style={stijl} /></figure></div>
+  </section>
+)}

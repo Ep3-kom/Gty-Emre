@@ -1,0 +1,237 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Academy · BHV incompany",
+    "h1": "BHV-training op jouw locatie",
+    "sub": "Incompany BHV-training voor je eigen team, afgestemd op de risico’s en de indeling van jouw werkplek. We komen bij je langs.",
+    "c1": {
+     "label": "Vraag een BHV-training aan",
+     "href": "/contact/?onderwerp=bhv"
+    },
+    "c2": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Academy",
+      "href": "/academy/"
+     }
+    ],
+    "cur": "BHV incompany",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 3
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "3",
+    "kopid": "h-bhv-1"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Voor wie",
+    "h2": "Voor wie is BHV incompany?",
+    "intro": "",
+    "items": [
+     "Werkgevers die BHV voor hun eigen team willen regelen",
+     "BHV-coördinatoren die een groep tegelijk willen trainen",
+     "Organisaties die willen oefenen in hun eigen pand",
+     "Teams die BHV willen combineren met RI&E-opvolging"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "0",
+    "overlap": "ja",
+    "z": "24"
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-bhv-2",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Zo werkt het",
+    "h2": "Van aanvraag tot getraind team",
+    "intro": "",
+    "foot": "",
+    "cols": 4,
+    "items": [
+     {
+      "n": "01",
+      "tag": "Aanvragen",
+      "title": "Intake",
+      "text": "Groepsgrootte, locatie en risico’s.",
+      "href": "",
+      "linklabel": "",
+      "who": "Jij en GTY"
+     },
+     {
+      "n": "02",
+      "tag": "Voorbereiden",
+      "title": "Afstemmen",
+      "text": "Scenario’s op jouw werkplek.",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY"
+     },
+     {
+      "n": "03",
+      "tag": "Trainen",
+      "title": "Training op locatie",
+      "text": "Theorie en praktijk in je eigen pand.",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY, met je team"
+     },
+     {
+      "n": "04",
+      "tag": "Bijhouden",
+      "title": "Herhaling",
+      "text": "Jaarlijks een herhalingstraining, zodat je BHV’ers bevoegd en geoefend blijven.",
+      "href": "",
+      "linklabel": "",
+      "who": "Jouw team, met GTY"
+     }
+    ],
+    "gap": "24px",
+    "minh": "340px",
+    "pad": "32px",
+    "limoen": true,
+    "cta": {
+     "label": "Vraag een BHV-training aan",
+     "href": "/contact/?onderwerp=bhv"
+    }
+   }
+  },
+  {
+   "type": "Tekst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "var(--sec-y-s)",
+    "z": "6",
+    "kopid": "h-bhv-3"
+   },
+   "inhoud": {
+    "kicker": "Kosten",
+    "h2": "Waar hangen de kosten van af?",
+    "paras": [
+     "De prijs van een BHV-training op locatie hangt vooral af van twee dingen: hoeveel deelnemers er meedoen, en waar en in hoeveel sessies we de training geven.",
+     "Geef je groepsgrootte en locatie door, dan krijg je een voorstel dat past bij jouw team en jouw pand."
+    ],
+    "foto": false
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-bhv-4",
+    "lijn": "boven"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over BHV",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Komen jullie bij ons op locatie?",
+      "a": "Ja. GTY verzorgt BHV incompany, op jouw locatie."
+     },
+     {
+      "q": "Hoe lang is een BHV-certificaat geldig?",
+      "a": "De wet noemt geen vaste termijn. De meeste BHV-certificaten, zoals die volgens de NIBHV-eisen, zijn één jaar geldig. Jaarlijks een herhalingstraining is daarom gangbaar, zodat je BHV’ers bevoegd en geoefend blijven."
+     },
+     {
+      "q": "Hoeveel BHV’ers heb ik nodig?",
+      "a": "Daar is geen vaste verhouding voor. Het aantal volgt uit je RI&E: hoeveel mensen er tegelijk aanwezig zijn, de indeling van het pand, werktijden en de risico’s van het werk. Houd ook rekening met vakanties en ziekte."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-bhv-5",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "BHV voor je team regelen?",
+    "text": "Geef groepsgrootte en locatie door; we stemmen datum en inhoud met je af.",
+    "c1": {
+     "label": "Vraag een BHV-training aan",
+     "href": "/contact/?onderwerp=bhv"
+    },
+    "c2": {
+     "label": "Bekijk Academy",
+     "href": "/academy/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-bhv-6",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 2,
+    "items": [
+     {
+      "rel": "Verder lezen",
+      "label": "Academy",
+      "href": "/academy/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "RI&E",
+      "href": "/rie/"
+     }
+    ]
+   }
+  }
+ ]
+}

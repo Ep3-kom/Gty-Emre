@@ -1,0 +1,342 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Start hier · Nulmeting",
+    "h1": "Weet eerst waar je staat. Beslis daarna pas.",
+    "sub": "Een eerlijk, onafhankelijk beeld van je vertrekpositie, gemeten langs de norm of een wettelijke verplichting. Zonder vervolgplicht.",
+    "c1": {
+     "label": "Plan een nulmeting",
+     "href": "/nulmeting/"
+    },
+    "c2": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     }
+    ],
+    "cur": "Nulmeting",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 0
+   }
+  },
+  {
+   "type": "Tekst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "3",
+    "kopid": "h-nulmeting-1"
+   },
+   "inhoud": {
+    "kicker": "Wat is een nulmeting",
+    "h2": "Wat is een nulmeting, en voor wie?",
+    "paras": [
+     "Een onafhankelijke meting van je uitgangssituatie: we leggen processen, documenten en managementstructuur naast de norm.",
+     "Je krijgt een helder rapport: wat staat, waar de hiaten zitten en welke stappen nodig zijn. Het rapport is van jou; een vervolgopdracht is niet verplicht.",
+     "Nuttig als een klant om een norm vraagt, als je twijfelt tussen ISO 27001, NEN 7510 of ISO 9001, of als je wilt weten hoe ver je van certificering af zit."
+    ],
+    "foto": true
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-nulmeting-2"
+   },
+   "inhoud": {
+    "kicker": "Wat onderzoeken we",
+    "h2": "Geen vermoedens. Een feitelijke meting.",
+    "intro": "",
+    "cols": 3,
+    "variant": "tegel",
+    "genummerd": true,
+    "items": [
+     {
+      "tag": "01",
+      "title": "Normaansluiting",
+      "text": "Hoe je processen zich verhouden tot wat de norm vraagt.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "02",
+      "title": "Documenten en beleid",
+      "text": "Compleet, actueel en bruikbaar in de praktijk.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "03",
+      "title": "Inrichting van het systeem",
+      "text": "Rollen, sturing, monitoring en de gaten daartussen.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "04",
+      "title": "Wettelijke verplichtingen",
+      "text": "Welke wetten je raken en in hoeverre je voldoet.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "05",
+      "title": "Prioritering",
+      "text": "Wat eerst moet, wat kan wachten en wat elke stap vraagt.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     }
+    ],
+    "cta": null,
+    "helper": ""
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-nulmeting-3"
+   },
+   "inhoud": {
+    "variant": "check",
+    "kicker": "Indicatieve zelftest",
+    "h2": "Hoe ver sta je van de norm?",
+    "intro": "Acht vragen, één minuut. Geen formele beoordeling, wel een indicatie om met GTY over door te praten (Ja / Deels / Nee).",
+    "items": [
+     "Beschikt je organisatie over een actueel kwaliteits- of managementsysteem dat in de praktijk gevolgd wordt?",
+     "Zijn verantwoordelijkheden voor processen en documentatie helder en aanwijsbaar belegd?",
+     "Is documentatie (procedures, beleid, registraties) op de werkvloer eenduidig vindbaar én actueel?",
+     "Worden interne audits structureel uitgevoerd, met opvolging van bevindingen?",
+     "Is er een terugkerende directiebeoordeling die op cijfers stuurt, en niet alleen administreert?",
+     "Worden risico’s, operationeel, informatie, milieu of zorginhoudelijk, periodiek beoordeeld?",
+     "Zijn medewerkers aantoonbaar getraind op de werkwijze die zij geacht worden te volgen?",
+     "Wordt de jaarlijkse surveillance-audit voorbereid voordat de auditor de datum vaststelt?"
+    ],
+    "links": [],
+    "cta": {
+     "tekst": "Veel ‘deels’ of ‘nee’? Een nulmeting laat precies zien waar je staat.",
+     "label": "Plan een nulmeting",
+     "href": "#h-nulmeting-5"
+    }
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-nulmeting-4",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "kicker": "Mogelijke routes na de nulmeting",
+    "h2": "Waar kan de nulmeting naartoe leiden?",
+    "intro": "",
+    "cols": 3,
+    "variant": "tegel",
+    "genummerd": false,
+    "items": [
+     {
+      "tag": "Route",
+      "title": "ISO 27001",
+      "text": "",
+      "href": "/certificering/iso-27001/",
+      "linklabel": "Bekijk",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Route",
+      "title": "NEN 7510",
+      "text": "",
+      "href": "/certificering/nen-7510/",
+      "linklabel": "Bekijk",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "Route",
+      "title": "ISO 9001",
+      "text": "",
+      "href": "/certificering/iso-9001/",
+      "linklabel": "Bekijk",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "Route",
+      "title": "Kwaliteitsmanagement",
+      "text": "",
+      "href": "/kwaliteitsmanagement/",
+      "linklabel": "Bekijk",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Route",
+      "title": "Partnerprogramma",
+      "text": "",
+      "href": "/partnerprogramma/",
+      "linklabel": "Bekijk",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "Route",
+      "title": "RI&E",
+      "text": "",
+      "href": "/rie/",
+      "linklabel": "Bekijk",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     }
+    ],
+    "cta": null,
+    "helper": ""
+   }
+  },
+  {
+   "type": "Formulier",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "pb": "var(--sec-y-s)",
+    "z": "7",
+    "kopid": "h-nulmeting-5",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Aanvragen",
+    "h2": "Vraag een nulmeting aan.",
+    "intro": "Vier verplichte velden. Binnen één werkdag nemen we contact op om de meting te plannen.",
+    "ok": [
+     "Binnen één werkdag nemen wij contact op",
+     "Even bellen? +31 6 36552241 · of mail info@gty.nl"
+    ],
+    "consent": "",
+    "helper": "Weet je je norm nog niet?",
+    "fields": [
+     {
+      "label": "Naam *",
+      "soort": "tekst",
+      "placeholder": "",
+      "vol": false
+     },
+     {
+      "label": "E-mail *",
+      "soort": "tekst",
+      "placeholder": "",
+      "vol": false
+     },
+     {
+      "label": "Organisatie *",
+      "soort": "tekst",
+      "placeholder": "",
+      "vol": false
+     },
+     {
+      "label": "Telefoon (optioneel)",
+      "soort": "tekst",
+      "placeholder": "",
+      "vol": false
+     },
+     {
+      "label": "Onderwerp *",
+      "soort": "keuze",
+      "placeholder": "",
+      "vol": false,
+      "waarde": "Nulmeting",
+      "hint": ""
+     },
+     {
+      "label": "Welke norm?",
+      "soort": "keuze",
+      "placeholder": "Kies een norm",
+      "vol": false
+     },
+     {
+      "label": "Bericht (optioneel)",
+      "soort": "tekstvak",
+      "placeholder": "",
+      "vol": true
+     }
+    ],
+    "raster": true,
+    "knop": "Verstuur aanvraag"
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-nulmeting-6",
+    "lijn": "boven"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Zit ik daarna ergens aan vast?",
+      "a": "Nee. Het rapport is van jou en je beslist zelf wat je ermee doet."
+     },
+     {
+      "q": "Wat is het verschil met een kennismakingsgesprek?",
+      "a": "Een kennismaking is een vrijblijvend gesprek over je situatie. Een nulmeting is een feitelijke meting langs de norm."
+     }
+    ],
+    "helper": ""
+   }
+  }
+ ]
+}

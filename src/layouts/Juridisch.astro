@@ -1,0 +1,22 @@
+---
+// Juridische pagina's: kop uit het nieuwe ontwerp, tekst uit de bestaande site.
+import Wauw from './Wauw.astro';
+import Hero from '~/components/wauw/blok/Hero.astro';
+const { titel, beschrijving } = Astro.props;
+---
+<Wauw title={titel} description={beschrijving} noindex>
+  <Hero opmaak={{ pt: '0', pb: '0' }} inhoud={{ klein: true, kicker: 'Juridisch', h1: titel, crumbs: [{ label: 'Home', href: '/' }], cur: titel }} />
+  <div style="background:#fff"><article class="gty-container zh-tekst"><slot /></article></div>
+</Wauw>
+
+<style is:global>
+  .zh-tekst { padding-top: var(--sec-y-s); padding-bottom: calc(var(--sec-y) + var(--zh-r-sec)); }
+  .zh-tekst > * { max-width: 760px; margin-inline: auto; }
+  .zh-tekst section { margin-top: 40px; overflow-wrap: break-word; }
+  .zh-tekst h2 { font: var(--type-h3); font-size: 24px; margin-bottom: 16px; hyphens: auto; overflow-wrap: break-word; }
+  .zh-tekst h3 { font: var(--type-body-strong); margin: 24px 0 8px; }
+  .zh-tekst p { margin-top: 12px; }
+  .zh-tekst ul { margin-top: 12px; padding-left: 24px; }
+  .zh .zh-tekst a { text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 900px) { article.zh-tekst { padding-inline: var(--page-gutter) !important; } }
+</style>

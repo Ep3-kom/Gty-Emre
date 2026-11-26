@@ -1,0 +1,280 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Certificering · ISO 9001",
+    "h1": "ISO 9001, kwaliteit aantoonbaar geregeld.",
+    "sub": "De meest gevraagde norm bij aanbestedingen en grote opdrachtgevers. Wij begeleiden je van nulmeting tot certificaat.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-iso9001"
+    },
+    "c2": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Certificering",
+      "href": "/certificering/"
+     }
+    ],
+    "cur": "ISO 9001",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 1
+   }
+  },
+  {
+   "type": "Tekst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "var(--sec-y-s)",
+    "z": "3",
+    "kopid": "h-iso9001-1"
+   },
+   "inhoud": {
+    "kicker": "Wat is ISO 9001",
+    "h2": "Wat is ISO 9001, en voor wie?",
+    "paras": [
+     "ISO 9001 is de internationale norm voor kwaliteitsmanagement. De norm toetst niet je product, maar of je kunt aantonen dat je levert wat je belooft, keer op keer.",
+     "Uitgangspunt is procesdenken en risicogebaseerd werken: welke processen leiden tot je resultaat, welke risico’s spelen daarbij en hoe stuur je daarop?",
+     "Voor wie: organisaties die het certificaat nodig hebben voor aanbestedingen of grote opdrachtgevers, en groeiende organisaties waar werkwijzen uit elkaar gaan lopen."
+    ],
+    "foto": false
+   }
+  },
+  {
+   "type": "Logos",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "calc(48px + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": ""
+   },
+   "inhoud": {
+    "h": "Organisaties die met GTY werken",
+    "logos": [
+     {
+      "naam": "AE Security Group",
+      "src": "ae-security",
+      "h": "43px"
+     },
+     {
+      "naam": "Shadow Security",
+      "src": "shadow-security",
+      "h": "40px"
+     },
+     {
+      "naam": "Linden Tree Care",
+      "src": "linden",
+      "h": "68px"
+     },
+     {
+      "naam": "Smile Place Tandartsen",
+      "src": "smile-place",
+      "h": "44px"
+     }
+    ],
+    "woorden": [
+     "iCNT",
+     "KinderKidz Opvang",
+     "JeugdSterk",
+     "Fort Jeugd"
+    ]
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-iso9001-2"
+   },
+   "inhoud": {
+    "kicker": "Aanpak GTY",
+    "h2": "Zo werken we naar ISO 9001 toe",
+    "intro": "",
+    "foot": "↻ Daarna: Partnerprogramma · interne audits",
+    "cols": 4,
+    "items": [
+     {
+      "n": "01",
+      "tag": "In kaart brengen",
+      "title": "Nulmeting",
+      "text": "Waar sta je en wat is nodig?",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY, samen met jou"
+     },
+     {
+      "n": "02",
+      "tag": "Op orde brengen",
+      "title": "Inrichten",
+      "text": "Risico’s, beleid en processen werkbaar inrichten.",
+      "href": "",
+      "linklabel": "",
+      "who": "Jouw team, begeleid door GTY"
+     },
+     {
+      "n": "03",
+      "tag": "Op orde brengen",
+      "title": "Interne audit",
+      "text": "Toetsen of het werkt, vóór de externe audit.",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY"
+     },
+     {
+      "n": "04",
+      "tag": "Certificaat ≠ eindpunt",
+      "title": "Certificeringsaudit",
+      "text": "De certificerende instelling auditeert; GTY begeleidt.",
+      "href": "",
+      "linklabel": "",
+      "who": "Certificerende instelling"
+     }
+    ],
+    "gap": "24px",
+    "minh": "360px",
+    "pad": "32px",
+    "limoen": true,
+    "cta": {
+     "label": "Plan een nulmeting",
+     "href": "/nulmeting/?onderwerp=nulmeting-iso9001"
+    }
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "1",
+    "overlap": "ja",
+    "z": "27"
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "9",
+    "kopid": "h-iso9001-3",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "variant": "donker",
+    "kicker": "Kostenfactoren",
+    "h2": "Waar hangen de kosten van af?",
+    "intro": "",
+    "items": [
+     "Omvang en scope (locaties, medewerkers, processen)",
+     "Huidige volwassenheid: wat is al geregeld?",
+     "Hoeveel doe je zelf, hoeveel besteed je uit",
+     "Kosten certificerende instelling (apart van begeleiding)"
+    ],
+    "links": [
+     {
+      "label": "Lees: wat kost ISO 9001?",
+      "href": "/inzichten/iso-9001-kosten/"
+     },
+     {
+      "label": "ISO 9001 checklist",
+      "href": "/inzichten/iso-9001-checklist/"
+     },
+     {
+      "label": "Kwaliteitsmanagement",
+      "href": "/kwaliteitsmanagement/"
+     },
+     {
+      "label": "Interne audit ISO 9001",
+      "href": "/interne-audits/iso-9001/"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "10",
+    "kopid": "h-iso9001-4"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over ISO 9001",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Hoe lang duurt een ISO 9001-traject?",
+      "a": "Dat hangt af van je uitgangspositie en omvang. Een nulmeting geeft een realistische planning."
+     },
+     {
+      "q": "Moeten alle processen worden beschreven?",
+      "a": "Nee. Alleen waar documentatie de werking van het systeem helpt."
+     },
+     {
+      "q": "Kun je ISO 9001 combineren met andere normen?",
+      "a": "Ja. ISO 9001, ISO 14001 en ISO 27001 delen dezelfde hoofdstructuur; één geïntegreerd systeem is goed mogelijk."
+     },
+     {
+      "q": "ISO 9001 of HKZ in de zorg?",
+      "a": "HKZ is specifiek voor zorg en welzijn en meestal passender. Soms vragen opdrachtgevers ISO 9001 erbij."
+     },
+     {
+      "q": "Wat als de auditor afwijkingen vindt?",
+      "a": "Kritieke afwijkingen los je op vóór afgifte van het certificaat; kleinere volg je op in een actieplan. GTY begeleidt dat."
+     },
+     {
+      "q": "Is GTY de certificerende instelling?",
+      "a": "Nee. GTY begeleidt de voorbereiding en kan de interne audit uitvoeren. De certificeringsaudit doet een onafhankelijke, geaccrediteerde instelling."
+     }
+    ],
+    "helper": "Twijfel je of dit de juiste norm is?"
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "11",
+    "kopid": "h-iso9001-5",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Klaar om met ISO 9001 aan de slag te gaan?",
+    "text": "Plan een vrijblijvend gesprek over je uitgangspositie. Na de certificering blijven we betrokken via het Partnerprogramma.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-iso9001"
+    },
+    "c2": {
+     "label": "Bekijk Partnerprogramma",
+     "href": "/partnerprogramma/"
+    }
+   }
+  }
+ ]
+}

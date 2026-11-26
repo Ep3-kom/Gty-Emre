@@ -1,0 +1,253 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Over GTY",
+    "h1": "Partners die verder kijken dan het stempel",
+    "sub": "GTY ontstond uit één gedachte: organisaties verdienen een partner die het certificaat niet als finish ziet.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking"
+    },
+    "c2": {
+     "label": "Bekijk werkwijze",
+     "href": "/werkwijze/"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     }
+    ],
+    "cur": "Over GTY",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 2
+   }
+  },
+  {
+   "type": "Feiten",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "var(--sec-y-s)",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "items": [
+     {
+      "k": "Opgericht",
+      "v": "2022"
+     },
+     {
+      "k": "Vestiging",
+      "v": "Capelle aan den IJssel"
+     },
+     {
+      "k": "Werkgebied",
+      "v": "Heel Nederland, op locatie"
+     },
+     {
+      "k": "Sectoren",
+      "v": "Zorg · IT · Arbodiensten · Beveiliging"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Logos",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "var(--sec-y-s)",
+    "z": "4",
+    "kopid": ""
+   },
+   "inhoud": {
+    "h": "Organisaties die met GTY werken",
+    "logos": [
+     {
+      "naam": "AE Security Group",
+      "src": "ae-security",
+      "h": "43px"
+     },
+     {
+      "naam": "Shadow Security",
+      "src": "shadow-security",
+      "h": "40px"
+     },
+     {
+      "naam": "Linden Tree Care",
+      "src": "linden",
+      "h": "68px"
+     },
+     {
+      "naam": "Smile Place Tandartsen",
+      "src": "smile-place",
+      "h": "44px"
+     },
+     {
+      "naam": "dAP, De Arbo Pioniers",
+      "src": "dap",
+      "h": "44px"
+     },
+     {
+      "naam": "Certicor",
+      "src": "certicor",
+      "h": "28px"
+     },
+     {
+      "naam": "Ir. Lely Lyceum",
+      "src": "lely",
+      "h": "79px"
+     },
+     {
+      "naam": "Emirs Foundation",
+      "src": "emirs",
+      "h": "41px"
+     }
+    ],
+    "woorden": [
+     "iCNT",
+     "KinderKidz Opvang",
+     "JeugdSterk",
+     "Fort Jeugd",
+     "Zorgstip"
+    ]
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "2",
+    "overlap": "ja",
+    "z": "25"
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-over-1",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Principes",
+    "h2": "Drie principes die het werk sturen",
+    "intro": "",
+    "cols": 3,
+    "variant": "tegel",
+    "genummerd": false,
+    "items": [
+     {
+      "tag": "Principe",
+      "title": "Helderheid",
+      "text": "Je weet wat er ligt, wat er nog moet en wat er gevraagd wordt. Geen verrassingen, ook niet op de factuur.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Principe",
+      "title": "Overzicht",
+      "text": "Wij houden de borging in beeld, zodat jij je kunt richten op waar je organisatie van is.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "Principe",
+      "title": "Eigenaarschap",
+      "text": "Jouw organisatie, jouw systeem. We bouwen zo dat je zelf grip houdt.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     }
+    ],
+    "cta": null,
+    "helper": ""
+   }
+  },
+  {
+   "type": "Split",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-over-2"
+   },
+   "inhoud": {
+    "kicker": "Eén vaste partner",
+    "h2": "De mensen achter GTY",
+    "text": "Geen klassiek adviesbureau en geen wisselend team. Eén vaste partner, structureel aanwezig zonder in dienst te zijn: dichtbij genoeg om je mensen te kennen, ver genoeg om patronen te zien.",
+    "quote": "“Niet om af te vinken. Om het beter te doen.”",
+    "flip": true,
+    "img": "emre",
+    "bullets": [
+     {
+      "t": "Emre Ozdemir, oprichter GTY",
+      "ico": "persoon"
+     },
+     {
+      "t": "+31 6 36552241 · info@gty.nl",
+      "ico": "telefoon"
+     },
+     {
+      "t": "Ma–vr 09:00–17:00",
+      "ico": "klok"
+     }
+    ],
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking"
+    },
+    "c2": {
+     "label": "Bekijk werkwijze",
+     "href": "/werkwijze/"
+    }
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-over-3",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Klaar voor de eerste afspraak?",
+    "text": "We luisteren, geven onze inschatting en zeggen het ook als wij niet de beste keuze zijn.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking"
+    },
+    "c2": {
+     "label": "Bekijk werkwijze",
+     "href": "/werkwijze/"
+    }
+   }
+  }
+ ]
+}

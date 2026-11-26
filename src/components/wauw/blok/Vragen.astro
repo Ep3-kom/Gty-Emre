@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import emre from '~/assets/wauw/emre.jpg';
+import emreMobiel from '~/assets/wauw/emre-mobiel.jpg';
+import Ico from '../Ico.astro';
+import Sectie from './Sectie.astro';
+import Kop from './Kop.astro';
+import { url } from '~/data/home';
+import { siteData } from '~/data/site-data';
+const { opmaak, inhoud: d } = Astro.props;
+const items: { q: string; a: string }[] = d.items;
+---
+<Sectie opmaak={opmaak}>
+  <div class="gty-container"><div class="zh-g-split" style={`display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);gap:var(--sec-gap);align-items:start;${d.lijn ? 'border-top:1px solid var(--zh-line);padding-top:var(--sec-y)' : ''}`}>
+    <div class="zh-sticky-d" style="display:flex;flex-direction:column;gap:32px;position:sticky;top:112px">
+      <Kop kicker={d.eyebrow} titel={d.h2} intro={d.intro} maxch="18" id={opmaak.kopid} verbergIntroMobiel={d.introMobiel === false} />
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <figure class="zh-contactkaart">
+          <picture>
+            <source media="(max-width: 600px)" srcset={emreMobiel.src} />
+            <Image src={emre} alt="Emre Ozdemir, oprichter van GTY" />
+          </picture>
+          <figcaption class="zh-contactkaart-paneel">
+            <span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font:600 expanded 18px/1.25 var(--font-display)">Emre Ozdemir</span><span style="font:400 14px/1.4 var(--font-body);color:var(--zh-soft)">Oprichter · beantwoordt je vraag zelf</span></span>
+            <a href={url.vraag} class="zh-btn zh-btn--dark" style="height:44px">Stel je vraag</a>
+          </figcaption>
+        </figure>
+        <span class="zh-contactregel"><a href={siteData.contact.phoneHref}><Ico naam="telefoon" />{siteData.contact.phone}</a><a href={siteData.contact.emailHref}><Ico naam="mail" />{siteData.contact.email}</a></span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      {items.map((f, i) => (
+        <details class="zh-faq" open={i === 0}><summary>{f.q}<span class="zh-pm" aria-hidden="true"><Ico naam="plus" /></span></summary><p>{f.a}</p></details>
+      ))}
+      {d.helper && <div style="margin-top:24px"><p style="margin:0;font:var(--type-body);color:var(--zh-soft)">{d.helper} <a href="#vind-je-route" class="zh-link" style="color:var(--zh-ink)">Vind je route</a></p></div>}
+    </div>
+  </div></div>
+</Sectie>
+<script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />

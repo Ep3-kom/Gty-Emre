@@ -1,0 +1,15 @@
+---
+import type { ImageMetadata } from 'astro';
+import Sectie from './Sectie.astro';
+const bestanden = import.meta.glob<ImageMetadata>('~/assets/wauw/klant-*.png', { eager: true, import: 'default' });
+const { opmaak, inhoud: d } = Astro.props;
+---
+<Sectie opmaak={opmaak}>
+  <div style="display:flex;flex-direction:column;gap:32px">
+    <div class="gty-container"><h2 id={opmaak.kopid || undefined} class="zh-logos-kop">{d.h}</h2></div>
+    <ul class="gty-container zh-drop-in" aria-label="Klanten" style="list-style:none;margin-top:0;margin-bottom:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 56px">
+      {(d.logos || []).map((l: { src: string; naam: string; h: string }) => (<li class="zh-logo zh-logo-img"><img src={bestanden[`/src/assets/wauw/klant-${l.src}.png`].src} alt={l.naam} style={`height:${l.h};width:auto;display:block`} /></li>))}
+      {(d.woorden || []).map((w: string) => (<li class="zh-logo" style="font:600 expanded 19px/1.1 var(--font-display);letter-spacing:-0.01em;color:rgba(11,11,11,0.62);white-space:nowrap;height:96px;display:flex;align-items:center">{w}</li>))}
+    </ul>
+  </div>
+</Sectie>

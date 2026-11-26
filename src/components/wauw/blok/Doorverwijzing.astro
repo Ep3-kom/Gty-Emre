@@ -1,0 +1,8 @@
+---
+import Sectie from './Sectie.astro';
+import Pijl from './Pijl.astro';
+const { opmaak, inhoud: d } = Astro.props;
+---
+<Sectie opmaak={{ ...opmaak, kopid: '' }}>
+  <div class="gty-container"><a href={d.href} class="zh-inline-cta zh-breathe"><span>{d.text}</span><span style="display:inline-flex;align-items:center;gap:12px;font-weight:600;white-space:nowrap">{d.label}<span class="zh-round" aria-hidden="true" style="width:40px;height:40px;background:var(--gty-magenta)"><Pijl maat="16" kleur="#fff" /></span></span></a></div>
+</Sectie>

@@ -1,0 +1,68 @@
+---
+import { Image } from 'astro:assets';
+import team from '~/assets/wauw/team.jpg';
+import Ico from './Ico.astro';
+import { stappen, url } from '~/data/home';
+const chip = (key: boolean) => `background:${key ? 'var(--gty-lime)' : '#F5F5F2'};color:${key ? '#0B0B0B' : '#4D4D4D'}`;
+---
+<section id="werkwijze" aria-labelledby="h-werk" style="position:relative;z-index:1;margin-top:calc(-1 * var(--zh-r-sec));background:#fff;padding:calc(var(--sec-y) + var(--zh-r-sec)) 0">
+  <div class="gty-container">
+    <div class="zh-g-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:var(--sec-gap);align-items:start">
+      <div style="display:flex;flex-direction:column">
+        <div style="display:flex;flex-direction:column;gap:24px;max-width:640px;margin-bottom:56px">
+          <span class="zh-eyebrow">Werkwijze</span>
+          <h2 id="h-werk" class="zh-h2">Drie fasen. Niets dat je overvalt.</h2>
+          <p style="margin:0;color:var(--zh-soft);font:var(--type-lead)">Elk traject, dezelfde drie fasen. Je weet vooraf wat er komt en wie wat doet.</p>
+        </div>
+        {stappen.map((s, i) => (
+          <div class="zh-step">
+            <button type="button" class="zh-step-btn" aria-expanded={String(i === 0)}>
+              <span class="zh-num">0{i + 1}</span>
+              <span style="flex:1 1 auto;display:flex;flex-direction:column;gap:8px">
+                <span class="zh-label" style="color:var(--zh-soft)">{s.tag}</span>
+                <span class="zh-h3" style="font-size:24px">{s.title}</span>
+              </span>
+              <span class="zh-step-pm" aria-hidden="true"><Ico naam="plus" /></span>
+            </button>
+            <div class="zh-step-body" hidden={i !== 0} style="padding:0 0 32px 64px;display:flex;flex-direction:column;gap:24px">
+              <p style="margin:0;color:var(--zh-soft);font:400 16px/1.65 var(--font-body);max-width:440px">{s.text}</p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px">
+                {s.key && <span class="zh-chip" style={chip(true)}>{s.key}</span>}
+                {s.chips.map((c) => <span class="zh-chip" style={chip(false)}>{c}</span>)}
+              </div>
+              {s.link && <a href={s.link.href} class="zh-link" style="width:max-content">{s.link.label}</a>}
+            </div>
+          </div>
+        ))}
+        <a href={url.werkwijze} class="zh-btn zh-btn--line" style="margin-top:40px;width:max-content">Lees meer over onze werkwijze</a>
+      </div>
+      <div class="zh-photo zh-hide-m" style="position:sticky;top:112px;aspect-ratio:4/5;border-radius:var(--zh-r-card)">
+        <Image src={team} widths={[1200, 2400, 3200]} sizes="140vw" alt="Twee collega’s bespreken samen de stand van zaken op een tablet" style="position:absolute;top:0;left:-131%;height:170%;width:auto;max-width:none" />
+        <figure style="position:absolute;left:24px;right:24px;bottom:24px;margin:0;padding:32px;border-radius:16px;background:rgba(255,255,255,0.72);border:1px solid rgba(255,255,255,0.8);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:flex;flex-direction:column;gap:16px">
+          <blockquote style="margin:0;font:600 expanded 20px/1.35 var(--font-display)">“De week voor de audit moet een gewone week zijn.”</blockquote>
+          <figcaption style="font:400 14px/1.4 var(--font-body);color:var(--zh-soft)">Uitgangspunt van elk GTY-traject</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .zh-step-btn[aria-expanded='true'] .zh-num { background: var(--gty-magenta); border-color: var(--gty-magenta); color: #fff; }
+  .zh-step-pm { width: 40px; height: 40px; border-radius: 50%; background: var(--zh-page); display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; transition: transform .2s ease; }
+  .zh-step-btn[aria-expanded='true'] .zh-step-pm { transform: rotate(45deg); }
+</style>
+
+<script>
+  const knoppen = [...document.querySelectorAll<HTMLElement>('.zh-step-btn')];
+  knoppen.forEach((knop) =>
+    knop.addEventListener('click', () => {
+      const open = knop.getAttribute('aria-expanded') !== 'true';
+      knoppen.forEach((k) => {
+        const aan = open && k === knop;
+        k.setAttribute('aria-expanded', String(aan));
+        (k.nextElementSibling as HTMLElement).hidden = !aan;
+      });
+    }),
+  );
+</script>

@@ -1,0 +1,58 @@
+---
+// Alleen op de pagina Partnerprogramma.
+import type { ImageMetadata } from 'astro';
+import Vink from './Vink.astro';
+import { klanten } from '~/data/home';
+const bestanden = import.meta.glob<ImageMetadata>('~/assets/wauw/klant-*.png', { eager: true, import: 'default' });
+const rijen = [
+  ['Implementatie', 'Kost het team meer dan het oplevert', 'Laat de organisatie scherper achter'],
+  ['Systeem', 'Leeft alleen in mappen', 'Herkenbaar voor wie ermee werkt'],
+  ['Audit', 'Vraagt opnieuw een sprint vooraf', 'Rustig en voorbereid'],
+  ['Normwijzigingen', 'Pas gemerkt als het te laat is', 'Al in beeld bij je partner'],
+];
+const { opmaak: p = {} } = Astro.props;
+const ov = p.overlap === 'ja';
+---
+<section aria-labelledby="h-voorna" style={`position:relative;z-index:1;margin-top:${ov ? 'calc(-1 * var(--zh-r-sec))' : '0'};background:#fff;padding:${ov ? 'calc(var(--sec-y) + var(--zh-r-sec)) 0 var(--sec-y-s)' : 'var(--sec-y) 0'}`}>
+  <div class="gty-container" style="display:flex;flex-direction:column;gap:var(--sec-gap)">
+    <div class="zh-g-split" style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:var(--sec-gap);align-items:end">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <span class="zh-eyebrow">Na de audit</span>
+        <h2 id="h-voorna" class="zh-h2" style="max-width:20ch">Wat er vaak gebeurt na de audit, en wat er verandert.</h2>
+      </div>
+      <p style="margin:0;color:var(--zh-soft);font:var(--type-lead);max-width:480px">Het certificaat ophalen is één. Het systeem levend houden tot de volgende audit is iets anders.</p>
+    </div>
+    <div class="zh-g-2 zh-drop-in" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+      <div style="padding:40px;border-radius:var(--zh-r-card);background:var(--zh-page);display:flex;flex-direction:column;gap:32px">
+        <h3 class="zh-h3" style="color:var(--zh-soft)">Zonder goede begeleiding</h3>
+        <dl style="margin:0;display:flex;flex-direction:column">
+          {rijen.map(([k, a]) => (
+            <div style="display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;align-items:start;padding:20px 0;border-top:var(--zh-dash)">
+              <span aria-hidden="true" style="width:40px;height:40px;border-radius:50%;border:1px solid var(--zh-line);display:flex;align-items:center;justify-content:center;color:var(--zh-soft);font:400 18px/1 var(--font-body)">–</span>
+              <div style="display:flex;flex-direction:column;gap:4px"><dt style="font:600 14px/1.4 var(--font-body);color:var(--zh-soft)">{k}</dt><dd style="margin:0;font:var(--type-body);color:var(--zh-soft)">{a}</dd></div>
+            </div>
+          ))}
+        </dl>
+      </div>
+      <div style="padding:40px;border-radius:var(--zh-r-card);background:var(--zh-ink);color:#fff;display:flex;flex-direction:column;gap:32px">
+        <h3 class="zh-h3">Met GTY aan boord</h3>
+        <dl style="margin:0;display:flex;flex-direction:column">
+          {rijen.map(([k, , b]) => (
+            <div style="display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;align-items:start;padding:20px 0;border-top:1px dashed rgba(255,255,255,0.25)">
+              <Vink maat="40px" vink="16" dikte="2.2" />
+              <div style="display:flex;flex-direction:column;gap:4px"><dt style="font:600 14px/1.4 var(--font-body);color:rgba(255,255,255,0.65)">{k}</dt><dd style="margin:0;font:600 18px/1.5 var(--font-body)">{b}</dd></div>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <h2 class="zh-logos-kop">Eens met ons begonnen. Nog steeds samen.</h2>
+      <div class="zh-marquee" role="region" aria-label="Klantlogo’s">
+        <ul class="zh-marquee-track">
+          {[false, true].map((dup) => klanten.map(([bestand, naam, h]) => (<li class="zh-logo zh-logo-img" aria-hidden={String(dup)}><img src={bestanden[`/src/assets/wauw/klant-${bestand}.png`].src} alt={dup ? '' : naam} style={`height:${h}px;width:auto;display:block`} /></li>)))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

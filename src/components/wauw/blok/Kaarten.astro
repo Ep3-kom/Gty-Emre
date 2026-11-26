@@ -1,0 +1,66 @@
+---
+import Sectie from './Sectie.astro';
+import Kop from './Kop.astro';
+import Kaart from './Kaart.astro';
+import Knop from './Knop.astro';
+const { opmaak, inhoud: d } = Astro.props;
+const wit = (opmaak.bg || 'wit') === 'wit';
+const blader = d.per && d.items.length > d.per;
+const knop = wit ? 'zh-btn zh-btn--line' : 'zh-btn zh-btn--light';
+---
+<Sectie opmaak={opmaak}>
+  <div class="gty-container" style="display:flex;flex-direction:column;gap:var(--sec-gap)" data-kaarten={d.per || undefined}>
+    <Kop kicker={d.kicker} titel={d.h2} intro={d.intro} midden id={opmaak.kopid} />
+    <div class={`zh-g-${d.cols} zh-drop-in`} style={`display:grid;grid-template-columns:repeat(${d.cols},minmax(0,1fr));gap:16px`}>
+      {d.items.map((it: any) => <Kaart {...it} variant={d.variant} genummerd={d.genummerd} vlak={wit ? 'var(--zh-page)' : '#fff'} knopvlak={wit ? '#fff' : 'var(--zh-page)'} minh={d.cols >= 4 ? '300px' : '260px'} />)}
+    </div>
+    {blader && (
+      <nav class="zh-pag" aria-label="Paginering" data-vlak={wit ? 'var(--zh-page)' : '#fff'} style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px">
+        <button type="button" class={knop} data-stap="-1">Vorige</button><span data-nummers style="display:contents"></span><button type="button" class={knop} data-stap="1">Volgende</button>
+      </nav>
+    )}
+    {(d.cta || d.helper) && (
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:24px">
+        {d.cta && <Knop {...d.cta} />}
+        {d.helper && <p style="margin:0;font:var(--type-body);color:var(--zh-soft)">{d.helper} <a href="#vind-je-route" class="zh-link" style="color:var(--zh-ink)">Vind je route</a></p>}
+      </div>
+    )}
+  </div>
+</Sectie>
+
+<script>
+  // Filter op onderwerp en paginering van het artikeloverzicht.
+  document.querySelectorAll<HTMLElement>('[data-kaarten]').forEach((blok) => {
+    const per = Number(blok.dataset.kaarten);
+    const kaarten = [...blok.querySelectorAll<HTMLElement>('[data-onderwerp]')];
+    const nav = blok.querySelector<HTMLElement>('.zh-pag');
+    const tags = [...document.querySelectorAll<HTMLButtonElement>('[data-filter]')];
+    let filter = 'Alle';
+    let pagina = 0;
+    const teken = () => {
+      const passend = kaarten.filter((k) => filter === 'Alle' || filter.startsWith(k.dataset.onderwerp!));
+      const aantal = Math.max(1, Math.ceil(passend.length / per));
+      pagina = Math.max(0, Math.min(aantal - 1, pagina));
+      kaarten.forEach((k) => (k.hidden = true));
+      passend.slice(pagina * per, (pagina + 1) * per).forEach((k) => (k.hidden = false));
+      tags.forEach((t) => t.setAttribute('aria-pressed', String(t.dataset.filter === filter)));
+      if (!nav) return;
+      nav.hidden = aantal < 2;
+      nav.querySelector('[data-nummers]')!.innerHTML = Array.from({ length: aantal }, (_, i) =>
+        `<button type="button" data-pagina="${i}" aria-label="Pagina ${i + 1}" aria-current="${i === pagina ? 'page' : 'false'}" style="width:48px;height:48px;border:0;border-radius:50%;font:600 16px/1 var(--font-body);${i === pagina ? 'background:var(--zh-ink);color:#fff' : `color:var(--zh-ink);background:${nav.dataset.vlak}`}">${i + 1}</button>`).join('');
+      nav.querySelectorAll<HTMLButtonElement>('[data-stap]').forEach((b) => {
+        b.disabled = (b.dataset.stap === '-1' && pagina === 0) || (b.dataset.stap === '1' && pagina === aantal - 1);
+        b.style.opacity = b.disabled ? '0.4' : '';
+      });
+    };
+    tags.forEach((t) => t.addEventListener('click', () => { filter = t.dataset.filter!; pagina = 0; teken(); }));
+    nav?.addEventListener('click', (e) => {
+      const b = (e.target as Element).closest('button');
+      if (!b) return;
+      pagina = b.dataset.pagina ? Number(b.dataset.pagina) : pagina + Number(b.dataset.stap);
+      teken();
+      blok.scrollIntoView({ behavior: 'smooth' });
+    });
+    teken();
+  });
+</script>

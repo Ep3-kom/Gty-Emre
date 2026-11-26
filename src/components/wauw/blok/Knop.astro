@@ -1,0 +1,5 @@
+---
+const klassen: Record<string, string> = { primair: 'zh-btn--primary', donker: 'zh-btn--dark', lijn: 'zh-btn--line', 'lijn-licht': 'zh-btn--line-light', glas: 'zh-btn--glass', limoen: 'zh-btn--lime', licht: 'zh-btn--light' };
+const { label, href, variant = 'primair', stijl } = Astro.props;
+---
+<div style="display:flex"><a href={href} class:list={['zh-btn', klassen[variant]]} style={stijl}>{label}</a></div>

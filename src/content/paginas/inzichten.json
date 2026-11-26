@@ -1,0 +1,249 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "2",
+    "kopid": "h-top"
+   },
+   "inhoud": {
+    "klein": true,
+    "kicker": "Kennis",
+    "h1": "Inzichten over certificering en compliance.",
+    "sub": "Praktische kennis voor directie, kwaliteitsmanagers en informatiebeveiligers: wat een norm vraagt, wat een traject kost, hoe je interne audits aanpakt en wat je doet na het certificaat.",
+    "c1": null,
+    "c2": null,
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     }
+    ],
+    "cur": "Inzichten",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 0
+   }
+  },
+  {
+   "type": "Filter",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "48px",
+    "pb": "calc(48px + var(--zh-r-sec))",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "h": "Filter op onderwerp",
+    "items": [
+     "Alle",
+     "Certificering",
+     "Interne audits",
+     "Borging",
+     "Informatiebeveiliging",
+     "Kwaliteitsmanagement"
+    ]
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "var(--sec-y-s)",
+    "z": "10",
+    "hoeken": "rond",
+    "kopid": "h-inzichten-1"
+   },
+   "inhoud": {
+    "kicker": "Artikelen",
+    "h2": "Alle artikelen",
+    "intro": "",
+    "cols": 4,
+    "variant": "artikel",
+    "genummerd": false,
+    "items": [
+     {
+      "tag": "ISO 27001 · Kosten",
+      "title": "Wat kost ISO 27001?",
+      "text": "",
+      "href": "/inzichten/iso-27001-kosten/",
+      "linklabel": "Lees",
+      "code": "27001",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Informatiebeveiliging"
+     },
+     {
+      "tag": "NEN 7510 · Verplichting",
+      "title": "Is NEN 7510 verplicht?",
+      "text": "",
+      "href": "/inzichten/nen-7510-verplicht/",
+      "linklabel": "Lees",
+      "code": "7510",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Informatiebeveiliging"
+     },
+     {
+      "tag": "ISO 27001 · Checklist",
+      "title": "ISO 27001 checklist",
+      "text": "",
+      "href": "/inzichten/iso-27001-checklist/",
+      "linklabel": "Lees",
+      "code": "27001",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Informatiebeveiliging"
+     },
+     {
+      "tag": "NEN 7510 · Checklist",
+      "title": "NEN 7510 checklist",
+      "text": "",
+      "href": "/inzichten/nen-7510-checklist/",
+      "linklabel": "Lees",
+      "code": "7510",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Informatiebeveiliging"
+     },
+     {
+      "tag": "ISO 9001 · Kosten",
+      "title": "Wat kost ISO 9001?",
+      "text": "",
+      "href": "/inzichten/iso-9001-kosten/",
+      "linklabel": "Lees",
+      "code": "9001",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Kwaliteit"
+     },
+     {
+      "tag": "ISO 9001 · Checklist",
+      "title": "ISO 9001 checklist",
+      "text": "",
+      "href": "/inzichten/iso-9001-checklist/",
+      "linklabel": "Lees",
+      "code": "9001",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Kwaliteit"
+     },
+     {
+      "tag": "RI&E · Verplichting",
+      "title": "Wanneer is een RI&E verplicht?",
+      "text": "",
+      "href": "/inzichten/rie-verplicht/",
+      "linklabel": "Lees",
+      "code": "RI&E",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Arbo"
+     },
+     {
+      "tag": "Informatiebeveiliging",
+      "title": "Wat is een ISMS?",
+      "text": "",
+      "href": "/informatiebeveiliging/isms/",
+      "linklabel": "Lees",
+      "code": "ISMS",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Informatiebeveiliging"
+     },
+     {
+      "tag": "Vergelijking · Informatiebeveiliging",
+      "title": "ISO 27001 of NEN 7510?",
+      "text": "",
+      "href": "/inzichten/iso-27001-vs-nen-7510/",
+      "linklabel": "Lees",
+      "code": "27001 · 7510",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Informatiebeveiliging"
+     },
+     {
+      "tag": "Naslag · Begrippen",
+      "title": "Begrippenlijst compliance",
+      "text": "",
+      "href": "/inzichten/begrippen/",
+      "linklabel": "Lees",
+      "code": "Begrippen",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Naslag"
+     },
+     {
+      "tag": "Interne audits · 6 min",
+      "title": "Interne audit voorbereiden: de 5 stappen die het verschil maken",
+      "text": "",
+      "href": "",
+      "linklabel": "Lees",
+      "code": "Interne audits",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Interne audits"
+     },
+     {
+      "tag": "Borging · 6 min",
+      "title": "Waarom zakken managementsystemen weg na certificering?",
+      "text": "",
+      "href": "",
+      "linklabel": "Lees",
+      "code": "Borging",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Borging"
+     },
+     {
+      "tag": "Certificering · 7 min",
+      "title": "ISO 9001 certificering: wat kost het en hoe lang duurt het?",
+      "text": "",
+      "href": "",
+      "linklabel": "Lees",
+      "code": "Certificering",
+      "swatch": "transparent",
+      "donker": false,
+      "onderwerp": "Certificering"
+     }
+    ],
+    "cta": null,
+    "helper": "",
+    "per": 12,
+    "paginas": 3
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-inzichten-4",
+    "hoeken": "onder"
+   },
+   "inhoud": {
+    "h2": "Een certificaat zegt dat je voldeed.",
+    "text": "Een goede organisatie zorgt dat je blijft voldoen. Bespreek je situatie of bekijk de dienst die bij je vraag past.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking"
+    },
+    "c2": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    }
+   }
+  }
+ ]
+}

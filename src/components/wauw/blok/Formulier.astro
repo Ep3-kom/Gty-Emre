@@ -1,0 +1,110 @@
+---
+import Sectie from './Sectie.astro';
+import Kop from './Kop.astro';
+import Vink from './Vink.astro';
+import { normOpties, onderwerpOpties } from '~/data/keuzehulp';
+const { opmaak, inhoud: d } = Astro.props;
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
+const vlak = (opmaak.bg || 'wit') === 'wit' ? 'var(--zh-page)' : '#fff';
+type Veld = { label: string; soort: string; placeholder?: string; vol?: boolean; onderwerp?: boolean; opties?: string[] };
+const velden = (d.fields as Veld[]).map((f) => {
+  const l = f.label.toLowerCase();
+  const type = /e-mail/.test(l) ? 'email' : /telefoon/.test(l) ? 'tel' : 'text';
+  // 'email' is de veldnaam die Web3Forms als antwoordadres gebruikt.
+  const naam = type === 'email' ? 'email' : l.replace(/\(optioneel\)/, '').replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '');
+  const ac = type === 'email' ? 'email' : type === 'tel' ? 'tel' : /naam/.test(l) ? 'name' : /organisatie/.test(l) ? 'organization' : 'off';
+  const rol = f.onderwerp || /^onderwerp/.test(l) ? 'onderwerp' : /norm/.test(l) && f.soort === 'keuze' ? 'norm' : undefined;
+  const opties = f.opties || (rol === 'onderwerp' ? onderwerpOpties : rol === 'norm' ? normOpties : []);
+  return { ...f, naam, type, ac, rol, opties, verplicht: f.label.includes('*') };
+});
+const consent: string = d.consent || '';
+const [voor, na] = consent.split('privacyverklaring');
+const stappen: { t: string; x: string }[] = d.stappen || [];
+---
+<Sectie opmaak={opmaak}>
+  <div class="gty-container zh-g-split" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--sec-gap);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <Kop kicker={d.kicker} titel={d.h2} intro={d.intro} maxch="16" id={opmaak.kopid} />
+      {d.ok?.length > 0 && <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px">{d.ok.map((o: string) => <li style="display:flex;align-items:center;gap:12px;font:500 16px/1.4 var(--font-body)"><Vink maat="28px" vink="12" />{o}</li>)}</ul>}
+      {stappen.length > 0 && (
+        <div class="zh-hide-m" style="display:flex;flex-direction:column;gap:16px;padding-top:32px;border-top:var(--zh-dash)">
+          <span class="zh-label">{d.staptitel || 'Zo gaat het verder'}</span>
+          <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px">{stappen.map((s, i) => <li style="display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;align-items:start"><span style={`width:40px;height:40px;border-radius:50%;background:${vlak};display:inline-flex;align-items:center;justify-content:center;font:600 14px/1 var(--font-body)`}>{i + 1}</span><span style="display:flex;flex-direction:column;gap:4px;padding-top:8px"><span style="font:var(--type-body-strong)">{s.t}</span><span style="font:var(--type-body-s);color:var(--zh-soft)">{s.x}</span></span></li>)}</ol>
+        </div>
+      )}
+      {d.helper && <p style="margin:0;font:var(--type-body);color:var(--zh-soft)">{d.helper} <a href="#vind-je-route" class="zh-link" style="color:var(--zh-ink)">Vind je route</a></p>}
+    </div>
+    <form class="zh-form" data-aanvraag data-onderwerp-regel={d.h2} action="https://api.web3forms.com/submit" method="POST" style={`display:flex;flex-direction:column;gap:24px;padding:40px;border-radius:var(--zh-r-card);background:${vlak}`}>
+      <input type="hidden" name="access_key" value={accessKey} />
+      <input type="hidden" name="from_name" value="GTY website" />
+      <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" hidden />
+      <div class={d.raster ? 'zh-form-raster' : undefined} style={d.raster ? 'display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px' : 'display:flex;flex-direction:column;gap:20px'}>
+        {velden.map((f) => (
+          <div style={d.raster ? `grid-column:${f.vol ? '1 / -1' : 'auto'}` : undefined}>
+            <label style="display:flex;flex-direction:column;gap:8px">
+              <span style="font:600 14px/1.3 var(--font-body)">{f.label}</span>
+              {f.soort === 'keuze' ? (
+                <span style="position:relative;display:block">
+                  <select class="zh-veld zh-veld-keuze" name={f.naam} data-rol={f.rol} required={f.verplicht}><option value="">{f.placeholder || 'Maak een keuze'}</option>{f.opties.map((o) => <option value={o}>{o}</option>)}</select>
+                  <svg width="12" height="8" viewBox="0 0 10 6" fill="none" stroke="#0B0B0B" stroke-width="1.6" aria-hidden="true" style="position:absolute;right:20px;top:50%;margin-top:-4px;pointer-events:none"><path d="M1 1l4 4 4-4"/></svg>
+                </span>
+              ) : f.soort === 'tekstvak' ? (
+                <textarea class="zh-veld zh-veld-vak" name={f.naam} required={f.verplicht}></textarea>
+              ) : (
+                <input class="zh-veld" type={f.type} name={f.naam} autocomplete={f.ac} required={f.verplicht} />
+              )}
+              {f.rol && <span data-hint hidden style="font:var(--type-small);color:var(--zh-soft)">Vooringevuld via de knop waarmee je hier kwam. Je kunt het aanpassen.</span>}
+            </label>
+          </div>
+        ))}
+      </div>
+      <p role="alert" data-fout hidden style="margin:0;font:var(--type-small);color:var(--gty-magenta-700)">Versturen is niet gelukt. Probeer het opnieuw of mail naar info@gty.nl.</p>
+      <div style="display:flex"><button type="submit" class="zh-btn zh-btn--primary" style="width:100%;height:56px">{d.knop}</button></div>
+      {consent && <p style="margin:0;font:var(--type-small);color:var(--zh-soft)">{voor}<a href="/privacyverklaring/" style="color:var(--zh-ink)">privacyverklaring</a>{na}</p>}
+      <p role="status" data-gelukt hidden style="margin:0;font:600 18px/1.5 var(--font-body)">Bedankt, je aanvraag is verstuurd. We nemen binnen één werkdag contact met je op.</p>
+    </form>
+    {stappen.length > 0 && (
+      <div class="zh-only-m" style="flex-direction:column;gap:16px;padding-top:32px;border-top:var(--zh-dash)">
+        <span class="zh-label">{d.staptitel || 'Zo gaat het verder'}</span>
+        <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px">{stappen.map((s, i) => <li style="display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;align-items:start"><span style={`width:40px;height:40px;border-radius:50%;background:${vlak};display:inline-flex;align-items:center;justify-content:center;font:600 14px/1 var(--font-body)`}>{i + 1}</span><span style="display:flex;flex-direction:column;gap:4px;padding-top:8px"><span style="font:var(--type-body-strong)">{s.t}</span><span style="font:var(--type-body-s);color:var(--zh-soft)">{s.x}</span></span></li>)}</ol>
+      </div>
+    )}
+  </div>
+</Sectie>
+
+<script>
+  import { voorinvullen } from '~/lib/onderwerp';
+
+  document.querySelectorAll<HTMLFormElement>('[data-aanvraag]').forEach((form) => {
+    // Elke knop naar het formulier geeft ?onderwerp=… mee.
+    const voor = voorinvullen(new URLSearchParams(location.search).get('onderwerp') ?? '');
+    form.querySelectorAll<HTMLSelectElement>('select[data-rol]').forEach((s) => {
+      const waarde = voor[s.dataset.rol as 'onderwerp' | 'norm'];
+      if (!waarde) return;
+      if (![...s.options].some((o) => o.value === waarde)) s.add(new Option(waarde, waarde));
+      s.value = waarde;
+      s.closest('label')!.querySelector<HTMLElement>('[data-hint]')!.hidden = false;
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const knop = form.querySelector<HTMLButtonElement>('[type=submit]')!;
+      const fout = form.querySelector<HTMLElement>('[data-fout]')!;
+      fout.hidden = true;
+      knop.disabled = true;
+      try {
+        const antwoord = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ ...Object.fromEntries(new FormData(form)), subject: `${form.dataset.onderwerpRegel} (${location.pathname}) via gty.nl` }),
+        });
+        const json = await antwoord.json().catch(() => null);
+        if (!antwoord.ok || !json?.success) throw new Error('submit failed');
+        [...form.children].forEach((c) => ((c as HTMLElement).hidden = !c.hasAttribute('data-gelukt')));
+      } catch {
+        fout.hidden = false;
+        knop.disabled = false;
+      }
+    });
+  });
+</script>

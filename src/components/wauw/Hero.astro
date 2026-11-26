@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import team from '~/assets/wauw/team.jpg';
+import { url } from '~/data/home';
+---
+<section class="zh-hero" aria-labelledby="h-hero" style="position:relative;min-height:900px;overflow:hidden;background:#1b1b1b;color:#fff;display:flex;align-items:flex-end">
+  <Image class="zh-hero-img" src={team} widths={[800, 1600, 2400, 3200]} sizes="(max-width: 600px) 300vw, 160vw" loading="eager" fetchpriority="high" alt="Twee collega’s bespreken samen een overzicht op een tablet in een lichte kantoorruimte" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;transform:scale(1.55);transform-origin:30% 0" />
+  <div class="zh-hero-shade" aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.15) 30%,rgba(0,0,0,0.38) 55%,rgba(0,0,0,0.82) 100%)"></div>
+  <div class="gty-container zh-g-hero" style="position:relative;z-index:1;padding-bottom:var(--sec-y);display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <span class="zh-eyebrow zh-hide-m">Certificering, nulmeting en borging</span>
+      <h1 id="h-hero" class="zh-h1 zh-h1--page" style="max-width:14ch">Compliance zonder omwegen. Op naar YES.</h1>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:32px;padding-bottom:8px">
+      <p style="margin:0;font:var(--type-lead);font-weight:500;color:#fff;max-width:460px;text-wrap:pretty;text-shadow:0 1px 16px rgba(0,0,0,0.45)">Kwaliteit, veiligheid en informatiebeveiliging aantoonbaar op orde: van nulmeting en certificering tot borging.</p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a href={url.route} class="zh-btn zh-btn--primary">Vind je route</a>
+          <a href={url.kennismaking} class="zh-btn zh-btn--glass zh-hide-m">Plan een kennismaking</a>
+        </div>
+        <span class="zh-hide-m" style="font:400 14px/1.4 var(--font-body);color:rgba(255,255,255,0.75)">Twee of drie vragen · je route naar YES</span>
+      </div>
+    </div>
+  </div>
+</section>

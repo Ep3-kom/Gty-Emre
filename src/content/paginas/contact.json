@@ -1,0 +1,151 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "2",
+    "kopid": "h-top"
+   },
+   "inhoud": {
+    "klein": true,
+    "kicker": "Contact",
+    "h1": "Neem contact op.",
+    "sub": "Een eerste gesprek is vrijblijvend. Bel of mail direct, of stuur het formulier: binnen één werkdag hoor je van ons.",
+    "c1": null,
+    "c2": null,
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     }
+    ],
+    "cur": "Contact",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 3
+   }
+  },
+  {
+   "type": "Formulier",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "3",
+    "kopid": "h-contact-1"
+   },
+   "inhoud": {
+    "kicker": "Formulier",
+    "h2": "Waar kunnen we je mee helpen?",
+    "intro": "Kies een onderwerp en vertel kort waar je staat. Hoe concreter je vraag, hoe gerichter ons antwoord.",
+    "ok": [],
+    "consent": "Door dit formulier in te dienen, ga je akkoord met de privacyverklaring",
+    "helper": "",
+    "fields": [
+     {
+      "label": "Naam *",
+      "soort": "tekst",
+      "placeholder": "",
+      "vol": false
+     },
+     {
+      "label": "E-mail *",
+      "soort": "tekst",
+      "placeholder": "",
+      "vol": false
+     },
+     {
+      "label": "Organisatie *",
+      "soort": "tekst",
+      "placeholder": "",
+      "vol": false
+     },
+     {
+      "label": "Telefoon (optioneel)",
+      "soort": "tekst",
+      "placeholder": "",
+      "vol": false
+     },
+     {
+      "label": "Onderwerp *",
+      "soort": "keuze",
+      "placeholder": "Kies een onderwerp",
+      "vol": true,
+      "onderwerp": true
+     },
+     {
+      "label": "Bericht (optioneel)",
+      "soort": "tekstvak",
+      "placeholder": "",
+      "vol": true
+     }
+    ],
+    "raster": true,
+    "knop": "Verstuur aanvraag",
+    "staptitel": "Zo gaat het verder",
+    "stappen": [
+     {
+      "t": "Emre leest je bericht",
+      "x": "Je aanvraag komt direct bij Emre Ozdemir, niet bij een afdeling."
+     },
+     {
+      "t": "Reactie binnen één werkdag",
+      "x": "We bellen of mailen om je vraag scherp te krijgen."
+     },
+     {
+      "t": "Vrijblijvend eerste gesprek",
+      "x": "We geven onze inschatting en zeggen het ook als wij niet de beste keuze zijn."
+     }
+    ]
+   }
+  },
+  {
+   "type": "Split",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-contact-2"
+   },
+   "inhoud": {
+    "kicker": "Direct contact",
+    "h2": "Liever direct inplannen of bellen?",
+    "text": "Plan direct een moment in de agenda van Emre Ozdemir, of neem contact op.",
+    "quote": "",
+    "flip": false,
+    "img": "emre",
+    "bullets": [
+     {
+      "t": "+31 6 36552241",
+      "ico": "telefoon"
+     },
+     {
+      "t": "info@gty.nl",
+      "ico": "mail"
+     },
+     {
+      "t": "’s-Gravenweg 44, 2901 LA Capelle aan den IJssel",
+      "ico": "locatie"
+     },
+     {
+      "t": "Ma–vr 09:00–17:00",
+      "ico": "klok"
+     }
+    ],
+    "c1": {
+     "label": "Plan direct in de agenda",
+     "href": "/contact/"
+    },
+    "c2": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+---
+// Layout voor het nieuwe ontwerp (Wauw). Bewust zonder Tailwind/global.css.
+import '~/styles/wauw.css';
+import SeoHead, { type Props } from '~/components/layout/SeoHead.astro';
+import Header from '~/components/wauw/Header.astro';
+import Footer from '~/components/wauw/Footer.astro';
+import Keuzehulp from '~/components/wauw/Keuzehulp.astro';
+---
+
+<!doctype html>
+<html lang="nl-NL">
+  <head>
+    <SeoHead {...(Astro.props as Props)} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ponytail: Google Fonts zoals in het ontwerp; zelf hosten vóór livegang (privacy) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Google+Sans+Flex:wght@400..700&display=swap"
+    />
+  </head>
+  <body>
+    <a href="#main" class="zh-skip">Naar de inhoud</a>
+    <div class="zh zh-root zh-anim" style="position:relative;width:100%;min-width:0;min-height:100vh;display:flex;flex-direction:column">
+      <div class="zh-header"><Header /></div>
+      <main id="main"><slot /></main>
+      <div class="zh-footwrap" style="flex:1 0 auto;background:var(--zh-ink)"><Footer /></div>
+      <Keuzehulp />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  [hidden] { display: none !important; }
+  .zh-foot-logo { display: flex; line-height: 0; }
+  .zh-skip { position: absolute; left: -999px; }
+  .zh-skip:focus { left: 8px; top: 8px; z-index: 100; padding: 8px 12px; border-radius: 8px; background: #fff; }
+  .gty-kd-input:focus { outline: 2px solid var(--action-primary); outline-offset: 1px; }
+</style>

@@ -1,0 +1,14 @@
+---
+import Sectie from './Sectie.astro';
+import Knop from './Knop.astro';
+const { opmaak, inhoud: d } = Astro.props;
+const donker = opmaak.bg === 'inkt';
+---
+<Sectie opmaak={opmaak}>
+  <div class="gty-container" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px">
+    <span class="zh-eyebrow" style={donker ? 'color:rgba(255,255,255,0.6)' : undefined}>{d.eyebrow || 'Volgende stap'}</span>
+    <h2 id={opmaak.kopid || undefined} class="zh-h1 zh-h1--page" style="max-width:18ch">{d.h2}</h2>
+    {d.text && <p style={`margin:0;max-width:620px;color:${donker ? 'rgba(255,255,255,0.75)' : 'var(--zh-soft)'};font:var(--type-lead)`}>{d.text}</p>}
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:16px">{d.c1 && <Knop {...d.c1} />}{d.c2 && <Knop {...d.c2} variant={donker ? 'lijn-licht' : 'donker'} />}</div>
+  </div>
+</Sectie>

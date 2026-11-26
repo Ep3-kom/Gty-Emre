@@ -1,0 +1,279 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Interne audits · ISO 27001",
+    "h1": "Interne audit ISO 27001",
+    "sub": "Toets of je ISMS in de praktijk werkt, vóór de certificerende instelling dat doet.",
+    "c1": {
+     "label": "Plan een interne audit",
+     "href": "/contact/?onderwerp=audit-iso27001"
+    },
+    "c2": {
+     "label": "Bekijk ISO 27001 begeleiding",
+     "href": "/certificering/iso-27001/"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Interne audits",
+      "href": "/interne-audits/"
+     }
+    ],
+    "cur": "Interne audit ISO 27001",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 3
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "var(--sec-y-s)",
+    "z": "3",
+    "kopid": "h-a27001-1"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Wanneer nodig",
+    "h2": "Wanneer is een interne audit ISO 27001 nodig?",
+    "intro": "Een certificaat is drie jaar geldig. Vóór elke externe audit in die cyclus hoort een interne audit.",
+    "items": [
+     "Vóór de eerste certificeringsaudit: toets het ISMS in de praktijk voordat de certificerende instelling komt.",
+     "Jaarlijks vóór de surveillance-audit: werkt het systeem nog zoals vastgelegd?",
+     "Vóór hercertificering: een bredere audit over de hele scope.",
+     "Na wijzigingen in scope of organisatie, zoals een nieuwe locatie, een overname of een ander kernsysteem."
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Tabel",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-a27001-2",
+    "lijn": "boven"
+   },
+   "inhoud": {
+    "kicker": "Vergelijking",
+    "h2": "Interne audit of certificeringsaudit?",
+    "intro": "",
+    "helper": "",
+    "head": [
+     "",
+     "Interne audit (GTY)",
+     "Certificeringsaudit"
+    ],
+    "rows": [
+     [
+      "Uitgevoerd door",
+      "GTY-auditor, onafhankelijk van je eigen team",
+      "Geaccrediteerde certificerende instelling"
+     ],
+     [
+      "Doel",
+      "Toetsen, leren en verbeteren vóór de externe audit",
+      "Beoordelen of het certificaat wordt verleend/behouden"
+     ],
+     [
+      "Uitkomst",
+      "Rapport met bevindingen en verbeteracties",
+      "Certificaat, bevindingen, eventuele afwijkingen"
+     ],
+     [
+      "Vereist door norm",
+      "Ja, periodiek",
+      "Ja, voor certificering en surveillance"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-aanpak"
+   },
+   "inhoud": {
+    "kicker": "Aanpak",
+    "h2": "Zo verloopt een interne audit ISO 27001",
+    "intro": "Vijf stappen, van afbakening tot opvolging. Je weet vooraf wie we spreken en wat je terugkrijgt.",
+    "foot": "",
+    "cols": 5,
+    "gap": "16px",
+    "minh": "360px",
+    "pad": "24px",
+    "limoen": true,
+    "outro": {
+     "text": "Liever een vast ritme van audits en opvolging?",
+     "link": "Dat kan binnen het Partnerprogramma",
+     "href": "/partnerprogramma/"
+    },
+    "items": [
+     {
+      "n": "01",
+      "tag": "Afbakenen",
+      "title": "Scope",
+      "text": "Welke processen, locaties en normeisen.",
+      "who": "Jij en de GTY-auditor",
+      "href": "",
+      "linklabel": ""
+     },
+     {
+      "n": "02",
+      "tag": "Plannen",
+      "title": "Voorbereiding",
+      "text": "Documenten opvragen, auditplan afstemmen.",
+      "who": "GTY-auditor",
+      "href": "",
+      "linklabel": ""
+     },
+     {
+      "n": "03",
+      "tag": "Toetsen",
+      "title": "Uitvoering",
+      "text": "Interviews, steekproeven en observaties.",
+      "who": "GTY-auditor, met je team",
+      "href": "",
+      "linklabel": ""
+     },
+     {
+      "n": "04",
+      "tag": "Vastleggen",
+      "title": "Rapportage",
+      "text": "Bevindingen, sterke punten, verbeterpunten.",
+      "who": "GTY-auditor",
+      "href": "",
+      "linklabel": ""
+     },
+     {
+      "n": "05",
+      "tag": "Verbeteren",
+      "title": "Opvolging",
+      "text": "Acties prioriteren en borgen.",
+      "who": "Jouw team",
+      "href": "",
+      "linklabel": ""
+     }
+    ],
+    "cta": {
+     "label": "Plan een interne audit",
+     "href": "/contact/?onderwerp=audit-iso27001"
+    }
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-faq"
+   },
+   "inhoud": {
+    "eyebrow": "Veelgestelde vragen",
+    "h2": "Veelgestelde vragen over de interne audit ISO 27001",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "introMobiel": false,
+    "items": [
+     {
+      "q": "Is een interne audit verplicht?",
+      "a": "Ja. ISO 27001 vraagt om periodieke interne audits als onderdeel van het managementsysteem."
+     },
+     {
+      "q": "Moet ik eerst een traject bij GTY hebben gedaan?",
+      "a": "Nee, de interne audit is ook zelfstandig af te nemen."
+     },
+     {
+      "q": "Wat krijg ik na de audit?",
+      "a": "Een rapport met bevindingen, sterke punten en verbeterpunten. Daarna prioriteren we samen de acties, zodat je weet wat vóór de externe audit klaar moet zijn."
+     },
+     {
+      "q": "Kan de interne audit een vast ritme krijgen?",
+      "a": "Ja. Binnen het Partnerprogramma plannen we audits, directiebeoordeling en acties doorlopend in."
+     }
+    ]
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-cta",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "eyebrow": "Plannen",
+    "h2": "Interne audit ISO 27001 plannen",
+    "text": "Geef je scope en gewenste periode door; we stemmen het auditplan met je af. Liever een vast ritme? Dat kan binnen het Partnerprogramma.",
+    "c1": {
+     "label": "Plan een interne audit",
+     "href": "/contact/?onderwerp=audit-iso27001"
+    },
+    "c2": {
+     "label": "Bekijk ISO 27001 begeleiding",
+     "href": "/certificering/iso-27001/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-verder",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 3,
+    "items": [
+     {
+      "rel": "Gerelateerd",
+      "label": "ISO 27001",
+      "text": "Van risicoanalyse tot een gecertificeerd ISMS.",
+      "href": "/certificering/iso-27001/"
+     },
+     {
+      "rel": "Volgende stap",
+      "label": "Interne audits",
+      "text": "Ook voor NEN 7510 en ISO 9001.",
+      "href": "/interne-audits/"
+     },
+     {
+      "rel": "Volgende stap",
+      "label": "Partnerprogramma",
+      "text": "Audits, directiebeoordeling en acties in een vast ritme.",
+      "href": "/partnerprogramma/"
+     }
+    ]
+   }
+  }
+ ]
+}

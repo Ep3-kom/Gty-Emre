@@ -1,0 +1,175 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "2",
+    "kopid": "h-top"
+   },
+   "inhoud": {
+    "klein": true,
+    "kicker": "Inzichten · NEN 7510",
+    "h1": "NEN 7510 checklist",
+    "sub": "Wat moet je regelen voor NEN 7510?",
+    "c1": null,
+    "c2": null,
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Inzichten",
+      "href": "/inzichten/"
+     }
+    ],
+    "cur": "NEN 7510 checklist",
+    "auteur": "Emre Ozdemir",
+    "meta": [],
+    "feiten": [],
+    "crop": 3
+   }
+  },
+  {
+   "type": "Antwoord",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "0",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "k": "Kort antwoord",
+    "text": "Deze checklist helpt zorgorganisaties te zien welke NEN 7510-onderdelen al geregeld zijn."
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-knencheck-1"
+   },
+   "inhoud": {
+    "variant": "check",
+    "kicker": "Checklist",
+    "h2": "Controleer wat al geregeld is",
+    "intro": "Vink aan wat staat. Wat openblijft, is je startpunt.",
+    "items": [
+     "Scope en context zijn vastgelegd",
+     "Risicoanalyse op patiënt- en cliëntgegevens is uitgevoerd",
+     "Toegangsbeheer is ingericht",
+     "Logging van dossierinzage wordt periodiek beoordeeld",
+     "Verwerkersovereenkomsten zijn afgesloten en worden opgevolgd",
+     "Datalekprocedure is ingericht en geoefend",
+     "Medewerkers zijn bewust van hun rol",
+     "Continuïteit bij uitval van het EPD is geregeld",
+     "Interne audit is uitgevoerd"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Formulier",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-knencheck-2"
+   },
+   "inhoud": {
+    "kicker": "Download",
+    "h2": "Download de NEN 7510 checklist als pdf",
+    "intro": "Om af te drukken of te delen met je team.",
+    "ok": [
+     "Je ontvangt de pdf direct per mail",
+     "Geen nieuwsbrief zonder je toestemming"
+    ],
+    "consent": "",
+    "helper": "",
+    "fields": [
+     {
+      "label": "Naam",
+      "soort": "tekst",
+      "placeholder": "",
+      "vol": true
+     },
+     {
+      "label": "E-mail *",
+      "soort": "tekst",
+      "placeholder": "",
+      "vol": true
+     }
+    ],
+    "raster": false,
+    "knop": "Stuur mij de checklist"
+   }
+  },
+  {
+   "type": "Split",
+   "opmaak": {
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-knencheck-4"
+   },
+   "inhoud": {
+    "kicker": "Volgende stap",
+    "h2": "Gaps gevonden?",
+    "text": "Start met een nulmeting of bekijk de NEN 7510-route.",
+    "quote": "",
+    "flip": false,
+    "img": "",
+    "bullets": [],
+    "c1": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "c2": {
+     "label": "Bekijk NEN 7510",
+     "href": "/certificering/nen-7510/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-knencheck-5"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 2,
+    "items": [
+     {
+      "rel": "Gerelateerd",
+      "label": "NEN 7510",
+      "href": "/certificering/nen-7510/"
+     },
+     {
+      "rel": "Verder lezen",
+      "label": "ISMS uitgelegd",
+      "href": "/informatiebeveiliging/isms/"
+     }
+    ]
+   }
+  }
+ ]
+}

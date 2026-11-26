@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import team from '~/assets/wauw/team.jpg';
+import Sectie from './Sectie.astro';
+import Kop from './Kop.astro';
+const { opmaak, inhoud: d } = Astro.props;
+const stijl = (i: number) => `margin:0;${i === 0 ? 'font:var(--type-lead);color:var(--zh-ink)' : 'color:var(--zh-soft)'}`;
+---
+<Sectie opmaak={opmaak}>
+  {d.foto ? (
+    <div class="gty-container zh-g-split" style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--sec-gap);align-items:center">
+      <div style="display:flex;flex-direction:column;gap:40px">
+        <Kop kicker={d.kicker} titel={d.h2} maxch="16" id={opmaak.kopid} />
+        <div style="display:flex;flex-direction:column;gap:24px;font:var(--type-body)">{d.paras.map((t: string, i: number) => <p style={stijl(i)}>{t}</p>)}</div>
+      </div>
+      <div class="zh-photo" style="aspect-ratio:1/1;border-radius:var(--zh-r-card)"><Image src={team} widths={[1200, 2400]} sizes="120vw" alt="Twee collega’s bespreken samen de stand van zaken op een tablet" style="position:absolute;top:0;left:-102%;height:175%;width:auto;max-width:none" /></div>
+    </div>
+  ) : (
+    <div class="gty-container zh-g-head" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:var(--sec-gap);align-items:start">
+      <Kop kicker={d.kicker} titel={d.h2} maxch="14" id={opmaak.kopid} />
+      <div style="display:flex;flex-direction:column;gap:24px;font:var(--type-body)">{d.paras.map((t: string, i: number) => <p style={stijl(i)}>{t}</p>)}</div>
+    </div>
+  )}
+</Sectie>

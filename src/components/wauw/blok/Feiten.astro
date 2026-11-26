@@ -1,0 +1,10 @@
+---
+import Sectie from './Sectie.astro';
+import Kaart from './Kaart.astro';
+const { opmaak, inhoud: d } = Astro.props;
+---
+<Sectie opmaak={opmaak}>
+  <div class="gty-container">
+    <dl class="zh-g-4 zh-drop-in" style={`margin:0;display:grid;grid-template-columns:repeat(${d.items.length},minmax(0,1fr));gap:16px`}>{d.items.map((f: { k: string; v: string }) => <Kaart variant="feit" tag={f.k} title={f.v} />)}</dl>
+  </div>
+</Sectie>

@@ -1,0 +1,255 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Expertise · Kwaliteitsmanagement",
+    "h1": "Kwaliteit en processen beter beheersen",
+    "sub": "Voor groeiende organisaties waar werkwijzen uit elkaar gaan lopen. Met of zonder ISO 9001-certificaat.",
+    "c1": {
+     "label": "Laat je situatie beoordelen",
+     "href": "/contact/?onderwerp=situatie"
+    },
+    "c2": {
+     "label": "Bekijk ISO 9001",
+     "href": "/certificering/iso-9001/"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     }
+    ],
+    "cur": "Kwaliteitsmanagement",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 2
+   }
+  },
+  {
+   "type": "Antwoord",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "k": "Wat is een kwaliteitsmanagementsysteem?",
+    "text": "Een kwaliteitsmanagementsysteem is de manier waarop een organisatie haar processen, verantwoordelijkheden en verbeteringen vastlegt en stuurt, zodat klanten telkens krijgen wat is afgesproken. ISO 9001 is de internationale norm hiervoor."
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-km-1"
+   },
+   "inhoud": {
+    "kicker": "Probleemherkenning",
+    "h2": "Waar loop je tegenaan?",
+    "intro": "",
+    "cols": 4,
+    "variant": "citaat",
+    "genummerd": false,
+    "items": [
+     {
+      "tag": "Herkenbaar",
+      "title": "“Iedereen doet het op zijn eigen manier.”",
+      "text": "",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Herkenbaar",
+      "title": "“Dezelfde fouten komen steeds terug.”",
+      "text": "",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "Herkenbaar",
+      "title": "“Nieuwe mensen inwerken kost te veel tijd.”",
+      "text": "",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "Herkenbaar",
+      "title": "“Een klant vraagt om ISO 9001.”",
+      "text": "",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     }
+    ],
+    "cta": {
+     "label": "Laat je situatie beoordelen",
+     "href": "/contact/?onderwerp=situatie"
+    },
+    "helper": ""
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-km-2"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Wat moet op orde",
+    "h2": "Wat hoort bij een werkend kwaliteitssysteem?",
+    "intro": "",
+    "items": [
+     "Kwaliteitsbeleid en doelen",
+     "Vastgelegde kernprocessen",
+     "Rollen en verantwoordelijkheden",
+     "Meten en klantfeedback",
+     "Interne audit en verbeteren"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "0",
+    "overlap": "ja",
+    "z": "26"
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-km-3",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Routes",
+    "h2": "Welke route past?",
+    "intro": "",
+    "cols": 3,
+    "variant": "tegel",
+    "genummerd": false,
+    "items": [
+     {
+      "tag": "Certificeringsvraag",
+      "title": "ISO 9001",
+      "text": "Een klant of aanbesteding vraagt om het certificaat.",
+      "href": "/certificering/iso-9001/",
+      "linklabel": "ISO 9001",
+      "code": "Certificering",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Toetsing",
+      "title": "Interne audit ISO 9001",
+      "text": "Je systeem bestaat; je wilt weten of het werkt.",
+      "href": "/interne-audits/iso-9001/",
+      "linklabel": "Interne audit",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "Borging",
+      "title": "Partnerprogramma",
+      "text": "Je wilt dat het systeem blijft werken na de audit.",
+      "href": "/partnerprogramma/",
+      "linklabel": "Partnerprogramma",
+      "code": "Borging",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     }
+    ],
+    "cta": null,
+    "helper": "Nog niet zeker welke route?"
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-km-4"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over kwaliteitsmanagement",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Heb ik ISO 9001 nodig voor een kwaliteitssysteem?",
+      "a": "Nee. Een kwaliteitssysteem kan zonder certificaat. ISO 9001 wordt relevant als klanten of aanbestedingen erom vragen."
+     },
+     {
+      "q": "Wat is het verschil tussen kwaliteitsbeleid en een kwaliteitssysteem?",
+      "a": "Het beleid beschrijft wat je wilt bereiken; het systeem hoe je dat organiseert, meet en verbetert."
+     },
+     {
+      "q": "Werkt een kwaliteitssysteem ook voor een kleine organisatie?",
+      "a": "Ja, mits proportioneel ingericht: niet meer documentatie dan nodig."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "9",
+    "kopid": "h-km-5",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Laat je situatie beoordelen",
+    "text": "We adviseren of ISO 9001 nu logisch is, of eerst een andere stap.",
+    "c1": {
+     "label": "Laat je situatie beoordelen",
+     "href": "/contact/?onderwerp=situatie"
+    },
+    "c2": {
+     "label": "Bekijk ISO 9001",
+     "href": "/certificering/iso-9001/"
+    }
+   }
+  }
+ ]
+}

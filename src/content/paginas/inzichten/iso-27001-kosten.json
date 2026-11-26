@@ -1,0 +1,273 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "2",
+    "kopid": "h-top"
+   },
+   "inhoud": {
+    "klein": true,
+    "kicker": "Inzichten · ISO 27001",
+    "h1": "ISO 27001 kosten",
+    "sub": "Een eerlijk overzicht van de factoren die de kosten van ISO 27001 bepalen.",
+    "c1": null,
+    "c2": null,
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Inzichten",
+      "href": "/inzichten/"
+     }
+    ],
+    "cur": "ISO 27001 kosten",
+    "auteur": "Emre Ozdemir",
+    "meta": [],
+    "feiten": [],
+    "crop": 0
+   }
+  },
+  {
+   "type": "Antwoord",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "0",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "k": "Kort antwoord",
+    "text": "De kosten van ISO 27001 hangen vooral af van je scope, je uitgangssituatie en hoeveel je zelf doet. Daarnaast betaal je apart voor de certificerende instelling. GTY werkt niet met standaardprijzen: na een kennismaking krijg je een indicatie op maat, zonder verrassingen achteraf."
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "4",
+    "kopid": "h-k27kosten-1"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Factoren",
+    "h2": "Wat bepaalt de kosten?",
+    "intro": "Vijf factoren bepalen samen de omvang van het traject. De eerste drie liggen bij jou, de laatste twee komen er altijd bij.",
+    "items": [
+     "Scope: locaties, medewerkers en processen die onder het ISMS vallen",
+     "Uitgangssituatie: wat is al geregeld en aantoonbaar, en wat nog niet",
+     "Eigen capaciteit versus begeleiding: hoeveel je zelf oppakt en hoeveel je uitbesteedt",
+     "Kosten certificerende instelling: externe audit en certificaat, apart gefactureerd",
+     "Onderhoud na certificering: jaarlijkse surveillance-audits en het bijhouden van het systeem"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Doorverwijzing",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "5",
+    "kopid": ""
+   },
+   "inhoud": {
+    "text": "Liever direct een indicatie voor jouw situatie?",
+    "label": "Vraag een prijsindicatie",
+    "href": "/contact/?onderwerp=prijs-iso27001"
+   }
+  },
+  {
+   "type": "Tabel",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "6",
+    "kopid": "h-k27kosten-2"
+   },
+   "inhoud": {
+    "kicker": "Scenario’s",
+    "h2": "Drie herkenbare scenario’s",
+    "intro": "Eén prijs bestaat niet: twee organisaties van dezelfde omvang kunnen een heel ander traject nodig hebben. Deze drie scenario’s laten zien waar de inspanning zit.",
+    "helper": "",
+    "head": [
+     "Scenario",
+     "Situatie",
+     "Waar de inspanning zit"
+    ],
+    "rows": [
+     [
+      "Klein, weinig ingericht",
+      "Start vanaf nul",
+      "Opbouw van systeem en documentatie"
+     ],
+     [
+      "Deels ingericht",
+      "Beleid aanwezig, niet aantoonbaar",
+      "Aanvullen en aantoonbaar maken"
+     ],
+     [
+      "Meerdere locaties",
+      "Meerdere scopes of vestigingen",
+      "Scope-afbakening en afstemming"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Tabel",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "7",
+    "lijn": "boven",
+    "kopid": "h-k27kosten-3"
+   },
+   "inhoud": {
+    "kicker": "Wat zit erin",
+    "h2": "Begeleiding of certificerende instelling?",
+    "intro": "Je betaalt aan twee partijen. Zo is het verdeeld.",
+    "helper": "",
+    "head": [
+     "Onderdeel",
+     "Begeleiding · GTY",
+     "Certificerende instelling"
+    ],
+    "rows": [
+     [
+      "Inrichten systeem",
+      "✓",
+      "–"
+     ],
+     [
+      "Interne audit",
+      "✓",
+      "–"
+     ],
+     [
+      "Externe audit en certificaat",
+      "–",
+      "✓"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-k27kosten-6",
+    "lijn": "boven"
+   },
+   "inhoud": {
+    "eyebrow": "Veelgestelde vragen",
+    "h2": "Veelgestelde vragen over de kosten van ISO 27001",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "introMobiel": false,
+    "items": [
+     {
+      "q": "Zijn de kosten van de certificerende instelling inbegrepen?",
+      "a": "Nee. Die factureert de certificerende instelling apart."
+     },
+     {
+      "q": "Wat kost het onderhoud na certificering?",
+      "a": "Jaarlijkse surveillance-audits door de certificerende instelling, plus je eigen inzet of begeleiding via het Partnerprogramma."
+     },
+     {
+      "q": "Werkt GTY met een vaste prijs?",
+      "a": "Ja. Na de kennismaking krijg je één voorstel met een vaste prijs. Verandert de scope, dan bespreken we dat eerst."
+     },
+     {
+      "q": "Hoe krijg ik een indicatie?",
+      "a": "Plan een kennismakingsgesprek. Daarna ontvang je een indicatie op maat."
+     }
+    ],
+    "lijn": true
+   }
+  },
+  {
+   "type": "Split",
+   "opmaak": {
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "9",
+    "kopid": "h-k27kosten-5"
+   },
+   "inhoud": {
+    "kicker": "Volgende stap",
+    "h2": "Een indicatie voor jouw situatie?",
+    "text": "Op basis van een kennismakingsgesprek geven we een realistische indicatie op maat, met een vaste prijs.",
+    "quote": "",
+    "flip": false,
+    "img": "",
+    "bullets": [],
+    "c1": {
+     "label": "Vraag een prijsindicatie",
+     "href": "/contact/?onderwerp=prijs-iso27001"
+    },
+    "c2": {
+     "label": "Bekijk ISO 27001 begeleiding",
+     "href": "/certificering/iso-27001/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "10",
+    "kopid": "h-k27kosten-7"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 3,
+    "items": [
+     {
+      "rel": "Gerelateerd",
+      "label": "ISO 27001",
+      "text": "Wat de norm vraagt en hoe GTY je naar het certificaat begeleidt.",
+      "href": "/certificering/iso-27001/"
+     },
+     {
+      "rel": "Volgende stap",
+      "label": "Nulmeting",
+      "text": "Meet waar je staat. Een dagdeel op locatie, met een feitelijk vertrekpunt.",
+      "href": "/nulmeting/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "Werkwijze",
+      "text": "Drie fasen, voor elke norm dezelfde. Je weet vooraf wat er komt.",
+      "href": "/werkwijze/"
+     }
+    ]
+   }
+  }
+ ]
+}

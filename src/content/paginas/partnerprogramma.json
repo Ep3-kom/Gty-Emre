@@ -1,0 +1,244 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Borging · Partnerprogramma",
+    "h1": "Doorlopende borging. In een vorm die past.",
+    "sub": "Na het certificaat begint het echte werk: documentatie actueel, naleving meten, rustig de volgende audit in. Het Partnerprogramma neemt dat ritme het hele jaar voor zijn rekening, naast je mensen.",
+    "c1": {
+     "label": "Bespreek het Partnerprogramma",
+     "href": "/contact/?onderwerp=partner"
+    },
+    "c2": {
+     "label": "Bekijk interne audits",
+     "href": "/interne-audits/"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     }
+    ],
+    "cur": "Partnerprogramma",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 0
+   }
+  },
+  {
+   "type": "VoorNa",
+   "opmaak": {
+    "overlap": "ja"
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "kopid": "h-aanpak",
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "var(--sec-y)",
+    "z": "2",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "kicker": "Aanpak",
+    "h2": "Drie fasen. Van eerste gesprek tot vaste relatie.",
+    "intro": "Of je net gecertificeerd bent of vlak voor hercertificering staat: we beginnen waar jij staat.",
+    "foot": "",
+    "cols": 3,
+    "gap": "24px",
+    "minh": "340px",
+    "pad": "32px",
+    "limoen": true,
+    "outro": {
+     "text": "Liever eerst één audit, zonder vast programma?",
+     "link": "Bekijk de interne audits",
+     "href": "/interne-audits/iso-27001/"
+    },
+    "items": [
+     {
+      "n": "01",
+      "tag": "Gesprek",
+      "title": "Verkenning",
+      "text": "We kijken waar je staat: vers gecertificeerd, een paar audits verder of vlak voor hercertificering.",
+      "who": "GTY, samen met jou",
+      "href": "",
+      "linklabel": ""
+     },
+     {
+      "n": "02",
+      "tag": "Voorstel",
+      "title": "Programma op maat",
+      "text": "Niet meer dan zinvol, niet minder dan de norm vraagt. Je kiest uit de bouwstenen hieronder.",
+      "who": "GTY stelt voor, jij kiest",
+      "href": "",
+      "linklabel": ""
+     },
+     {
+      "n": "03",
+      "tag": "Doorlopend",
+      "title": "Vaste samenwerking",
+      "text": "Een doorlopende relatie; onderhoud is geen kop-erbij-werk meer.",
+      "who": "Je vaste GTY-partner",
+      "href": "",
+      "linklabel": ""
+     }
+    ]
+   }
+  },
+  {
+   "type": "Bouwstenen",
+   "opmaak": {
+    "overlap": "ja"
+   }
+  },
+  {
+   "type": "Tabel",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "1",
+    "hoeken": "geen",
+    "kopid": "h-rol"
+   },
+   "inhoud": {
+    "stijl": "lijst",
+    "kicker": "Rolverdeling",
+    "h2": "Wie doet wat?",
+    "intro": "Jij blijft eigenaar van het managementsysteem. GTY zorgt dat het ritme doorloopt.",
+    "maxch": "40",
+    "kopbreedte": "620px",
+    "maxw": "1080px",
+    "tpl": "minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr)",
+    "gap": "32px",
+    "hcls": "zh-row-head",
+    "rcls": "zh-g-rol",
+    "kopmaat": "20px",
+    "koplh": "1.2",
+    "kopls": "-0.005em",
+    "tags": [
+     "",
+     "Jij",
+     "GTY"
+    ],
+    "leeg": "Niet nodig",
+    "head": [
+     "Onderwerp",
+     "Jouw organisatie",
+     "GTY"
+    ],
+    "rows": [
+     {
+      "cells": [
+       "Eigenaarschap managementsysteem",
+       "✓",
+       "Ondersteunt"
+      ]
+     },
+     {
+      "cells": [
+       "Interne audits",
+       "Faciliteert",
+       "Voert uit"
+      ]
+     },
+     {
+      "cells": [
+       "Normupdates signaleren",
+       "–",
+       "✓"
+      ]
+     },
+     {
+      "cells": [
+       "Acties uitvoeren",
+       "✓",
+       "Bewaakt voortgang"
+      ]
+     },
+     {
+      "cells": [
+       "Directiebeoordeling",
+       "Besluit",
+       "Bereidt voor"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "Citaat",
+   "opmaak": {
+    "overlap": "ja"
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "1",
+    "kopid": "h-faq",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "eyebrow": "Veelgestelde vragen",
+    "h2": "Veelgestelde vragen over het Partnerprogramma",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "introMobiel": false,
+    "items": [
+     {
+      "q": "Moet ik bij GTY gecertificeerd zijn?",
+      "a": "Nee. Ook als je traject elders is gedaan, kun je instromen. We beginnen met een verkenning van waar je staat."
+     },
+     {
+      "q": "Hoe vaak zijn jullie betrokken?",
+      "a": "Dat stemmen we af op je norm en situatie: doorgaans vier interne audits per jaar, plus de voorbereiding op elke externe audit."
+     },
+     {
+      "q": "Voor welke normen?",
+      "a": "Onder meer ISO 27001, NEN 7510, ISO 9001, HKZ en het Certificatieschema Arbodiensten. Bij meerdere normen borgen we ze in één samenhangend systeem."
+     },
+     {
+      "q": "Wat is het verschil met een losse interne audit?",
+      "a": "Een losse interne audit is een momentopname. In het Partnerprogramma plannen we audits, directiebeoordeling en acties doorlopend in, met dezelfde partner."
+     }
+    ]
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "2",
+    "hoeken": "rond",
+    "kopid": "h-cta"
+   },
+   "inhoud": {
+    "eyebrow": "Borging",
+    "h2": "Wat vandaag klopt, klopt morgen nog steeds.",
+    "text": "Daar zorgen we samen voor. In een gesprek kijken we naar de stand van zaken en welke vorm van borging past. Je houdt er altijd iets aan over, ook als we niet samen verder gaan.",
+    "c1": {
+     "label": "Bespreek het Partnerprogramma",
+     "href": "/contact/?onderwerp=partner"
+    },
+    "c2": {
+     "label": "Bekijk interne audits",
+     "href": "/interne-audits/iso-27001/"
+    }
+   }
+  }
+ ]
+}

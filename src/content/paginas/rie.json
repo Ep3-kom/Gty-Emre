@@ -1,0 +1,312 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Arbo · RI&E",
+    "h1": "Je RI&E op orde. Compleet, getoetst, bruikbaar.",
+    "sub": "Elke werkgever is wettelijk verplicht een RI&E uit te voeren. Wij begeleiden het van inventarisatie op de werkvloer tot plan van aanpak en, waar nodig, de toetsing.",
+    "c1": {
+     "label": "Vraag een RI&E aan",
+     "href": "/contact/?onderwerp=rie"
+    },
+    "c2": {
+     "label": "Lees wanneer RI&E verplicht is",
+     "href": "/inzichten/rie-verplicht/"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     }
+    ],
+    "cur": "RI&E",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 1
+   }
+  },
+  {
+   "type": "Antwoord",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "k": "Een verplichting voor elke werkgever",
+    "text": "De RI&E komt uit artikel 5 van de Arbowet. Heb je personeel, dan leg je vast welke arbeidsrisico’s er spelen en welke maatregelen je neemt, in een inventarisatie en een plan van aanpak. Meestal is toetsing door een gecertificeerd kerndeskundige verplicht."
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-rie-1"
+   },
+   "inhoud": {
+    "kicker": "Herkenbaar",
+    "h2": "Speelt een van deze zaken bij jou?",
+    "intro": "",
+    "cols": 4,
+    "variant": "tegel",
+    "genummerd": false,
+    "items": [
+     {
+      "tag": "Trigger",
+      "title": "Geen of verouderde RI&E",
+      "text": "",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Trigger",
+      "title": "Verandering in je organisatie",
+      "text": "Nieuwe werkplekken, processen of locaties vragen om een herziening.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "Trigger",
+      "title": "Inspectie op de agenda",
+      "text": "Bij een bezoek van de Arbeidsinspectie is je RI&E vrijwel altijd onderwerp.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "Trigger",
+      "title": "Je wilt het laten toetsen",
+      "text": "Wij regelen het hele traject inclusief toetsing door een kerndeskundige.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     }
+    ],
+    "cta": null,
+    "helper": ""
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "1",
+    "overlap": "ja",
+    "z": "25"
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-rie-2",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Aanpak",
+    "h2": "Zo pakken we je RI&E aan",
+    "intro": "Ter plekke, samen met je mensen. Zij weten het beste hoe het werk loopt.",
+    "foot": "",
+    "cols": 4,
+    "items": [
+     {
+      "n": "01",
+      "tag": "",
+      "title": "Inventarisatie",
+      "text": "Werkplekken, processen en risico’s in kaart, op locatie.",
+      "href": "",
+      "linklabel": "",
+      "laatste": false
+     },
+     {
+      "n": "02",
+      "tag": "",
+      "title": "Evaluatie",
+      "text": "Risico’s wegen op ernst en kans.",
+      "href": "",
+      "linklabel": "",
+      "laatste": false
+     },
+     {
+      "n": "03",
+      "tag": "",
+      "title": "Plan van aanpak",
+      "text": "Maatregelen met eigenaar en termijn, leesbaar voor directie en werkvloer.",
+      "href": "",
+      "linklabel": "",
+      "laatste": false
+     },
+     {
+      "n": "04",
+      "tag": "",
+      "title": "Toetsing",
+      "text": "Waar de wet het eist, via een gecertificeerd kerndeskundige.",
+      "href": "",
+      "linklabel": "",
+      "laatste": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-rie-3"
+   },
+   "inhoud": {
+    "kicker": "Wat je ontvangt",
+    "h2": "Een complete RI&E. Direct inzetbaar.",
+    "intro": "",
+    "cols": 3,
+    "variant": "tegel",
+    "genummerd": true,
+    "items": [
+     {
+      "tag": "01",
+      "title": "RI&E-rapport",
+      "text": "Alle risico’s per werkplek en proces, met ernst en kans.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "02",
+      "title": "Plan van aanpak",
+      "text": "Maatregelen, eigenaren en termijnen in begrijpelijke taal.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "03",
+      "title": "Toetsingsrapport",
+      "text": "Waar vereist: de toets door een kerndeskundige.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     }
+    ],
+    "cta": null,
+    "helper": ""
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-rie-4"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over de RI&E",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Wat kost een RI&E?",
+      "a": "Dat hangt af van het aantal medewerkers en locaties, het type werk en of toetsing nodig is. Na een gesprek krijg je een vaste prijs."
+     },
+     {
+      "q": "Kunnen jullie ook BHV regelen?",
+      "a": "Ja, via de Academy: BHV incompany op je eigen locatie."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "9",
+    "kopid": "h-rie-5",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Je RI&E in goede handen brengen?",
+    "text": "In een vrijblijvend kennismakingsgesprek nemen we je situatie door, kijken we of toetsing nodig is en wat je kunt verwachten van een volledig traject. Geen verplichting, geen verkoop, gewoon helderheid.",
+    "c1": {
+     "label": "Vraag een RI&E aan",
+     "href": "/contact/?onderwerp=rie"
+    },
+    "c2": {
+     "label": "Lees wanneer RI&E verplicht is",
+     "href": "/inzichten/rie-verplicht/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-rie-6",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 3,
+    "items": [
+     {
+      "rel": "Verder lezen",
+      "label": "Wanneer is een RI&E verplicht?",
+      "href": "/inzichten/rie-verplicht/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "BHV incompany",
+      "href": "/academy/bhv/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "Certificatieschema Arbodiensten",
+      "href": "/certificering/certificatieschema-arbodiensten/"
+     }
+    ]
+   }
+  }
+ ]
+}

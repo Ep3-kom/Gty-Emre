@@ -1,0 +1,274 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Certificering",
+    "h1": "Van uitgangspunt tot certificaat, met één vaste partner.",
+    "sub": "Van nulmeting tot certificaat, en daarna blijven we betrokken. Voor ISO 27001, NEN 7510, ISO 9001, ISO 14001, HKZ en het Certificatieschema Arbodiensten.",
+    "c1": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "c2": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     }
+    ],
+    "cur": "Certificering",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 3
+   }
+  },
+  {
+   "type": "NormenBento",
+   "opmaak": {
+    "variant": "certificering",
+    "overlap": "ja"
+   }
+  },
+  {
+   "type": "Tabel",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "1",
+    "hoeken": "geen",
+    "kopid": "h-vergelijk"
+   },
+   "inhoud": {
+    "stijl": "lijst",
+    "kicker": "Vergelijking",
+    "h2": "Zes normen, naast elkaar.",
+    "intro": "Alle zes drie jaar geldig, met elk jaar een surveillance-audit.",
+    "maxch": "40",
+    "maxw": "none",
+    "tpl": "minmax(0,0.8fr) minmax(0,1.2fr) minmax(0,1.2fr) 40px",
+    "gap": "48px",
+    "hcls": "zh-g-row zh-row-head",
+    "rcls": "zh-g-row zh-vrow",
+    "kopmaat": "22px",
+    "koplh": "1.15",
+    "kopls": "-0.01em",
+    "head": [
+     "Norm",
+     "Voor wie",
+     "Sectorfocus",
+     "Link"
+    ],
+    "kleuren": [
+     "",
+     "var(--zh-ink)",
+     "var(--zh-soft)"
+    ],
+    "rows": [
+     {
+      "href": "/certificering/iso-27001/",
+      "cells": [
+       "ISO 27001",
+       "Organisaties die werken met vertrouwelijke data",
+       "IT, SaaS, financieel, beveiliging, overheid"
+      ]
+     },
+     {
+      "href": "/certificering/nen-7510/",
+      "cells": [
+       "NEN 7510",
+       "Zorgaanbieders én verwerkers van gezondheidsinformatie",
+       "Zorg, zorg-IT, EPD/ECD-software, hosting"
+      ]
+     },
+     {
+      "href": "/certificering/iso-9001/",
+      "cells": [
+       "ISO 9001",
+       "Organisaties die kwaliteit willen bewijzen én borgen",
+       "Sectoronafhankelijk"
+      ]
+     },
+     {
+      "href": "/certificering/hkz/",
+      "cells": [
+       "HKZ",
+       "Zorginstellingen en welzijnsorganisaties",
+       "Jeugdzorg, thuiszorg, gehandicaptenzorg, ggz"
+      ]
+     },
+     {
+      "href": "/certificering/iso-14001/",
+      "cells": [
+       "ISO 14001",
+       "Organisaties met meetbare milieu-impact",
+       "Productie, techniek, facilitair, bouw"
+      ]
+     },
+     {
+      "href": "/certificering/certificatieschema-arbodiensten/",
+      "cells": [
+       "Arbodiensten",
+       "Interne en externe arbodiensten",
+       "Arbodienstverlening, bedrijfsgeneeskunde"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "BeeldBand",
+   "opmaak": {
+    "overlap": "ja"
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "kopid": "h-aanpak",
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "1",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Aanpak GTY",
+    "h2": "Zo werken we naar certificering toe, en wie wat doet",
+    "intro": "Vier stappen, voor elke norm dezelfde. Je weet vooraf wat er komt.",
+    "foot": "",
+    "cols": 4,
+    "gap": "24px",
+    "minh": "360px",
+    "pad": "32px",
+    "limoen": true,
+    "outro": {
+     "text": "Jouw organisatie is en blijft eigenaar van het systeem. Na het certificaat:",
+     "link": "borging via het Partnerprogramma",
+     "href": "/partnerprogramma/"
+    },
+    "items": [
+     {
+      "n": "01",
+      "tag": "In kaart brengen",
+      "title": "Nulmeting",
+      "text": "Uitgangssituatie, scope en gaps in kaart. Je krijgt een feitelijk vertrekpunt met prioriteiten.",
+      "who": "GTY, samen met jou",
+      "href": "",
+      "linklabel": ""
+     },
+     {
+      "n": "02",
+      "tag": "Op orde brengen",
+      "title": "Inrichten",
+      "text": "Risico’s, beleid, processen en documentatie werkbaar opzetten, samen met de mensen die ermee werken.",
+      "who": "Jouw team, begeleid door GTY",
+      "href": "",
+      "linklabel": ""
+     },
+     {
+      "n": "03",
+      "tag": "Op orde brengen",
+      "title": "Interne audit",
+      "text": "Toetsen of het systeem in de praktijk werkt, vóór de externe audit.",
+      "who": "GTY",
+      "href": "",
+      "linklabel": ""
+     },
+     {
+      "n": "04",
+      "tag": "Geen eindpunt",
+      "title": "Certificeringsaudit",
+      "text": "De certificerende instelling auditeert en geeft het certificaat af. GTY begeleidt je erdoorheen.",
+      "who": "Certificerende instelling",
+      "href": "",
+      "linklabel": ""
+     }
+    ],
+    "cta": {
+     "label": "Plan een nulmeting",
+     "href": "/nulmeting/"
+    }
+   }
+  },
+  {
+   "type": "Citaat",
+   "opmaak": {
+    "overlap": "ja"
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "1",
+    "kopid": "h-faq",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "eyebrow": "Veelgestelde vragen",
+    "h2": "Veelgestelde vragen over certificering",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "introMobiel": false,
+    "items": [
+     {
+      "q": "Hoe lang is een certificaat geldig?",
+      "a": "Drie jaar. In die periode volgt elk jaar een surveillance-audit door de certificerende instelling. Na drie jaar volgt een hercertificeringsaudit."
+     },
+     {
+      "q": "Kan ik meerdere normen combineren?",
+      "a": "Ja. ISO 9001, ISO 14001 en ISO 27001 delen dezelfde hoofdstructuur (HLS); NEN 7510 sluit via ISO 27001 aan. GTY richt dan één geïntegreerd managementsysteem in, zoals ISO 9001 met ISO 27001 of HKZ met NEN 7510."
+     },
+     {
+      "q": "Wie geeft het certificaat af?",
+      "a": "Een onafhankelijke, geaccrediteerde certificerende instelling. GTY begeleidt de voorbereiding en voert desgewenst de interne audit uit, maar certificeert zelf niet."
+     },
+     {
+      "q": "Ik weet niet welke norm past. Waar begin ik?",
+      "a": "Met Vind je route: twee of drie vragen en je ziet welke norm bij je situatie past. Daarna plan je een nulmeting, of eerst een kennismakingsgesprek."
+     },
+     {
+      "q": "Wat gebeurt er na het certificaat?",
+      "a": "Via het Partnerprogramma blijft GTY betrokken: periodieke interne audits, normupdates, trainingen en een vaste contactpersoon."
+     }
+    ]
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "2",
+    "hoeken": "rond",
+    "kopid": "h-cta"
+   },
+   "inhoud": {
+    "eyebrow": "Beginnen",
+    "h2": "Goed voorbereid. Zonder toneelstuk voor de audit.",
+    "text": "We brengen in kaart waar je staat en begeleiden je tot en met certificering. Twijfel je over de norm? Begin met een gesprek.",
+    "c1": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "c2": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,233 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "2",
+    "kopid": "h-top"
+   },
+   "inhoud": {
+    "klein": true,
+    "kicker": "Inzichten · Informatiebeveiliging",
+    "h1": "ISO 27001 of NEN 7510?",
+    "sub": "Welke norm past bij je organisatie? Een vergelijking op basis van sector, klanten en scope.",
+    "c1": null,
+    "c2": null,
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Inzichten",
+      "href": "/inzichten/"
+     }
+    ],
+    "cur": "ISO 27001 of NEN 7510?",
+    "auteur": "Emre Ozdemir",
+    "meta": [],
+    "feiten": [],
+    "crop": 0
+   }
+  },
+  {
+   "type": "Antwoord",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "0",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "k": "Kort antwoord",
+    "text": "NEN 7510 is gebaseerd op ISO 27001 en voegt zorgspecifieke eisen toe. Werk je in of voor de zorg, dan is NEN 7510 doorgaans passender. Ben je ook buiten de zorg actief, dan kiezen veel organisaties voor beide in één traject."
+   }
+  },
+  {
+   "type": "Tabel",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "4",
+    "kopid": "h-vergelijk-1"
+   },
+   "inhoud": {
+    "kicker": "Vergelijking",
+    "h2": "ISO 27001 en NEN 7510 naast elkaar",
+    "intro": "",
+    "helper": "Nog steeds twijfel?",
+    "head": [
+     "",
+     "ISO 27001",
+     "NEN 7510"
+    ],
+    "rows": [
+     [
+      "Reikwijdte",
+      "Sector-onafhankelijk, internationaal",
+      "Zorg, Nederlands"
+     ],
+     [
+      "Structuur",
+      "Hoofdtekst + Annex A (93 controls)",
+      "NEN 7510-1 (systeem) + NEN 7510-2 (maatregelen)"
+     ],
+     [
+      "Typische vraag van",
+      "Enterprise-klanten, overheid, aanbestedingen",
+      "Zorgverzekeraars, ketenpartners, zorginstellingen"
+     ],
+     [
+      "Combineren",
+      "Ja, grote overlap",
+      "Ja, via ISO 27001-structuur"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Doorverwijzing",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "5",
+    "kopid": ""
+   },
+   "inhoud": {
+    "text": "Twijfel je tussen beide? We adviseren in één gesprek.",
+    "label": "Plan een kennismaking",
+    "href": "/contact/?onderwerp=kennismaking"
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "6",
+    "kopid": "h-vergelijk-2"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Keuzehulp",
+    "h2": "Welke past bij jou?",
+    "intro": "",
+    "items": [
+     "Alleen zorgklanten → NEN 7510",
+     "Zorg- én andere klanten → beide in één traject",
+     "Geen zorg → ISO 27001",
+     "Twijfel → nulmeting"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-vergelijk-5",
+    "lijn": "boven"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Moet ik als IT-leverancier aan de zorg NEN 7510 hebben?",
+      "a": "Niet altijd, maar zorgklanten vragen er steeds vaker om. Heb je ook klanten buiten de zorg, dan is ISO 27001 met NEN 7510 een logische combinatie."
+     },
+     {
+      "q": "Is NEN 7510 strenger dan ISO 27001?",
+      "a": "Niet strenger, wel specifieker: extra eisen voor gezondheidsgegevens, zoals logging van inzage."
+     },
+     {
+      "q": "Kan ik ISO 27001 en NEN 7510 in één traject behalen?",
+      "a": "Ja. NEN 7510 volgt de structuur van ISO 27001, dus één managementsysteem kan aan beide voldoen. Je richt het één keer in en vult het aan met de zorgspecifieke eisen."
+     },
+     {
+      "q": "Hoe lang zijn de certificaten geldig?",
+      "a": "Allebei drie jaar, met elk jaar een controle-audit. Na drie jaar volgt een hercertificeringsaudit."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Split",
+   "opmaak": {
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-vergelijk-4"
+   },
+   "inhoud": {
+    "kicker": "Volgende stap",
+    "h2": "Twijfel je nog?",
+    "text": "We beoordelen je situatie en adviseren welke norm, of welke combinatie, past.",
+    "quote": "",
+    "flip": false,
+    "img": "",
+    "bullets": [],
+    "c1": {
+     "label": "Laat je situatie beoordelen",
+     "href": "/contact/?onderwerp=situatie"
+    },
+    "c2": {
+     "label": "Bekijk NEN 7510",
+     "href": "/certificering/nen-7510/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "9",
+    "kopid": "h-vergelijk-6"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 3,
+    "items": [
+     {
+      "rel": "Gerelateerd",
+      "label": "ISO 27001",
+      "href": "/certificering/iso-27001/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "NEN 7510",
+      "href": "/certificering/nen-7510/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "Informatiebeveiliging in de zorg",
+      "href": "/informatiebeveiliging/zorg/"
+     }
+    ]
+   }
+  }
+ ]
+}

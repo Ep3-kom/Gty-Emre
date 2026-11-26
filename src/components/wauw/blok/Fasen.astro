@@ -1,0 +1,19 @@
+---
+import Sectie from './Sectie.astro';
+import Kop from './Kop.astro';
+import Kaart from './Kaart.astro';
+import Knop from './Knop.astro';
+const { opmaak, inhoud: d } = Astro.props;
+const vlak = (opmaak.bg || 'wit') === 'wit' ? 'var(--zh-page)' : '#fff';
+---
+<Sectie opmaak={opmaak}>
+  <div class="gty-container" style="display:flex;flex-direction:column;gap:var(--sec-gap)">
+    <Kop kicker={d.kicker} titel={d.h2} intro={d.intro} midden id={opmaak.kopid} />
+    <ol class={`zh-g-${d.cols} zh-drop-in`} style={`list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(${d.cols},minmax(0,1fr));gap:${d.gap || '16px'}`}>
+      {d.items.map((s: any) => <Kaart {...s} variant="stap" vlak={vlak} minh={d.minh || (d.cols === 3 ? '320px' : '300px')} pad={d.pad || '32px'} limoen={d.limoen} />)}
+    </ol>
+    {d.foot && <p style="margin:0;text-align:center;font:var(--type-body);color:var(--zh-ink)">{d.foot}</p>}
+    {d.outro && <p style="margin:0;text-align:center;font:var(--type-body);color:var(--zh-soft)">{d.outro.text} <a href={d.outro.href} class="zh-link" style="color:var(--zh-ink)">{d.outro.link}</a></p>}
+    {d.cta && <div style="display:flex;justify-content:center"><Knop {...d.cta} /></div>}
+  </div>
+</Sectie>

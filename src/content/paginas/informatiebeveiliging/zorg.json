@@ -1,0 +1,266 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Expertise · Zorg",
+    "h1": "Informatiebeveiliging in de zorg",
+    "sub": "Aantoonbaar veilig omgaan met gezondheidsinformatie, met NEN 7510 als basis en ISO 27001 waar dat past.",
+    "c1": {
+     "label": "Bekijk NEN 7510 route",
+     "href": "/certificering/nen-7510/"
+    },
+    "c2": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Informatiebeveiliging",
+      "href": "/informatiebeveiliging/"
+     }
+    ],
+    "cur": "Informatiebeveiliging in de zorg",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 0
+   }
+  },
+  {
+   "type": "Logos",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "var(--sec-y-s)",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "h": "Zorg- en welzijnsorganisaties die met GTY werken",
+    "logos": [
+     {
+      "naam": "Linden Tree Care",
+      "src": "linden",
+      "h": "68px"
+     },
+     {
+      "naam": "Smile Place Tandartsen",
+      "src": "smile-place",
+      "h": "44px"
+     }
+    ],
+    "woorden": [
+     "KinderKidz Opvang",
+     "JeugdSterk",
+     "Fort Jeugd",
+     "Zorgstip"
+    ]
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-zorg-1"
+   },
+   "inhoud": {
+    "kicker": "Herkenbaar",
+    "h2": "Situaties in de zorg",
+    "intro": "",
+    "cols": 3,
+    "variant": "tegel",
+    "genummerd": false,
+    "items": [
+     {
+      "tag": "Trigger",
+      "title": "Ketenpartner of verzekeraar vraagt om NEN 7510",
+      "text": "Een gemeente, verzekeraar of ketenpartner stelt het als eis.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Trigger",
+      "title": "Je bent leverancier aan zorginstellingen",
+      "text": "Je levert software, IT of diensten aan zorginstellingen.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "Trigger",
+      "title": "Je combineert kwaliteit (HKZ) met informatiebeveiliging",
+      "text": "Eén systeem voor HKZ en NEN 7510 scheelt dubbel werk.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     }
+    ],
+    "cta": {
+     "label": "Laat je situatie beoordelen",
+     "href": "/contact/?onderwerp=situatie"
+    },
+    "helper": ""
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "2",
+    "overlap": "ja",
+    "z": "25"
+   }
+  },
+  {
+   "type": "Tabel",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "var(--sec-y-s)",
+    "z": "6",
+    "kopid": "h-zorg-2",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Vergelijking",
+    "h2": "NEN 7510 of ISO 27001?",
+    "intro": "",
+    "helper": "",
+    "head": [
+     "",
+     "NEN 7510",
+     "ISO 27001"
+    ],
+    "rows": [
+     [
+      "Basis",
+      "Gebaseerd op ISO 27001 + zorgeisen",
+      "Internationale norm"
+     ],
+     [
+      "Past bij",
+      "Zorgaanbieders, zorg-ICT",
+      "Leveranciers met ook niet-zorgklanten"
+     ],
+     [
+      "Lees verder",
+      "NEN 7510",
+      "ISO 27001"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-zorg-3",
+    "lijn": "boven"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over informatiebeveiliging in de zorg",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "NEN 7510 of ISO 27001?",
+      "a": "Alleen zorgklanten: NEN 7510. Ook klanten buiten de zorg: vaak beide in één traject."
+     },
+     {
+      "q": "Kun je HKZ en NEN 7510 combineren?",
+      "a": "Ja. Directiebeoordeling, interne audits en risicobeheer kunnen in één systeem."
+     },
+     {
+      "q": "Is GTY de certificerende instelling?",
+      "a": "Nee. GTY begeleidt de voorbereiding en kan de interne audit uitvoeren. De certificeringsaudit doet een onafhankelijke, geaccrediteerde instelling."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-zorg-5",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Informatiebeveiliging in de zorg concreet maken",
+    "text": "Bekijk de NEN 7510-route of start met een nulmeting.",
+    "c1": {
+     "label": "Bekijk NEN 7510 route",
+     "href": "/certificering/nen-7510/"
+    },
+    "c2": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-zorg-4",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 3,
+    "items": [
+     {
+      "rel": "Gerelateerd",
+      "label": "NEN 7510",
+      "href": "/certificering/nen-7510/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "ISO 27001",
+      "href": "/certificering/iso-27001/"
+     },
+     {
+      "rel": "Verder lezen",
+      "label": "ISO 27001 of NEN 7510?",
+      "href": "/inzichten/iso-27001-vs-nen-7510/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "HKZ",
+      "href": "/certificering/hkz/"
+     }
+    ]
+   }
+  }
+ ]
+}

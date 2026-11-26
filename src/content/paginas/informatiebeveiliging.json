@@ -1,0 +1,261 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Expertise · Informatiebeveiliging",
+    "h1": "Informatiebeveiliging aantoonbaar op orde",
+    "sub": "Je hoeft niet te weten welke norm je nodig hebt. Wij vertalen je situatie naar een aanpak die werkt: ISMS, ISO 27001 of NEN 7510.",
+    "c1": {
+     "label": "Laat je situatie beoordelen",
+     "href": "/contact/?onderwerp=situatie"
+    },
+    "c2": {
+     "label": "Bekijk ISO 27001 / NEN 7510",
+     "href": "/certificering/"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     }
+    ],
+    "cur": "Informatiebeveiliging",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 1
+   }
+  },
+  {
+   "type": "Antwoord",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "k": "Wat is informatiebeveiliging?",
+    "text": "Informatiebeveiliging is het geheel van organisatorische en technische maatregelen om de beschikbaarheid, integriteit en vertrouwelijkheid van informatie te borgen. Aantoonbaar wordt het met een managementsysteem (ISMS), bijvoorbeeld volgens ISO 27001 of, in de zorg, NEN 7510."
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-ib-1"
+   },
+   "inhoud": {
+    "kicker": "Probleemherkenning",
+    "h2": "Waar loop je tegenaan?",
+    "intro": "",
+    "cols": 4,
+    "variant": "citaat",
+    "genummerd": false,
+    "items": [
+     {
+      "tag": "Herkenbaar",
+      "title": "“Een klant stuurt een securityvragenlijst en we weten niet goed wat we moeten invullen.”",
+      "text": "",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Herkenbaar",
+      "title": "“Informatiebeveiliging hangt af van één IT’er.”",
+      "text": "",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "Herkenbaar",
+      "title": "“We moeten aantonen dat we veilig met patiëntgegevens werken.”",
+      "text": "",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "Herkenbaar",
+      "title": "“We hebben beleid, maar niemand weet of het werkt.”",
+      "text": "",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     }
+    ],
+    "cta": {
+     "label": "Laat je situatie beoordelen",
+     "href": "/contact/?onderwerp=situatie"
+    },
+    "helper": ""
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-ib-2"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Wat moet op orde",
+    "h2": "Wat hoort bij aantoonbare informatiebeveiliging?",
+    "intro": "Wij richten het managementsysteem in. Technische diensten zoals pentesten, SOC/MDR en firewallbeheer vallen buiten onze scope.",
+    "items": [
+     "Inzicht in je informatie en risico’s",
+     "Beleid, rollen en verantwoordelijkheden",
+     "Passende maatregelen (organisatorisch en technisch)",
+     "Bewustzijn bij medewerkers",
+     "Periodiek toetsen en verbeteren"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "2",
+    "overlap": "ja",
+    "z": "26"
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-ib-3",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Mogelijke routes",
+    "h2": "Welke route past bij je situatie?",
+    "intro": "",
+    "cols": 4,
+    "variant": "tegel",
+    "genummerd": false,
+    "items": [
+     {
+      "tag": "Zorg",
+      "title": "Informatiebeveiliging in de zorg",
+      "text": "Je werkt met patiënt- of cliëntgegevens.",
+      "href": "/informatiebeveiliging/zorg/",
+      "linklabel": "NEN 7510 / ISO 27001",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Andere organisaties",
+      "title": "ISO 27001",
+      "text": "Een klant of opdrachtgever vraagt om aantoonbare beveiliging.",
+      "href": "/certificering/iso-27001/",
+      "linklabel": "ISO 27001",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "Vroege oriëntatie",
+      "title": "Wat is een ISMS?",
+      "text": "Je wilt eerst begrijpen hoe het werkt.",
+      "href": "/informatiebeveiliging/isms/",
+      "linklabel": "ISMS",
+      "code": "ISMS",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "Weet het niet",
+      "title": "Nulmeting",
+      "text": "Je weet nog niet waar je staat.",
+      "href": "#vind-je-route",
+      "linklabel": "Vind je route",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     }
+    ],
+    "cta": null,
+    "helper": "Nog niet zeker welke route?"
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-ib-4"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over informatiebeveiliging",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Wat is het verschil tussen informatiebeveiliging en cybersecurity?",
+      "a": "Cybersecurity richt zich op digitale dreigingen en techniek. Informatiebeveiliging is breder: ook processen, mensen, leveranciers en papieren informatie. GTY richt zich op het managementsysteem, niet op technische cyberdiensten."
+     },
+     {
+      "q": "Welke norm past bij mijn organisatie?",
+      "a": "Werk je in of voor de zorg, dan NEN 7510, eventueel met ISO 27001. Andere organisaties kiezen ISO 27001. Twijfel je, begin dan met een nulmeting."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "9",
+    "kopid": "h-ib-5",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Laat je huidige situatie beoordelen",
+    "text": "We kijken mee en adviseren welke route logisch is.",
+    "c1": {
+     "label": "Laat je situatie beoordelen",
+     "href": "/contact/?onderwerp=situatie"
+    },
+    "c2": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+import team from '~/assets/wauw/team.jpg';
+import emre from '~/assets/wauw/emre-avatar.jpg';
+import Sectie from './Sectie.astro';
+import Knop from './Knop.astro';
+const { opmaak, inhoud: d } = Astro.props;
+const [schaal, punt] = [['1.8', '0 0'], ['1.6', '55% 0'], ['1.7', '35% 0'], ['1.5', '10% 0']][d.crop || 0];
+const paden: { label: string; href: string }[] = d.crumbs || [];
+const donker = !d.klein;
+const feiten: { k: string; v: string }[] = d.feiten || [];
+---
+{donker ? (
+  <section class="zh-hero" aria-labelledby="h-top" style="position:relative;z-index:1;min-height:640px;overflow:hidden;background:#1b1b1b;color:#fff;display:flex;align-items:flex-end">
+    <Image src={team} widths={[800, 1600, 2400, 3200]} sizes="(max-width: 600px) 300vw, 180vw" loading="eager" fetchpriority="high" alt="Collega’s in overleg in een licht kantoor, in beweging vastgelegd" style={`position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;transform:scale(${schaal});transform-origin:${punt}`} />
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.48) 35%,rgba(0,0,0,0.62) 60%,rgba(0,0,0,0.88) 100%)"></div>
+    <nav aria-label="Kruimelpad" class="gty-container zh-crumbs" style="color:rgba(255,255,255,0.75)">{paden.map((c) => (<><a href={c.href}>{c.label}</a><span aria-hidden="true">/</span></>))}<span aria-current="page" style="color:#fff">{d.cur}</span></nav>
+    <div class="gty-container" style="position:relative;z-index:1;padding-top:160px;padding-bottom:calc(var(--sec-y-s) + var(--zh-r-sec));display:flex;flex-direction:column;gap:48px">
+      <div class="zh-g-hero" style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px;align-items:end">
+        <div style="display:flex;flex-direction:column;gap:32px">
+          <span class="zh-eyebrow">{d.kicker}</span>
+          <h1 id="h-top" class="zh-h1 zh-h1--page" style="max-width:18ch">{d.h1}</h1>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:32px;padding-bottom:8px">
+          <p style="margin:0;font:var(--type-lead);font-weight:500;color:#fff;max-width:460px;text-wrap:pretty;text-shadow:0 1px 16px rgba(0,0,0,0.45)">{d.sub}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px">{d.c1 && <Knop {...d.c1} />}{d.c2 && <Knop {...d.c2} variant="glas" />}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+) : (
+  <Sectie opmaak={opmaak}>
+    <nav aria-label="Kruimelpad" class="gty-container zh-crumbs" style="color:var(--zh-soft)">{paden.map((c) => (<><a href={c.href}>{c.label}</a><span aria-hidden="true">/</span></>))}<span aria-current="page" style="color:var(--zh-ink)">{d.cur}</span></nav>
+    <div class="gty-container" style="padding-top:176px">
+      <header class="zh-g-split" style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:48px;align-items:end">
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <span class="zh-eyebrow">{d.kicker}</span>
+          <h1 id="h-top" class="zh-h1 zh-h1--page" style="max-width:20ch">{d.h1}</h1>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:24px">
+          {d.sub && <p style="margin:0;font:var(--type-lead);color:var(--zh-soft)">{d.sub}</p>}
+          {d.auteur && (
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;font:400 14px/1.4 var(--font-body);color:var(--zh-soft)">
+              <span style="display:inline-flex;align-items:center;gap:12px"><Image src={emre} alt="Emre Ozdemir" width={72} height={72} style="width:36px;height:36px;border-radius:8px;object-fit:cover;object-position:50% 20%;flex:0 0 auto;display:block" /><span><strong style="font-weight:600;color:var(--zh-ink)">{d.auteur}</strong> · oprichter GTY</span></span>
+              {(d.meta || []).map((m: string) => <span>{m}</span>)}
+            </div>
+          )}
+        </div>
+      </header>
+    </div>
+  </Sectie>
+)}
+{donker && feiten.length > 0 && (
+  <section aria-label="Kernfeiten" style="position:relative;z-index:2;margin-top:calc(-1 * var(--zh-r-sec));border-radius:var(--zh-r-sec) var(--zh-r-sec) 0 0;background:#fff;padding:56px 0 var(--zh-r-sec)">
+    <div class="gty-container"><dl class="zh-g-3 zh-feiten zh-drop-in" style={`margin:0;display:grid;grid-template-columns:repeat(${feiten.length},minmax(0,1fr));gap:16px`}>{feiten.map((f) => (<div style="display:flex;flex-direction:column;gap:10px;padding:24px 28px;border-radius:var(--zh-r-card);background:var(--zh-page)"><dt class="zh-label" style="color:var(--zh-soft)">{f.k}</dt><dd style="margin:0;font:600 18px/1.4 var(--font-body);color:var(--zh-ink)">{f.v}</dd></div>))}</dl></div>
+  </section>
+)}

@@ -1,0 +1,348 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Certificering · HKZ",
+    "h1": "HKZ, kwaliteit in zorg en welzijn.",
+    "sub": "De sectorspecifieke kwaliteitsnorm voor zorg en welzijn. Van nulmeting tot certificaat, en de borging daarna.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-hkz"
+    },
+    "c2": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Certificering",
+      "href": "/certificering/"
+     }
+    ],
+    "cur": "HKZ",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 3
+   }
+  },
+  {
+   "type": "Tekst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "var(--sec-y-s)",
+    "z": "3",
+    "kopid": "h-hkz-1"
+   },
+   "inhoud": {
+    "kicker": "Wat is HKZ",
+    "h2": "Wat is HKZ, en voor wie?",
+    "paras": [
+     "HKZ (Harmonisatie Kwaliteitsbeoordeling in de Zorgsector) is een familie van kwaliteitsschema’s voor zorg en welzijn, van jeugdzorg en thuiszorg tot ggz en kinderopvang.",
+     "Anders dan ISO 9001 verankert HKZ het cliëntperspectief: cliëntervaringen, klachten en medezeggenschap zitten in de eisen. Inkopers, verzekeraars en gemeenten vragen er vaak om.",
+     "Voor wie: zorg- en welzijnsorganisaties. GTY heeft ervaring in de jeugdzorg; per segment stemmen we de aanpak af op het geldende schema."
+    ],
+    "foto": false
+   }
+  },
+  {
+   "type": "Logos",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "calc(48px + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": ""
+   },
+   "inhoud": {
+    "h": "Zorg- en welzijnsorganisaties die met GTY werken",
+    "logos": [
+     {
+      "naam": "Linden Tree Care",
+      "src": "linden",
+      "h": "68px"
+     },
+     {
+      "naam": "Smile Place Tandartsen",
+      "src": "smile-place",
+      "h": "44px"
+     }
+    ],
+    "woorden": [
+     "KinderKidz Opvang",
+     "JeugdSterk",
+     "Fort Jeugd",
+     "Zorgstip"
+    ]
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-hkz-3"
+   },
+   "inhoud": {
+    "kicker": "Valkuilen",
+    "h2": "Waar trajecten stuklopen, en hoe GTY dat voorkomt.",
+    "intro": "",
+    "cols": 3,
+    "variant": "tegel",
+    "genummerd": true,
+    "items": [
+     {
+      "tag": "01",
+      "title": "Cliëntervaringen meten zonder ze te gebruiken",
+      "text": "Feedback verzamelen is niet genoeg. Wij richten in dat het aantoonbaar tot verbetering leidt.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "02",
+      "title": "Klachtafhandeling die te procedureel is",
+      "text": "Een klachtenregeling volgens de Wkkgz is een begin. Klachten moeten tot leren leiden.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "03",
+      "title": "Medezeggenschap als formaliteit",
+      "text": "De cliëntenraad staat op papier, de betrokkenheid niet. Wij helpen die aan te tonen.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "04",
+      "title": "Methodieken op papier, niet in de praktijk",
+      "text": "Wij beschrijven de methodiek zoals die echt werkt, niet andersom.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "05",
+      "title": "Incidenten melden zonder analyse",
+      "text": "Wij laten incidentanalyses terugvloeien in de jaarlijkse evaluatie.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "06",
+      "title": "Kwaliteit als eilandje van de kwaliteitsfunctionaris",
+      "text": "Wij verankeren kwaliteit in de teams; de kwaliteitsfunctionaris bewaakt.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     }
+    ],
+    "cta": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-hkz"
+    },
+    "helper": ""
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-hkz-2"
+   },
+   "inhoud": {
+    "kicker": "Aanpak GTY",
+    "h2": "Zo werken we naar HKZ toe",
+    "intro": "",
+    "foot": "↻ Daarna: Partnerprogramma · interne audits",
+    "cols": 4,
+    "items": [
+     {
+      "n": "01",
+      "tag": "In kaart brengen",
+      "title": "Nulmeting",
+      "text": "Waar sta je en wat is nodig?",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY, samen met jou"
+     },
+     {
+      "n": "02",
+      "tag": "Op orde brengen",
+      "title": "Inrichten",
+      "text": "Risico’s, beleid en processen werkbaar inrichten.",
+      "href": "",
+      "linklabel": "",
+      "who": "Jouw team, begeleid door GTY"
+     },
+     {
+      "n": "03",
+      "tag": "Op orde brengen",
+      "title": "Interne audit",
+      "text": "Toetsen of het werkt, vóór de externe audit.",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY"
+     },
+     {
+      "n": "04",
+      "tag": "Certificaat ≠ eindpunt",
+      "title": "Certificeringsaudit",
+      "text": "De certificerende instelling auditeert; GTY begeleidt.",
+      "href": "",
+      "linklabel": "",
+      "who": "Certificerende instelling"
+     }
+    ],
+    "gap": "24px",
+    "minh": "360px",
+    "pad": "32px",
+    "limoen": true,
+    "cta": {
+     "label": "Plan een nulmeting",
+     "href": "/nulmeting/?onderwerp=nulmeting-hkz"
+    }
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "2",
+    "overlap": "ja",
+    "z": "27"
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "kopid": "h-kosten",
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "9",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "variant": "donker",
+    "kicker": "Kostenfactoren",
+    "h2": "Waar hangen de kosten van af?",
+    "intro": "",
+    "items": [
+     "Omvang en scope (locaties, medewerkers, processen)",
+     "Huidige volwassenheid: wat is al geregeld?",
+     "Hoeveel doe je zelf, hoeveel besteed je uit",
+     "Kosten certificerende instelling (apart van begeleiding)"
+    ],
+    "links": [
+     {
+      "label": "NEN 7510",
+      "href": "/certificering/nen-7510/"
+     },
+     {
+      "label": "ISO 9001",
+      "href": "/certificering/iso-9001/"
+     },
+     {
+      "label": "Informatiebeveiliging in de zorg",
+      "href": "/informatiebeveiliging/zorg/"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "10",
+    "kopid": "h-hkz-4"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over HKZ",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Welk HKZ-schema is op onze organisatie van toepassing?",
+      "a": "Dat hangt af van het type zorg dat je levert. Tijdens de nulmeting bepalen we samen welk schema, of welke combinatie, aansluit."
+     },
+     {
+      "q": "Verschil tussen HKZ en ISO 9001 voor de zorg?",
+      "a": "HKZ bevat eisen rond cliëntgerichtheid, klachten, medezeggenschap en zorginhoud die in ISO 9001 niet expliciet staan. Voor de meeste zorgorganisaties is HKZ daarmee passender."
+     },
+     {
+      "q": "Moeten we voor HKZ ook NEN 7510 hebben?",
+      "a": "Niet automatisch, het zijn aparte certificeringen. Zorgverzekeraars en gemeenten vragen NEN 7510 wel steeds vaker als aanvullende eis. We adviseren of een gecombineerd traject zinvol is."
+     },
+     {
+      "q": "Wat als de IGJ tegelijkertijd toezicht houdt?",
+      "a": "Een HKZ-systeem dat in de praktijk werkt, helpt ook bij IGJ-toezicht: de kaders overlappen sterk op veiligheid, deskundigheid en cliëntgerichtheid."
+     },
+     {
+      "q": "Is GTY de certificerende instelling?",
+      "a": "Nee. GTY begeleidt de voorbereiding en kan de interne audit uitvoeren. De certificeringsaudit doet een onafhankelijke, geaccrediteerde instelling."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "11",
+    "kopid": "h-hkz-5",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Klaar om met HKZ aan de slag te gaan?",
+    "text": "Plan een vrijblijvend gesprek over je uitgangspositie. Na de certificering blijven we betrokken via het Partnerprogramma.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-hkz"
+    },
+    "c2": {
+     "label": "Bekijk Partnerprogramma",
+     "href": "/partnerprogramma/"
+    }
+   }
+  }
+ ]
+}

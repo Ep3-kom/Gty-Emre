@@ -1,0 +1,275 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Borging · Interne audits",
+    "h1": "Doet je organisatie ook werkelijk wat er beschreven staat?",
+    "sub": "Onafhankelijke interne audits die laten zien hoe je processen er in de praktijk voor staan. Als opmaat naar de externe audit of als eerlijke peiling.",
+    "c1": {
+     "label": "Plan een interne audit",
+     "href": "/contact/?onderwerp=audit"
+    },
+    "c2": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     }
+    ],
+    "cur": "Interne audits",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 1
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-audits-1",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "kicker": "Kies je norm",
+    "h2": "Voor welke norm?",
+    "intro": "",
+    "cols": 3,
+    "variant": "tegel",
+    "genummerd": false,
+    "items": [
+     {
+      "tag": "Audit",
+      "title": "Interne audit ISO 27001",
+      "text": "Toets je ISMS vóór de certificerende instelling dat doet.",
+      "href": "/interne-audits/iso-27001/",
+      "linklabel": "ISO 27001-audit",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Audit",
+      "title": "Interne audit NEN 7510",
+      "text": "Aantonen dat NEN 7510 in de zorgpraktijk werkt.",
+      "href": "/interne-audits/nen-7510/",
+      "linklabel": "NEN 7510-audit",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "Audit",
+      "title": "Interne audit ISO 9001",
+      "text": "Toets of je kwaliteitssysteem doet wat het belooft.",
+      "href": "/interne-audits/iso-9001/",
+      "linklabel": "ISO 9001-audit",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     }
+    ],
+    "cta": null,
+    "helper": ""
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-audits-2",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Wanneer",
+    "h2": "Vier situaties waarin een audit echt iets oplevert.",
+    "intro": "",
+    "cols": 4,
+    "variant": "tegel",
+    "genummerd": true,
+    "items": [
+     {
+      "tag": "01",
+      "title": "De externe audit komt eraan",
+      "text": "Een audit vooraf vindt wat de externe auditor anders vindt, met tijd om het op te lossen.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "02",
+      "title": "Onzekerheid over de praktijk",
+      "text": "Door groei of nieuw personeel lopen beschrijving en praktijk ongemerkt uit elkaar.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "03",
+      "title": "Inspectie of toezichtbezoek",
+      "text": "IGJ, Arbeidsinspectie of AP komt langs. Een audit laat zien waar je staat.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "04",
+      "title": "Je wilt je processen scherper krijgen",
+      "text": "Ook zonder aanleiding: waar lopen afspraken en praktijk uit elkaar?",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     }
+    ],
+    "cta": null,
+    "helper": ""
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "0",
+    "overlap": "ja",
+    "z": "25"
+   }
+  },
+  {
+   "type": "Tekst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "var(--sec-y-s)",
+    "z": "6",
+    "kopid": "h-audits-3",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Werkwijze",
+    "h2": "Meer dan afvinken tegen de norm.",
+    "paras": [
+     "Een externe auditor toetst of je voldoet. Wij kijken ook waarom de praktijk afwijkt en wat er beter kan, in gesprek met de mensen op de vloer.",
+     "Je krijgt een helder rapport met bevindingen en acties. We nemen het met je team door en helpen bij de opvolging. In het Partnerprogramma plannen we audits als vast ritme."
+    ],
+    "foto": false
+   }
+  },
+  {
+   "type": "Tabel",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "7",
+    "kopid": "h-audits-4",
+    "lijn": "boven"
+   },
+   "inhoud": {
+    "kicker": "Vergelijking",
+    "h2": "Interne audit of certificeringsaudit?",
+    "intro": "",
+    "helper": "",
+    "head": [
+     "",
+     "Interne audit (GTY)",
+     "Certificeringsaudit"
+    ],
+    "rows": [
+     [
+      "Door",
+      "GTY, onafhankelijk van je team",
+      "Geaccrediteerde certificerende instelling"
+     ],
+     [
+      "Doel",
+      "Toetsen, leren en verbeteren",
+      "Certificaat verlenen of behouden"
+     ],
+     [
+      "Uitkomst",
+      "Rapport met bevindingen en acties",
+      "Certificaat en eventuele afwijkingen"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-audits-5",
+    "lijn": "boven"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over interne audits",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Hoe vaak moet een interne audit?",
+      "a": "ISO-normen vragen om een geplande auditcyclus; in de praktijk minimaal jaarlijks over het hele systeem. Binnen het Partnerprogramma doorgaans vier keer per jaar op wisselende onderdelen."
+     },
+     {
+      "q": "Mag een interne audit door een externe partij?",
+      "a": "Ja. De norm vraagt onafhankelijkheid en objectiviteit, geen eigen medewerker. Een externe auditor is vaak onafhankelijker."
+     },
+     {
+      "q": "Wat is het verschil met een certificeringsaudit?",
+      "a": "De interne audit toetst en verbetert; de certificeringsaudit door de CI beslist over het certificaat."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "9",
+    "kopid": "h-audits-6",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Wil je een eerlijke spiegel?",
+    "text": "In een vrijblijvend kennismakingsgesprek bekijken we welke norm of welk proces je wilt laten doorlichten en wat een interne audit je oplevert. Geen verplichting, gewoon een gesprek.",
+    "c1": {
+     "label": "Plan een interne audit",
+     "href": "/contact/?onderwerp=audit"
+    },
+    "c2": {
+     "label": "Bekijk Partnerprogramma",
+     "href": "/partnerprogramma/"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+---
+import Wauw from '~/layouts/Wauw.astro';
+import Blok from '~/components/wauw/blok/Blok.astro';
+import { siteData } from '~/data/site-data';
+
+export function getStaticPaths() {
+  const bestanden = import.meta.glob<{ blokken: any[] }>('../content/paginas/**/*.json', { eager: true, import: 'default' });
+  return Object.entries(bestanden).map(([bestand, pagina]) => ({
+    params: { pad: bestand.replace('../content/paginas/', '').replace('.json', '') },
+    props: { blokken: pagina.blokken },
+  }));
+}
+
+const { blokken } = Astro.props;
+const hero = blokken[0].inhoud;
+const kruimels = [...hero.crumbs, { label: hero.cur, href: Astro.url.pathname }];
+const jsonLd = [{
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: kruimels.map((k, i) => ({ '@type': 'ListItem', position: i + 1, name: k.label, item: new URL(k.href, siteData.url).href })),
+}];
+---
+<Wauw title={hero.cur} description={hero.sub || hero.h1} jsonLd={jsonLd}>
+  {blokken.map((blok) => <Blok {...blok} />)}
+</Wauw>

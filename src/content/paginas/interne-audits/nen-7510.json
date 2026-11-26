@@ -1,0 +1,266 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Interne audits · NEN 7510",
+    "h1": "Interne audit NEN 7510",
+    "sub": "Aantonen dat NEN 7510 in de dagelijkse zorgpraktijk werkt.",
+    "c1": {
+     "label": "Plan een interne audit",
+     "href": "/contact/?onderwerp=audit-nen7510"
+    },
+    "c2": {
+     "label": "Bekijk NEN 7510 begeleiding",
+     "href": "/certificering/nen-7510/"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Interne audits",
+      "href": "/interne-audits/"
+     }
+    ],
+    "cur": "Interne audit NEN 7510",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 2
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "var(--sec-y-s)",
+    "z": "3",
+    "kopid": "h-a7510-1"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Wanneer nodig",
+    "h2": "Wanneer is een interne audit NEN 7510 nodig?",
+    "intro": "",
+    "items": [
+     "Vóór de NEN 7510-certificeringsaudit",
+     "Periodiek als onderdeel van de norm",
+     "Na incidenten of wijzigingen in zorgprocessen",
+     "Op verzoek van ketenpartner"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Tabel",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-a7510-2",
+    "lijn": "boven"
+   },
+   "inhoud": {
+    "kicker": "Vergelijking",
+    "h2": "Interne audit of certificeringsaudit?",
+    "intro": "",
+    "helper": "",
+    "head": [
+     "",
+     "Interne audit (GTY)",
+     "Certificeringsaudit"
+    ],
+    "rows": [
+     [
+      "Uitgevoerd door",
+      "GTY-auditor, onafhankelijk van je eigen team",
+      "Geaccrediteerde certificerende instelling"
+     ],
+     [
+      "Doel",
+      "Toetsen, leren en verbeteren vóór de externe audit",
+      "Beoordelen of het certificaat wordt verleend/behouden"
+     ],
+     [
+      "Uitkomst",
+      "Rapport met bevindingen en verbeteracties",
+      "Certificaat, bevindingen, eventuele afwijkingen"
+     ],
+     [
+      "Vereist door norm",
+      "Ja, periodiek",
+      "Ja, voor certificering en surveillance"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-a7510-3"
+   },
+   "inhoud": {
+    "kicker": "Aanpak",
+    "h2": "Zo verloopt een interne audit NEN 7510",
+    "intro": "",
+    "foot": "",
+    "cols": 5,
+    "items": [
+     {
+      "n": "01",
+      "tag": "Afbakenen",
+      "title": "Scope",
+      "text": "Welke processen, locaties en normeisen.",
+      "href": "",
+      "linklabel": "",
+      "who": "Jij en de GTY-auditor"
+     },
+     {
+      "n": "02",
+      "tag": "Plannen",
+      "title": "Voorbereiding",
+      "text": "Documenten opvragen, auditplan afstemmen.",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY-auditor"
+     },
+     {
+      "n": "03",
+      "tag": "Toetsen",
+      "title": "Uitvoering",
+      "text": "Interviews, steekproeven en observaties.",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY-auditor, met je team"
+     },
+     {
+      "n": "04",
+      "tag": "Vastleggen",
+      "title": "Rapportage",
+      "text": "Bevindingen, sterke punten, verbeterpunten.",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY-auditor"
+     },
+     {
+      "n": "05",
+      "tag": "Verbeteren",
+      "title": "Opvolging",
+      "text": "Acties prioriteren en borgen.",
+      "href": "",
+      "linklabel": "",
+      "who": "Jouw team"
+     }
+    ],
+    "gap": "16px",
+    "minh": "360px",
+    "pad": "24px",
+    "limoen": true,
+    "cta": {
+     "label": "Plan een interne audit",
+     "href": "/contact/?onderwerp=audit-nen7510"
+    }
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-a7510-4"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over de interne audit NEN 7510",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Moet ik eerst een traject bij GTY hebben gedaan?",
+      "a": "Nee, de interne audit is ook zelfstandig af te nemen."
+     },
+     {
+      "q": "Is een interne audit verplicht?",
+      "a": "Ja, NEN 7510 vraagt om periodieke interne audits als onderdeel van het managementsysteem."
+     },
+     {
+      "q": "Kan de interne audit een vast ritme krijgen?",
+      "a": "Ja. Binnen het Partnerprogramma plannen we audits, directiebeoordeling en acties doorlopend in."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-a7510-5",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Interne audit NEN 7510 plannen",
+    "text": "Geef je scope en gewenste periode door; we stemmen het auditplan met je af. Liever een vast ritme? Dat kan binnen het Partnerprogramma.",
+    "c1": {
+     "label": "Plan een interne audit",
+     "href": "/contact/?onderwerp=audit-nen7510"
+    },
+    "c2": {
+     "label": "Bekijk NEN 7510 begeleiding",
+     "href": "/certificering/nen-7510/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-a7510-6",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 3,
+    "items": [
+     {
+      "rel": "Gerelateerd",
+      "label": "NEN 7510",
+      "href": "/certificering/nen-7510/"
+     },
+     {
+      "rel": "Volgende stap",
+      "label": "Interne audits",
+      "href": "/interne-audits/"
+     },
+     {
+      "rel": "Volgende stap",
+      "label": "Partnerprogramma",
+      "href": "/partnerprogramma/"
+     }
+    ]
+   }
+  }
+ ]
+}

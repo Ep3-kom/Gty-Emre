@@ -1,0 +1,55 @@
+---
+import { siteData } from '~/data/site-data';
+import { buildTitle, canonical, localBusinessJsonLd } from '~/lib/seo';
+
+export type Props = {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  jsonLd?: object[];
+};
+
+const {
+  title,
+  description = siteData.description,
+  ogImage = '/og-default.png',
+  noindex = false,
+  jsonLd = [],
+} = Astro.props;
+
+const pageTitle = buildTitle(title);
+const url = canonical(Astro.url.pathname);
+const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
+const allLd = [localBusinessJsonLd(), ...jsonLd];
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+<title>{pageTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={url} />
+{noindex && <meta name="robots" content="noindex,nofollow" />}
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+<meta property="og:image" content={new URL(ogImage, siteData.url).toString()} />
+<meta property="og:locale" content="nl_NL" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+{allLd.map((ld) => (
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+))}
+
+{plausibleDomain && (
+  <script
+    defer
+    data-domain={plausibleDomain}
+    src="https://plausible.io/js/script.js"
+  ></script>
+)}

@@ -1,0 +1,15 @@
+---
+import Sectie from './Sectie.astro';
+const { opmaak, inhoud: d } = Astro.props;
+---
+<Sectie opmaak={opmaak}>
+  <div class="gty-container"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;padding-top:32px;border-top:var(--zh-dash)">
+    <span class="zh-label" style="color:var(--zh-soft)">{d.h}</span>
+    <div role="group" aria-label={d.h} style="display:flex;flex-wrap:wrap;gap:8px">{d.items.map((it: string, i: number) => <button type="button" class="zh-tag" data-filter={it} aria-pressed={String(i === 0)}>{it}</button>)}</div>
+  </div></div>
+</Sectie>
+
+<style is:global>
+  button.zh-tag { color: inherit; cursor: pointer; }
+  button.zh-tag[aria-pressed='true'] { background: var(--zh-ink); color: #fff; border-color: var(--zh-ink); }
+</style>

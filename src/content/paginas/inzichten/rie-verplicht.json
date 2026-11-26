@@ -1,0 +1,241 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "2",
+    "kopid": "h-top"
+   },
+   "inhoud": {
+    "klein": true,
+    "kicker": "Inzichten · RI&E",
+    "h1": "Wanneer is een RI&E verplicht?",
+    "sub": "Wat de wet vraagt en wat je moet regelen.",
+    "c1": null,
+    "c2": null,
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Inzichten",
+      "href": "/inzichten/"
+     }
+    ],
+    "cur": "Wanneer is een RI&E verplicht?",
+    "auteur": "Emre Ozdemir",
+    "meta": [],
+    "feiten": [],
+    "crop": 2
+   }
+  },
+  {
+   "type": "Antwoord",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "0",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "k": "Kort antwoord",
+    "text": "Iedere werkgever met personeel moet een RI&E met plan van aanpak hebben (Arbowet, artikel 5). Toetsing door een kerndeskundige is verplicht, behalve voor werkgevers met maximaal 25 medewerkers die een erkend branche-instrument gebruiken."
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "4",
+    "kopid": "h-krie-1"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Voor wie",
+    "h2": "Voor wie geldt het?",
+    "intro": "",
+    "items": [
+     "Elke werkgever met personeel, ook bij één medewerker"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "5",
+    "kopid": "h-krie-2",
+    "lijn": "boven"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Wat moet geregeld",
+    "h2": "Wat moet je regelen?",
+    "intro": "",
+    "items": [
+     "Inventarisatie en evaluatie van risico’s",
+     "Plan van aanpak met maatregelen en termijnen",
+     "Toetsing door een kerndeskundige (indien vereist)",
+     "Bijwerken bij wezenlijke veranderingen"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Doorverwijzing",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "6",
+    "kopid": ""
+   },
+   "inhoud": {
+    "text": "RI&E laten opstellen, inclusief toetsing?",
+    "label": "Bekijk RI&E",
+    "href": "/rie/"
+   }
+  },
+  {
+   "type": "Tekst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-krie-3"
+   },
+   "inhoud": {
+    "kicker": "Risico van niets doen",
+    "h2": "Wat als je niets doet?",
+    "paras": [
+     "De Nederlandse Arbeidsinspectie kan een boete opleggen als de RI&E ontbreekt, verouderd is of niet is getoetst.",
+     "Bij een ongeval of ziekte door het werk weegt een ontbrekende of verouderde RI&E zwaar mee, ook in de vraag of je als werkgever aansprakelijk bent."
+    ],
+    "foto": false
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-krie-4"
+   },
+   "inhoud": {
+    "kicker": "Stappenplan",
+    "h2": "In drie stappen",
+    "intro": "",
+    "foot": "",
+    "cols": 3,
+    "items": [
+     {
+      "n": "01",
+      "tag": "Nagaan",
+      "title": "Nagaan of het op jou van toepassing is",
+      "text": "Heb je personeel? Dan geldt de plicht.",
+      "href": "",
+      "linklabel": "",
+      "who": "Jij"
+     },
+     {
+      "n": "02",
+      "tag": "In kaart brengen",
+      "title": "Uitgangssituatie bepalen",
+      "text": "Bestaat er een RI&E en is die actueel?",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY, samen met jou"
+     },
+     {
+      "n": "03",
+      "tag": "Op orde brengen",
+      "title": "Plan en uitvoering",
+      "text": "Opstellen, plan van aanpak, toetsen waar nodig.",
+      "href": "",
+      "linklabel": "",
+      "who": "Jouw team, begeleid door GTY"
+     }
+    ],
+    "gap": "24px",
+    "minh": "340px",
+    "pad": "32px",
+    "limoen": true
+   }
+  },
+  {
+   "type": "Split",
+   "opmaak": {
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "9",
+    "kopid": "h-krie-6"
+   },
+   "inhoud": {
+    "kicker": "Volgende stap",
+    "h2": "RI&E laten opstellen?",
+    "text": "GTY stelt je RI&E op en helpt met het plan van aanpak.",
+    "quote": "",
+    "flip": false,
+    "img": "",
+    "bullets": [],
+    "c1": {
+     "label": "Vraag een RI&E aan",
+     "href": "/contact/?onderwerp=rie"
+    },
+    "c2": {
+     "label": "Bekijk RI&E dienst",
+     "href": "/rie/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "11",
+    "kopid": "h-krie-7"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 2,
+    "items": [
+     {
+      "rel": "Gerelateerd",
+      "label": "RI&E",
+      "href": "/rie/"
+     },
+     {
+      "rel": "Verder lezen",
+      "label": "Academy",
+      "href": "/academy/"
+     }
+    ]
+   }
+  }
+ ]
+}

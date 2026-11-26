@@ -1,0 +1,8 @@
+---
+const { kicker, titel, intro, midden = false, donker = false, maxch = '22', maxbreedte = '900px', id, verbergIntroMobiel = false } = Astro.props;
+---
+<div style={`display:flex;flex-direction:column;gap:24px;${midden ? 'align-items:center;text-align:center;margin:0 auto;' : ''}max-width:${maxbreedte}`}>
+  {kicker && <span class="zh-eyebrow" style={donker ? 'color:rgba(255,255,255,0.6)' : undefined}>{kicker}</span>}
+  {titel && <h2 id={id || undefined} class="zh-h2" style={`max-width:${maxch}ch`}>{titel}</h2>}
+  {intro && <p class:list={[verbergIntroMobiel && 'zh-hide-m']} style={`margin:0;color:${donker ? 'rgba(255,255,255,0.75)' : 'var(--zh-soft)'};font:var(--type-lead)`}>{intro}</p>}
+</div>

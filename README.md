@@ -5,10 +5,11 @@ Astro 5 + Tailwind 3 — vendor-neutrale build voor [gty.nl](https://gty.nl).
 ## Stack
 
 - **Astro 5** (volledig statisch)
-- **Tailwind CSS 3** (custom design tokens — geen default colors)
+- Eigen stylesheet uit het Wauw-ontwerp (`src/styles/wauw.css`)
 - **Web3Forms** voor formuliermail (vanuit de browser, geen server nodig)
 - **Plausible** (cookieloos) voor analytics
-- Lokale fonts via `@fontsource(-variable)` — Newsreader, Inter, IBM Plex Mono
+- Lettertypes: Google Sans Flex en Archivo via Google Fonts (vóór livegang zelf hosten);
+  Otoiwo Grotesk Extended volgt zodra de licentie binnen is
 
 ## Vereisten
 
@@ -64,31 +65,27 @@ toevoegen in CloudPanel → gty.nl → SSH/FTP → `gty-deploy`.
 Documenteer redirects van de huidige WordPress-URLs op de doelhost — zie
 [`redirects.md`](./redirects.md). De mapping is grotendeels 1-op-1.
 
-## Belangrijke bestanden
+## Inhoud aanpassen
 
-- `src/data/site-data.ts` — bedrijfsgegevens (NAW, telefoon, e-mail)
-- `src/data/normen.ts` — gestructureerde data over de 5 normen
-- `src/i18n/nl.ts` — UI-strings (centraal voor latere i18n-uitbreiding)
-- `src/lib/seo.ts` — meta + JSON-LD generators
-- `tailwind.config.mjs` — design tokens met WCAG AA contrast-comments
-
-## Openstaande klant-input
-
-Zie [`TODO.md`](./TODO.md) voor de volledige intake-checklist.
+| Wat | Waar |
+|---|---|
+| Tekst van een pagina | `src/content/paginas/<adres>.json` (een lijst blokken) |
+| Homepage, menu, footer en adressen | `src/data/home.ts` |
+| 'Vind je route' | `src/data/keuzehulp.ts` |
+| Juridische teksten | `src/pages/*.astro` |
+| Bedrijfsgegevens | `src/data/site-data.ts` |
 
 ## Architectuur
 
 ```
 src/
-├── components/
-│   ├── layout/      Header, Footer, MobileNav
-│   ├── sections/    Page-secties (Hero, Probleem, Plan, …)
-│   └── ui/          Button, Eyebrow, Form, Accordion, …
-├── content/         Markdown collections (legal, inzichten, cases)
-├── data/            Site- en domein-data
-├── i18n/            UI-strings
-├── layouts/         Base + NormPaginaTemplate
-├── lib/             Helpers (seo, form-handler)
-├── pages/           Routes
-└── styles/          global.css
+├── assets/wauw/        Beelden uit het ontwerp
+├── components/wauw/    Header, footer, keuzehulp en homepagesecties
+│   └── blok/           Herbruikbare secties (Blok.astro kiest op `type`)
+├── content/paginas/    Inhoud per pagina
+├── layouts/            Wauw (alle pagina's) en Juridisch
+├── pages/              Home, juridisch, 404 en [...pad] voor de rest
+└── styles/wauw.css     Ontwerpsysteem
 ```
+
+Test: `node --experimental-strip-types --test src/lib/onderwerp.test.ts`

@@ -1,0 +1,59 @@
+---
+import Sectie from './Sectie.astro';
+import Kop from './Kop.astro';
+import Vink from './Vink.astro';
+import Pijl from './Pijl.astro';
+const { opmaak, inhoud: d } = Astro.props;
+const kaart = (opmaak.bg || 'wit') === 'wit' ? 'var(--zh-page)' : '#fff';
+const lijst = d.stijl === 'lijst';
+const head: string[] = d.head || [];
+const tags: string[] = d.tags || [];
+const grid = `display:grid;grid-template-columns:${d.tpl};gap:${d.gap || '32px'}`;
+const kolommen = `minmax(0,0.8fr) ${'minmax(0,1.2fr) '.repeat(Math.max(0, head.length - 1))}`.trim();
+const nee = (c: string) => c === '–' || c === '-';
+---
+<Sectie opmaak={opmaak}>
+  <div class="gty-container" style="display:flex;flex-direction:column;gap:var(--sec-gap)">
+    <Kop kicker={d.kicker} titel={d.h2} intro={d.intro} midden maxch={d.maxch || '22'} maxbreedte={d.kopbreedte || '900px'} id={opmaak.kopid} />
+    {lijst ? (
+      <div role="table" class="zh-rise-in" aria-label={d.h2} style={`display:flex;flex-direction:column;max-width:${d.maxw || 'none'};width:100%;margin:0 auto`}>
+        <div role="row" class={d.hcls || 'zh-row-head'} style={`${grid};padding:0 0 16px`}>{head.map((h) => (h === 'Link' ? <span role="columnheader" class="gty-sr">{h}</span> : <span role="columnheader" class="zh-label" style="color:var(--zh-soft)">{h}</span>))}</div>
+        {d.rows.map((r: { href?: string; cells: string[] }) => {
+          const Rij = r.href ? 'a' : 'div';
+          return (
+            <Rij role="row" href={r.href || undefined} class={d.rcls || undefined} style={`${grid};align-items:center;padding:24px 0;border-top:var(--zh-dash);color:var(--zh-ink);text-decoration:none`}>
+              {r.cells.map((c, i) => (i === 0
+                ? <span role="rowheader" style={`font:600 expanded ${d.kopmaat || '22px'}/${d.koplh || '1.15'} var(--font-display);letter-spacing:${d.kopls || '-0.01em'}`}>{c}</span>
+                : <span role="cell" style={`${tags.length ? 'display:flex;align-items:center;gap:12px;' : ''}font:var(--type-body-s)`}>
+                    {tags[i] && <span class="zh-rol-tag">{tags[i]}</span>}
+                    {c === '✓' ? <><Vink maat="32px" vink="16" dikte="2.2" /><span class="gty-sr">Ja</span></> : <span style={`color:${c === '–' ? 'var(--zh-soft)' : d.kleuren?.[i] || 'var(--zh-ink)'}`}>{c === '–' ? d.leeg || '–' : c}</span>}
+                  </span>))}
+              {r.href && <span role="cell" class="zh-round" aria-hidden="true" style="width:40px;height:40px;background:transparent;justify-self:end"><Pijl /></span>}
+            </Rij>
+          );
+        })}
+        <div style="border-top:var(--zh-dash)"></div>
+      </div>
+    ) : (
+      <div role="table" class="zh-rise-in" aria-label={d.h2} style="display:flex;flex-direction:column;max-width:1120px;width:100%;margin:0 auto">
+        <div role="row" class="zh-g-row zh-row-head" style={`display:grid;grid-template-columns:${kolommen};gap:16px;padding:0 0 12px`}>
+          {head.map((h, i) => (i === 0
+            ? <span role="columnheader" class="zh-label" style="align-self:end;padding-bottom:8px;color:var(--zh-soft)">{h}</span>
+            : <span role="columnheader" style={`padding:16px 24px;border-radius:14px;background:${i === 1 ? 'var(--zh-ink)' : kaart};color:${i === 1 ? '#fff' : 'var(--zh-ink)'};font:600 expanded 20px/1.2 var(--font-display)`}>{h}</span>))}
+        </div>
+        {d.rows.map((r: string[]) => (
+          <div role="row" class="zh-g-row" style={`display:grid;grid-template-columns:${kolommen};gap:16px;align-items:center;padding:20px 0;border-top:var(--zh-dash)`}>
+            {r.map((c, i) => (i === 0
+              ? <span role="rowheader" class="zh-label" style="color:var(--zh-soft)">{c}</span>
+              : <span role="cell" class="zh-cel" style={`padding:0 24px;font:var(--type-body-s);${i === 1 ? 'font-weight:500' : 'color:var(--zh-soft)'}`}>
+                  <span class="zh-cel-kop" aria-hidden="true">{head[i]}</span>
+                  {c === '✓' ? <><Vink maat="28px" vink="12" /><span class="gty-sr">Ja</span></> : nee(c) ? <><span aria-hidden="true" style="color:var(--zh-mute)">–</span><span class="gty-sr">Nee</span></> : c}
+                </span>))}
+          </div>
+        ))}
+        <div style="border-top:var(--zh-dash)"></div>
+      </div>
+    )}
+    {d.helper && <div style="text-align:center"><p style="margin:0;font:var(--type-body);color:var(--zh-soft)">{d.helper} <a href="#vind-je-route" class="zh-link" style="color:var(--zh-ink)">Vind je route</a></p></div>}
+  </div>
+</Sectie>

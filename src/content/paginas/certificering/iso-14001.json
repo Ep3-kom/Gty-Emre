@@ -1,0 +1,358 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Certificering · ISO 14001",
+    "h1": "ISO 14001, milieu-impact in beeld.",
+    "sub": "De wereldwijde norm voor milieumanagement, steeds vaker gevraagd in aanbestedingen. Van milieu-inventarisatie tot certificaat.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-iso14001"
+    },
+    "c2": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Certificering",
+      "href": "/certificering/"
+     }
+    ],
+    "cur": "ISO 14001",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 2
+   }
+  },
+  {
+   "type": "Tekst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "var(--sec-y-s)",
+    "z": "3",
+    "kopid": "h-iso14001-1"
+   },
+   "inhoud": {
+    "kicker": "Wat is ISO 14001",
+    "h2": "Wat is ISO 14001, en voor wie?",
+    "paras": [
+     "ISO 14001 is de internationale norm voor milieumanagement. Je brengt je milieu-aspecten en wettelijke kaders in kaart, stelt meetbare doelen en verbetert aantoonbaar.",
+     "De norm deelt de hoofdstructuur met ISO 9001 en ISO 27001. Heb je al een van beide, dan sluit ISO 14001 er efficiënt op aan.",
+     "Voor wie: productie, techniek, bouw en facilitair, en dienstverleners die in aanbestedingen om milieumanagement gevraagd worden."
+    ],
+    "foto": false
+   }
+  },
+  {
+   "type": "Logos",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "calc(48px + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": ""
+   },
+   "inhoud": {
+    "h": "Organisaties die met GTY werken",
+    "logos": [
+     {
+      "naam": "AE Security Group",
+      "src": "ae-security",
+      "h": "43px"
+     },
+     {
+      "naam": "Shadow Security",
+      "src": "shadow-security",
+      "h": "40px"
+     },
+     {
+      "naam": "Linden Tree Care",
+      "src": "linden",
+      "h": "68px"
+     },
+     {
+      "naam": "Smile Place Tandartsen",
+      "src": "smile-place",
+      "h": "44px"
+     }
+    ],
+    "woorden": [
+     "iCNT",
+     "KinderKidz Opvang",
+     "JeugdSterk",
+     "Fort Jeugd"
+    ]
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-iso14001-3"
+   },
+   "inhoud": {
+    "kicker": "Valkuilen",
+    "h2": "Waar trajecten stuklopen, en hoe GTY dat voorkomt.",
+    "intro": "",
+    "cols": 3,
+    "variant": "tegel",
+    "genummerd": true,
+    "items": [
+     {
+      "tag": "01",
+      "title": "Aspectenanalyse die te abstract blijft",
+      "text": "“Energie” en “afval” als categorie passeren geen audit. Wij werken op het niveau van concrete activiteiten.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "02",
+      "title": "Wettelijke kaders die niet bijgehouden worden",
+      "text": "Wij richten een proces in dat wijzigingen in wet- en regelgeving doorlopend signaleert.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "03",
+      "title": "Doelstellingen die niet meetbaar zijn",
+      "text": "“Minder afval” is geen doel. Wij formuleren doelen die je echt kunt meten.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "04",
+      "title": "Noodsituatie-procedures die nooit getest worden",
+      "text": "Een auditor vraagt naar de laatste oefening. Wij plannen ze in en lopen ze met je door.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "05",
+      "title": "Monitoring zonder analyse",
+      "text": "Wij richten monitoring zo in dat de directie op de uitkomsten kan sturen.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "06",
+      "title": "Het systeem isoleren van de bedrijfsvoering",
+      "text": "Wij verweven milieu met inkoop, projecten en de dagelijkse operatie.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     }
+    ],
+    "cta": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-iso14001"
+    },
+    "helper": ""
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-iso14001-2"
+   },
+   "inhoud": {
+    "kicker": "Aanpak GTY",
+    "h2": "Zo werken we naar ISO 14001 toe",
+    "intro": "",
+    "foot": "↻ Daarna: Partnerprogramma · interne audits",
+    "cols": 4,
+    "items": [
+     {
+      "n": "01",
+      "tag": "In kaart brengen",
+      "title": "Nulmeting",
+      "text": "Waar sta je en wat is nodig?",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY, samen met jou"
+     },
+     {
+      "n": "02",
+      "tag": "Op orde brengen",
+      "title": "Inrichten",
+      "text": "Risico’s, beleid en processen werkbaar inrichten.",
+      "href": "",
+      "linklabel": "",
+      "who": "Jouw team, begeleid door GTY"
+     },
+     {
+      "n": "03",
+      "tag": "Op orde brengen",
+      "title": "Interne audit",
+      "text": "Toetsen of het werkt, vóór de externe audit.",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY"
+     },
+     {
+      "n": "04",
+      "tag": "Certificaat ≠ eindpunt",
+      "title": "Certificeringsaudit",
+      "text": "De certificerende instelling auditeert; GTY begeleidt.",
+      "href": "",
+      "linklabel": "",
+      "who": "Certificerende instelling"
+     }
+    ],
+    "gap": "24px",
+    "minh": "360px",
+    "pad": "32px",
+    "limoen": true,
+    "cta": {
+     "label": "Plan een nulmeting",
+     "href": "/nulmeting/?onderwerp=nulmeting-iso14001"
+    }
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "3",
+    "overlap": "ja",
+    "z": "27"
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "kopid": "h-kosten",
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "9",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "variant": "donker",
+    "kicker": "Kostenfactoren",
+    "h2": "Waar hangen de kosten van af?",
+    "intro": "",
+    "items": [
+     "Omvang en scope (locaties, medewerkers, processen)",
+     "Huidige volwassenheid: wat is al geregeld?",
+     "Hoeveel doe je zelf, hoeveel besteed je uit",
+     "Kosten certificerende instelling (apart van begeleiding)"
+    ],
+    "links": [
+     {
+      "label": "Certificering overzicht",
+      "href": "/certificering/"
+     },
+     {
+      "label": "ISO 9001",
+      "href": "/certificering/iso-9001/"
+     },
+     {
+      "label": "Partnerprogramma",
+      "href": "/partnerprogramma/"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "10",
+    "kopid": "h-iso14001-4"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over ISO 14001",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Hoe lang duurt een ISO 14001-traject?",
+      "a": "Dat hangt af van de complexiteit van je milieu-impact en de mate waarin je al milieudata verzamelt. Een nulmeting geeft een realistische planning."
+     },
+     {
+      "q": "Kan ISO 14001 gecombineerd worden met ISO 9001?",
+      "a": "Ja. Met één geïntegreerd managementsysteem deel je directiebeoordeling, interne audits, documentbeheer en risicoanalyse."
+     },
+     {
+      "q": "Wat is het verschil tussen ISO 14001 en de CO₂-Prestatieladder?",
+      "a": "ISO 14001 is een breed milieumanagementsysteem; de CO₂-Prestatieladder richt zich specifiek op CO₂-reductie en wordt vooral in aanbestedingen gevraagd. Veel bouw- en infrabedrijven voeren beide."
+     },
+     {
+      "q": "Wat als we geen “milieu-zware” activiteiten hebben?",
+      "a": "Ook dienstverleners hebben milieu-aspecten: kantoorenergie, mobiliteit, ICT, inkoop, afval. ISO 14001 is ook dan goed implementeerbaar."
+     },
+     {
+      "q": "Is GTY de certificerende instelling?",
+      "a": "Nee. GTY begeleidt de voorbereiding en kan de interne audit uitvoeren. De certificeringsaudit doet een onafhankelijke, geaccrediteerde instelling."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "11",
+    "kopid": "h-iso14001-5",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Klaar om met ISO 14001 aan de slag te gaan?",
+    "text": "Plan een vrijblijvend gesprek over je uitgangspositie. Na de certificering blijven we betrokken via het Partnerprogramma.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-iso14001"
+    },
+    "c2": {
+     "label": "Bekijk Partnerprogramma",
+     "href": "/partnerprogramma/"
+    }
+   }
+  }
+ ]
+}

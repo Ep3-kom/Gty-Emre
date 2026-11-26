@@ -1,0 +1,196 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Academy",
+    "h1": "Kennis die landt. En in je organisatie blijft hangen.",
+    "sub": "Een certificaat houdt alleen stand als de mensen erachter begrijpen wat er van hen wordt verwacht. Onze trainingen komen naar jouw locatie, toegespitst op je werk en met voorbeelden uit de praktijk.",
+    "c1": {
+     "label": "Vraag een training aan",
+     "href": "/contact/?onderwerp=training"
+    },
+    "c2": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     }
+    ],
+    "cur": "Academy",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 2
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "3",
+    "kopid": "h-academy-1"
+   },
+   "inhoud": {
+    "kicker": "Aanbod",
+    "h2": "Trainingen die wij verzorgen",
+    "intro": "Geen open inschrijvingen. Altijd op locatie, afgestemd op je sector, in groepen van 8 tot 15.",
+    "cols": 3,
+    "variant": "tegel",
+    "genummerd": false,
+    "items": [
+     {
+      "tag": "Training 01",
+      "title": "Normkennis",
+      "text": "Wat een norm vraagt, zonder jargon, en wat het betekent voor jouw organisatie.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Training 02",
+      "title": "Implementatie",
+      "text": "Van norm-eisen naar werkende processen, zonder onnodig zware structuur.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "Training 03",
+      "title": "Interne auditvaardigheden",
+      "text": "Vraagtechniek, waarneming en rapportages die tot verbetering leiden.",
+      "href": "/interne-audits/",
+      "linklabel": "Interne audits",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "Training 04",
+      "title": "Kwaliteitsmanagement",
+      "text": "Van directiebeoordeling tot opvolging van afwijkingen: de bouwstenen die een systeem levend houden.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Training 05",
+      "title": "Informatiebeveiliging",
+      "text": "Awareness en gedragsverandering voor zorgteams, IT en finance. Geen jaarlijkse afvinkcursus.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "Training 06",
+      "title": "BHV incompany",
+      "text": "BHV-training op jouw locatie, afgestemd op de risico’s en indeling van je werkplek.",
+      "href": "/academy/bhv/",
+      "linklabel": "Bekijk BHV incompany",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     }
+    ],
+    "cta": null,
+    "helper": ""
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "2",
+    "overlap": "ja",
+    "z": "24"
+   }
+  },
+  {
+   "type": "Tekst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-academy-2",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "kicker": "Op locatie",
+    "h2": "De training komt bij je langs.",
+    "paras": [
+     "Alle trainingen vinden plaats op jouw locatie, met situaties die je mensen elke dag tegenkomen.",
+     "Vooraf stemmen we af wat moet blijven hangen en hoe we dat toetsen. Voor BHV volgen we de wettelijk vastgelegde praktijktijd."
+    ],
+    "foto": false
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-academy-3",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Een training aanvragen begint met een gesprek.",
+    "text": "We kijken welke training past, voor welke groep en in welke vorm. Geen prijslijst met pakketten, wel een vaste werkwijze.",
+    "c1": {
+     "label": "Vraag een training aan",
+     "href": "/contact/?onderwerp=training"
+    },
+    "c2": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-academy-4",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 2,
+    "items": [
+     {
+      "rel": "Gerelateerd",
+      "label": "RI&E",
+      "href": "/rie/"
+     },
+     {
+      "rel": "Volgende stap",
+      "label": "Partnerprogramma",
+      "href": "/partnerprogramma/"
+     }
+    ]
+   }
+  }
+ ]
+}

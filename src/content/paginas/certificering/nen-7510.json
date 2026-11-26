@@ -1,0 +1,415 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "inhoud": {
+    "klein": false,
+    "kicker": "Certificering · NEN 7510",
+    "h1": "NEN 7510, informatiebeveiliging in de zorg.",
+    "sub": "De Nederlandse norm voor informatiebeveiliging in de zorg, voor iedereen die gezondheidsinformatie verwerkt. Wij begeleiden het hele traject, technisch én zorgspecifiek.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-nen7510"
+    },
+    "c2": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Certificering",
+      "href": "/certificering/"
+     }
+    ],
+    "cur": "NEN 7510",
+    "auteur": "",
+    "meta": [],
+    "feiten": [],
+    "crop": 0
+   }
+  },
+  {
+   "type": "Tekst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "pb": "var(--sec-y-s)",
+    "z": "3",
+    "kopid": "h-nen7510-1"
+   },
+   "inhoud": {
+    "kicker": "Wat is NEN 7510",
+    "h2": "Wat is NEN 7510, en voor wie?",
+    "paras": [
+     "NEN 7510 is de Nederlandse norm voor informatiebeveiliging in de zorg. De norm volgt de structuur van ISO 27001 en vult die aan voor werken met patiënt- en cliëntgegevens.",
+     "Hij sluit aan op de AVG en de Wabvpz: toegangsrechten, logging van dossierinzage, dataminimalisatie en een datalekprocedure die werkt.",
+     "Voor wie: zorgaanbieders, van ziekenhuis tot huisartsenpraktijk, jeugdzorg en thuiszorg. En voor wie de zorg bedient: EPD- en ECD-leveranciers, IT- en hostingpartijen en arbodiensten."
+    ],
+    "foto": false
+   }
+  },
+  {
+   "type": "Logos",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "calc(48px + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": ""
+   },
+   "inhoud": {
+    "h": "Zorg- en welzijnsorganisaties die met GTY werken",
+    "logos": [
+     {
+      "naam": "Linden Tree Care",
+      "src": "linden",
+      "h": "68px"
+     },
+     {
+      "naam": "Smile Place Tandartsen",
+      "src": "smile-place",
+      "h": "44px"
+     }
+    ],
+    "woorden": [
+     "KinderKidz Opvang",
+     "JeugdSterk",
+     "Fort Jeugd",
+     "Zorgstip"
+    ]
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-nen7510-2"
+   },
+   "inhoud": {
+    "kicker": "Vier ingangen",
+    "h2": "Herken je je organisatie?",
+    "intro": "",
+    "cols": 4,
+    "variant": "tegel",
+    "genummerd": false,
+    "items": [
+     {
+      "tag": "Zorg",
+      "title": "Zorgaanbieder",
+      "text": "Je verwerkt dossiers van patiënten of cliënten.",
+      "href": "/informatiebeveiliging/zorg/",
+      "linklabel": "Zorg",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "Keten",
+      "title": "Zorgleverancier",
+      "text": "Een zorginstelling vraagt je om aantoonbare beveiliging.",
+      "href": "/inzichten/nen-7510-verplicht/",
+      "linklabel": "Is NEN 7510 verplicht?",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "IT",
+      "title": "IT-partij met zorgklanten",
+      "text": "Vaak NEN 7510 én ISO 27001 in één traject.",
+      "href": "/certificering/iso-27001/",
+      "linklabel": "ISO 27001",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "Arbo",
+      "title": "Arbodienst",
+      "text": "Het certificatieschema vraagt NEN 7510-1.",
+      "href": "/certificering/certificatieschema-arbodiensten/",
+      "linklabel": "Arbodiensten",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     }
+    ],
+    "cta": null,
+    "helper": ""
+   }
+  },
+  {
+   "type": "Kaarten",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-nen7510-4"
+   },
+   "inhoud": {
+    "kicker": "Valkuilen",
+    "h2": "Waar trajecten stuklopen, en hoe GTY dat voorkomt.",
+    "intro": "",
+    "cols": 3,
+    "variant": "tegel",
+    "genummerd": true,
+    "items": [
+     {
+      "tag": "01",
+      "title": "Logging die niemand bekijkt",
+      "text": "Logging van dossierinzage staat vaak aan, maar wordt niet beoordeeld. Wij richten de periodieke controle in.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "02",
+      "title": "Verwerkers zonder opvolging",
+      "text": "Een verwerkersovereenkomst is een begin. Wij richten toezicht op leveranciers en sub-verwerkers in.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "03",
+      "title": "Awareness die de zorgvloer mist",
+      "text": "Een algemene e-learning beklijft niet. Wij werken met korte teamoverleg-onderdelen en eigen casuïstiek.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     },
+     {
+      "tag": "04",
+      "title": "Datalek niet binnen 72 uur gemeld",
+      "text": "De meldplicht vraagt een proces dat werkt. Wij oefenen het, ook onder tijdsdruk.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--gty-lime)",
+      "donker": false
+     },
+     {
+      "tag": "05",
+      "title": "Continuïteit die alleen IT betreft",
+      "text": "Wat doe je als het EPD een dag uit de lucht is? Wij toetsen de zorgpraktijk, niet alleen de serverruimte.",
+      "href": "",
+      "linklabel": "",
+      "code": "",
+      "swatch": "var(--zh-ink)",
+      "donker": true
+     },
+     {
+      "tag": "06",
+      "title": "ISMS los van het kwaliteitssysteem",
+      "text": "NEN 7510 en HKZ als twee werelden is dubbel werk. Wij integreren waar dat zinvol is.",
+      "href": "",
+      "linklabel": "",
+      "code": "ISMS",
+      "swatch": "var(--gradient-brand)",
+      "donker": false
+     }
+    ],
+    "cta": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-nen7510"
+    },
+    "helper": ""
+   }
+  },
+  {
+   "type": "Fasen",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "7",
+    "kopid": "h-nen7510-3"
+   },
+   "inhoud": {
+    "kicker": "Aanpak GTY",
+    "h2": "Zo werken we naar NEN 7510 toe",
+    "intro": "",
+    "foot": "↻ Daarna: Partnerprogramma · interne audits",
+    "cols": 4,
+    "items": [
+     {
+      "n": "01",
+      "tag": "In kaart brengen",
+      "title": "Nulmeting",
+      "text": "Waar sta je en wat is nodig?",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY, samen met jou"
+     },
+     {
+      "n": "02",
+      "tag": "Op orde brengen",
+      "title": "Inrichten",
+      "text": "Risico’s, beleid en processen werkbaar inrichten.",
+      "href": "",
+      "linklabel": "",
+      "who": "Jouw team, begeleid door GTY"
+     },
+     {
+      "n": "03",
+      "tag": "Op orde brengen",
+      "title": "Interne audit",
+      "text": "Toetsen of het werkt, vóór de externe audit.",
+      "href": "",
+      "linklabel": "",
+      "who": "GTY"
+     },
+     {
+      "n": "04",
+      "tag": "Certificaat ≠ eindpunt",
+      "title": "Certificeringsaudit",
+      "text": "De certificerende instelling auditeert; GTY begeleidt.",
+      "href": "",
+      "linklabel": "",
+      "who": "Certificerende instelling"
+     }
+    ],
+    "gap": "24px",
+    "minh": "360px",
+    "pad": "32px",
+    "limoen": true,
+    "cta": {
+     "label": "Plan een nulmeting",
+     "href": "/nulmeting/?onderwerp=nulmeting-nen7510"
+    }
+   }
+  },
+  {
+   "type": "Beeld",
+   "opmaak": {
+    "uitsnede": "0",
+    "overlap": "ja",
+    "z": "27"
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "9",
+    "kopid": "h-nen7510-5",
+    "hoeken": "geen"
+   },
+   "inhoud": {
+    "variant": "donker",
+    "kicker": "Kostenfactoren",
+    "h2": "Waar hangen de kosten van af?",
+    "intro": "",
+    "items": [
+     "Omvang en scope (locaties, medewerkers, processen)",
+     "Huidige volwassenheid: wat is al geregeld?",
+     "Hoeveel doe je zelf, hoeveel besteed je uit",
+     "Kosten certificerende instelling (apart van begeleiding)"
+    ],
+    "links": [
+     {
+      "label": "Is NEN 7510 verplicht?",
+      "href": "/inzichten/nen-7510-verplicht/"
+     },
+     {
+      "label": "NEN 7510 checklist",
+      "href": "/inzichten/nen-7510-checklist/"
+     },
+     {
+      "label": "ISO 27001 of NEN 7510?",
+      "href": "/inzichten/iso-27001-vs-nen-7510/"
+     },
+     {
+      "label": "Interne audit NEN 7510",
+      "href": "/interne-audits/nen-7510/"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "10",
+    "kopid": "h-nen7510-6"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over NEN 7510",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Wat is het verschil tussen NEN 7510 en ISO 27001?",
+      "a": "NEN 7510 is ISO 27001 plus zorgspecifieke eisen, onder meer voor toegang tot en logging van patiëntgegevens. Werk je ook buiten de zorg, dan voer je vaak beide."
+     },
+     {
+      "q": "Geldt NEN 7510 ook voor cloudgebruik?",
+      "a": "Ja. Cloud-EPD’s en SaaS-toepassingen vallen binnen de scope."
+     },
+     {
+      "q": "Hoe lang duurt een NEN 7510-traject?",
+      "a": "Dat hangt af van je uitgangspositie. Een nulmeting geeft een realistische planning."
+     },
+     {
+      "q": "Werkt NEN 7510 ook voor een kleine praktijk?",
+      "a": "Ja. De norm is niet schaalafhankelijk, de invulling wel: proportioneel, zonder overbodige documentatie."
+     },
+     {
+      "q": "Is GTY de certificerende instelling?",
+      "a": "Nee. GTY begeleidt de voorbereiding en kan de interne audit uitvoeren. De certificeringsaudit doet een onafhankelijke, geaccrediteerde instelling."
+     }
+    ],
+    "helper": "Twijfel je of dit de juiste norm is?"
+   }
+  },
+  {
+   "type": "Afsluiter",
+   "opmaak": {
+    "bg": "verloop",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "11",
+    "kopid": "h-nen7510-7",
+    "hoeken": "rond"
+   },
+   "inhoud": {
+    "h2": "Klaar om met NEN 7510 aan de slag te gaan?",
+    "text": "Plan een vrijblijvend gesprek over je uitgangspositie. Na de certificering blijven we betrokken via het Partnerprogramma.",
+    "c1": {
+     "label": "Plan een kennismaking",
+     "href": "/contact/?onderwerp=kennismaking-nen7510"
+    },
+    "c2": {
+     "label": "Bekijk Partnerprogramma",
+     "href": "/partnerprogramma/"
+    }
+   }
+  }
+ ]
+}

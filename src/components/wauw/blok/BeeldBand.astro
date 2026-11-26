@@ -1,0 +1,24 @@
+---
+// Alleen gebruikt op de certificeringspagina.
+import { Image } from 'astro:assets';
+import team from '~/assets/wauw/team.jpg';
+const feiten = [['6', 'normen, één aanspreekpunt'], ['1×', 'per jaar een surveillance-audit'], ['3 jaar', 'geldig per certificaat']];
+const { opmaak: p = {} } = Astro.props;
+---
+<section aria-labelledby="h-band" style={`position:relative;z-index:2;margin-top:${p.overlap === 'ja' ? 'calc(-1 * var(--zh-r-sec))' : '0'};min-height:560px;overflow:hidden;border-radius:var(--zh-r-sec);background:#1b1b1b;color:#fff;display:flex;align-items:flex-end`}>
+  <Image src={team} widths={[1600, 2400, 3200]} sizes="210vw" alt="Collega’s lopen door een licht kantoor, in beweging vastgelegd" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:15% 10%;transform:scale(2.1);transform-origin:0 0" />
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.45) 45%,rgba(0,0,0,0.85) 100%)"></div>
+  <div class="gty-container zh-g-split" style="position:relative;z-index:1;padding-top:var(--sec-y);padding-bottom:var(--sec-y-s);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--sec-gap);align-items:end">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;gap:24px">
+      <span class="zh-eyebrow">Eén partner, alle normen</span>
+      <h2 id="h-band" class="zh-h2" style="max-width:16ch">Combineer normen in één systeem.</h2>
+      <a href="#vind-je-route" class="zh-btn zh-btn--primary" style="margin-top:8px">Vind je route</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <dl class="zh-g-facts" style="margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+        {feiten.map(([v, k]) => (<div style="display:flex;flex-direction:column-reverse;gap:8px"><dt style="font:400 14px/1.4 var(--font-body);color:rgba(255,255,255,0.75)">{k}</dt><dd style="margin:0;font:600 expanded clamp(32px,3.2vw,52px)/1 var(--font-display);letter-spacing:-0.02em;white-space:nowrap">{v}</dd></div>))}
+      </dl>
+      <p style="margin:0;font:var(--type-body);color:rgba(255,255,255,0.9);max-width:480px">Veel eisen overlappen: directiebeoordeling, interne audits, risicobeheer. Daarom richten we bij meerdere normen één samenhangend managementsysteem in, zoals ISO 9001 met ISO 27001, of HKZ met NEN 7510.</p>
+    </div>
+  </div>
+</section>

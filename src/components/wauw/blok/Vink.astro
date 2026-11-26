@@ -1,0 +1,4 @@
+---
+const { maat = '32px', vink = '14', kleur = '#0B0B0B', ring = false, dikte = '2.4' } = Astro.props;
+---
+<span class:list={['zh-check', !ring && 'zh-check--fill']} aria-hidden="true" style={`width:${maat};height:${maat}`}><svg width={vink} height={vink} viewBox="0 0 16 16" fill="none" stroke={kleur} stroke-width={dikte} stroke-linecap="butt" stroke-linejoin="miter" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"/></svg></span>

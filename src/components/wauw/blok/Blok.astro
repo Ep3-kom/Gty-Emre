@@ -1,0 +1,31 @@
+---
+// Zet een blok uit een paginabestand (src/content/paginas) om naar de juiste sectie.
+import Hero from './Hero.astro';
+import Tekst from './Tekst.astro';
+import Logos from './Logos.astro';
+import Kaarten from './Kaarten.astro';
+import Filter from './Filter.astro';
+import Fasen from './Fasen.astro';
+import Feiten from './Feiten.astro';
+import Gerelateerd from './Gerelateerd.astro';
+import Afsluiter from './Afsluiter.astro';
+import Antwoord from './Antwoord.astro';
+import Doorverwijzing from './Doorverwijzing.astro';
+import Beeld from './Beeld.astro';
+import BeeldBand from './BeeldBand.astro';
+import Lijst from './Lijst.astro';
+import Vragen from './Vragen.astro';
+import Split from './Split.astro';
+import Tabel from './Tabel.astro';
+import Formulier from './Formulier.astro';
+import VoorNa from './VoorNa.astro';
+import Bouwstenen from './Bouwstenen.astro';
+import Citaat from '../Citaat.astro';
+import Normen from '../Normen.astro';
+
+const soorten = { Hero, Tekst, Logos, Kaarten, Filter, Fasen, Feiten, Gerelateerd, Afsluiter, Antwoord, Doorverwijzing, Beeld, BeeldBand, Lijst, Vragen, Split, Tabel, Formulier, VoorNa, Bouwstenen, Citaat, NormenBento: Normen };
+const { type, opmaak = {}, inhoud } = Astro.props;
+const Sectie = soorten[type as keyof typeof soorten];
+if (!Sectie) throw new Error(`Onbekend blok: ${type}`);
+---
+<Sectie opmaak={opmaak} inhoud={inhoud} />

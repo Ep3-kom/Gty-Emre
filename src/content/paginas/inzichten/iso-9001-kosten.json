@@ -1,0 +1,264 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "2",
+    "kopid": "h-top"
+   },
+   "inhoud": {
+    "klein": true,
+    "kicker": "Inzichten · ISO 9001",
+    "h1": "ISO 9001 kosten",
+    "sub": "Wat vraagt een ISO 9001-traject aan tijd en budget?",
+    "c1": null,
+    "c2": null,
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Inzichten",
+      "href": "/inzichten/"
+     }
+    ],
+    "cur": "ISO 9001 kosten",
+    "auteur": "Emre Ozdemir",
+    "meta": [],
+    "feiten": [],
+    "crop": 1
+   }
+  },
+  {
+   "type": "Antwoord",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "0",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "k": "Kort antwoord",
+    "text": "De kosten van ISO 9001 worden bepaald door omvang, huidige procesvolwassenheid en de gekozen begeleiding. De certificerende instelling rekent apart. Na een kennismaking krijg je een indicatie op maat."
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "4",
+    "kopid": "h-k9kosten-1"
+   },
+   "inhoud": {
+    "variant": "licht",
+    "kicker": "Factoren",
+    "h2": "Wat bepaalt de kosten?",
+    "intro": "",
+    "items": [
+     "Scope: locaties, medewerkers, processen",
+     "Uitgangssituatie: wat is al geregeld",
+     "Eigen capaciteit versus begeleiding",
+     "Kosten certificerende instelling (apart)",
+     "Onderhoud na certificering"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Doorverwijzing",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "5",
+    "kopid": ""
+   },
+   "inhoud": {
+    "text": "Liever direct een indicatie voor jouw situatie?",
+    "label": "Vraag een prijsindicatie",
+    "href": "/contact/?onderwerp=prijs-iso9001"
+   }
+  },
+  {
+   "type": "Tabel",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "6",
+    "kopid": "h-k9kosten-2"
+   },
+   "inhoud": {
+    "kicker": "Scenario’s",
+    "h2": "Drie herkenbare scenario’s",
+    "intro": "Eén prijs bestaat niet: twee organisaties van dezelfde omvang kunnen een heel ander traject nodig hebben. Deze drie scenario’s laten zien waar de inspanning zit.",
+    "helper": "",
+    "head": [
+     "Scenario",
+     "Situatie",
+     "Wat bepaalt de inspanning"
+    ],
+    "rows": [
+     [
+      "Klein, weinig ingericht",
+      "Start vanaf nul",
+      "Opbouw van systeem en documentatie"
+     ],
+     [
+      "Deels ingericht",
+      "Beleid aanwezig, niet aantoonbaar",
+      "Aanvullen en aantoonbaar maken"
+     ],
+     [
+      "Meerdere locaties",
+      "Meerdere scopes of vestigingen",
+      "Scope-afbakening en afstemming"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Tabel",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "var(--sec-y-s)",
+    "z": "7",
+    "lijn": "boven",
+    "kopid": "h-k9kosten-3"
+   },
+   "inhoud": {
+    "kicker": "Wat zit erin",
+    "h2": "Begeleiding vs. certificerende instelling",
+    "intro": "",
+    "helper": "",
+    "head": [
+     "Onderdeel",
+     "Begeleiding (GTY)",
+     "Certificerende instelling"
+    ],
+    "rows": [
+     [
+      "Inrichten systeem",
+      "✓",
+      "–"
+     ],
+     [
+      "Interne audit",
+      "✓",
+      "–"
+     ],
+     [
+      "Externe audit + certificaat",
+      "–",
+      "✓"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Vragen",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-k9kosten-6",
+    "lijn": "boven"
+   },
+   "inhoud": {
+    "h2": "Veelgestelde vragen over de kosten van ISO 9001",
+    "eyebrow": "Veelgestelde vragen",
+    "intro": "Staat je vraag er niet bij? Emre beantwoordt hem zelf.",
+    "items": [
+     {
+      "q": "Zijn de kosten van de certificerende instelling inbegrepen?",
+      "a": "Nee. Die factureert de certificerende instelling apart."
+     },
+     {
+      "q": "Wat kost het onderhoud na certificering?",
+      "a": "Jaarlijkse surveillance-audits door de CI, plus je eigen inzet of begeleiding via het Partnerprogramma."
+     },
+     {
+      "q": "Werkt GTY met een vaste prijs?",
+      "a": "Ja. Na de kennismaking één voorstel met een vaste prijs; verandert de scope, dan bespreken we dat eerst."
+     },
+     {
+      "q": "Hoe krijg ik een indicatie?",
+      "a": "Plan een kennismakingsgesprek; daarna ontvang je een indicatie op maat."
+     }
+    ],
+    "helper": ""
+   }
+  },
+  {
+   "type": "Split",
+   "opmaak": {
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "9",
+    "kopid": "h-k9kosten-5"
+   },
+   "inhoud": {
+    "kicker": "Volgende stap",
+    "h2": "Een prijsindicatie voor jouw situatie?",
+    "text": "We geven een indicatie op basis van je scope.",
+    "quote": "",
+    "flip": false,
+    "img": "",
+    "bullets": [],
+    "c1": {
+     "label": "Vraag een prijsindicatie",
+     "href": "/contact/?onderwerp=prijs-iso9001"
+    },
+    "c2": {
+     "label": "Bekijk ISO 9001",
+     "href": "/certificering/iso-9001/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "10",
+    "kopid": "h-k9kosten-7"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 2,
+    "items": [
+     {
+      "rel": "Gerelateerd",
+      "label": "ISO 9001",
+      "href": "/certificering/iso-9001/"
+     },
+     {
+      "rel": "Gerelateerd",
+      "label": "Werkwijze",
+      "href": "/werkwijze/"
+     }
+    ]
+   }
+  }
+ ]
+}

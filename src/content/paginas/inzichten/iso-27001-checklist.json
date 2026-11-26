@@ -1,0 +1,177 @@
+{
+ "blokken": [
+  {
+   "type": "Hero",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "0",
+    "pb": "0",
+    "z": "2",
+    "kopid": "h-top"
+   },
+   "inhoud": {
+    "klein": true,
+    "kicker": "Inzichten · ISO 27001",
+    "h1": "ISO 27001 checklist",
+    "sub": "Toets zelf wat er al geregeld is.",
+    "c1": null,
+    "c2": null,
+    "crumbs": [
+     {
+      "label": "Home",
+      "href": "/"
+     },
+     {
+      "label": "Inzichten",
+      "href": "/inzichten/"
+     }
+    ],
+    "cur": "ISO 27001 checklist",
+    "auteur": "Emre Ozdemir",
+    "meta": [],
+    "feiten": [],
+    "crop": 2
+   }
+  },
+  {
+   "type": "Antwoord",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "0",
+    "z": "3",
+    "kopid": ""
+   },
+   "inhoud": {
+    "k": "Kort antwoord",
+    "text": "Met deze checklist zie je in een paar minuten welke ISO 27001-onderdelen al staan en waar gaps zitten."
+   }
+  },
+  {
+   "type": "Lijst",
+   "opmaak": {
+    "bg": "wit",
+    "overlap": "nee",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "4",
+    "kopid": "h-k27check-1"
+   },
+   "inhoud": {
+    "variant": "check",
+    "kicker": "Checklist",
+    "h2": "Controleer wat al geregeld is",
+    "intro": "Vink aan wat staat. Wat openblijft, is je startpunt.",
+    "items": [
+     "Scope van het ISMS is vastgelegd",
+     "Context en belanghebbenden zijn in kaart",
+     "Risicobeoordeling is uitgevoerd",
+     "Verklaring van toepasselijkheid (SoA) is opgesteld",
+     "Informatiebeveiligingsbeleid is vastgesteld",
+     "Rollen en verantwoordelijkheden zijn belegd",
+     "Medewerkers zijn getraind en bewust",
+     "Leveranciers zijn beoordeeld",
+     "Incidentproces is ingericht en getest",
+     "Interne audit is uitgevoerd",
+     "Directiebeoordeling is vastgelegd"
+    ],
+    "links": []
+   }
+  },
+  {
+   "type": "Formulier",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y)",
+    "pb": "calc(var(--sec-y) + var(--zh-r-sec))",
+    "z": "5",
+    "kopid": "h-k27check-2"
+   },
+   "inhoud": {
+    "kicker": "Download",
+    "h2": "Download de ISO 27001 checklist als pdf",
+    "intro": "Om af te drukken of te delen met je team.",
+    "ok": [
+     "Je ontvangt de pdf direct per mail",
+     "Geen nieuwsbrief zonder je toestemming"
+    ],
+    "consent": "",
+    "helper": "",
+    "fields": [
+     {
+      "label": "Naam",
+      "soort": "tekst",
+      "placeholder": "",
+      "vol": true
+     },
+     {
+      "label": "E-mail *",
+      "soort": "tekst",
+      "placeholder": "",
+      "vol": true
+     }
+    ],
+    "raster": false,
+    "knop": "Stuur mij de checklist"
+   }
+  },
+  {
+   "type": "Split",
+   "opmaak": {
+    "bg": "inkt",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "6",
+    "kopid": "h-k27check-4"
+   },
+   "inhoud": {
+    "kicker": "Volgende stap",
+    "h2": "Gaps gevonden?",
+    "text": "Een nulmeting maakt concreet wat nodig is.",
+    "quote": "",
+    "flip": false,
+    "img": "",
+    "bullets": [],
+    "c1": {
+     "label": "Vind je route",
+     "href": "#vind-je-route"
+    },
+    "c2": {
+     "label": "Bekijk ISO 27001",
+     "href": "/certificering/iso-27001/"
+    }
+   }
+  },
+  {
+   "type": "Gerelateerd",
+   "opmaak": {
+    "bg": "tint",
+    "overlap": "ja",
+    "pt": "var(--sec-y-s)",
+    "pb": "calc(var(--sec-y-s) + var(--zh-r-sec))",
+    "z": "8",
+    "kopid": "h-k27check-5"
+   },
+   "inhoud": {
+    "h2": "Verder lezen",
+    "cols": 2,
+    "items": [
+     {
+      "rel": "Gerelateerd",
+      "label": "ISO 27001",
+      "href": "/certificering/iso-27001/"
+     },
+     {
+      "rel": "Verder lezen",
+      "label": "ISMS uitgelegd",
+      "href": "/informatiebeveiliging/isms/"
+     }
+    ]
+   }
+  }
+ ]
+}

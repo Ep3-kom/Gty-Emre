@@ -1,0 +1,29 @@
+---
+import { aanbod } from '~/data/home';
+---
+<section class="zh-breathe" id="contact" aria-labelledby="h-start" style="position:relative;z-index:2;margin-top:calc(-1 * var(--zh-r-sec));border-radius:var(--zh-r-sec);padding:var(--sec-y) 0">
+  <div class="gty-container" style="display:flex;flex-direction:column;gap:56px">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;max-width:900px;margin:0 auto">
+      <span class="zh-eyebrow">Beginnen</span>
+      <h2 id="h-start" class="zh-h1 zh-h1--page">Compliance die je vooruithelpt.</h2>
+      <p style="margin:0;color:var(--zh-soft);font:var(--type-lead)">Twee manieren om te beginnen. Allebei zonder verplichtingen.</p>
+    </div>
+    <div class="zh-g-offers zh-swipe-m zh-drop-in" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+      {aanbod.map((o) => (
+        <article class="zh-glass" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:32px;border-radius:var(--zh-r-card);background:#fff">
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <span class="zh-label" style="color:var(--zh-soft)">{o.chip}</span>
+            <h3 style="margin:0;font:600 expanded 28px/1.15 var(--font-display);letter-spacing:-0.01em">{o.title}</h3>
+            <dl class="zh-dl">
+              {o.rows.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+            </dl>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px">
+            <a href={o.href} class:list={['zh-btn', o.btn]}>{o.cta}</a>
+            <span style="font:400 14px/1.4 var(--font-body);color:var(--zh-soft)">{o.micro}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

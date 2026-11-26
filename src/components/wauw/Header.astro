@@ -1,0 +1,148 @@
+---
+import Logo from './Logo.astro';
+import Ico from './Ico.astro';
+import { menu, url } from '~/data/home';
+import { siteData } from '~/data/site-data';
+---
+<div class="gty-container" data-hdr style="position:relative;padding-top:16px">
+  <div class="zh-bar">
+    <Logo animatie />
+    <nav class="zh-nav" aria-label="Hoofdmenu" style="display:flex;align-items:center;gap:32px">
+      {menu.map((n, i) => (
+        <a href={n.href} data-nav={i} aria-expanded="false" aria-haspopup="true">{n.label}<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></a>
+      ))}
+    </nav>
+    <div style="display:flex;align-items:center;gap:16px">
+      <span class="zh-nav" aria-hidden="true" style="display:block;width:1px;height:24px;margin:0 4px 0 -12px;background:rgba(0,0,0,0.18)"></span>
+      <a href={url.route} class="zh-nav" style="font:600 16px/1 var(--font-body);color:var(--zh-ink);text-decoration:none;text-underline-offset:6px;white-space:nowrap">Vind je route</a>
+      <a href={url.kennismaking} class="zh-btn zh-btn--lime" style="height:48px;padding:0 24px">Plan een kennismaking</a>
+      <a href={url.kennismaking} class="zh-mlink">Plan een kennismaking</a>
+      <button type="button" class="zh-round zh-burger" data-burger aria-label="Menu openen" aria-expanded="false"><Ico naam="menu" /></button>
+    </div>
+  </div>
+  {menu.map((m, i) => (
+    <div class:list={['zh-mega', m.cols.length <= 2 && `zh-mega--${m.cols.length}`, i > 2 && 'zh-mega--zonder']} role="region" aria-label={m.label} data-mega={i} hidden>
+      <div class="zh-mega-cols" style={`grid-template-columns:repeat(${m.cols.length},minmax(0,1fr))`}>
+        {m.cols.map((c) => (
+          <div class="zh-mega-col">
+            <span class="zh-label" style="color:var(--zh-soft)">{c.h}</span>
+            <ul>
+              {c.hub && <li><a href={c.hub.href} class="zh-mega-hub">{c.hub.label}</a></li>}
+              {c.items.map((it) => <li><a href={it.href}>{it.label}</a></li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+      {i <= 2 && (
+        <aside class="zh-mega-promo">
+          <span class="zh-label">Twijfel je?</span>
+          <p style="margin:0;font:600 expanded 22px/1.2 var(--font-display);letter-spacing:-0.01em">Weet je niet welke norm past?</p>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:auto">
+            <a href={url.nulmeting} class="zh-btn zh-btn--dark" style="height:44px">Start nulmeting</a>
+            <span style="font:400 14px/1.4 var(--font-body);color:var(--zh-soft)">Meting langs de norm</span>
+          </div>
+        </aside>
+      )}
+    </div>
+  ))}
+</div>
+
+<div class="zh-mmenu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="zh-mmenu-top">
+    <Logo breedte="48px" />
+    <button type="button" class="zh-round zh-burger" data-mclose aria-label="Menu sluiten" style="display:inline-flex"><Ico naam="kruis" /></button>
+  </div>
+  <nav aria-label="Hoofdmenu mobiel" class="zh-mmenu-nav">
+    {menu.map((g) => (
+      <div class="zh-mmenu-group">
+        <button type="button" class="zh-mmenu-h" aria-expanded="false">{g.label}<span class="zh-mmenu-pm" aria-hidden="true"><Ico naam="plus" /></span></button>
+        <div class="zh-mmenu-body" hidden>
+          {g.cols.map((c) => (
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <span class="zh-label" style="color:var(--zh-soft);padding:8px 0 4px">{c.h}</span>
+              {c.hub && <a href={c.hub.href} style="font-weight:600">{c.hub.label}</a>}
+              {c.items.map((it) => <a href={it.href}>{it.label}</a>)}
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </nav>
+  <div class="zh-mmenu-foot">
+    <a href={url.route} class="zh-btn zh-btn--primary" style="width:100%">Vind je route</a>
+    <a href={url.kennismaking} class="zh-btn zh-btn--lime" style="width:100%">Plan een kennismaking</a>
+    <span class="zh-contactregel" style="justify-content:center"><a href={siteData.contact.phoneHref}>{siteData.contact.phone}</a><a href={siteData.contact.emailHref}>{siteData.contact.email}</a></span>
+  </div>
+</div>
+
+<script>
+  const bar = document.querySelector<HTMLElement>('.zh-bar')!;
+  const navs = [...document.querySelectorAll<HTMLElement>('[data-nav]')];
+  const megas = [...document.querySelectorAll<HTMLElement>('[data-mega]')];
+  const mmenu = document.querySelector<HTMLElement>('.zh-mmenu')!;
+  const burger = document.querySelector<HTMLElement>('[data-burger]')!;
+  let open = -1;
+  let timer: number | undefined;
+
+  const show = (i: number) => {
+    open = i;
+    megas.forEach((m, j) => (m.hidden = j !== i));
+    navs.forEach((n, j) => {
+      n.classList.toggle('is-open', j === i);
+      n.setAttribute('aria-expanded', String(j === i));
+    });
+    if (i >= 0) bar.classList.remove('zh-bar--hidden');
+  };
+
+  // Megamenu: opent bij hover/focus, sluit 250ms nadat de muis het menu verlaat.
+  const over = (e: Event) => {
+    if (innerWidth <= 1100) return;
+    const t = e.target as Element;
+    const n = t.closest<HTMLElement>('[data-nav]');
+    if (n || t.closest('[data-hdr]')) {
+      clearTimeout(timer);
+      timer = undefined;
+      if (n) show(Number(n.dataset.nav));
+    } else if (open >= 0 && !timer) {
+      timer = window.setTimeout(() => { timer = undefined; show(-1); }, 250);
+    }
+  };
+  document.addEventListener('mouseover', over);
+  document.addEventListener('focusin', over);
+
+  const mobiel = (aan: boolean) => {
+    mmenu.hidden = !aan;
+    burger.setAttribute('aria-expanded', String(aan));
+    document.body.style.overflow = aan ? 'hidden' : '';
+  };
+  burger.addEventListener('click', () => mobiel(true));
+  mmenu.addEventListener('click', (e) => {
+    const t = e.target as Element;
+    if (t.closest('[data-mclose], a')) return mobiel(false);
+    const kop = t.closest('.zh-mmenu-h');
+    if (!kop) return;
+    const groep = kop.parentElement!;
+    const aan = !groep.classList.contains('is-open');
+    mmenu.querySelectorAll('.zh-mmenu-group').forEach((g) => {
+      const dit = g === groep && aan;
+      g.classList.toggle('is-open', dit);
+      g.querySelector('button')!.setAttribute('aria-expanded', String(dit));
+      g.querySelector<HTMLElement>('.zh-mmenu-body')!.hidden = !dit;
+    });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { show(-1); mobiel(false); }
+  });
+
+  // Menubalk verdwijnt bij omlaag scrollen en komt terug na 320px omhoog.
+  let lastY = scrollY;
+  let up = 0;
+  addEventListener('scroll', () => {
+    const y = scrollY;
+    const d = y - lastY;
+    lastY = y;
+    if (d > 0) { up = 0; if (y > 120 && open < 0) bar.classList.add('zh-bar--hidden'); }
+    else if (d < 0) { up -= d; if (up > 320) bar.classList.remove('zh-bar--hidden'); }
+    if (y <= 120) bar.classList.remove('zh-bar--hidden');
+  }, { passive: true });
+</script>
